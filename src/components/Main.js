@@ -31,7 +31,7 @@ class Main extends React.Component {
         <article id="past" className={`${this.props.article === 'past' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Past Shows</h2>
           <span className="image main"><img src={rur} alt="" /></span>
-          <p>Our first show. R.U.R. by Karel Čapek translated into English by Claudia Novack. This Czech play that introduced the word ROBOT to the world was prescient for its time and the questions it raises remain relevant today.</p>
+          <p>Our first show. R.U.R. by Karel Čapek translated into English by Claudia Novack. This Czech play that introduced the word "robot" to the world was prescient for its time and the questions it raises remain relevant today.</p>
           {close}
         </article>
 
