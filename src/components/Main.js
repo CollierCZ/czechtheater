@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import logoWide from '../images/logo-wide.jpg'
-import rur from '../images/rur.jpg'
+import rur from '../images/RUR.jpg'
 
 class Main extends React.Component {
   render() {
