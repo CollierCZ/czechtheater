@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import '../assets/scss/main.scss'
+import logoWide from '../images/logo-wide.jpg'
 
 const Layout = ({ children, location }) => {
 
@@ -32,6 +33,8 @@ const Layout = ({ children, location }) => {
           site {
             siteMetadata {
               title
+              description
+              keywords
             }
           }
         }
@@ -41,8 +44,9 @@ const Layout = ({ children, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: data.site.siteMetadata.description },
+              { name: 'keywords', content: data.site.siteMetadata.keywords },
+              { name: 'og:image', content: logoWide}
             ]}
           >
             <html lang="en" />

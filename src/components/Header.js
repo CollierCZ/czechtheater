@@ -10,8 +10,8 @@ const Header = (props) => (
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Czech Theatre</h1>
-                <p>We are a new multicultural amateur community theater presenting Czech plays in English.</p>
+                <h1>Czech Theater</h1>
+                <p>A multicultural amateur community theater in Brno presenting Czech plays in English.</p>
             </div>
         </div>
         <nav>
