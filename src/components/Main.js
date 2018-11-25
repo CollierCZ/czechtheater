@@ -37,7 +37,7 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <p>Czech Theater, z.s., Tučkova 915/22, Veveří, 602 00 Brno</p>
+          <p>Registered Office (mailing address): <br />Czech Theater, z.s. <br /> Tučkova 915/22 <br /> Veveří, 602 00 Brno</p>
           <ul className="icons">
             <li><a href="https://www.facebook.com/czechtheater/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
             <li><a href="https://www.instagram.com/czechtheater/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
