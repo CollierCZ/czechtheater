@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import logoWide from '../images/logo-wide.jpg'
-import rur from '../images/RUR.jpg'
+import bow from '../images/TakeABow.jpg'
+import ice from '../images/WomanInIceCave.jpg'
 
 class Main extends React.Component {
   render() {
@@ -21,17 +22,15 @@ class Main extends React.Component {
 
         <article id="upcoming" className={`${this.props.article === 'upcoming' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Upcoming Shows</h2>
-          <a href="https://www.smsticket.cz/vstupenky/14386-czech-theater-presents-r-u-r-in-english"><span className="image main"><img src={rur} alt="" /></span></a>
-          <p>R.U.R. by Karel Čapek translated into English by Claudia Novack. This Czech play that introduced the word "robot" to the world was prescient for its time and the questions it raises remain relevant today.</p>
-          <p><a href="https://www.smsticket.cz/vstupenky/14386-czech-theater-presents-r-u-r-in-english">Buy tickets</a></p>
-          <p><a href="https://www.facebook.com/events/1943921235683830/">Event on Facebook</a></p>
+          <span className="image main"><img src={ice} alt="" /></span>
+          <p>Jenůfa (Her Step-daughter) by Gabriela Preissová translated by Barbara Day. This play was the basis for Janáček's famous opera.</p>
           {close}
         </article>
 
         <article id="past" className={`${this.props.article === 'past' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Past Shows</h2>
-          <span className="image main"><img src={rur} alt="" /></span>
-          <p>Our first show. R.U.R. by Karel Čapek translated into English by Claudia Novack. This Czech play that introduced the word "robot" to the world was prescient for its time and the questions it raises remain relevant today.</p>
+          <span className="image main"><img src={bow} alt="" /></span>
+          <p>Our first show was R.U.R. by Karel Čapek translated into English by Claudia Novack. This Czech play that introduced the word "robot" to the world was prescient for its time and the questions it raises remain relevant today.</p>
           {close}
         </article>
 
