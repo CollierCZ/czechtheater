@@ -1,25 +1,31 @@
 module.exports = {
-  siteMetadata: {
-    title: "Czech Theater",
-    author: "Aaron Collier",
-    description: "A multicultural amateur community theater presenting Czech plays in English in Brno.",
-    keywords: "theater, czech, amateur, performance"
-  },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-kentico-cloud`,
+        options: {
+          deliveryClientConfig: {
+            projectId: `fb599585-baec-0077-1624-981d3321fff0` 
+          },
+          languageCodenames: [
+            `en-US`
+          ]
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'czech-theater',
-        short_name: 'czech-theater',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/logo.jpg', // This path is relative to the root of the site.
+        name: `Czech Theater`,
+        short_name: `Czech Theater`,
+        start_url: `/`,
+        background_color: `#d7141a`,
+        theme_color: `#d7141a`,
+        display: `minimal-ui`,
+        icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
   ],
 }
