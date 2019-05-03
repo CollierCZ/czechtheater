@@ -34,7 +34,8 @@
             -webkit-transform: scale(1.1);
             -ms-transform: scale(1.1);
             transform: scale(1.1);
-            opacity:0.9;
+            opacity: 0.9;
+            cursor: pointer;
         }
 
         @media screen and (max-width: 1280px) {
