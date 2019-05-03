@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Dialog } from "@reach/dialog"
-import "@reach/dialog/styles.css"
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import "./Gallery.css"
 
 class Gallery extends Component {
@@ -8,13 +8,13 @@ class Gallery extends Component {
     super(props)
 
     this.state = {
+      photoIndex: 0,
       showLightbox: false,
-      selectedImage: null,
     }
   }
   render() {
     const { images  } = this.props;
-    const { selectedImage, showLightbox } = this.state
+    const { photoIndex, showLightbox } = this.state
     return (
       <div className={"gallery"}>
         {images.map(image => {
@@ -22,7 +22,7 @@ class Gallery extends Component {
               <div
                 key={image.url}
                 className="image"
-                onClick={() => this.setState({ showLightbox: true, selectedImage: image })}
+                onClick={() => this.setState({ showLightbox: true, photoIndex: images.indexOf(image) })}
               > 
                 <img 
                     src={image.url + "?w=250&h=250&fit=crop"}
@@ -32,18 +32,22 @@ class Gallery extends Component {
             )
         })}
         {showLightbox && (
-          <Dialog>
-          <button
-            className="close button"
-            onClick={() => this.setState({ showLightbox: false })}
-          >
-            Close
-          </button>            
-            <img 
-                    src={selectedImage.url}
-                    alt={selectedImage.description}
-                />
-          </Dialog>
+          <Lightbox
+          mainSrc={images[photoIndex].url}
+          nextSrc={images[(photoIndex + 1) % images.length].url}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length].url}
+          onCloseRequest={() => this.setState({ showLightbox: false })}
+          onMovePrevRequest={() =>
+            this.setState({
+              photoIndex: (photoIndex + images.length - 1) % images.length,
+            })
+          }
+          onMoveNextRequest={() =>
+            this.setState({
+              photoIndex: (photoIndex + 1) % images.length,
+            })
+          }
+        />
         )}
       </div>
     )
