@@ -152,6 +152,11 @@ export const query = graphql`
           description {
             resolvedHtml
           }
+          image {
+            value {
+              url
+            }
+          }
         }
       }
     }

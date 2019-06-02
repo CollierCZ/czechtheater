@@ -1,0 +1,28 @@
+.fact {
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.factText {
+    grid-column: 1/3;
+}
+
+.factImage {
+    grid-column: 3;
+}
+
+@media screen and (max-width: 540px) {
+    .fact {
+        display: inline;
+        grid-gap: 0;
+    }
+    
+    .factText {
+        display: inline;
+    }    
+
+    .factImage {
+        display: inline;
+    }
+}

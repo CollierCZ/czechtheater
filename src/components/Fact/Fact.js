@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 import "./Fact.css"
 
-  
-
-
 class Fact extends Component {
   render() {
     const { facts } = this.props;
     
-    const allFacts = facts.edges;
-    console.log(allFacts);
+    const currentFact = facts.edges[Math.floor(Math.random() * facts.edges.length)];
     return (    
 
-      <div className="fact" dangerouslySetInnerHTML={{ __html: allFacts[Math.floor(Math.random() * allFacts.length)].node.elements.description.resolvedHtml}} />
+      <div className="fact">
+        <div className="factText" dangerouslySetInnerHTML={{ __html: currentFact.node.elements.description.resolvedHtml}} />
+        {currentFact.node.elements.image.value[0] ? (
+          <img src={currentFact.node.elements.image.value[0].url+"?w=250&h250"} alt="" className="factImage" /> ) : null
+        }
+      </div>
     )
   }
 }
