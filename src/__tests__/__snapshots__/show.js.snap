@@ -26,7 +26,7 @@ exports[`A show loads correctly with a gallery 1`] = `
  (max-width: 800px) 760px,
  (max-width: 1200) 1140px"
       src="https://example.com"
-      srcset="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
+      srcSet="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
     />
   </div>
   <div
@@ -47,7 +47,14 @@ exports[`A show loads correctly with a gallery 1`] = `
     </a>
   </h4>
   <Gallery
-    images={Array []}
+    images={
+      Array [
+        Object {
+          "description": "A cool image",
+          "url": "https://example.com",
+        },
+      ]
+    }
   />
 </Layout>
 `;
@@ -78,7 +85,7 @@ exports[`A show loads correctly with no gallery 1`] = `
  (max-width: 800px) 760px,
  (max-width: 1200) 1140px"
       src="https://example.com"
-      srcset="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
+      srcSet="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
     />
   </div>
   <div
@@ -98,8 +105,5 @@ exports[`A show loads correctly with no gallery 1`] = `
       Tickets
     </a>
   </h4>
-  <Gallery
-    images={Array []}
-  />
 </Layout>
 `;
