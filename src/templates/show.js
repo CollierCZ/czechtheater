@@ -19,9 +19,7 @@ const Show = ({data}) => {
                     mainImage + `?w=800&fit=crop 800, ` +
                     mainImage + `?w=1200&fit=crop 1200, `
                 } 
-                sizes="(max-width: 400px) 360px,
-                    (max-width: 800px) 760px,
-                    (max-width: 1200) 1140px"
+                sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
                 src={mainImage.url} alt={mainImage.description} />
         </div>
         <div className="showDescription" dangerouslySetInnerHTML={{ __html: show.description.resolvedHtml}} />
