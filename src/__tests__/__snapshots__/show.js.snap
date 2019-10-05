@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A show loads correctly with a gallery 1`] = `
+<Layout>
+  <SEO
+    keywords={
+      Array [
+        "czech",
+        "theater",
+        "show",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="Alquist's revenge"
+  />
+  <h1>
+    Alquist's revenge
+  </h1>
+  <div
+    className="mainImage"
+  >
+    <img
+      alt="A cool image"
+      sizes="(max-width: 400px) 360px,
+ (max-width: 800px) 760px,
+ (max-width: 1200) 1140px"
+      src="https://example.com"
+      srcset="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
+    />
+  </div>
+  <div
+    className="showDescription"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "All the acting",
+      }
+    }
+  />
+  <h4
+    className="tickets"
+  >
+    <a
+      href="https://example.com"
+    >
+      Tickets
+    </a>
+  </h4>
+  <Gallery
+    images={Array []}
+  />
+</Layout>
+`;
+
+exports[`A show loads correctly with no gallery 1`] = `
+<Layout>
+  <SEO
+    keywords={
+      Array [
+        "czech",
+        "theater",
+        "show",
+      ]
+    }
+    lang="en"
+    meta={Array []}
+    title="Alquist's revenge"
+  />
+  <h1>
+    Alquist's revenge
+  </h1>
+  <div
+    className="mainImage"
+  >
+    <img
+      alt="A cool image"
+      sizes="(max-width: 400px) 360px,
+ (max-width: 800px) 760px,
+ (max-width: 1200) 1140px"
+      src="https://example.com"
+      srcset="[object Object]?w=400&fit=crop 400w, [object Object]?w=800&fit=crop 800, [object Object]?w=1200&fit=crop 1200, "
+    />
+  </div>
+  <div
+    className="showDescription"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "All the acting",
+      }
+    }
+  />
+  <h4
+    className="tickets"
+  >
+    <a
+      href="https://example.com"
+    >
+      Tickets
+    </a>
+  </h4>
+  <Gallery
+    images={Array []}
+  />
+</Layout>
+`;

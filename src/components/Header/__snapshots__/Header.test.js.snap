@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header loads correctly 1`] = `
+<header>
+  <mockConstructor
+    to="/"
+  >
+    <img />
+    <div
+      className="siteName"
+    />
+  </mockConstructor>
+</header>
+`;

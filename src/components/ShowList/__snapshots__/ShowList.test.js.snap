@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowList loads correctly for future shows 1`] = `
+<ShowCard
+  description="All the acting"
+  gallery={
+    Array [
+      Object {
+        "description": "A cool image",
+        "url": "https://example.com",
+      },
+    ]
+  }
+  imageDescription="A cool image"
+  imageUrl="https://example.com"
+  key="Alquist's revenge"
+  name="Alquist's revenge"
+  slug="alquists-revenge"
+  ticketLink="https://example.com"
+  time="future"
+/>
+`;
+
+exports[`ShowList loads correctly for past shows 1`] = `
+<ShowCard
+  description="All the acting"
+  gallery={
+    Array [
+      Object {
+        "description": "A cool image",
+        "url": "https://example.com",
+      },
+    ]
+  }
+  imageDescription="A cool image"
+  imageUrl="https://example.com"
+  key="Alquist's revenge"
+  name="Alquist's revenge"
+  slug="alquists-revenge"
+  ticketLink="https://example.com"
+  time="past"
+/>
+`;

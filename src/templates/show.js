@@ -5,8 +5,6 @@ import Layout from "../layout/layout"
 import Gallery from "../components/Gallery/Gallery"
 import SEO from "../components/seo"
 
-
-
 const Show = ({data}) => {
   const show = data.kenticoCloudItemShow.elements;
   const mainImage = show.main_image.assets[0];
@@ -16,7 +14,7 @@ const Show = ({data}) => {
         <h1>{show.name.value}</h1>
         <div className="mainImage">
             <img 
-                srcset={
+                srcSet={
                     mainImage + `?w=400&fit=crop 400w, ` +
                     mainImage + `?w=800&fit=crop 800, ` +
                     mainImage + `?w=1200&fit=crop 1200, `
@@ -32,7 +30,7 @@ const Show = ({data}) => {
             <h4 className="tickets"><a href={show.ticket_link.value}>Tickets</a></h4>
             : null
         }
-        {show.gallery
+        {show.gallery.assets[0]
             ?  
             <Gallery images={show.gallery.assets} />
             : null

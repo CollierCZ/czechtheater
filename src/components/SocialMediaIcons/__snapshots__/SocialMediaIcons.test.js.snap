@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaIcons loads correctly 1`] = `
+<div
+  className="social-media-icons"
+>
+  <SocialIcon
+    className="social-media-icon"
+    key="https://www.facebook.com/czechtheater/"
+    style={
+      Object {
+        "height": null,
+        "width": null,
+      }
+    }
+    url="https://www.facebook.com/czechtheater/"
+  />
+</div>
+`;

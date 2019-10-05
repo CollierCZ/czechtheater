@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fact renders correctly with an image 1`] = `
+<div
+  className="fact"
+>
+  <div
+    className="factText"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div>Testing inner HTML</div>",
+      }
+    }
+  />
+  <img
+    alt=""
+    className="factImage"
+    src="https://example.com?w=250&h250"
+  />
+</div>
+`;
+
+exports[`Fact renders correctly without an image 1`] = `
+<div
+  className="fact"
+>
+  <div
+    className="factText"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<div>Testing inner HTML</div>",
+      }
+    }
+  />
+</div>
+`;
