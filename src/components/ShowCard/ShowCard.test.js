@@ -18,9 +18,9 @@ const renderShowCard = (time) => {
 
 describe("ShowCard", () => {
   it("loads correctly for future shows", () => {
-    renderShowCard(future)
+    renderShowCard("future")
   })
   it("loads correctly for past shows", () => {
-    renderShowCard(past)
+    renderShowCard("past")
   })
 })

@@ -27,11 +27,13 @@ export const sampleShow = {
   }
 }
 
-export const sampleShowNoGallery = JSON.parse(JSON.stringify(sampleShow))
-sampleShowNoGallery.gallery.assets = []
+let sampleShowNoGallery = JSON.parse(JSON.stringify(sampleShow))
+sampleShowNoGallery.elements.gallery.assets = []
 
-export const sampleShowNoTicketLink = JSON.parse(JSON.stringify(sampleShow))
-sampleShowNoGallery.ticket_link.value = ""
+let sampleShowNoTicketLink = JSON.parse(JSON.stringify(sampleShow))
+sampleShowNoTicketLink.elements.ticket_link.value = ""
+
+export {sampleShowNoGallery,sampleShowNoTicketLink}
 
 export const basicInfoQuery = {
   kenticoCloudItemBasicInfo: {
