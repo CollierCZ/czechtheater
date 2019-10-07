@@ -40,17 +40,7 @@ const Layout = ({ children }) => (
     query={graphql`
       query SiteTitleQuery {
         kenticoCloudItemBasicInfo {
-          elements {
-            name {
-              value
-            }
-            favicon {
-              assets {
-                url
-                description
-              }
-            }
-          }
+          ...BasicInfoFragment
         }
       }
     `}
