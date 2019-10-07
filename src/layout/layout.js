@@ -6,7 +6,6 @@ import Header from "../components/Header/Header"
 import "./layout.css"
 
 export const PureLayout = ({ children,data }) => {
-  console.log(data)
   return (
     <>
       <Header 
@@ -56,7 +55,6 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => {
-      console.log(data)
       return (
         <PureLayout children={children} data={data} />
       )
