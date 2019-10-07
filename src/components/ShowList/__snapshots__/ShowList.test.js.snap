@@ -2,7 +2,7 @@
 
 exports[`ShowList loads correctly for future shows 1`] = `
 <ShowCard
-  description="All the acting"
+  description="<p>All the acting</p>"
   gallery={
     Array [
       Object {
@@ -23,7 +23,7 @@ exports[`ShowList loads correctly for future shows 1`] = `
 
 exports[`ShowList loads correctly for past shows 1`] = `
 <ShowCard
-  description="All the acting"
+  description="<p>All the acting</p>"
   gallery={
     Array [
       Object {
@@ -38,6 +38,41 @@ exports[`ShowList loads correctly for past shows 1`] = `
   name="Alquist's revenge"
   slug="alquists-revenge"
   ticketLink="https://example.com"
+  time="past"
+/>
+`;
+
+exports[`ShowList loads correctly for past shows with no gallery 1`] = `
+<ShowCard
+  description="<p>All the acting</p>"
+  gallery={Array []}
+  imageDescription="A cool image"
+  imageUrl="https://example.com"
+  key="Alquist's revenge"
+  name="Alquist's revenge"
+  slug="alquists-revenge"
+  ticketLink="https://example.com"
+  time="past"
+/>
+`;
+
+exports[`ShowList loads correctly for past shows with no ticket link 1`] = `
+<ShowCard
+  description="<p>All the acting</p>"
+  gallery={
+    Array [
+      Object {
+        "description": "A cool image",
+        "url": "https://example.com",
+      },
+    ]
+  }
+  imageDescription="A cool image"
+  imageUrl="https://example.com"
+  key="Alquist's revenge"
+  name="Alquist's revenge"
+  slug="alquists-revenge"
+  ticketLink={false}
   time="past"
 />
 `;

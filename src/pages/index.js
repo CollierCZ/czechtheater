@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Fact from "../components/Fact/Fact"
 import Layout from "../layout/layout"
 import ShowList from "../components/ShowList/ShowList"
-import SEO from "../components/seo"
+import SEO from "../components/SEO/seo"
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons"
 
 
@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
   const info = data.kenticoCloudItemBasicInfo.elements;
   return (
     <Layout>
-      <SEO title="Czech Theater" keywords={[`theater`, `czech`, `amateur`]} />
+      <SEO />
       <section className="about">
         <p dangerouslySetInnerHTML={{ __html: info.short_description.value }} />
       </section>
