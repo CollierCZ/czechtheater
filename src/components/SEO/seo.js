@@ -87,7 +87,13 @@ PureSEO.propTypes = {
 function SEO({ description, image, keywords, title }) {
   return (
     <StaticQuery
-      query={seoQuery}
+      query={graphql`
+        query SEOQuery {
+          kenticoCloudItemBasicInfo {
+            ...BasicInfoFragment
+          }
+        }
+      `}
       render={data => {
         return (
           <PureSEO description={description} image={image} data={data} keywords={keywords} pageTitle={title} /> 
@@ -105,23 +111,3 @@ SEO.propTypes = {
 }
 
 export default SEO
-
-const seoQuery = graphql`
-  query SEOQuery {
-    kenticoCloudItemBasicInfo {
-      elements {
-        name {
-          value
-        }
-        short_description {
-          value
-        }
-        favicon {
-          assets{
-            url
-          }
-        }
-      }
-    }
-  }
-`

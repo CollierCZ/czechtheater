@@ -52,23 +52,7 @@ export default IndexPage
 export const query = graphql`
   query indexQuery {
     kenticoCloudItemBasicInfo {
-      elements {
-        name {
-          value
-        }
-        short_description {
-          value
-        }
-        about_us {
-          value
-        }
-        contact_info {
-          resolvedHtml
-        }
-        social_media {
-          value
-        }
-      }
+      ...BasicInfoFragment
     }
     futureShows: allKenticoCloudItemShowSection (filter: {system: {codename: {eq: "future_shows"}}}) {
       edges {
