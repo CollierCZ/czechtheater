@@ -1,10 +1,7 @@
 import React from "react";
-import { sampleShow } from "../utilities/sampleShow";
+import { sampleShow, sampleShowNoGallery } from "../utilities/sampleTestData";
 import { shallow } from "enzyme";
 import Show from "../templates/show";
-
-let sampleShowNoGallery = JSON.parse(JSON.stringify(sampleShow))
-sampleShowNoGallery.elements.gallery.assets = []
 
 const showToLoad = {}
 showToLoad['kenticoCloudItemShow'] = sampleShow

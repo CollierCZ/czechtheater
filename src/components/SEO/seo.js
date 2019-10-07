@@ -3,10 +3,16 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
-export const PureSEO = ({favicon,homeTitle,image,keywords,lang,metaDescription,title}) => {
+export const PureSEO = ({ description,image,data,keywords,pageTitle }) => {
+  const info = data.kenticoCloudItemBasicInfo.elements;
+  const homeTitle = info.name.value;
+  const favicon = info.favicon.assets[0].url;
+  const ogImage = image ? image : favicon;
+  const metaDescription = description ? description : info.short_description.value;
+  const title = pageTitle ? pageTitle : homeTitle;
   return (
     <Helmet
-      htmlAttributes={{lang}}
+      htmlAttributes={{lang: "en"}}
       title={title}
       titleTemplate={`%s | ${homeTitle}`}
       link={[
@@ -30,7 +36,7 @@ export const PureSEO = ({favicon,homeTitle,image,keywords,lang,metaDescription,t
         },
         {
           property: `og:image`,
-          content: image,
+          content: ogImage,
         },
         {
           property: `og:type`,
@@ -65,44 +71,37 @@ export const PureSEO = ({favicon,homeTitle,image,keywords,lang,metaDescription,t
   )
 }
 
-PureSEO.propTypes = {
-  homeTitle: PropTypes.string.isRequired,
-  favicon: PropTypes.string.isRequired,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  lang: PropTypes.string.isRequired,
-  metaDescription: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+PureSEO.defaultProps = {
+  keywords: [`theater`, `czech`, `amateur`],
+  pageTitle: "Czech Theater"
 }
 
-function SEO({ description, image, lang, keywords, title }) {
+PureSEO.propTypes = {
+  data: PropTypes.object.isRequired,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  keywords: PropTypes.arrayOf(PropTypes.string),
+  pageTitle: PropTypes.string.isRequired,
+}
+
+function SEO({ description, image, keywords, title }) {
   return (
     <StaticQuery
       query={seoQuery}
       render={data => {
-        const info = data.kenticoCloudItemBasicInfo.elements;
-        const homeTitle = info.name.value;
-        const favicon = info.favicon.assets[0].url;
-        const ogImage = image ? image : favicon;
-        const metaDescription = description ? description : info.short_description.value;
         return (
-          <PureSEO homeTitle={homeTitle} favicon={favicon} image={ogImage} keywords={keywords} lang={lang} metaDescription={metaDescription} title={title} /> 
+          <PureSEO description={description} image={image} data={data} keywords={keywords} pageTitle={title} /> 
         )
       }}
     />
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  keywords: [],
-}
-
 SEO.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
-  lang: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO

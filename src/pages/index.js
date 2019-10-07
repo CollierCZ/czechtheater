@@ -13,7 +13,7 @@ const IndexPage = ({data}) => {
   const info = data.kenticoCloudItemBasicInfo.elements;
   return (
     <Layout>
-      <SEO title="Czech Theater" keywords={[`theater`, `czech`, `amateur`]} />
+      <SEO />
       <section className="about">
         <p dangerouslySetInnerHTML={{ __html: info.short_description.value }} />
       </section>
