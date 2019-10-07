@@ -27,61 +27,11 @@ export const sampleShow = {
   }
 }
 
-export const sampleShowNoGallery = {
-  elements: {
-    name: {
-      value: "Alquist's revenge"
-    },
-    description: {
-      resolvedHtml: "<p>All the acting</p>"
-    },
-    main_image: {
-      assets: [{
-        description: "A cool image",
-        url: "https://example.com"
-      }]
-    },
-    ticket_link: {
-      value: "https://example.com"
-    },
-    url: {
-      value: "alquists-revenge"
-    },
-    gallery: {
-      assets: []
-    }
-  }
-}
+export const sampleShowNoGallery = JSON.parse(JSON.stringify(sampleShow))
+sampleShowNoGallery.gallery.assets = []
 
-export const sampleShowNoTicketLink = {
-  elements: {
-    name: {
-      value: "Alquist's revenge"
-    },
-    description: {
-      resolvedHtml: "<p>All the acting</p>"
-    },
-    main_image: {
-      assets: [{
-        description: "A cool image",
-        url: "https://example.com"
-      }]
-    },
-    ticket_link: {
-      value: ""
-    },
-    url: {
-      value: "alquists-revenge"
-    },
-    gallery: {
-      assets: [{
-        description: "A cool image",
-        url: "https://example.com"
-      }]
-    }
-  }
-}
-
+export const sampleShowNoTicketLink = JSON.parse(JSON.stringify(sampleShow))
+sampleShowNoGallery.ticket_link.value = ""
 
 export const basicInfoQuery = {
   kenticoCloudItemBasicInfo: {

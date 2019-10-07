@@ -11,13 +11,16 @@ const propsArray = {
   ticketLink: "https://example.com"
 }
 
+const renderShowCard = (time) => {
+  const component = shallow (<ShowCard {...propsArray} time={time} />)
+  expect(component).toMatchSnapshot()
+}
+
 describe("ShowCard", () => {
   it("loads correctly for future shows", () => {
-    const component = shallow (<ShowCard {...propsArray} time="future" />)
-    expect(component).toMatchSnapshot()
+    renderShowCard(future)
   })
   it("loads correctly for past shows", () => {
-    const component = shallow (<ShowCard {...propsArray} time="past" />)
-    expect(component).toMatchSnapshot()
+    renderShowCard(past)
   })
 })
