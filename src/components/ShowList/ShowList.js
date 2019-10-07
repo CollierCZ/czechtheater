@@ -3,10 +3,7 @@ import ShowCard from "../ShowCard/ShowCard"
 
 class ShowList extends React.Component {
   render() {
-    const {
-      shows,
-      future
-    } = this.props;
+    const { shows, future } = this.props;
     return (
       shows.map(show => {
         let propsArray = {
@@ -18,16 +15,8 @@ class ShowList extends React.Component {
         }
         future ? propsArray.time = "future" : propsArray.time = "past";
         show.elements.ticket_link.value ? propsArray.ticketLink = show.elements.ticket_link.value : propsArray.ticketLink = false;
-        if (show.elements.gallery.assets) {
-          propsArray.gallery = show.elements.gallery.assets
-        };
-        return ( <
-          ShowCard key = {
-            propsArray.name
-          } {
-            ...propsArray
-          }
-          />
+        if (show.elements.gallery.assets) { propsArray.gallery = show.elements.gallery.assets };
+        return ( <ShowCard key = { propsArray.name } { ...propsArray } />
         )
       }))
   }

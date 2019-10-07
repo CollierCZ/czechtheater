@@ -13,10 +13,16 @@ const images = [
   },
 ]
 
-const openLightbox = (wrapper) => {
-  const imageNodes = wrapper.find('img')
+const openLightbox = (nextClick) => {
+  const component = mount (<Gallery images={images} />)
+  const imageNodes = component.find('img')
   const image = imageNodes.at(0)
   image.simulate('click')
+  if (nextClick) {
+    component.find(nextClick).simulate('click')    
+  }
+  expect(component).toMatchSnapshot()
+  component.unmount()
 }
 
 describe("Gallery", () => {
@@ -25,24 +31,15 @@ describe("Gallery", () => {
     expect(component).toMatchSnapshot()
   })
   it("correctly opens lightbox", () => {
-    const component = mount (<Gallery images={images} />)
-    openLightbox(component)
-    expect(component).toMatchSnapshot()
-    component.unmount()
+    openLightbox()
   })
 })
 
 describe("Lightbox", () => {
   it("moves to the next image correcly", () => {
-    const component = mount (<Gallery images={images} />)
-    openLightbox(component)
-    component.find('.ril__navButtonNext').simulate('click')
-    expect(component).toMatchSnapshot()
+    openLightbox('.ril__navButtonNext')
   })
   it("moves to the previous image correcly", () => {
-    const component = mount (<Gallery images={images} />)
-    openLightbox(component)
-    component.find('.ril__navButtonPrev').simulate('click')
-    expect(component).toMatchSnapshot()
+    openLightbox('.ril__navButtonPrev')
   })
 })
