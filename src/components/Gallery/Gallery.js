@@ -3,21 +3,19 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import "./Gallery.css"
 
-const mapImages = (images) => {
-  images.map(image => {
-    return (
-      <div
-        key={image.url}
-        className="image"
-        onClick={() => this.setState({ showLightbox: true, photoIndex: images.indexOf(image) })}
-      > 
-        <img 
-            src={image.url + "?w=250&h=250&fit=crop"}
-            alt={image.description}
-        />
-      </div>
-    )
-})
+const createImage = (image,index) => {
+  return (
+    <div
+      key={image.url}
+      className="image"
+      onClick={() => this.setState({ showLightbox: true, photoIndex: index })}
+    > 
+      <img 
+          src={image.url + "?w=250&h=250&fit=crop"}
+          alt={image.description}
+      />
+    </div>
+  )
 }
 
 class Gallery extends Component {
@@ -34,7 +32,9 @@ class Gallery extends Component {
     const { photoIndex, showLightbox } = this.state
     return (
       <div className={"gallery"}>
-        {mapImages(images)}
+        {images.map((image,index) => {
+          return (createImage(image,index))
+        })}
         {showLightbox && (
           <Lightbox
           mainSrc={images[photoIndex].url}
