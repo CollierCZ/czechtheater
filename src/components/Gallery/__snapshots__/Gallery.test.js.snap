@@ -18,26 +18,48 @@ exports[`Gallery correctly opens lightbox 1`] = `
   <div
     className="gallery"
   >
-    <div
-      className="image"
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/1",
+        }
+      }
+      index={0}
       key="https://example.com/1"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/1?w=250&h=250&fit=crop"
-      />
-    </div>
-    <div
-      className="image"
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/1?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/2",
+        }
+      }
+      index={1}
       key="https://example.com/2"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/2?w=250&h=250&fit=crop"
-      />
-    </div>
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/2?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
       animationDuration={300}
@@ -46,7 +68,7 @@ exports[`Gallery correctly opens lightbox 1`] = `
       closeLabel="Close lightbox"
       discourageDownloads={false}
       enableZoom={true}
-      imageCaption={null}
+      imageCaption="A description"
       imageCrossOrigin={null}
       imageLoadErrorMessage="This image failed to load"
       imagePadding={10}
@@ -306,6 +328,15 @@ exports[`Gallery correctly opens lightbox 1`] = `
                           />
                         </li>
                       </ul>
+                    </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -576,6 +607,15 @@ exports[`Gallery correctly opens lightbox 1`] = `
                         </li>
                       </ul>
                     </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -814,6 +854,15 @@ exports[`Gallery correctly opens lightbox 1`] = `
                               />
                             </li>
                           </ul>
+                        </div>
+                        <div
+                          class="ril-caption ril__caption"
+                        >
+                          <div
+                            class="ril-caption-content ril__captionContent"
+                          >
+                            A description
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1212,6 +1261,17 @@ exports[`Gallery correctly opens lightbox 1`] = `
                       </li>
                     </ul>
                   </div>
+                  <div
+                    className="ril-caption ril__caption"
+                    onMouseDown={[Function]}
+                    onWheel={[Function]}
+                  >
+                    <div
+                      className="ril-caption-content ril__captionContent"
+                    >
+                      A description
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1227,26 +1287,28 @@ exports[`Gallery renders correctly  1`] = `
 <div
   className="gallery"
 >
-  <div
-    className="image"
+  <GalleryImage
+    handler={[Function]}
+    image={
+      Object {
+        "description": "A description",
+        "url": "https://example.com/1",
+      }
+    }
+    index={0}
     key="https://example.com/1"
-    onClick={[Function]}
-  >
-    <img
-      alt="A description"
-      src="https://example.com/1?w=250&h=250&fit=crop"
-    />
-  </div>
-  <div
-    className="image"
+  />
+  <GalleryImage
+    handler={[Function]}
+    image={
+      Object {
+        "description": "A description",
+        "url": "https://example.com/2",
+      }
+    }
+    index={1}
     key="https://example.com/2"
-    onClick={[Function]}
-  >
-    <img
-      alt="A description"
-      src="https://example.com/2?w=250&h=250&fit=crop"
-    />
-  </div>
+  />
 </div>
 `;
 
@@ -1268,26 +1330,48 @@ exports[`Lightbox moves to the next image correcly 1`] = `
   <div
     className="gallery"
   >
-    <div
-      className="image"
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/1",
+        }
+      }
+      index={0}
       key="https://example.com/1"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/1?w=250&h=250&fit=crop"
-      />
-    </div>
-    <div
-      className="image"
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/1?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/2",
+        }
+      }
+      index={1}
       key="https://example.com/2"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/2?w=250&h=250&fit=crop"
-      />
-    </div>
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/2?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
       animationDuration={300}
@@ -1296,7 +1380,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
       closeLabel="Close lightbox"
       discourageDownloads={false}
       enableZoom={true}
-      imageCaption={null}
+      imageCaption="A description"
       imageCrossOrigin={null}
       imageLoadErrorMessage="This image failed to load"
       imagePadding={10}
@@ -1557,6 +1641,15 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           />
                         </li>
                       </ul>
+                    </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1828,6 +1921,15 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                         </li>
                       </ul>
                     </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2067,6 +2169,15 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                               />
                             </li>
                           </ul>
+                        </div>
+                        <div
+                          class="ril-caption ril__caption"
+                        >
+                          <div
+                            class="ril-caption-content ril__captionContent"
+                          >
+                            A description
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -2464,6 +2575,17 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                       </li>
                     </ul>
                   </div>
+                  <div
+                    className="ril-caption ril__caption"
+                    onMouseDown={[Function]}
+                    onWheel={[Function]}
+                  >
+                    <div
+                      className="ril-caption-content ril__captionContent"
+                    >
+                      A description
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2493,26 +2615,48 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
   <div
     className="gallery"
   >
-    <div
-      className="image"
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/1",
+        }
+      }
+      index={0}
       key="https://example.com/1"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/1?w=250&h=250&fit=crop"
-      />
-    </div>
-    <div
-      className="image"
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/1?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "A description",
+          "url": "https://example.com/2",
+        }
+      }
+      index={1}
       key="https://example.com/2"
-      onClick={[Function]}
     >
-      <img
-        alt="A description"
-        src="https://example.com/2?w=250&h=250&fit=crop"
-      />
-    </div>
+      <div
+        className="image"
+        onClick={[Function]}
+      >
+        <img
+          alt="A description"
+          src="https://example.com/2?w=250&h=250&fit=crop"
+        />
+      </div>
+    </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
       animationDuration={300}
@@ -2521,7 +2665,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
       closeLabel="Close lightbox"
       discourageDownloads={false}
       enableZoom={true}
-      imageCaption={null}
+      imageCaption="A description"
       imageCrossOrigin={null}
       imageLoadErrorMessage="This image failed to load"
       imagePadding={10}
@@ -2782,6 +2926,15 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           />
                         </li>
                       </ul>
+                    </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -3053,6 +3206,15 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                         </li>
                       </ul>
                     </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        A description
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3292,6 +3454,15 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                               />
                             </li>
                           </ul>
+                        </div>
+                        <div
+                          class="ril-caption ril__caption"
+                        >
+                          <div
+                            class="ril-caption-content ril__captionContent"
+                          >
+                            A description
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -3688,6 +3859,17 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                         />
                       </li>
                     </ul>
+                  </div>
+                  <div
+                    className="ril-caption ril__caption"
+                    onMouseDown={[Function]}
+                    onWheel={[Function]}
+                  >
+                    <div
+                      className="ril-caption-content ril__captionContent"
+                    >
+                      A description
+                    </div>
                   </div>
                 </div>
               </div>
