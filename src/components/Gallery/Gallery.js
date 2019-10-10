@@ -12,43 +12,46 @@ class Gallery extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(index) {
+  handleClick = (index) => {
     this.setState({ showLightbox: true, photoIndex: index })
   }
-  createImageDiv(image,index) {
-    return (
-      <div
-        key={image.url}
-        className="image"
-        onClick={() => this.handleClick(index)}
-      > 
-        <img 
-            src={image.url + "?w=250&h=250&fit=crop"}
-            alt={image.description}
-        />
-      </div>
-    )
-  }
+  
   render() {
     const { images  } = this.props;
     const { photoIndex, showLightbox } = this.state
     return (
       <div className={"gallery"}>
-        {images.map((image,index) => { createImageDiv(image,index) })}
+        {images.map((image,index) => {
+          return ( <GalleryImage key={image.url} image={image} index={index} handler={this.handleClick} />)
+         })}
         {showLightbox && (
           <Lightbox
           mainSrc={images[photoIndex].url}
           nextSrc={images[(photoIndex + 1) % images.length].url}
           prevSrc={images[(photoIndex + images.length - 1) % images.length].url}
           onCloseRequest={() => this.setState({ showLightbox: false })}
-          onMovePrevRequest={() =>
-            this.setState({ photoIndex: (photoIndex + images.length - 1) % images.length })
-          }
-          onMoveNextRequest={() =>
-            this.setState({ photoIndex: (photoIndex + 1) % images.length })
-          }
+          onMovePrevRequest={() => this.setState({ photoIndex: (photoIndex + images.length - 1) % images.length }) }
+          onMoveNextRequest={() => this.setState({ photoIndex: (photoIndex + 1) % images.length }) }
+          imageCaption={images[photoIndex].description}
         />
         )}
+      </div>
+    )
+  }
+}
+
+class GalleryImage extends Component {
+  render() {
+    const {image,index,handler} = this.props;
+    return (
+      <div
+        className="image"
+        onClick={() => handler(index)}
+      > 
+        <img 
+            src={image.url + "?w=250&h=250&fit=crop"}
+            alt={image.description}
+        />
       </div>
     )
   }
