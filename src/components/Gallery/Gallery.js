@@ -3,6 +3,23 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import "./Gallery.css"
 
+const mapImages = (images) => {
+  images.map(image => {
+    return (
+      <div
+        key={image.url}
+        className="image"
+        onClick={() => this.setState({ showLightbox: true, photoIndex: images.indexOf(image) })}
+      > 
+        <img 
+            src={image.url + "?w=250&h=250&fit=crop"}
+            alt={image.description}
+        />
+      </div>
+    )
+})
+}
+
 class Gallery extends Component {
   constructor(props) {
     super(props)
@@ -17,20 +34,7 @@ class Gallery extends Component {
     const { photoIndex, showLightbox } = this.state
     return (
       <div className={"gallery"}>
-        {images.map(image => {
-            return (
-              <div
-                key={image.url}
-                className="image"
-                onClick={() => this.setState({ showLightbox: true, photoIndex: images.indexOf(image) })}
-              > 
-                <img 
-                    src={image.url + "?w=250&h=250&fit=crop"}
-                    alt={image.description}
-                />
-              </div>
-            )
-        })}
+        {mapImages(images)}
         {showLightbox && (
           <Lightbox
           mainSrc={images[photoIndex].url}
@@ -38,14 +42,10 @@ class Gallery extends Component {
           prevSrc={images[(photoIndex + images.length - 1) % images.length].url}
           onCloseRequest={() => this.setState({ showLightbox: false })}
           onMovePrevRequest={() =>
-            this.setState({
-              photoIndex: (photoIndex + images.length - 1) % images.length,
-            })
+            this.setState({ photoIndex: (photoIndex + images.length - 1) % images.length })
           }
           onMoveNextRequest={() =>
-            this.setState({
-              photoIndex: (photoIndex + 1) % images.length,
-            })
+            this.setState({ photoIndex: (photoIndex + 1) % images.length })
           }
         />
         )}
