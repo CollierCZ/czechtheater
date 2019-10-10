@@ -1,6 +1,7 @@
-import React from "react";
-import { mount, shallow } from "enzyme";
 import Gallery from "./Gallery";
+import { mount } from "enzyme";
+import React from "react";
+import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const images = [
   {
@@ -27,8 +28,7 @@ const openLightbox = (nextClick) => {
 
 describe("Gallery", () => {
   it("renders correctly ", () => {
-    const component = shallow (<Gallery images={images} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<Gallery images={images} />)
   })
   it("correctly opens lightbox", () => {
     openLightbox()

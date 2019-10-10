@@ -1,6 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
 import ShowCard from "./ShowCard";
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 const propsArray = {
   name: "Alquist's revenge",
@@ -11,16 +11,11 @@ const propsArray = {
   ticketLink: "https://example.com"
 }
 
-const renderShowCard = (time) => {
-  const component = shallow (<ShowCard {...propsArray} time={time} />)
-  expect(component).toMatchSnapshot()
-}
-
 describe("ShowCard", () => {
   it("loads correctly for future shows", () => {
-    renderShowCard("future")
+    simpleShallowRender(<ShowCard {...propsArray} time="future" />)
   })
   it("loads correctly for past shows", () => {
-    renderShowCard("past")
+    simpleShallowRender(<ShowCard {...propsArray} time="past" />)
   })
 })

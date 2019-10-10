@@ -1,10 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
 import Header from "./Header";
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 describe("Header", () => {
   it("loads correctly", () => {
-    const component = shallow (<Header />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<Header />)
   })
 })

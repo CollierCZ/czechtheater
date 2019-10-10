@@ -1,6 +1,7 @@
-import React from "react";
-import { shallow } from "enzyme";
 import Fact from "./Fact";
+import React from "react";
+import { simpleShallowRender } from "../../utilities/testHelpers"
+import { shallow } from "enzyme";
 
 const factsWithImage = {
   edges: [{
@@ -36,11 +37,9 @@ const factsNoImage = {
 
 describe("Fact", () => {
   it("renders correctly with an image", () => {
-    const component = shallow (<Fact facts={factsWithImage} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<Fact facts={factsWithImage} />)
   })
   it("renders correctly without an image", () => {
-    const component = shallow (<Fact facts={factsNoImage} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<Fact facts={factsNoImage} />)
   })
 })
