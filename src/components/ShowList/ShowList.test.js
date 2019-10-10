@@ -1,7 +1,7 @@
 import React from "react";
 import { sampleShow, sampleShowNoGallery, sampleShowNoTicketLink } from "../../utilities/sampleTestData";
-import { shallow } from "enzyme";
 import ShowList from "./ShowList";
+import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const shows = [sampleShow];
 const showsNoGallery = [sampleShowNoGallery];
@@ -10,19 +10,15 @@ const showsNoTicketLink = [sampleShowNoTicketLink];
 
 describe("ShowList", () => {
   it("loads correctly for future shows", () => {
-    const component = shallow (<ShowList shows={shows} future="true" />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ShowList shows={shows} future="true" />)
   })
   it("loads correctly for past shows", () => {
-    const component = shallow (<ShowList shows={shows} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ShowList shows={shows} />)
   })
   it("loads correctly for past shows with no gallery", () => {
-    const component = shallow (<ShowList shows={showsNoGallery} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ShowList shows={showsNoGallery} />)
   })
   it("loads correctly for past shows with no ticket link", () => {
-    const component = shallow (<ShowList shows={showsNoTicketLink} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<ShowList shows={showsNoTicketLink} />)
   })
 });

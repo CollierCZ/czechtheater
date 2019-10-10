@@ -1,17 +1,15 @@
 import { basicInfoQuery } from "../../utilities/sampleTestData" 
-import React from "react"
-import { shallow } from "enzyme"
 import { PureSEO as SEO } from "./seo"
+import React from "react"
+import { simpleShallowRender } from "../../utilities/testHelpers"
 
 const renderSEO = (property,value) => {
   if (property) {
     const props = { [property]: value}
-    const component = shallow (<SEO data={basicInfoQuery} {...props} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<SEO data={basicInfoQuery} {...props} />)
   }
   else {
-    const component = shallow (<SEO data={basicInfoQuery} />)
-    expect(component).toMatchSnapshot()
+    simpleShallowRender(<SEO data={basicInfoQuery} />)
   }
 }
 
