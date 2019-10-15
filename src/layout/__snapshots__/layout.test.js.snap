@@ -30,11 +30,17 @@ exports[`Layout loads correctly 1`] = `
       >
         HTML5 UP
       </a>
-      . Built with 
+      . Powered by 
       <a
         href="https://www.gatsbyjs.org"
       >
         Gatsby
+      </a>
+       and 
+      <a
+        href="https://kontent.ai"
+      >
+        Kentico Kontent
       </a>
       .
     </footer>
