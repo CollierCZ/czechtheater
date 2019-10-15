@@ -5,8 +5,9 @@
   "version": "0.1.0",
   "author": "Aaron Collier",
   "dependencies": {
-    "@reach/dialog": "^0.2.8",
-    "gatsby": "^2.15.35",
+    "@babel/core": "^7.6.2",
+    "@reach/dialog": "^0.3.0",
+    "gatsby": "^2.16.1",
     "gatsby-image": "^2.2.27",
     "gatsby-plugin-manifest": "^2.2.21",
     "gatsby-plugin-offline": "^3.0.14",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.20",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.2",

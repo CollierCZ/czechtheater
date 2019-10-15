@@ -23,7 +23,7 @@ export const PureLayout = ({ children,data }) => {
       >
         <main>{children}</main>
         <footer>
-          © 2018&ndash;{new Date().getFullYear()} Czech Theater, z.s., IČO: 07245904. Theme inspired by <a href="https://html5up.net">HTML5 UP</a>. Built with <a href="https://www.gatsbyjs.org">Gatsby</a>.
+          © 2018&ndash;{new Date().getFullYear()} Czech Theater, z.s., IČO: 07245904. Theme inspired by <a href="https://html5up.net">HTML5 UP</a>. Powered by <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://kontent.ai">Kentico Kontent</a>.
         </footer>
       </div>
     </>
