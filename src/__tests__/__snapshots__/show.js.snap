@@ -23,7 +23,7 @@ exports[`A show loads correctly with a gallery 1`] = `
       alt="A cool image"
       sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
       src="https://example.com"
-      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800, https://example.com?w=1200&fit=crop 1200, "
+      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800w, https://example.com?w=1200&fit=crop 1200w, "
     />
   </div>
   <div
@@ -79,7 +79,7 @@ exports[`A show loads correctly with no gallery 1`] = `
       alt="A cool image"
       sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
       src="https://example.com"
-      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800, https://example.com?w=1200&fit=crop 1200, "
+      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800w, https://example.com?w=1200&fit=crop 1200w, "
     />
   </div>
   <div
