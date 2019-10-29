@@ -16,8 +16,8 @@
     "gatsby-source-kentico-cloud": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-helmet": "^5.2.0",
     "react-image-lightbox": "^5.1.0",
     "react-social-icons": "^4.1.0"
@@ -32,7 +32,7 @@
     "babel-preset-gatsby": "^0.2.20",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
-    "enzyme-to-json": "^3.4.2",
+    "enzyme-to-json": "^3.4.3",
     "jest": "^24.9.0"
   }
 }
