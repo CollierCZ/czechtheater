@@ -4,13 +4,16 @@ export const sampleShow = {
       value: "Alquist's revenge"
     },
     description: {
-      resolvedHtml: "<p>All the acting</p>"
+      resolvedHtml: "<p>All the acting in a longer way.</p>"
     },
     main_image: {
       assets: [{
         description: "A cool image",
         url: "https://example.com"
       }]
+    },
+    short_description: {
+      value: "<p>All the acting</p>"
     },
     ticket_link: {
       value: "https://example.com"

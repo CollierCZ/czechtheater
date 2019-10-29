@@ -11,7 +11,7 @@ const Show = ({data}) => {
   const mainImage = show.main_image.assets[0];
   return (
     <Layout>
-        <SEO image={mainImage.url} title={show.name.value} keywords={[`czech`, `theater`, `show`]} />
+        <SEO image={mainImage.url} description={show.short_description.value} title={show.name.value} keywords={[`czech`, `theater`, `show`]} />
         <h1>{show.name.value}</h1>
         <div className="mainImage">
             <img
@@ -57,6 +57,9 @@ export const query = graphql`
                 url
                 description
               }
+          }
+          short_description {
+            value
           }
           ticket_link {
             value

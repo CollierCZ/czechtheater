@@ -20,7 +20,7 @@ const IndexPage = ({data}) => {
       <section className ="future-shows">
         <h2>Future Shows</h2>
         <div className={"future showList"}>
-          <ShowList shows={data.futureShows.edges[0].node.elements.shows} future="true"/>
+          <ShowList shows={data.futureShows.elements.shows} future="true"/>
         </div>
       </section>
       <section className="theaterFacts" >
@@ -30,7 +30,7 @@ const IndexPage = ({data}) => {
       <section className="past-shows">
         <h2>Past Shows</h2>
         <div className={"past showList"}>
-          <ShowList shows={data.pastShows.edges[0].node.elements.shows} />
+          <ShowList shows={data.pastShows.elements.shows} />
         </div>
       </section>
       <section className="mission">
@@ -54,77 +54,12 @@ export const query = graphql`
     kenticoCloudItemBasicInfo {
       ...BasicInfoFragment
     }
-    futureShows: allKenticoCloudItemShowSection (filter: {system: {codename: {eq: "future_shows"}}}) {
-      edges {
-        node {
-          elements {
-            shows {
-              elements {
-                main_image {
-                  assets {
-                    url
-                    description
-                  }
-                }
-                name {
-                  value
-                }
-                url {
-                  value
-                }
-                description {
-                  resolvedHtml
-                }
-                ticket_link {
-                  value
-                }
-                gallery {
-                  assets {
-                    url
-                    description
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    futureShows: kenticoCloudItemShowSection (system: {codename: {eq: "future_shows"}}) {
+      ...ShowListFragment
     }
-    pastShows: allKenticoCloudItemShowSection (filter: {system: {codename: {eq: "past_shows"}}}) {
-      edges {
-        node {
-          elements {
-            shows {
-              elements {
-                main_image {
-                  assets {
-                    url
-                    description
-                  }
-                }
-                name {
-                  value
-                }
-                url {
-                  value
-                }
-                description {
-                  resolvedHtml
-                }
-                ticket_link {
-                  value
-                }
-                gallery {
-                  assets {
-                    url
-                    description
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    pastShows: kenticoCloudItemShowSection (system: {codename: {eq: "past_shows"}}) {
+      ...ShowListFragment
+      
   }
   facts: allKenticoCloudItemTheaterFact {
     edges {

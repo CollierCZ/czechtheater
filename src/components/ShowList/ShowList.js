@@ -4,11 +4,13 @@ import ShowCard from "../ShowCard/ShowCard"
 class ShowList extends React.Component {
   render() {
     const { shows, future } = this.props;
+    console.log(shows)
     return (
       shows.map(show => {
+        console.log(show.elements.short_description)
         let propsArray = {
           name: show.elements.name.value,
-          description: show.elements.description.resolvedHtml.substring(0, (show.elements.description.resolvedHtml.indexOf('</p>') + 4)),
+          description: show.elements.short_description.value,
           imageUrl: show.elements.main_image.assets[0].url,
           imageDescription: show.elements.main_image.assets[0].description,
           slug: show.elements.url.value
