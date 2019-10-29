@@ -3,6 +3,7 @@
 exports[`A show loads correctly with a gallery 1`] = `
 <Layout>
   <SEO
+    description="<p>All the acting</p>"
     image="https://example.com"
     keywords={
       Array [
@@ -30,7 +31,7 @@ exports[`A show loads correctly with a gallery 1`] = `
     className="showDescription"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<p>All the acting</p>",
+        "__html": "<p>All the acting in a longer way.</p>",
       }
     }
   />
@@ -59,6 +60,7 @@ exports[`A show loads correctly with a gallery 1`] = `
 exports[`A show loads correctly with no gallery 1`] = `
 <Layout>
   <SEO
+    description="<p>All the acting</p>"
     image="https://example.com"
     keywords={
       Array [
@@ -86,7 +88,7 @@ exports[`A show loads correctly with no gallery 1`] = `
     className="showDescription"
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<p>All the acting</p>",
+        "__html": "<p>All the acting in a longer way.</p>",
       }
     }
   />
