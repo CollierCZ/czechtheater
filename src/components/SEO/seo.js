@@ -4,9 +4,9 @@ import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 export const PureSEO = ({ description,image,data,keywords,pageTitle }) => {
-  const info = data.kenticoCloudItemBasicInfo.elements;
+  const info = data.kontentItemBasicInfo.elements;
   const homeTitle = info.name.value;
-  const favicon = info.favicon.assets[0].url;
+  const favicon = info.favicon.value[0].url;
   const ogImage = image ? image : favicon;
   const metaDescription = description ? description : info.short_description.value;
   const title = pageTitle ? pageTitle : homeTitle;
@@ -89,7 +89,7 @@ function SEO({ description, image, keywords, title }) {
     <StaticQuery
       query={graphql`
         query SEOQuery {
-          kenticoCloudItemBasicInfo {
+          kontentItemBasicInfo {
             ...BasicInfoFragment
           }
         }

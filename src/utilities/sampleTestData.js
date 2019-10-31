@@ -4,10 +4,12 @@ export const sampleShow = {
       value: "Alquist's revenge"
     },
     description: {
-      resolvedHtml: "<p>All the acting in a longer way.</p>"
+      resolvedData: {
+        html: "<p>All the acting in a longer way.</p>"
+      }
     },
     main_image: {
-      assets: [{
+      value: [{
         description: "A cool image",
         url: "https://example.com"
       }]
@@ -22,7 +24,7 @@ export const sampleShow = {
       value: "alquists-revenge"
     },
     gallery: {
-      assets: [{
+      value: [{
         description: "A cool image",
         url: "https://example.com"
       }]
@@ -31,7 +33,7 @@ export const sampleShow = {
 }
 
 let sampleShowNoGallery = JSON.parse(JSON.stringify(sampleShow))
-sampleShowNoGallery.elements.gallery.assets = []
+sampleShowNoGallery.elements.gallery.value = []
 
 let sampleShowNoTicketLink = JSON.parse(JSON.stringify(sampleShow))
 sampleShowNoTicketLink.elements.ticket_link.value = ""
@@ -39,13 +41,13 @@ sampleShowNoTicketLink.elements.ticket_link.value = ""
 export {sampleShowNoGallery,sampleShowNoTicketLink}
 
 export const basicInfoQuery = {
-  kenticoCloudItemBasicInfo: {
+  kontentItemBasicInfo: {
     elements: {
       name: {
         value: "Czech Theater"
       },
       favicon: {
-        assets: [{
+        value: [{
           url: "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
         }]
       },

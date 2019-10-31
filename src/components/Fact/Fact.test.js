@@ -1,14 +1,15 @@
 import Fact from "./Fact";
 import React from "react";
 import { simpleShallowRender } from "../../utilities/testHelpers"
-import { shallow } from "enzyme";
 
 const factsWithImage = {
   edges: [{
     node: {
       elements: {
         description: {
-          resolvedHtml: "<div>Testing inner HTML</div>"
+          resolvedData: {
+            html: "<div>Testing inner HTML</div>"
+          }
         },
         image: {
           value:[{
@@ -25,7 +26,9 @@ const factsNoImage = {
     node: {
       elements: {
         description: {
-          resolvedHtml: "<div>Testing inner HTML</div>"
+          resolvedData: {
+            html: "<div>Testing inner HTML</div>"
+          }
         },
         image: {
           value:[]

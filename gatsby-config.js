@@ -3,7 +3,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-kentico-cloud`,
+      resolve: `@kentico/gatsby-source-kontent`,
         options: {
           deliveryClientConfig: {
             projectId: `fb599585-baec-0077-1624-981d3321fff0` 

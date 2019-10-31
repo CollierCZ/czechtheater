@@ -1,18 +1,20 @@
 import { graphql } from 'gatsby';
 
 export const BasicInfoFragment = graphql`
-    fragment BasicInfoFragment on KenticoCloudItemBasicInfo {
+    fragment BasicInfoFragment on KontentItemBasicInfo {
         elements {
             about_us {
               value
             }
             contact_info {
-              resolvedHtml
+              resolvedData {
+                html
+              }
             }
             favicon {
-                assets{
-                  url
-                }
+              value {
+                url
+              }
             }
             name {
               value
@@ -28,32 +30,34 @@ export const BasicInfoFragment = graphql`
 `;
 
 export const ShowListFragment = graphql`
-    fragment ShowListFragment on KenticoCloudItemShowSection {
+    fragment ShowListFragment on KontentItemShowSection {
       elements {
         shows {
-          elements {
-            main_image {
-              assets {
-                url
-                description
+          linked_items {
+            elements {
+              main_image {
+                value {
+                  url
+                  description
+                }
               }
-            }
-            name {
-              value
-            }
-            url {
-              value
-            }
-            short_description {
-              value
-            }
-            ticket_link {
-              value
-            }
-            gallery {
-              assets {
-                url
-                description
+              name {
+                value
+              }
+              url {
+                value
+              }
+              short_description {
+                value
+              }
+              ticket_link {
+                value
+              }
+              gallery {
+                value {
+                  url
+                  description
+                }
               }
             }
           }
