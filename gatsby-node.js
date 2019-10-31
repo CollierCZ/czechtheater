@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
-    if (node.internal.type === `KenticoCloudItemShow`) {
+    if (node.internal.type === `KontentItemShow`) {
       createNodeField({
         node,
         name: `slug`,
@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
     return new Promise((resolve, reject) => {
       graphql(`
       {
-        allKenticoCloudItemShow {
+        allKontentItemShow {
           edges {
             node {
               fields {
@@ -26,7 +26,7 @@ exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
         }
       }
       `).then(result => {
-        result.data.allKenticoCloudItemShow.edges.forEach(({ node }) => {
+        result.data.allKontentItemShow.edges.forEach(({ node }) => {
             createPage({
                 path: node.fields.slug,
                 component: path.resolve(`src/templates/show.js`),

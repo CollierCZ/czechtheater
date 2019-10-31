@@ -7,8 +7,8 @@ import SEO from "../components/SEO/seo"
 import "./show.css"
 
 const Show = ({data}) => {
-  const show = data.kenticoCloudItemShow.elements;
-  const mainImage = show.main_image.assets[0];
+  const show = data.kontentItemShow.elements;
+  const mainImage = show.main_image.value[0];
   return (
     <Layout>
         <SEO image={mainImage.url} description={show.short_description.value} title={show.name.value} keywords={[`czech`, `theater`, `show`]} />
@@ -23,15 +23,15 @@ const Show = ({data}) => {
                 sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
                 src={mainImage.url} alt={mainImage.description} />
         </div>
-        <div className="showDescription" dangerouslySetInnerHTML={{ __html: show.description.resolvedHtml}} />
+        <div className="showDescription" dangerouslySetInnerHTML={{ __html: show.description.resolvedData.html}} />
         {show.ticket_link.value
             ?  
             <h4 className="tickets"><a href={show.ticket_link.value}>Tickets</a></h4>
             : null
         }
-        {show.gallery.assets[0]
+        {show.gallery.value[0]
             ?  
-            <Gallery images={show.gallery.assets} />
+            <Gallery images={show.gallery.value} />
             : null
         }
       
@@ -44,16 +44,18 @@ export default Show
 
 export const query = graphql`
   query show ($slug: String!) {
-    kenticoCloudItemShow (fields: { slug: { eq: $slug } }) {
+    kontentItemShow (fields: { slug: { eq: $slug } }) {
       elements {
         name {
             value
           }
           description {
-            resolvedHtml
+            resolvedData {
+              html
+            }
           }
           main_image {
-              assets {
+            value {
                 url
                 description
               }
@@ -65,7 +67,7 @@ export const query = graphql`
             value
           }
           gallery {
-            assets {
+            value {
               url
               description
             }

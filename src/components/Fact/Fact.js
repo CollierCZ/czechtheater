@@ -9,7 +9,7 @@ class Fact extends Component {
     return (    
 
       <div className="fact">
-        <div className="factText" dangerouslySetInnerHTML={{ __html: currentFact.node.elements.description.resolvedHtml}} />
+        <div className="factText" dangerouslySetInnerHTML={{ __html: currentFact.node.elements.description.resolvedData.html}} />
         {currentFact.node.elements.image.value[0] ? (
           <img src={currentFact.node.elements.image.value[0].url+"?w=250&h250"} alt="" className="factImage" /> ) : null
         }

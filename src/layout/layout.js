@@ -9,9 +9,9 @@ export const PureLayout = ({ children,data }) => {
   return (
     <>
       <Header 
-        siteTitle={data.kenticoCloudItemBasicInfo.elements.name.value} 
-        logoUrl={data.kenticoCloudItemBasicInfo.elements.favicon.assets[0].url} 
-        logoDescription={data.kenticoCloudItemBasicInfo.elements.favicon.assets[0].description}        
+        siteTitle={data.kontentItemBasicInfo.elements.name.value} 
+        logoUrl={data.kontentItemBasicInfo.elements.favicon.value[0].url} 
+        logoDescription={data.kontentItemBasicInfo.elements.favicon.value[0].description}        
       />
       <div
         style={{
@@ -39,7 +39,7 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
-        kenticoCloudItemBasicInfo {
+        kontentItemBasicInfo {
           ...BasicInfoFragment
         }
       }

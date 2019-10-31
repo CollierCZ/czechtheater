@@ -4,7 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b94c000265e7e4214395/maintainability)](https://codeclimate.com/github/CollierCZ/czechtheater/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b94c000265e7e4214395/test_coverage)](https://codeclimate.com/github/CollierCZ/czechtheater/test_coverage)
 
-A [website](https://czechtheater.cz) for an amateur theater in Brno built in [Gatsby](https://www.gatsbyjs.org/) with content pulled from [Kentico Cloud](https://kenticocloud.com) using a [source plugin](https://github.com/Kentico/gatsby-source-kentico-cloud).
+A [website](https://czechtheater.cz) for an amateur theater in Brno built in [Gatsby](https://www.gatsbyjs.org/) with content pulled from [Kentico Kontent](https://kontent.ai) using a [source plugin](https://github.com/Kentico/gatsby-source-kontent).
 
 ## Running in development
 `gatsby develop`

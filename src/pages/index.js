@@ -10,7 +10,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons"
 
 
 const IndexPage = ({data}) => {
-  const info = data.kenticoCloudItemBasicInfo.elements;
+  const info = data.kontentItemBasicInfo.elements;
   return (
     <Layout>
       <SEO />
@@ -39,7 +39,7 @@ const IndexPage = ({data}) => {
       </section>
       <section className="contact">
         <h2>Contact us</h2>
-        <div dangerouslySetInnerHTML={{ __html: info.contact_info.resolvedHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: info.contact_info.resolvedData.html }} />
         <SocialMediaIcons urls={info.social_media.value.split(",")} color="green" />
       </section>
     </Layout>
@@ -51,17 +51,17 @@ export default IndexPage
 
 export const query = graphql`
   query indexQuery {
-    kenticoCloudItemBasicInfo {
+    kontentItemBasicInfo {
       ...BasicInfoFragment
     }
-    futureShows: kenticoCloudItemShowSection (system: {codename: {eq: "future_shows"}}) {
+    futureShows: kontentItemShowSection (system: {codename: {eq: "future_shows"}}) {
       ...ShowListFragment
     }
-    pastShows: kenticoCloudItemShowSection (system: {codename: {eq: "past_shows"}}) {
+    pastShows: kontentItemShowSection (system: {codename: {eq: "past_shows"}}) {
       ...ShowListFragment
       
   }
-  facts: allKenticoCloudItemTheaterFact {
+  facts: allKontentItemTheaterFact {
     edges {
       node {
         system {
@@ -69,7 +69,9 @@ export const query = graphql`
         }
         elements {
           description {
-            resolvedHtml
+            resolvedData {
+              html
+            }
           }
           image {
             value {

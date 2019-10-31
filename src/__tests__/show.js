@@ -4,10 +4,10 @@ import Show from "../templates/show";
 import { simpleShallowRender } from "../utilities/testHelpers"
 
 const showToLoad = {}
-showToLoad['kenticoCloudItemShow'] = sampleShow
+showToLoad['kontentItemShow'] = sampleShow
 
 const showToLoadNoGallery = {}
-showToLoadNoGallery['kenticoCloudItemShow'] = sampleShowNoGallery
+showToLoadNoGallery['kontentItemShow'] = sampleShowNoGallery
 
 describe("A show", () => {
     it("loads correctly with a gallery", () => {

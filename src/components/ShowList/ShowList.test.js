@@ -3,9 +3,9 @@ import { sampleShow, sampleShowNoGallery, sampleShowNoTicketLink } from "../../u
 import ShowList from "./ShowList";
 import { simpleShallowRender } from "../../utilities/testHelpers";
 
-const shows = [sampleShow];
-const showsNoGallery = [sampleShowNoGallery];
-const showsNoTicketLink = [sampleShowNoTicketLink];
+const shows = {linked_items:[sampleShow]};
+const showsNoGallery = {linked_items:[sampleShowNoGallery]};
+const showsNoTicketLink = {linked_items:[sampleShowNoTicketLink]};
 
 
 describe("ShowList", () => {

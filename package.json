@@ -6,6 +6,7 @@
   "author": "Aaron Collier",
   "dependencies": {
     "@babel/core": "^7.6.2",
+    "@kentico/gatsby-source-kontent": "4.0.0-beta1",
     "@reach/dialog": "^0.4.0",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
@@ -13,14 +14,14 @@
     "gatsby-plugin-offline": "^3.0.17",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sharp": "^2.2.34",
-    "gatsby-source-kentico-cloud": "^3.0.1",
     "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.0",
     "react-image-lightbox": "^5.1.0",
-    "react-social-icons": "^4.1.0"
+    "react-social-icons": "^4.1.0",
+    "sharp": "^0.23.2"
   },
   "scripts": {
     "build": "gatsby build",
