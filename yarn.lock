@@ -1298,7 +1298,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^2.5.0":
+"@typescript-eslint/eslint-plugin@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.6.0.tgz#e82ed43fc4527b21bfe35c20a2d6e4ed49fc7957"
   integrity sha512-iCcXREU4RciLmLniwKLRPCOFVXrkF7z27XuHq5DrykpREv/mz6ztKAyLg2fdkM0hQC7659p5ZF5uStH7uzAJ/w==
@@ -1318,7 +1318,7 @@
     "@typescript-eslint/typescript-estree" "2.6.0"
     eslint-scope "^5.0.0"
 
-"@typescript-eslint/parser@^2.5.0":
+"@typescript-eslint/parser@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.6.0.tgz#5106295c6a7056287b4719e24aae8d6293d5af49"
   integrity sha512-AvLejMmkcjRTJ2KD72v565W4slSrrzUIzkReu1JN34b8JnsEsxx7S9Xx/qXEuMQas0mkdUfETr0j3zOhq2DIqQ==
@@ -2278,12 +2278,7 @@ blob@0.0.5:
   resolved "https://registry.yarnpkg.com/blob/-/blob-0.0.5.tgz#d680eeef25f8cd91ad533f5b01eed48e64caf683"
   integrity sha512-gaqbzQPqOoamawKg0LGVd7SzLgXS+JH61oWprSLH+P+abTczqJbhTR8CmJ2u9/bUYNmHTGJx/UEmn6doAvvuig==
 
-bluebird@^3.5.5:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.0.tgz#56a6a886e03f6ae577cffedeb524f8f2450293cf"
-  integrity sha512-aBQ1FxIa7kSWCcmKHlcHFlT2jt6J/l4FzC7KcPELkOJOsPOb/bccdhmIrKDfXhwFrmc7vDoDrrepFvGqjyXGJg==
-
-bluebird@^3.7.1:
+bluebird@^3.5.5, bluebird@^3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.1.tgz#df70e302b471d7473489acf26a93d63b53f874de"
   integrity sha512-DdmyoGCleJnkbp3nkbxTLJ18rjDsE4yCggEwKNXkeV123sPNfOCYeDoeuOY+F2FrSjO1YXcTU+dsy96KMy+gcg==
@@ -2468,16 +2463,7 @@ browserslist@3.2.8:
     caniuse-lite "^1.0.30000844"
     electron-to-chromium "^1.3.47"
 
-browserslist@^4.0.0, browserslist@^4.6.0, browserslist@^4.6.6:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.0.tgz#9ee89225ffc07db03409f2fee524dc8227458a17"
-  integrity sha512-9rGNDtnj+HaahxiVV38Gn8n8Lr8REKsel68v1sPFfIGEK6uSXTY3h9acgiT1dZVtOOUtifo/Dn8daDQ5dUgVsA==
-  dependencies:
-    caniuse-lite "^1.0.30000989"
-    electron-to-chromium "^1.3.247"
-    node-releases "^1.1.29"
-
-browserslist@^4.7.2:
+browserslist@^4.0.0, browserslist@^4.6.0, browserslist@^4.6.6, browserslist@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.7.2.tgz#1bb984531a476b5d389cedecb195b2cd69fb1348"
   integrity sha512-uZavT/gZXJd2UTi9Ov7/Z340WOSQ3+m1iBVRUknf+okKxonL9P83S3ctiBDtuRmRu8PiCHjqyueqQ9HYlJhxiw==
@@ -2682,7 +2668,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000989:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844:
   version "1.0.30000998"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000998.tgz#7227a8046841e7d01e156ae7227a504d065f6744"
   integrity sha512-8Tj5sPZR9kMHeDD9SZXIVr5m9ofufLLCG2Y4QwQrH18GIwG+kCc+zYdlR036ZRkuKjVVetyxeAgGA1xF7XdmzQ==
@@ -4050,15 +4036,15 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.247, electron-to-chromium@^1.3.47:
-  version "1.3.274"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.274.tgz#0fb4624c63eeaabe5aa079da5c2a966f5c916de3"
-  integrity sha512-9bWkiXxGylowqMXoF1ec7k6akmsL2nOa1kzZ4CKzBuwK9WVz0VauE1w/RVyYraE1LpJM7+8fNCsW9b7ZSoxWIg==
-
 electron-to-chromium@^1.3.295:
   version "1.3.296"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.296.tgz#a1d4322d742317945285d3ba88966561b67f3ac8"
   integrity sha512-s5hv+TSJSVRsxH190De66YHb50pBGTweT9XGWYu/LMR20KX6TsjFzObo36CjVAzM+PUeeKSBRtm/mISlCzeojQ==
+
+electron-to-chromium@^1.3.47:
+  version "1.3.274"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.274.tgz#0fb4624c63eeaabe5aa079da5c2a966f5c916de3"
+  integrity sha512-9bWkiXxGylowqMXoF1ec7k6akmsL2nOa1kzZ4CKzBuwK9WVz0VauE1w/RVyYraE1LpJM7+8fNCsW9b7ZSoxWIg==
 
 elliptic@^6.0.0:
   version "6.5.1"
@@ -5176,10 +5162,10 @@ functions-have-names@^1.1.1:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.1.1.tgz#79d35927f07b8e7103d819fed475b64ccf7225ea"
   integrity sha512-U0kNHUoxwPNPWOJaMG7Z00d4a/qZVrFtzWJRaK8V9goaVOCXBSQSJpt3MYGNtkScKEBKovxLjnNdC9MlXwo5Pw==
 
-gatsby-cli@^2.8.7:
-  version "2.8.7"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.7.tgz#172ef50075e075e97bf2fc949f9b650ef42376c2"
-  integrity sha512-/lp/afahhg2GSZv8cDFcIl6hsV2YZzAxkfuiM9gSDU8Pe6C19JaTex8PBGuXHR0NN2L4u7rItXe21beqxy9GAQ==
+gatsby-cli@^2.8.8:
+  version "2.8.8"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.8.8.tgz#b8f88ef4cfc42442ec805b02b3ad0d2340114881"
+  integrity sha512-j8xhEA3G0msqBY5Iu1ddZkBybV+gwiLEVOtO1GwSwv4moJunWkTjWW9tn9sVKOpQdRnEZ11z5ducVY/kBJRENA==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/runtime" "^7.6.3"
@@ -5336,10 +5322,10 @@ gatsby-telemetry@^1.1.35:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@^2.17.6:
-  version "2.17.6"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.6.tgz#b58459776333345dfdb0dfa5c59144a2646a11ea"
-  integrity sha512-JCAgtDxfdpKxKOxvT2OukZyef8cFc/4E/ZOKpziBHQY+eJq6510KKzD/52yRtXV/iw0ByA4RwGZEKrUovZLVQw==
+gatsby@^2.17.7:
+  version "2.17.7"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.7.tgz#8aa71868044a42e27dc0314f5c99bac8777e0ff5"
+  integrity sha512-gAqV+ZIdF2Tj55Rpt1Vmm0tTUsvdN+TgcA2R1MdsoAZ9VdALKpCNFJWe1EDB761qmjp8PGpHg9X2RMmxwrsq7Q==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.4"
@@ -5352,8 +5338,8 @@ gatsby@^2.17.6:
     "@mikaelkristiansson/domready" "^1.0.9"
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     "@reach/router" "^1.2.1"
-    "@typescript-eslint/eslint-plugin" "^2.5.0"
-    "@typescript-eslint/parser" "^2.5.0"
+    "@typescript-eslint/eslint-plugin" "^2.6.0"
+    "@typescript-eslint/parser" "^2.6.0"
     address "1.1.2"
     autoprefixer "^9.7.0"
     axios "^0.19.0"
@@ -5401,7 +5387,7 @@ gatsby@^2.17.6:
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^2.8.7"
+    gatsby-cli "^2.8.8"
     gatsby-core-utils "^1.0.17"
     gatsby-graphiql-explorer "^0.2.26"
     gatsby-link "^2.2.22"
@@ -5571,19 +5557,7 @@ glob-to-regexp@^0.3.0:
   resolved "https://registry.yarnpkg.com/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz#8c5a1494d2066c570cc3bfe4496175acc4d502ab"
   integrity sha1-jFoUlNIGbFcMw7/kSWF1rMTVAqs=
 
-glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
-  integrity sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
-glob@^7.1.5:
+glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.5:
   version "7.1.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.5.tgz#6714c69bee20f3c3e64c4dd905553e532b40cdc0"
   integrity sha512-J9dlskqUXK1OeTOYBEn5s8aMukWMwWfs+rPTn/jn50Ux4MNXVhubL1wu/j2t+H4NVI+cXEcCaYellqaPVGXNqQ==
@@ -8350,13 +8324,6 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
-
-node-releases@^1.1.29:
-  version "1.1.34"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.34.tgz#ced4655ee1ba9c3a2c5dcbac385e19434155fd40"
-  integrity sha512-fNn12JTEfniTuCqo0r9jXgl44+KxRH/huV7zM/KAGOKxDKrHr6EbT7SSs4B+DNxyBE2mks28AD+Jw6PkfY5uwA==
-  dependencies:
-    semver "^6.3.0"
 
 node-releases@^1.1.38:
   version "1.1.39"
