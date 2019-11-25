@@ -7,7 +7,7 @@
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@kentico/gatsby-source-kontent": "4.0.0-beta1",
-    "@reach/dialog": "^0.6.1",
+    "@reach/dialog": "^0.6.2",
     "gatsby": "^2.18.0",
     "gatsby-plugin-manifest": "^2.2.29",
     "gatsby-plugin-offline": "^3.0.22",
