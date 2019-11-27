@@ -8,8 +8,9 @@ const propsArray = {
   imageUrl: "https://example.com",
   imageDescription: "A cool image",
   slug: "alquists-revenge",
-  ticketLink: "https://example.com"
 }
+
+const ticketLink = "https://example.com"
 
 describe("ShowCard", () => {
   it("loads correctly for future shows", () => {
@@ -17,5 +18,8 @@ describe("ShowCard", () => {
   })
   it("loads correctly for past shows", () => {
     simpleShallowRender(<ShowCard {...propsArray} time="past" />)
+  })
+  it("loads correctly with a ticket link", () => {
+    simpleShallowRender(<ShowCard {...propsArray} ticketLink={ticketLink} time="future" />)
   })
 })

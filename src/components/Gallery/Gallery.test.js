@@ -5,12 +5,12 @@ import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const images = [
   {
-    description: "A description",
-    url: "https://example.com/1"
+    description: "The theater logo (image 1)",
+    url: "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
   },
   {
-    description: "A description",
-    url: "https://example.com/2"
+    description: "RUR banner (image 2)",
+    url: "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
   },
 ]
 
@@ -41,5 +41,8 @@ describe("Lightbox", () => {
   })
   it("moves to the previous image correcly", () => {
     openLightbox('.ril__navButtonPrev')
+  })
+  it("closes correcly", () => {
+    openLightbox('.ril__closeButton')
   })
 })
