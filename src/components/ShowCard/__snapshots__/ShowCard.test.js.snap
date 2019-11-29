@@ -12,15 +12,6 @@ exports[`ShowCard loads correctly for future shows 1`] = `
       src="https://example.com?w=353&h=353&fit=crop"
     />
   </div>
-  <h4
-    className="tickets"
-  >
-    <a
-      href="https://example.com"
-    >
-      Tickets
-    </a>
-  </h4>
   <a
     href="alquists-revenge"
   >
@@ -51,6 +42,45 @@ exports[`ShowCard loads correctly for past shows 1`] = `
       src="https://example.com?w=353&h=353&fit=crop"
     />
   </div>
+  <a
+    href="alquists-revenge"
+  >
+    <h3>
+      Alquist's revenge
+    </h3>
+    <div
+      className="showDescription"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "All the acting",
+        }
+      }
+    />
+  </a>
+</div>
+`;
+
+exports[`ShowCard loads correctly with a ticket link 1`] = `
+<div
+  className="future showCard"
+>
+  <div
+    className="image"
+  >
+    <img
+      alt="A cool image"
+      src="https://example.com?w=353&h=353&fit=crop"
+    />
+  </div>
+  <h4
+    className="tickets"
+  >
+    <a
+      href="https://example.com"
+    >
+      Tickets
+    </a>
+  </h4>
   <a
     href="alquists-revenge"
   >
