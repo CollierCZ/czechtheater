@@ -10,7 +10,7 @@
     "@reach/dialog": "^0.6.4",
     "gatsby": "^2.18.6",
     "gatsby-plugin-manifest": "^2.2.31",
-    "gatsby-plugin-offline": "^3.0.29",
+    "gatsby-plugin-offline": "^3.0.30",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.6.2",
