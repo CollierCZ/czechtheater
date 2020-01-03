@@ -34,29 +34,31 @@ export const ShowListFragment = graphql`
       elements {
         shows {
           linked_items {
-            elements {
-              main_image {
-                value {
-                  url
-                  description
+            ... on KontentItemShow {
+              elements {
+                main_image {
+                  value {
+                    url
+                    description
+                  }
                 }
-              }
-              name {
-                value
-              }
-              url {
-                value
-              }
-              short_description {
-                value
-              }
-              ticket_link {
-                value
-              }
-              gallery {
-                value {
-                  url
-                  description
+                name {
+                  value
+                }
+                url {
+                  value
+                }
+                short_description {
+                  value
+                }
+                ticket_link {
+                  value
+                }
+                gallery {
+                  value {
+                    url
+                    description
+                  }
                 }
               }
             }
