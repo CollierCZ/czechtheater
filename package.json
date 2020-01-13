@@ -9,7 +9,7 @@
     "@kentico/gatsby-source-kontent": "4.0.0",
     "@reach/dialog": "^0.7.0",
     "gatsby": "^2.18.17",
-    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^3.0.31",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "identity-obj-proxy": "^3.0.0",
