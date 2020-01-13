@@ -1080,21 +1080,21 @@
     string-width "^2.0.0"
     strip-ansi "^3"
 
-"@reach/dialog@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.0.tgz#4bf1a47974861863cfc6fcbf3a79279d18e56352"
-  integrity sha512-4CTxvpYwnv3dRGD3ZmyeLAl6zUQJRxrl5lfkTQW2hU+AqWaaPpVwh7JeZoXQfe0GzaTSmOHlcKTQuhLMYRF4zw==
+"@reach/dialog@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.2.tgz#70f561eba5aa197e33d4048f8c535e4573984d97"
+  integrity sha512-+bjGJsxJP38DUO36tAKvG/I0okZiaIiHrN3VoDbhfRxQ+NE0eBI7CPyuDqAQBIWlT//HZt4Z3CykQleA6+ZU0w==
   dependencies:
-    "@reach/portal" "^0.7.0"
-    "@reach/utils" "^0.7.0"
+    "@reach/portal" "^0.7.2"
+    "@reach/utils" "^0.7.2"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
 
-"@reach/portal@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.0.tgz#25f68ac468017e79a4bced20bf1b434db52edc7e"
-  integrity sha512-k+QHjbrnQvOvJuQPr8G/SlBWcdmgHDTguH96zIOgMOq55L9CoId4I8NKXksUTG3iWKpPx12S+uIOML+yDykI+w==
+"@reach/portal@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.2.tgz#6ed3d226d4ba52564b1dcdff6a07a16a0848dcd6"
+  integrity sha512-5WRYEyNG+WBm+ohXOojfiUpwAL3S3zOrV8sKNmaN6dhnOf7ggmoO2qSI4qMNjIlG4RT86SdgfsUy3bgkZ8MaoQ==
 
 "@reach/router@^1.2.1":
   version "1.2.1"
@@ -1107,10 +1107,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/utils@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.0.tgz#d089552bee11b9900cb8b54d4f151362a509eb54"
-  integrity sha512-sqPUQzpA+ofGd+38kZ3PylG5NrsbPCP6U+W5+YOrrxGDobX04807ofNRrq30unGo1ueIBzwcm5C5pu33FshpmQ==
+"@reach/utils@^0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.2.tgz#0bc91cc449a5a9be5735b4626c920ee3e74e0e8b"
+  integrity sha512-oGmA5eqM1f4NAyFSQvyFCcRRvgFTSiiPhw8Djn5PGfPY+sgmfyrUsJpo9FwJnl7P0nKb4liWq5jbWlZXUtWhLQ==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
