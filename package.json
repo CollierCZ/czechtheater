@@ -6,7 +6,7 @@
   "author": "Aaron Collier",
   "dependencies": {
     "@babel/core": "^7.8.3",
-    "@kentico/gatsby-source-kontent": "4.2.0",
+    "@kentico/gatsby-source-kontent": "4.3.0",
     "@reach/dialog": "^0.7.3",
     "gatsby": "^2.19.5",
     "gatsby-plugin-manifest": "^2.2.38",
