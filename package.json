@@ -8,7 +8,7 @@
     "@babel/core": "^7.8.4",
     "@kentico/gatsby-source-kontent": "4.3.0",
     "@reach/dialog": "^0.8.0",
-    "gatsby": "^2.19.12",
+    "gatsby": "^2.19.17",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-offline": "^3.0.34",
     "gatsby-plugin-react-helmet": "^3.1.22",
