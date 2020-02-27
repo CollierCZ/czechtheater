@@ -13,6 +13,9 @@ export const BasicInfoFragment = graphql`
             }
             favicon {
               value {
+                fixed(height: 150, width: 150) {
+                  srcWebp
+                }
                 url
               }
             }

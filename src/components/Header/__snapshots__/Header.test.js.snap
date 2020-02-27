@@ -5,7 +5,9 @@ exports[`Header loads correctly 1`] = `
   <mockConstructor
     to="/"
   >
-    <img />
+    <img
+      alt=""
+    />
     <div
       className="siteName"
     />
