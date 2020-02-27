@@ -75,7 +75,9 @@ export const query = graphql`
           }
           image {
             value {
-              url
+              fixed(width: 250, fit: "scale") {
+                ...KontentAssetFixed_withWebp
+              }
             }
           }
         }

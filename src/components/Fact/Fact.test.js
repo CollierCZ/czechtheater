@@ -1,5 +1,6 @@
 import Fact from "./Fact";
 import React from "react";
+import { sampleKenticoFixedData } from "../../utilities/sampleTestData"
 import { simpleShallowRender } from "../../utilities/testHelpers"
 
 const factsWithImage = {
@@ -13,7 +14,7 @@ const factsWithImage = {
         },
         image: {
           value:[{
-            url: "https://example.com"
+            fixed: sampleKenticoFixedData
           }]
         }
       }

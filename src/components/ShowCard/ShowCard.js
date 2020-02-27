@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import Img from "gatsby-image";
 import "./ShowCard.css"
 
 class ShowCard extends Component {
   render() {
-    const { name, description, imageUrl, imageDescription, slug, time, ticketLink  } = this.props;
+    const { name, description, imageSrc, imageDescription, slug, time, ticketLink  } = this.props;
     return (
       <div className={time + " showCard"} >
         <div className="image">
-          <img 
-            src={imageUrl + "?w=353&h=353&fit=crop"}
+          <Img 
+            fluid={imageSrc}
             alt={imageDescription}
           />
         </div>
