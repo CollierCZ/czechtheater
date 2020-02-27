@@ -4,7 +4,7 @@ exports[`A show loads correctly with a gallery 1`] = `
 <Layout>
   <SEO
     description="<p>All the acting</p>"
-    image="https://example.com"
+    image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={
       Array [
         "czech",
@@ -17,16 +17,32 @@ exports[`A show loads correctly with a gallery 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <div
-    className="mainImage"
-  >
-    <img
-      alt="A cool image"
-      sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
-      src="https://example.com"
-      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800w, https://example.com?w=1200&fit=crop 1200w, "
-    />
-  </div>
+  <Image
+    Tag="div"
+    alt="A cool image"
+    durationFadeIn={500}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.1961722488038278,
+        "description": "A cool image",
+        "presentationHeight": 480,
+        "presentationWidth": 720,
+        "sizes": "(max-width: 720px) 100vw, 720px",
+        "src": "/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg",
+        "srcSet": "/static/c2ec33c63d96920564e01b5e545af3da/ac4cf/cat-on-the-rails.jpg 500w,
+/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg 720w",
+        "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='800'%3e%3cpath%20d='M0%2014v14l3-1%202%201-3%202c-2%200-2%201-2%205l1%205v1a162%20162%200%20000%2042l-1%204c0%204%203%204%204%200%200-3%202-4%202-1h2c5-1%204%202%200%204-3%201-4%202-4%204s0%202-2%202c-2-1-2%200-2%209l1%209c3%200%203%202%201%206-2%203-2%204-1%205v2l-1%208c0%205%200%206%201%205%202-2%203-1%203%202%200%202%200%202-2%202-2-1-2-1-2%203l1%204v10c-2%204-1%2013%201%2014l3%201H2c-4%202-2%2013%203%2013l1-1c0-1%201-2%203-2l5-2%202%201-2%201c-2%201-2%201-1%203%203%202%202%204-1%206-2%202-3%202-4%201-1-2-7-4-8-4v12c0%2011%201%2014%202%2011l5-1%206-2%203%201-14%204c-2%200-2%200-2%2013v12a947%20947%200%200016%203H0v10l1%2010v1l-1%204c0%203%200%203%203%203l2%201-3%201c-2%200-2%201-2%2014v14h4l4%201c1-1%202%201%200%203l-2%203c0%204-2%206-3%204v-2c2%200%201-2%200-2-3%200-4%205-2%207%202%201%202%202%201%202l-2%202c0%201%201%202%206%202%206%200%207%200%209%203%206%205%209%204%206-2-1-3-1-5%202-5l1%201c…",
+      }
+    }
+    loading="lazy"
+    style={
+      Object {
+        "maxHeight": 480,
+        "maxWidth": 720,
+      }
+    }
+  />
   <div
     className="showDescription"
     dangerouslySetInnerHTML={
@@ -61,7 +77,7 @@ exports[`A show loads correctly with no gallery 1`] = `
 <Layout>
   <SEO
     description="<p>All the acting</p>"
-    image="https://example.com"
+    image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={
       Array [
         "czech",
@@ -74,16 +90,32 @@ exports[`A show loads correctly with no gallery 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <div
-    className="mainImage"
-  >
-    <img
-      alt="A cool image"
-      sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
-      src="https://example.com"
-      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800w, https://example.com?w=1200&fit=crop 1200w, "
-    />
-  </div>
+  <Image
+    Tag="div"
+    alt="A cool image"
+    durationFadeIn={500}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.1961722488038278,
+        "description": "A cool image",
+        "presentationHeight": 480,
+        "presentationWidth": 720,
+        "sizes": "(max-width: 720px) 100vw, 720px",
+        "src": "/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg",
+        "srcSet": "/static/c2ec33c63d96920564e01b5e545af3da/ac4cf/cat-on-the-rails.jpg 500w,
+/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg 720w",
+        "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='800'%3e%3cpath%20d='M0%2014v14l3-1%202%201-3%202c-2%200-2%201-2%205l1%205v1a162%20162%200%20000%2042l-1%204c0%204%203%204%204%200%200-3%202-4%202-1h2c5-1%204%202%200%204-3%201-4%202-4%204s0%202-2%202c-2-1-2%200-2%209l1%209c3%200%203%202%201%206-2%203-2%204-1%205v2l-1%208c0%205%200%206%201%205%202-2%203-1%203%202%200%202%200%202-2%202-2-1-2-1-2%203l1%204v10c-2%204-1%2013%201%2014l3%201H2c-4%202-2%2013%203%2013l1-1c0-1%201-2%203-2l5-2%202%201-2%201c-2%201-2%201-1%203%203%202%202%204-1%206-2%202-3%202-4%201-1-2-7-4-8-4v12c0%2011%201%2014%202%2011l5-1%206-2%203%201-14%204c-2%200-2%200-2%2013v12a947%20947%200%200016%203H0v10l1%2010v1l-1%204c0%203%200%203%203%203l2%201-3%201c-2%200-2%201-2%2014v14h4l4%201c1-1%202%201%200%203l-2%203c0%204-2%206-3%204v-2c2%200%201-2%200-2-3%200-4%205-2%207%202%201%202%202%201%202l-2%202c0%201%201%202%206%202%206%200%207%200%209%203%206%205%209%204%206-2-1-3-1-5%202-5l1%201c…",
+      }
+    }
+    loading="lazy"
+    style={
+      Object {
+        "maxHeight": 480,
+        "maxWidth": 720,
+      }
+    }
+  />
   <div
     className="showDescription"
     dangerouslySetInnerHTML={
@@ -108,7 +140,7 @@ exports[`A show loads correctly with no tickets 1`] = `
 <Layout>
   <SEO
     description="<p>All the acting</p>"
-    image="https://example.com"
+    image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={
       Array [
         "czech",
@@ -121,16 +153,32 @@ exports[`A show loads correctly with no tickets 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <div
-    className="mainImage"
-  >
-    <img
-      alt="A cool image"
-      sizes="(max-width: 400px) 360px,(max-width: 800px) 760px,(max-width: 1200) 1140px"
-      src="https://example.com"
-      srcSet="https://example.com?w=400&fit=crop 400w, https://example.com?w=800&fit=crop 800w, https://example.com?w=1200&fit=crop 1200w, "
-    />
-  </div>
+  <Image
+    Tag="div"
+    alt="A cool image"
+    durationFadeIn={500}
+    fadeIn={true}
+    fluid={
+      Object {
+        "aspectRatio": 1.1961722488038278,
+        "description": "A cool image",
+        "presentationHeight": 480,
+        "presentationWidth": 720,
+        "sizes": "(max-width: 720px) 100vw, 720px",
+        "src": "/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg",
+        "srcSet": "/static/c2ec33c63d96920564e01b5e545af3da/ac4cf/cat-on-the-rails.jpg 500w,
+/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg 720w",
+        "tracedSVG": "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='800'%3e%3cpath%20d='M0%2014v14l3-1%202%201-3%202c-2%200-2%201-2%205l1%205v1a162%20162%200%20000%2042l-1%204c0%204%203%204%204%200%200-3%202-4%202-1h2c5-1%204%202%200%204-3%201-4%202-4%204s0%202-2%202c-2-1-2%200-2%209l1%209c3%200%203%202%201%206-2%203-2%204-1%205v2l-1%208c0%205%200%206%201%205%202-2%203-1%203%202%200%202%200%202-2%202-2-1-2-1-2%203l1%204v10c-2%204-1%2013%201%2014l3%201H2c-4%202-2%2013%203%2013l1-1c0-1%201-2%203-2l5-2%202%201-2%201c-2%201-2%201-1%203%203%202%202%204-1%206-2%202-3%202-4%201-1-2-7-4-8-4v12c0%2011%201%2014%202%2011l5-1%206-2%203%201-14%204c-2%200-2%200-2%2013v12a947%20947%200%200016%203H0v10l1%2010v1l-1%204c0%203%200%203%203%203l2%201-3%201c-2%200-2%201-2%2014v14h4l4%201c1-1%202%201%200%203l-2%203c0%204-2%206-3%204v-2c2%200%201-2%200-2-3%200-4%205-2%207%202%201%202%202%201%202l-2%202c0%201%201%202%206%202%206%200%207%200%209%203%206%205%209%204%206-2-1-3-1-5%202-5l1%201c…",
+      }
+    }
+    loading="lazy"
+    style={
+      Object {
+        "maxHeight": 480,
+        "maxWidth": 720,
+      }
+    }
+  />
   <div
     className="showDescription"
     dangerouslySetInnerHTML={

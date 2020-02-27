@@ -3,16 +3,18 @@
 exports[`ShowList loads correctly for future shows 1`] = `
 <ShowCard
   description="<p>All the acting</p>"
-  gallery={
-    Array [
-      Object {
-        "description": "A cool image",
-        "url": "https://example.com",
-      },
-    ]
-  }
   imageDescription="A cool image"
-  imageUrl="https://example.com"
+  imageSrc={
+    Object {
+      "aspectRatio": 1,
+      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
+      "sizes": "(max-width: 353px) 100vw, 353px",
+      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
+      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
+      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
+      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+    }
+  }
   key="Alquist's revenge"
   name="Alquist's revenge"
   slug="alquists-revenge"
@@ -24,30 +26,18 @@ exports[`ShowList loads correctly for future shows 1`] = `
 exports[`ShowList loads correctly for past shows 1`] = `
 <ShowCard
   description="<p>All the acting</p>"
-  gallery={
-    Array [
-      Object {
-        "description": "A cool image",
-        "url": "https://example.com",
-      },
-    ]
+  imageDescription="A cool image"
+  imageSrc={
+    Object {
+      "aspectRatio": 1,
+      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
+      "sizes": "(max-width: 353px) 100vw, 353px",
+      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
+      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
+      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
+      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+    }
   }
-  imageDescription="A cool image"
-  imageUrl="https://example.com"
-  key="Alquist's revenge"
-  name="Alquist's revenge"
-  slug="alquists-revenge"
-  ticketLink="https://example.com"
-  time="past"
-/>
-`;
-
-exports[`ShowList loads correctly for past shows with no gallery 1`] = `
-<ShowCard
-  description="<p>All the acting</p>"
-  gallery={Array []}
-  imageDescription="A cool image"
-  imageUrl="https://example.com"
   key="Alquist's revenge"
   name="Alquist's revenge"
   slug="alquists-revenge"
@@ -59,16 +49,18 @@ exports[`ShowList loads correctly for past shows with no gallery 1`] = `
 exports[`ShowList loads correctly for past shows with no ticket link 1`] = `
 <ShowCard
   description="<p>All the acting</p>"
-  gallery={
-    Array [
-      Object {
-        "description": "A cool image",
-        "url": "https://example.com",
-      },
-    ]
-  }
   imageDescription="A cool image"
-  imageUrl="https://example.com"
+  imageSrc={
+    Object {
+      "aspectRatio": 1,
+      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
+      "sizes": "(max-width: 353px) 100vw, 353px",
+      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
+      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
+      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
+      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+    }
+  }
   key="Alquist's revenge"
   name="Alquist's revenge"
   slug="alquists-revenge"

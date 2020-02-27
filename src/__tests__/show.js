@@ -1,16 +1,16 @@
 import React from "react";
-import { sampleShow, sampleShowNoGallery, sampleShowNoTicketLink } from "../utilities/sampleTestData";
+import { sampleShowForPage, sampleShowForPageNoGallery, sampleShowForPageNoTicketLink } from "../utilities/sampleTestData";
 import Show from "../templates/show";
 import { simpleShallowRender } from "../utilities/testHelpers"
 
 const showToLoad = {}
-showToLoad['kontentItemShow'] = sampleShow
+showToLoad['kontentItemShow'] = sampleShowForPage
 
 const showToLoadNoGallery = {}
-showToLoadNoGallery['kontentItemShow'] = sampleShowNoGallery
+showToLoadNoGallery['kontentItemShow'] = sampleShowForPageNoGallery
 
 const showToLoadNoTickets = {}
-showToLoadNoTickets['kontentItemShow'] = sampleShowNoTicketLink
+showToLoadNoTickets['kontentItemShow'] = sampleShowForPageNoTicketLink
 
 describe("A show", () => {
     it("loads correctly with a gallery", () => {

@@ -3,13 +3,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: `@kentico/gatsby-source-kontent`,
-        options: {
-          deliveryClientConfig: {
-            projectId: `fb599585-baec-0077-1624-981d3321fff0` 
-          },
-          languageCodenames: [
-            `en-US`
-          ]
+      options: {
+        deliveryClientConfig: {
+          projectId: `fb599585-baec-0077-1624-981d3321fff0`
+        },
+        languageCodenames: [`en-US`]
       }
     },
     {
@@ -21,9 +19,17 @@ module.exports = {
         background_color: `#d7141a`,
         theme_color: `#d7141a`,
         display: `minimal-ui`,
-        icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/logo.jpg` // This path is relative to the root of the site.
+      }
+    },
+    {
+      resolve: `@rshackleton/gatsby-transformer-kontent-image`,
+      options: {
+        local: true
       },
     },
-    'gatsby-plugin-offline',
-  ],
-}
+    "gatsby-plugin-offline",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
+  ]
+};

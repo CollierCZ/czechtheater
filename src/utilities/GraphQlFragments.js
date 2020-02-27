@@ -38,7 +38,9 @@ export const ShowListFragment = graphql`
               elements {
                 main_image {
                   value {
-                    url
+                    fluid(maxHeight: 353, maxWidth: 353, fit: "crop") {
+                      ...KontentAssetFluid_withWebp
+                    }
                     description
                   }
                 }
@@ -53,12 +55,6 @@ export const ShowListFragment = graphql`
                 }
                 ticket_link {
                   value
-                }
-                gallery {
-                  value {
-                    url
-                    description
-                  }
                 }
               }
             }

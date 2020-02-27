@@ -1,16 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery correctly opens lightbox 1`] = `
+exports[`Gallery correctly opens lightbox on click 1`] = `
 <Gallery
   images={
     Array [
       Object {
         "description": "The theater logo (image 1)",
-        "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
       Object {
         "description": "RUR banner (image 2)",
-        "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
     ]
   }
@@ -23,42 +33,1643 @@ exports[`Gallery correctly opens lightbox 1`] = `
       image={
         Object {
           "description": "The theater logo (image 1)",
-          "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={0}
       key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="The theater logo (image 1)"
-          src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="The theater logo (image 1)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="The theater logo (image 1)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"The theater logo (image 1)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <GalleryImage
       handler={[Function]}
       image={
         Object {
           "description": "RUR banner (image 2)",
-          "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={1}
       key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="RUR banner (image 2)"
-          src="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="RUR banner (image 2)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="RUR banner (image 2)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"RUR banner (image 2)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
+    </GalleryImage>
+    <ReactImageLightbox
+      animationDisabled={false}
+      animationDuration={300}
+      animationOnKeyInput={false}
+      clickOutsideToClose={true}
+      closeLabel="Close lightbox"
+      discourageDownloads={false}
+      enableZoom={true}
+      imageCaption="The theater logo (image 1)"
+      imageCrossOrigin={null}
+      imageLoadErrorMessage="This image failed to load"
+      imagePadding={10}
+      imageTitle={null}
+      keyRepeatKeyupBonus={40}
+      keyRepeatLimit={180}
+      mainSrc="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+      mainSrcThumbnail={null}
+      nextLabel="Next image"
+      nextSrc="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
+      nextSrcThumbnail={null}
+      onAfterOpen={[Function]}
+      onCloseRequest={[Function]}
+      onImageLoad={[Function]}
+      onImageLoadError={[Function]}
+      onMoveNextRequest={[Function]}
+      onMovePrevRequest={[Function]}
+      prevLabel="Previous image"
+      prevSrc="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
+      prevSrcThumbnail={null}
+      reactModalProps={Object {}}
+      reactModalStyle={Object {}}
+      toolbarButtons={null}
+      wrapperClassName=""
+      zoomInLabel="Zoom in"
+      zoomOutLabel="Zoom out"
+    >
+      <Modal
+        appElement={
+          <body
+            aria-hidden="true"
+            class="ReactModal__Body--open"
+          >
+            <div
+              class="ReactModalPortal"
+            >
+              <div
+                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
+              >
+                <div
+                  aria-label="Lightbox"
+                  class="ReactModal__Content ReactModal__Content--after-open"
+                  role="dialog"
+                  style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
+                  tabindex="-1"
+                >
+                  <div
+                    class="ril-outer ril__outer ril__outerAnimating  "
+                    style="transition: opacity 300ms; animation-duration: 300ms; animation-direction: reverse;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="ril-inner ril__inner"
+                    >
+                      <div
+                        class="ril-image-next ril__imageNext ril__image ril-not-loaded"
+                        style="transform: translate3d(1024px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ril-image-current ril__image ril-not-loaded"
+                        style="transform: translate3d(0px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ril-image-prev ril__imagePrev ril__image ril-not-loaded"
+                        style="transform: translate3d(-1024px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      aria-label="Previous image"
+                      class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      type="button"
+                    />
+                    <button
+                      aria-label="Next image"
+                      class="ril-next-button ril__navButtons ril__navButtonNext"
+                      type="button"
+                    />
+                    <div
+                      class="ril-toolbar ril__toolbar"
+                    >
+                      <ul
+                        class="ril-toolbar-left ril__toolbarSide ril__toolbarLeftSide"
+                      >
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <span
+                            class="ril-toolbar__item__child ril__toolbarItemChild"
+                          />
+                        </li>
+                      </ul>
+                      <ul
+                        class="ril-toolbar-right ril__toolbarSide ril__toolbarRightSide"
+                      >
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Zoom in"
+                            class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            type="button"
+                          />
+                        </li>
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Zoom out"
+                            class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
+                            disabled=""
+                            type="button"
+                          />
+                        </li>
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Close lightbox"
+                            class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            type="button"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        The theater logo (image 1)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+        }
+        ariaHideApp={true}
+        bodyOpenClassName="ReactModal__Body--open"
+        closeTimeoutMS={0}
+        contentLabel="Lightbox"
+        isOpen={true}
+        onAfterOpen={[Function]}
+        onRequestClose={[Function]}
+        parentSelector={[Function]}
+        portalClassName="ReactModalPortal"
+        role="dialog"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        shouldFocusAfterRender={true}
+        shouldReturnFocusAfterClose={true}
+        style={
+          Object {
+            "content": Object {
+              "backgroundColor": "transparent",
+              "border": "none",
+              "borderRadius": 0,
+              "bottom": 0,
+              "left": 0,
+              "overflow": "hidden",
+              "padding": 0,
+              "right": 0,
+              "top": 0,
+            },
+            "overlay": Object {
+              "backgroundColor": "transparent",
+              "zIndex": 1000,
+            },
+          }
+        }
+      >
+        <Portal
+          containerInfo={
+            <div
+              class="ReactModalPortal"
+            >
+              <div
+                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
+              >
+                <div
+                  aria-label="Lightbox"
+                  class="ReactModal__Content ReactModal__Content--after-open"
+                  role="dialog"
+                  style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
+                  tabindex="-1"
+                >
+                  <div
+                    class="ril-outer ril__outer ril__outerAnimating  "
+                    style="transition: opacity 300ms; animation-duration: 300ms; animation-direction: reverse;"
+                    tabindex="-1"
+                  >
+                    <div
+                      class="ril-inner ril__inner"
+                    >
+                      <div
+                        class="ril-image-next ril__imageNext ril__image ril-not-loaded"
+                        style="transform: translate3d(1024px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ril-image-current ril__image ril-not-loaded"
+                        style="transform: translate3d(0px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="ril-image-prev ril__imagePrev ril__image ril-not-loaded"
+                        style="transform: translate3d(-1024px,0px,0) scale3d(NaN,NaN,1);"
+                      >
+                        <div
+                          class="ril__loadingContainer"
+                        >
+                          <div
+                            class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                          >
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                            <div
+                              class="ril-loading-circle-point ril__loadingCirclePoint"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      aria-label="Previous image"
+                      class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      type="button"
+                    />
+                    <button
+                      aria-label="Next image"
+                      class="ril-next-button ril__navButtons ril__navButtonNext"
+                      type="button"
+                    />
+                    <div
+                      class="ril-toolbar ril__toolbar"
+                    >
+                      <ul
+                        class="ril-toolbar-left ril__toolbarSide ril__toolbarLeftSide"
+                      >
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <span
+                            class="ril-toolbar__item__child ril__toolbarItemChild"
+                          />
+                        </li>
+                      </ul>
+                      <ul
+                        class="ril-toolbar-right ril__toolbarSide ril__toolbarRightSide"
+                      >
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Zoom in"
+                            class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            type="button"
+                          />
+                        </li>
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Zoom out"
+                            class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
+                            disabled=""
+                            type="button"
+                          />
+                        </li>
+                        <li
+                          class="ril-toolbar__item ril__toolbarItem"
+                        >
+                          <button
+                            aria-label="Close lightbox"
+                            class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            type="button"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="ril-caption ril__caption"
+                    >
+                      <div
+                        class="ril-caption-content ril__captionContent"
+                      >
+                        The theater logo (image 1)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        >
+          <ModalPortal
+            appElement={
+              <body
+                aria-hidden="true"
+                class="ReactModal__Body--open"
+              >
+                <div
+                  class="ReactModalPortal"
+                >
+                  <div
+                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
+                  >
+                    <div
+                      aria-label="Lightbox"
+                      class="ReactModal__Content ReactModal__Content--after-open"
+                      role="dialog"
+                      style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
+                      tabindex="-1"
+                    >
+                      <div
+                        class="ril-outer ril__outer ril__outerAnimating  "
+                        style="transition: opacity 300ms; animation-duration: 300ms; animation-direction: reverse;"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="ril-inner ril__inner"
+                        >
+                          <div
+                            class="ril-image-next ril__imageNext ril__image ril-not-loaded"
+                            style="transform: translate3d(1024px,0px,0) scale3d(NaN,NaN,1);"
+                          >
+                            <div
+                              class="ril__loadingContainer"
+                            >
+                              <div
+                                class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                              >
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="ril-image-current ril__image ril-not-loaded"
+                            style="transform: translate3d(0px,0px,0) scale3d(NaN,NaN,1);"
+                          >
+                            <div
+                              class="ril__loadingContainer"
+                            >
+                              <div
+                                class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                              >
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="ril-image-prev ril__imagePrev ril__image ril-not-loaded"
+                            style="transform: translate3d(-1024px,0px,0) scale3d(NaN,NaN,1);"
+                          >
+                            <div
+                              class="ril__loadingContainer"
+                            >
+                              <div
+                                class="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                              >
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                                <div
+                                  class="ril-loading-circle-point ril__loadingCirclePoint"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          aria-label="Previous image"
+                          class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          type="button"
+                        />
+                        <button
+                          aria-label="Next image"
+                          class="ril-next-button ril__navButtons ril__navButtonNext"
+                          type="button"
+                        />
+                        <div
+                          class="ril-toolbar ril__toolbar"
+                        >
+                          <ul
+                            class="ril-toolbar-left ril__toolbarSide ril__toolbarLeftSide"
+                          >
+                            <li
+                              class="ril-toolbar__item ril__toolbarItem"
+                            >
+                              <span
+                                class="ril-toolbar__item__child ril__toolbarItemChild"
+                              />
+                            </li>
+                          </ul>
+                          <ul
+                            class="ril-toolbar-right ril__toolbarSide ril__toolbarRightSide"
+                          >
+                            <li
+                              class="ril-toolbar__item ril__toolbarItem"
+                            >
+                              <button
+                                aria-label="Zoom in"
+                                class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                                type="button"
+                              />
+                            </li>
+                            <li
+                              class="ril-toolbar__item ril__toolbarItem"
+                            >
+                              <button
+                                aria-label="Zoom out"
+                                class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
+                                disabled=""
+                                type="button"
+                              />
+                            </li>
+                            <li
+                              class="ril-toolbar__item ril__toolbarItem"
+                            >
+                              <button
+                                aria-label="Close lightbox"
+                                class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                type="button"
+                              />
+                            </li>
+                          </ul>
+                        </div>
+                        <div
+                          class="ril-caption ril__caption"
+                        >
+                          <div
+                            class="ril-caption-content ril__captionContent"
+                          >
+                            The theater logo (image 1)
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </body>
+            }
+            ariaHideApp={true}
+            bodyOpenClassName="ReactModal__Body--open"
+            closeTimeoutMS={0}
+            contentLabel="Lightbox"
+            defaultStyles={
+              Object {
+                "content": Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "background": "#fff",
+                  "border": "1px solid #ccc",
+                  "borderRadius": "4px",
+                  "bottom": "40px",
+                  "left": "40px",
+                  "outline": "none",
+                  "overflow": "auto",
+                  "padding": "20px",
+                  "position": "absolute",
+                  "right": "40px",
+                  "top": "40px",
+                },
+                "overlay": Object {
+                  "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "fixed",
+                  "right": 0,
+                  "top": 0,
+                },
+              }
+            }
+            isOpen={true}
+            onAfterOpen={[Function]}
+            onRequestClose={[Function]}
+            parentSelector={[Function]}
+            portalClassName="ReactModalPortal"
+            role="dialog"
+            shouldCloseOnEsc={true}
+            shouldCloseOnOverlayClick={true}
+            shouldFocusAfterRender={true}
+            shouldReturnFocusAfterClose={true}
+            style={
+              Object {
+                "content": Object {
+                  "backgroundColor": "transparent",
+                  "border": "none",
+                  "borderRadius": 0,
+                  "bottom": 0,
+                  "left": 0,
+                  "overflow": "hidden",
+                  "padding": 0,
+                  "right": 0,
+                  "top": 0,
+                },
+                "overlay": Object {
+                  "backgroundColor": "transparent",
+                  "zIndex": 1000,
+                },
+              }
+            }
+          >
+            <div
+              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "fixed",
+                  "right": 0,
+                  "top": 0,
+                  "zIndex": 1000,
+                }
+              }
+            >
+              <div
+                aria-label="Lightbox"
+                className="ReactModal__Content ReactModal__Content--after-open"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
+                role="dialog"
+                style={
+                  Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "background": "#fff",
+                    "backgroundColor": "transparent",
+                    "border": "none",
+                    "borderRadius": 0,
+                    "bottom": 0,
+                    "left": 0,
+                    "outline": "none",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+                tabIndex="-1"
+              >
+                <div
+                  className="ril-outer ril__outer ril__outerAnimating  "
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseMove={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  onWheel={[Function]}
+                  style={
+                    Object {
+                      "animationDirection": "reverse",
+                      "animationDuration": "300ms",
+                      "transition": "opacity 300ms",
+                    }
+                  }
+                  tabIndex="-1"
+                >
+                  <div
+                    className="ril-inner ril__inner"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="ril-image-next ril__imageNext ril__image ril-not-loaded"
+                      key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=cropi1"
+                      style={
+                        Object {
+                          "transform": "translate3d(1024px,0px,0) scale3d(NaN,NaN,1)",
+                        }
+                      }
+                    >
+                      <div
+                        className="ril__loadingContainer"
+                      >
+                        <div
+                          className="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                        >
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="0"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="1"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="2"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="3"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="4"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="5"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="6"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="7"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="8"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="9"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="10"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="11"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="ril-image-current ril__image ril-not-loaded"
+                      key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpgi0"
+                      style={
+                        Object {
+                          "transform": "translate3d(0px,0px,0) scale3d(NaN,NaN,1)",
+                        }
+                      }
+                    >
+                      <div
+                        className="ril__loadingContainer"
+                      >
+                        <div
+                          className="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                        >
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="0"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="1"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="2"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="3"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="4"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="5"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="6"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="7"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="8"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="9"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="10"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="11"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="ril-image-prev ril__imagePrev ril__image ril-not-loaded"
+                      key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=cropi-1"
+                      style={
+                        Object {
+                          "transform": "translate3d(-1024px,0px,0) scale3d(NaN,NaN,1)",
+                        }
+                      }
+                    >
+                      <div
+                        className="ril__loadingContainer"
+                      >
+                        <div
+                          className="ril-loading-circle ril__loadingCircle ril__loadingContainer__icon"
+                        >
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="0"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="1"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="2"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="3"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="4"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="5"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="6"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="7"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="8"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="9"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="10"
+                          />
+                          <div
+                            className="ril-loading-circle-point ril__loadingCirclePoint"
+                            key="11"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    aria-label="Previous image"
+                    className="ril-prev-button ril__navButtons ril__navButtonPrev"
+                    key="prev"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <button
+                    aria-label="Next image"
+                    className="ril-next-button ril__navButtons ril__navButtonNext"
+                    key="next"
+                    onClick={[Function]}
+                    type="button"
+                  />
+                  <div
+                    className="ril-toolbar ril__toolbar"
+                  >
+                    <ul
+                      className="ril-toolbar-left ril__toolbarSide ril__toolbarLeftSide"
+                    >
+                      <li
+                        className="ril-toolbar__item ril__toolbarItem"
+                      >
+                        <span
+                          className="ril-toolbar__item__child ril__toolbarItemChild"
+                        />
+                      </li>
+                    </ul>
+                    <ul
+                      className="ril-toolbar-right ril__toolbarSide ril__toolbarRightSide"
+                    >
+                      <li
+                        className="ril-toolbar__item ril__toolbarItem"
+                      >
+                        <button
+                          aria-label="Zoom in"
+                          className="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                          disabled={false}
+                          key="zoom-in"
+                          onClick={[Function]}
+                          type="button"
+                        />
+                      </li>
+                      <li
+                        className="ril-toolbar__item ril__toolbarItem"
+                      >
+                        <button
+                          aria-label="Zoom out"
+                          className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
+                          disabled={true}
+                          key="zoom-out"
+                          type="button"
+                        />
+                      </li>
+                      <li
+                        className="ril-toolbar__item ril__toolbarItem"
+                      >
+                        <button
+                          aria-label="Close lightbox"
+                          className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                          key="close"
+                          onClick={[Function]}
+                          type="button"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    className="ril-caption ril__caption"
+                    onMouseDown={[Function]}
+                    onWheel={[Function]}
+                  >
+                    <div
+                      className="ril-caption-content ril__captionContent"
+                    >
+                      The theater logo (image 1)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ModalPortal>
+        </Portal>
+      </Modal>
+    </ReactImageLightbox>
+  </div>
+</Gallery>
+`;
+
+exports[`Gallery correctly opens lightbox on keypress 1`] = `
+<Gallery
+  images={
+    Array [
+      Object {
+        "description": "The theater logo (image 1)",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+      },
+      Object {
+        "description": "RUR banner (image 2)",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+      },
+    ]
+  }
+>
+  <div
+    className="gallery"
+  >
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "The theater logo (image 1)",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+        }
+      }
+      index={0}
+      key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+    >
+      <button
+        className="image"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+      >
+        <Image
+          Tag="div"
+          alt="The theater logo (image 1)"
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="The theater logo (image 1)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="The theater logo (image 1)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"The theater logo (image 1)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
+    </GalleryImage>
+    <GalleryImage
+      handler={[Function]}
+      image={
+        Object {
+          "description": "RUR banner (image 2)",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+        }
+      }
+      index={1}
+      key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
+    >
+      <button
+        className="image"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+      >
+        <Image
+          Tag="div"
+          alt="RUR banner (image 2)"
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="RUR banner (image 2)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="RUR banner (image 2)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"RUR banner (image 2)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
@@ -1292,7 +2903,12 @@ exports[`Gallery renders correctly  1`] = `
     image={
       Object {
         "description": "The theater logo (image 1)",
-        "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       }
     }
     index={0}
@@ -1303,7 +2919,12 @@ exports[`Gallery renders correctly  1`] = `
     image={
       Object {
         "description": "RUR banner (image 2)",
-        "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       }
     }
     index={1}
@@ -1318,11 +2939,21 @@ exports[`Lightbox closes correcly 1`] = `
     Array [
       Object {
         "description": "The theater logo (image 1)",
-        "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
       Object {
         "description": "RUR banner (image 2)",
-        "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
     ]
   }
@@ -1335,42 +2966,196 @@ exports[`Lightbox closes correcly 1`] = `
       image={
         Object {
           "description": "The theater logo (image 1)",
-          "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={0}
       key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="The theater logo (image 1)"
-          src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="The theater logo (image 1)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="The theater logo (image 1)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"The theater logo (image 1)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <GalleryImage
       handler={[Function]}
       image={
         Object {
           "description": "RUR banner (image 2)",
-          "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={1}
       key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="RUR banner (image 2)"
-          src="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="RUR banner (image 2)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="RUR banner (image 2)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"RUR banner (image 2)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
@@ -2603,11 +4388,21 @@ exports[`Lightbox moves to the next image correcly 1`] = `
     Array [
       Object {
         "description": "The theater logo (image 1)",
-        "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
       Object {
         "description": "RUR banner (image 2)",
-        "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
     ]
   }
@@ -2620,42 +4415,196 @@ exports[`Lightbox moves to the next image correcly 1`] = `
       image={
         Object {
           "description": "The theater logo (image 1)",
-          "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={0}
       key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="The theater logo (image 1)"
-          src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="The theater logo (image 1)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="The theater logo (image 1)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"The theater logo (image 1)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <GalleryImage
       handler={[Function]}
       image={
         Object {
           "description": "RUR banner (image 2)",
-          "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={1}
       key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="RUR banner (image 2)"
-          src="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="RUR banner (image 2)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="RUR banner (image 2)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"RUR banner (image 2)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
@@ -3888,11 +5837,21 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
     Array [
       Object {
         "description": "The theater logo (image 1)",
-        "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
       Object {
         "description": "RUR banner (image 2)",
-        "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        "fixed": Object {
+          "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+        },
+        "fluid": Object {
+          "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+        },
       },
     ]
   }
@@ -3905,42 +5864,196 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
       image={
         Object {
           "description": "The theater logo (image 1)",
-          "url": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={0}
       key="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="The theater logo (image 1)"
-          src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="The theater logo (image 1)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="The theater logo (image 1)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"The theater logo (image 1)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <GalleryImage
       handler={[Function]}
       image={
         Object {
           "description": "RUR banner (image 2)",
-          "url": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          "fixed": Object {
+            "src": "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop",
+          },
+          "fluid": Object {
+            "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+          },
         }
       }
       index={1}
       key="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
     >
-      <div
+      <button
         className="image"
         onClick={[Function]}
+        onKeyPress={[Function]}
       >
-        <img
+        <Image
+          Tag="div"
           alt="RUR banner (image 2)"
-          src="https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop?w=250&h=250&fit=crop"
-        />
-      </div>
+          durationFadeIn={500}
+          fadeIn={true}
+          fluid={
+            Object {
+              "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg",
+            }
+          }
+          loading="lazy"
+        >
+          <div
+            className=" gatsby-image-wrapper"
+            key="fluid-undefined"
+            style={
+              Object {
+                "overflow": "hidden",
+                "position": "relative",
+              }
+            }
+          >
+            <div
+              aria-hidden={true}
+              style={
+                Object {
+                  "paddingBottom": "NaN%",
+                  "width": "100%",
+                }
+              }
+            />
+            <picture>
+              <source />
+              <ForwardRef
+                alt="RUR banner (image 2)"
+                loading="lazy"
+                onLoad={[Function]}
+                src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                style={
+                  Object {
+                    "opacity": 0,
+                    "transition": "opacity 500ms",
+                  }
+                }
+              >
+                <img
+                  alt="RUR banner (image 2)"
+                  loading="lazy"
+                  onLoad={[Function]}
+                  src="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+                  style={
+                    Object {
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "cover",
+                      "objectPosition": "center",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "opacity 500ms",
+                      "width": "100%",
+                    }
+                  }
+                />
+              </ForwardRef>
+            </picture>
+            <noscript
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<picture><source srcset=\\"undefined\\" /><img loading=\\"lazy\\" src=\\"https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg\\" alt=\\"RUR banner (image 2)\\" style=\\"position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center\\"/></picture>",
+                }
+              }
+            />
+          </div>
+        </Image>
+      </button>
     </GalleryImage>
     <ReactImageLightbox
       animationDisabled={false}
