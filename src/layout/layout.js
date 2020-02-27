@@ -10,7 +10,7 @@ export const PureLayout = ({ children,data }) => {
     <>
       <Header 
         siteTitle={data.kontentItemBasicInfo.elements.name.value} 
-        logoUrl={data.kontentItemBasicInfo.elements.favicon.value[0].url} 
+        logoUrl={data.kontentItemBasicInfo.elements.favicon.value[0].fixed.srcWebp} 
         logoDescription={data.kontentItemBasicInfo.elements.favicon.value[0].description}        
       />
       <div

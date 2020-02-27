@@ -35,9 +35,11 @@ export const sampleGatsbyFluidData = {
   presentationWidth: 720,
   sizes: "(max-width: 720px) 100vw, 720px",
   src: "/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg",
-  srcSet: "/static/c2ec33c63d96920564e01b5e545af3da/ac4cf/cat-on-the-rails.jpg 500w,\n/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg 720w",
-  tracedSVG: "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='800'%3e%3cpath%20d='M0%2014v14l3-1%202%201-3%202c-2%200-2%201-2%205l1%205v1a162%20162%200%20000%2042l-1%204c0%204%203%204%204%200%200-3%202-4%202-1h2c5-1%204%202%200%204-3%201-4%202-4%204s0%202-2%202c-2-1-2%200-2%209l1%209c3%200%203%202%201%206-2%203-2%204-1%205v2l-1%208c0%205%200%206%201%205%202-2%203-1%203%202%200%202%200%202-2%202-2-1-2-1-2%203l1%204v10c-2%204-1%2013%201%2014l3%201H2c-4%202-2%2013%203%2013l1-1c0-1%201-2%203-2l5-2%202%201-2%201c-2%201-2%201-1%203%203%202%202%204-1%206-2%202-3%202-4%201-1-2-7-4-8-4v12c0%2011%201%2014%202%2011l5-1%206-2%203%201-14%204c-2%200-2%200-2%2013v12a947%20947%200%200016%203H0v10l1%2010v1l-1%204c0%203%200%203%203%203l2%201-3%201c-2%200-2%201-2%2014v14h4l4%201c1-1%202%201%200%203l-2%203c0%204-2%206-3%204v-2c2%200%201-2%200-2-3%200-4%205-2%207%202%201%202%202%201%202l-2%202c0%201%201%202%206%202%206%200%207%200%209%203%206%205%209%204%206-2-1-3-1-5%202-5l1%201c…"
-}
+  srcSet:
+    "/static/c2ec33c63d96920564e01b5e545af3da/ac4cf/cat-on-the-rails.jpg 500w,\n/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg 720w",
+  tracedSVG:
+    "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='1200'%20height='800'%3e%3cpath%20d='M0%2014v14l3-1%202%201-3%202c-2%200-2%201-2%205l1%205v1a162%20162%200%20000%2042l-1%204c0%204%203%204%204%200%200-3%202-4%202-1h2c5-1%204%202%200%204-3%201-4%202-4%204s0%202-2%202c-2-1-2%200-2%209l1%209c3%200%203%202%201%206-2%203-2%204-1%205v2l-1%208c0%205%200%206%201%205%202-2%203-1%203%202%200%202%200%202-2%202-2-1-2-1-2%203l1%204v10c-2%204-1%2013%201%2014l3%201H2c-4%202-2%2013%203%2013l1-1c0-1%201-2%203-2l5-2%202%201-2%201c-2%201-2%201-1%203%203%202%202%204-1%206-2%202-3%202-4%201-1-2-7-4-8-4v12c0%2011%201%2014%202%2011l5-1%206-2%203%201-14%204c-2%200-2%200-2%2013v12a947%20947%200%200016%203H0v10l1%2010v1l-1%204c0%203%200%203%203%203l2%201-3%201c-2%200-2%201-2%2014v14h4l4%201c1-1%202%201%200%203l-2%203c0%204-2%206-3%204v-2c2%200%201-2%200-2-3%200-4%205-2%207%202%201%202%202%201%202l-2%202c0%201%201%202%206%202%206%200%207%200%209%203%206%205%209%204%206-2-1-3-1-5%202-5l1%201c…"
+};
 
 export const sampleShow = {
   elements: {
@@ -78,13 +80,15 @@ export const sampleShow = {
 };
 
 let sampleShowForPage = JSON.parse(JSON.stringify(sampleShow));
-sampleShowForPage.elements. main_image.value = [{
-  localFile: {
-    childImageSharp: {
-      fluid: sampleGatsbyFluidData
+sampleShowForPage.elements.main_image.value = [
+  {
+    localFile: {
+      childImageSharp: {
+        fluid: sampleGatsbyFluidData
+      }
     }
   }
-}];
+];
 
 let sampleShowNoTicketLink = JSON.parse(JSON.stringify(sampleShow));
 sampleShowNoTicketLink.elements.ticket_link.value = "";
@@ -92,10 +96,17 @@ sampleShowNoTicketLink.elements.ticket_link.value = "";
 let sampleShowForPageNoGallery = JSON.parse(JSON.stringify(sampleShowForPage));
 sampleShowForPageNoGallery.elements.gallery.value = [];
 
-let sampleShowForPageNoTicketLink = JSON.parse(JSON.stringify(sampleShowForPage));
+let sampleShowForPageNoTicketLink = JSON.parse(
+  JSON.stringify(sampleShowForPage)
+);
 sampleShowForPageNoTicketLink.elements.ticket_link.value = "";
 
-export { sampleShowForPage, sampleShowForPageNoGallery, sampleShowForPageNoTicketLink, sampleShowNoTicketLink };
+export {
+  sampleShowForPage,
+  sampleShowForPageNoGallery,
+  sampleShowForPageNoTicketLink,
+  sampleShowNoTicketLink
+};
 
 export const basicInfoQuery = {
   kontentItemBasicInfo: {
@@ -106,6 +117,10 @@ export const basicInfoQuery = {
       favicon: {
         value: [
           {
+            fixed: {
+              srcWebp:
+                "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?fm=webp&w=88&h=88"
+            },
             url:
               "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
           }
