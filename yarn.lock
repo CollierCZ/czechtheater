@@ -1316,10 +1316,10 @@
   dependencies:
     core-js "^2.5.7"
 
-"@kentico/gatsby-source-kontent@4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.3.0.tgz#888c195904c726d489e099702260b29e02e32d41"
-  integrity sha512-c9LY0fLx+Jw49I6ByZWLSvGqqC0q/A0Axnl3vxQCkZD8VlY76rpr3v39zk3yE1RYVvvC/lssq9sGiSr621xUMQ==
+"@kentico/gatsby-source-kontent@4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@kentico/gatsby-source-kontent/-/gatsby-source-kontent-4.4.0.tgz#802c754fb58c02126d69aa254f5bc774b0671d96"
+  integrity sha512-uX1iK1rgeshd284ep7Ld9hYjPIhFN6ie70QOGHK7iSZEuSNd4VD33ynTr9F6hYQgb2gM56bW1V3VriRAMIlzUw==
   dependencies:
     "@kentico/kontent-delivery" "^9.0.0"
     change-case "^3.1.0"
@@ -12097,14 +12097,7 @@ rx-lite@*, rx-lite@^4.0.8:
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
   integrity sha1-Cx4Rr4vESDbwSmQH6S2kJGe3lEQ=
 
-rxjs@^6.4.0:
-  version "6.5.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
-  integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
-  dependencies:
-    tslib "^1.9.0"
-
-rxjs@^6.5.3, rxjs@^6.5.4:
+rxjs@^6.4.0, rxjs@^6.5.3, rxjs@^6.5.4:
   version "6.5.4"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
   integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
