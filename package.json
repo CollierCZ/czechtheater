@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
-    "@kentico/gatsby-source-kontent": "4.4.0",
+    "@kentico/gatsby-source-kontent": "6.0.1",
     "@reach/dialog": "^0.10.2",
     "@rshackleton/gatsby-transformer-kontent-image": "^0.1.0-beta.6",
     "gatsby": "^2.21.33",
