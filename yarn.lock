@@ -1756,10 +1756,10 @@
     tslib "^1.11.2"
     warning "^4.0.3"
 
-"@rshackleton/gatsby-transformer-kontent-image@^0.1.0-beta.6":
-  version "0.1.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@rshackleton/gatsby-transformer-kontent-image/-/gatsby-transformer-kontent-image-0.1.0-beta.6.tgz#9f2302521fe0ef2e0e91471407e74f244b7dfd8f"
-  integrity sha512-hBOmeTulP0j6TtQDybP7SJEvTU9JOWAMJvFahnWudOZFv46V7cdxNMZsRzT/jE6MEoq35DBKYqIHk3dT8qj/zg==
+"@rshackleton/gatsby-transformer-kontent-image@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@rshackleton/gatsby-transformer-kontent-image/-/gatsby-transformer-kontent-image-1.0.0.tgz#4eb0d3aaaf638586ea8a923b8f2acd8bd6eb1203"
+  integrity sha512-FUe62G4evWVwkW/MDQQhtOdIRIWOmdmiJAJ7PJ/Q345IHIi6w163cpIn+6bZaFKr5ys2S/MUnkgWGM3JpZbH0w==
   dependencies:
     "@kentico/kontent-delivery" "^8.2.0"
     "@types/fs-extra" "^8.0.1"
