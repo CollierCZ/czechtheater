@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- "lts/erbium"
+  - "lts/erbium"
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
@@ -8,5 +8,4 @@ before_script:
 script:
   - yarn test
   - yarn build
-after_script:
-  ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+after_script: ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
