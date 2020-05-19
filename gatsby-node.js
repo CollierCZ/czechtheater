@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 exports.onCreateNode = ({ node, actions: { createNodeField } }) => {
-    if (node.internal.type === `KontentItemShow`) {
+    if (node.internal.type === `kontent_item_show`) {
       createNodeField({
         node,
         name: `slug`,

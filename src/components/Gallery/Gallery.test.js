@@ -7,19 +7,31 @@ const images = [
   {
     description: "The theater logo (image 1)",
     fixed: {
-      src: "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+      width: 100,
+      height: 100,
+      src: `test_image_1.jpg`,
+      srcSet: `a_srcSet`,
     },
     fluid: {
-      src: "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+      aspectRatio: 1.5,
+      src: `test_image.jpg`,
+      srcSet: `some srcSet`,
+      sizes: `(max-width: 600px) 100vw, 600px`,
     }
   },
   {
     description: "RUR banner (image 2)",
     fixed: {
-      src: "https://assets-us-01.kc-usercontent.com/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?w=1200&fit=crop"
+      width: 100,
+      height: 100,
+      src: `test_image_2.jpg`,
+      srcSet: `a_second_srcSet`,
     },
     fluid: {
-      src: "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg"
+      aspectRatio: 1.5,
+      src: `test_image_2.jpg`,
+      srcSet: `a_second_srcSet`,
+      sizes: `(max-width: 600px) 100vw, 600px`,
     }
   },
 ]

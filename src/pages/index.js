@@ -39,7 +39,7 @@ const IndexPage = ({data}) => {
       </section>
       <section className="contact">
         <h2>Contact us</h2>
-        <div dangerouslySetInnerHTML={{ __html: info.contact_info.resolvedData.html }} />
+        <div dangerouslySetInnerHTML={{ __html: info.contact_info.value }} />
         <SocialMediaIcons urls={info.social_media.value.split(",")} color="green" />
       </section>
     </Layout>
@@ -69,9 +69,7 @@ export const query = graphql`
         }
         elements {
           description {
-            resolvedData {
-              html
-            }
+            value
           }
           image {
             value {

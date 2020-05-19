@@ -13,7 +13,7 @@ class Fact extends Component {
         <div
           className="factText"
           dangerouslySetInnerHTML={{
-            __html: currentFact.node.elements.description.resolvedData.html
+            __html: currentFact.node.elements.description.value
           }}
         />
         {currentFact.node.elements.image.value[0] ? (
