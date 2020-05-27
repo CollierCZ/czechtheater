@@ -1,15 +1,13 @@
 import { graphql } from 'gatsby';
 
 export const BasicInfoFragment = graphql`
-    fragment BasicInfoFragment on KontentItemBasicInfo {
+    fragment BasicInfoFragment on kontent_item_basic_info {
         elements {
             about_us {
               value
             }
             contact_info {
-              resolvedData {
-                html
-              }
+              value
             }
             favicon {
               value {
@@ -33,11 +31,11 @@ export const BasicInfoFragment = graphql`
 `;
 
 export const ShowListFragment = graphql`
-    fragment ShowListFragment on KontentItemShowSection {
+    fragment ShowListFragment on kontent_item_show_section {
       elements {
         shows {
-          linked_items {
-            ... on KontentItemShow {
+          value {
+            ... on kontent_item_show {
               elements {
                 main_image {
                   value {

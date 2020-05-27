@@ -5,7 +5,7 @@ class ShowList extends React.Component {
   render() {
     const { shows, future } = this.props;
     return (
-      shows.linked_items.map(show => {
+      shows.value.map(show => {
         let propsArray = {
           name: show.elements.name.value,
           description: show.elements.short_description.value,

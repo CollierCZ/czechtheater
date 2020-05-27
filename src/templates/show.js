@@ -29,7 +29,7 @@ const Show = ({ data }) => {
       />
       <div
         className="showDescription"
-        dangerouslySetInnerHTML={{ __html: show.description.resolvedData.html }}
+        dangerouslySetInnerHTML={{ __html: show.description.value }}
       />
       {show.ticket_link.value ? (
         <h4 className="tickets">
@@ -51,9 +51,7 @@ export const query = graphql`
           value
         }
         description {
-          resolvedData {
-            html
-          }
+          value
         }
         main_image {
           value {

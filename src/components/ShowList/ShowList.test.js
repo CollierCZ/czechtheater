@@ -3,8 +3,8 @@ import { sampleShow, sampleShowNoTicketLink } from "../../utilities/sampleTestDa
 import ShowList from "./ShowList";
 import { simpleShallowRender } from "../../utilities/testHelpers";
 
-const shows = {linked_items:[sampleShow]};
-const showsNoTicketLink = {linked_items:[sampleShowNoTicketLink]};
+const shows = {value:[sampleShow]};
+const showsNoTicketLink = {value:[sampleShowNoTicketLink]};
 
 
 describe("ShowList", () => {
