@@ -14,32 +14,33 @@
     "@kentico/gatsby-source-kontent": "6.0.1",
     "@reach/dialog": "^0.10.3",
     "@rshackleton/gatsby-transformer-kontent-image": "^2.0.0",
-    "gatsby": "^2.22.15",
-    "gatsby-image": "^2.4.5",
-    "gatsby-plugin-manifest": "^2.4.9",
-    "gatsby-plugin-offline": "^3.2.1",
-    "gatsby-plugin-react-helmet": "^3.3.2",
-    "gatsby-plugin-sharp": "^2.6.9",
-    "gatsby-transformer-sharp": "^2.5.3",
+    "gatsby": "^2.23.1",
+    "gatsby-image": "^2.4.6",
+    "gatsby-plugin-manifest": "^2.4.10",
+    "gatsby-plugin-offline": "^3.2.8",
+    "gatsby-plugin-react-helmet": "^3.3.3",
+    "gatsby-plugin-sharp": "^2.6.10",
+    "gatsby-transformer-sharp": "^2.5.4",
     "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0",
     "react-image-lightbox": "^5.1.1",
     "react-social-icons": "^4.1.0",
     "rxjs": "^6.5.5"
   },
   "devDependencies": {
     "babel-jest": "^26.0.1",
-    "babel-preset-gatsby": "^0.4.2",
+    "babel-preset-gatsby": "^0.4.8",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
     "jest": "^26.0.1"
   },
   "resolutions": {
+    "@babel/helper-call-delegate": "^7.10.1",
     "@babel/helper-function-name": "^7.9.5",
-    "@babel/helper-explode-assignable-expression": "7.8.3"
+    "@babel/helper-explode-assignable-expression": "7.10.1"
   }
 }
