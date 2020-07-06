@@ -28,7 +28,7 @@
     "react-helmet": "^6.1.0",
     "react-image-lightbox": "^5.1.1",
     "react-social-icons": "^4.1.0",
-    "rxjs": "^6.5.5"
+    "rxjs": "^6.6.0"
   },
   "devDependencies": {
     "babel-jest": "^26.1.0",
