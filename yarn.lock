@@ -1925,10 +1925,10 @@
     tslib "^2.0.0"
     warning "^4.0.3"
 
-"@rshackleton/gatsby-transformer-kontent-image@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@rshackleton/gatsby-transformer-kontent-image/-/gatsby-transformer-kontent-image-2.0.0.tgz#43982b2e5bb7a30e2e0e482914547fdf27f0efb4"
-  integrity sha512-BU79Ddhq+owDRURWjmN0s0PHxt1GFo37bw4egpYeOJ8O4JuNS8Tn8rlJ8SfxuQUin2YmhgRqep5DbOFc347apw==
+"@rshackleton/gatsby-transformer-kontent-image@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@rshackleton/gatsby-transformer-kontent-image/-/gatsby-transformer-kontent-image-2.1.0.tgz#0d3ad79e1dbc916beee3dced3247edcb08a6b561"
+  integrity sha512-KrXejJvqwJPTGQwYPjMrsxhzv1AQfixLUtEKFtZnEeEkw6qs+J794u31D7irxxkeyZd4QCbO8QhTeWLj4TBtjw==
   dependencies:
     "@kentico/kontent-delivery" "^8.2.0"
     "@types/fs-extra" "^8.0.1"
