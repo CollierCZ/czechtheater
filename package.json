@@ -19,7 +19,7 @@
     "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-offline": "^3.2.27",
     "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-sharp": "^2.6.31",
+    "gatsby-plugin-sharp": "^2.6.35",
     "gatsby-transformer-sharp": "^2.5.14",
     "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.6.2",
