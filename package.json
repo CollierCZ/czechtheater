@@ -16,7 +16,7 @@
     "@rshackleton/gatsby-transformer-kontent-image": "^2.1.0",
     "gatsby": "^2.32.4",
     "gatsby-image": "^2.11.0",
-    "gatsby-plugin-manifest": "^2.12.0",
+    "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-offline": "^3.10.1",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.1",
