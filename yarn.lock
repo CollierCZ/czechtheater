@@ -1950,24 +1950,24 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@reach/dialog@^0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.13.2.tgz#edbb8800f20e795c70b455b34999c6355b61c154"
-  integrity sha512-DOl7REyfrC3v6ugZtuiZs3pNr4ctRFBPU53AXph1kS5qH+3HxW2/Nq231Wg3ck+FQsZI+Ch4DeT0af52nbIaCg==
+"@reach/dialog@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.14.0.tgz#a8099261fa37ee91e0c587c369e8d095cc24a3a8"
+  integrity sha512-Pc9EKxh15vOfeKn2aSZqm7dFJPSgx4kDA1GOANZJ831QCLEBTY8PkWU3KmwbQ/sEU4jOnrd8f8bndv1ixwgCLQ==
   dependencies:
-    "@reach/portal" "0.13.2"
-    "@reach/utils" "0.13.2"
+    "@reach/portal" "0.14.0"
+    "@reach/utils" "0.14.0"
     prop-types "^15.7.2"
     react-focus-lock "^2.5.0"
     react-remove-scroll "^2.4.1"
     tslib "^2.1.0"
 
-"@reach/portal@0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.13.2.tgz#6f2a6f4afc14894bde9c6435667bb9b660887ed9"
-  integrity sha512-g74BnCdtuTGthzzHn2cWW+bcyIYb0iIE/yRsm89i8oNzNgpopbkh9UY8TPbhNlys52h7U60s4kpRTmcq+JqsTA==
+"@reach/portal@0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.14.0.tgz#acb1c3008de1c1b735cccd66d6348b0a0f724316"
+  integrity sha512-b7Ejp83GckaSKP/IIlIpER7dUV3IV/Kz5BTff8rPXA2a2NWKFdpbu5ozKDeAeiXXFLBbRmNk93JPpcvUJAzezw==
   dependencies:
-    "@reach/utils" "0.13.2"
+    "@reach/utils" "0.14.0"
     tslib "^2.1.0"
 
 "@reach/router@^1.3.4":
@@ -1980,10 +1980,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@reach/utils@0.13.2":
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.13.2.tgz#87e8fef8ebfe583fa48250238a1a3ed03189fcc8"
-  integrity sha512-3ir6cN60zvUrwjOJu7C6jec/samqAeyAB12ZADK+qjnmQPdzSYldrFWwDVV5H0WkhbYXR3uh+eImu13hCetNPQ==
+"@reach/utils@0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.14.0.tgz#f3ff579c737c3e9528f6f940bc518452f2636810"
+  integrity sha512-QbSFO5p44qUCkOllJM06Lt5A/EsoVIYlB9Ij1vKEezy53keaa5bc879dD2Ahv+mMf+E1VppCeiL6YYvdpJmVVQ==
   dependencies:
     "@types/warning" "^3.0.0"
     tslib "^2.1.0"
