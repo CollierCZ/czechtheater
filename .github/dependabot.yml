@@ -1,0 +1,51 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: babel-preset-gatsby
+    versions:
+    - 0.11.0
+    - 0.12.2
+    - 1.0.0
+    - 1.1.0
+    - 1.2.0
+  - dependency-name: gatsby-image
+    versions:
+    - 2.10.0
+    - 3.0.0
+    - 3.1.0
+    - 3.2.0
+  - dependency-name: "@reach/dialog"
+    versions:
+    - 0.12.1
+    - 0.13.0
+    - 0.14.0
+  - dependency-name: react-social-icons
+    versions:
+    - 5.0.0
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.1
+    - 2.13.4
+  - dependency-name: gatsby-plugin-react-helmet
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-offline
+    versions:
+    - 3.9.0
+  - dependency-name: gatsby-plugin-manifest
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-transformer-sharp
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby
+    versions:
+    - 2.31.1
+  - dependency-name: "@kentico/gatsby-source-kontent"
+    versions:
+    - 6.3.0
