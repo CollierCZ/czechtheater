@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.3",
     "@kentico/gatsby-source-kontent": "6.3.5",
     "@reach/dialog": "^0.13.2",
     "@rshackleton/gatsby-transformer-kontent-image": "^2.1.0",
