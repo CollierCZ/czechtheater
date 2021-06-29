@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "babel-jest": "^27.0.6",
-    "babel-preset-gatsby": "^0.12.1",
+    "babel-preset-gatsby": "^1.8.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
