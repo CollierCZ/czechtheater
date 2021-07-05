@@ -12706,10 +12706,10 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
 
-react-social-icons@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-5.5.0.tgz#cc5943f8145424b8c1853eaedfb070e645978c9c"
-  integrity sha512-ohSI5UqIRV+Vd34I1ikAT6R3R/pzgy5uAXVXZBMKDsnSv1O7nE5Yp2RXMygbSo84fpljKBqNGVxAU09xz+qKmw==
+react-social-icons@^5.5.1:
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-5.5.1.tgz#dcac503c91f25737e2dcd90f69489401c972e417"
+  integrity sha512-JBq4dbtthfN+PSUOw4mCu8VDvx+tCce3GcGlAb0xipfd4xmwwVBTLLYpNhkYcMFfCyK6E75XHeY/EwvIRdYJiA==
   dependencies:
     prop-types "^15.7.2"
 
