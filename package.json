@@ -36,7 +36,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
-    "jest": "^27.0.5"
+    "jest": "^27.0.6"
   },
   "resolutions": {
     "@babel/helper-call-delegate": "^7.10.1",
