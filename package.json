@@ -6,13 +6,16 @@
   "author": "Aaron Collier",
   "scripts": {
     "build": "gatsby build",
+    "clean": "gatsby clean",
     "dev": "gatsby develop",
     "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/helper-call-delegate": "^7.10.1",
+    "@babel/helper-function-name": "^7.9.5",
     "@kentico/gatsby-source-kontent": "6.3.5",
-    "@reach/dialog": "^0.15.0",
+    "@reach/dialog": "^0.15.2",
     "@rshackleton/gatsby-transformer-kontent-image": "^2.1.0",
     "gatsby": "^2.32.13",
     "gatsby-image": "^3.8.0",
@@ -32,11 +35,12 @@
   },
   "devDependencies": {
     "babel-jest": "^27.0.6",
-    "babel-preset-gatsby": "^0.12.1",
+    "babel-preset-gatsby": "^1.8.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "enzyme-to-json": "^3.6.2",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "jsdom": "^16.6.0"
   },
   "resolutions": {
     "@babel/helper-call-delegate": "^7.10.1",
