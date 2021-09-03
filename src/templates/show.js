@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../layout/layout";
 import Gallery from "../components/Gallery/Gallery";
 import Img from "gatsby-image";
-import SEO from "../components/SEO/seo";
+import Seo from "../components/Seo/Seo";
 import "./show.css";
 
 const Show = ({ data }) => {
@@ -12,7 +12,7 @@ const Show = ({ data }) => {
   const mainImage = show.main_image.value[0].localFile.childImageSharp.fluid;
   return (
     <Layout>
-      <SEO
+      <Seo
         image={mainImage.src}
         description={show.short_description.value}
         title={show.name.value}

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
-export const PureSEO = ({ description,image,data,keywords,pageTitle }) => {
+export const PureSeo = ({ description,image,data,keywords,pageTitle }) => {
   const info = data.kontentItemBasicInfo.elements;
   const homeTitle = info.name.value;
   const favicon = info.favicon.value[0].url;
@@ -71,12 +71,12 @@ export const PureSEO = ({ description,image,data,keywords,pageTitle }) => {
   )
 }
 
-PureSEO.defaultProps = {
+PureSeo.defaultProps = {
   keywords: [`theater`, `czech`, `amateur`],
   pageTitle: "Czech Theater"
 }
 
-PureSEO.propTypes = {
+PureSeo.propTypes = {
   data: PropTypes.object.isRequired,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -84,7 +84,7 @@ PureSEO.propTypes = {
   pageTitle: PropTypes.string.isRequired,
 }
 
-function SEO({ description, image, keywords, title }) {
+function Seo({ description, image, keywords, title }) {
   return (
     <StaticQuery
       query={graphql`
@@ -96,18 +96,18 @@ function SEO({ description, image, keywords, title }) {
       `}
       render={data => {
         return (
-          <PureSEO description={description} image={image} data={data} keywords={keywords} pageTitle={title} /> 
+          <PureSeo description={description} image={image} data={data} keywords={keywords} pageTitle={title} /> 
         )
       }}
     />
   )
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string,
 }
 
-export default SEO
+export default Seo

@@ -1,15 +1,15 @@
 import { basicInfoQuery } from "../../utilities/sampleTestData" 
-import { PureSEO as SEO } from "./seo"
+import { PureSeo as Seo } from "./Seo"
 import React from "react"
 import { simpleShallowRender } from "../../utilities/testHelpers"
 
 const renderSEO = (property,value) => {
   if (property) {
     const props = { [property]: value}
-    simpleShallowRender(<SEO data={basicInfoQuery} {...props} />)
+    simpleShallowRender(<Seo data={basicInfoQuery} {...props} />)
   }
   else {
-    simpleShallowRender(<SEO data={basicInfoQuery} />)
+    simpleShallowRender(<Seo data={basicInfoQuery} />)
   }
 }
 

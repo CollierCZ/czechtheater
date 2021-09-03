@@ -2,7 +2,7 @@
 
 exports[`A show loads correctly with a gallery 1`] = `
 <Layout>
-  <SEO
+  <Seo
     description="<p>All the acting</p>"
     image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={
@@ -75,7 +75,7 @@ exports[`A show loads correctly with a gallery 1`] = `
 
 exports[`A show loads correctly with no gallery 1`] = `
 <Layout>
-  <SEO
+  <Seo
     description="<p>All the acting</p>"
     image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={
@@ -138,7 +138,7 @@ exports[`A show loads correctly with no gallery 1`] = `
 
 exports[`A show loads correctly with no tickets 1`] = `
 <Layout>
-  <SEO
+  <Seo
     description="<p>All the acting</p>"
     image="/static/c2ec33c63d96920564e01b5e545af3da/d7623/cat-on-the-rails.jpg"
     keywords={

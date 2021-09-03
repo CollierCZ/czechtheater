@@ -1,0 +1,23 @@
+name: Test
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install Dependencies
+      run: npm ci
+    - name: Test
+      run: npm test
+    - name: Coverage
+      uses: paambaati/codeclimate-action@v2.7.5
+      env:
+        CC_TEST_REPORTER_ID: 932377e5007dac88c84906de9fdfa61c7b1631404642bf9de5a0b7b536843e48
+      with:
+        coverageCommand: npm run test --code--coverage
