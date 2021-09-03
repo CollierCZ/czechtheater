@@ -37,7 +37,7 @@ const images = [
 ]
 
 const openLightbox = (nextClick,event) => {
-  const component = mount (<Gallery images={images} />)
+  const component = mount(<Gallery images={images} />)
   const imageNodes = component.find('img')
   const image = imageNodes.at(0)
   if (event === 'keypress') {

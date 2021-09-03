@@ -328,12 +328,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -497,11 +498,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -527,6 +530,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           <button
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -537,6 +541,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -546,6 +551,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -569,12 +575,15 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
         ariaHideApp={true}
         bodyOpenClassName="ReactModal__Body--open"
         closeTimeoutMS={0}
+        contentElement={[Function]}
         contentLabel="Lightbox"
         isOpen={true}
         onAfterOpen={[Function]}
         onRequestClose={[Function]}
+        overlayElement={[Function]}
         parentSelector={[Function]}
         portalClassName="ReactModalPortal"
+        preventScroll={false}
         role="dialog"
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
@@ -606,12 +615,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -775,11 +785,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -805,6 +817,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           <button
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -815,6 +828,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -824,6 +838,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -864,12 +879,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                   class="ReactModalPortal"
                 >
                   <div
-                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    class="ReactModal__Overlay"
                     style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
                   >
                     <div
                       aria-label="Lightbox"
-                      class="ReactModal__Content ReactModal__Content--after-open"
+                      aria-modal="true"
+                      class="ReactModal__Content"
                       role="dialog"
                       style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                       tabindex="-1"
@@ -1033,11 +1049,13 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                         <button
                           aria-label="Previous image"
                           class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          title="Previous image"
                           type="button"
                         />
                         <button
                           aria-label="Next image"
                           class="ril-next-button ril__navButtons ril__navButtonNext"
+                          title="Next image"
                           type="button"
                         />
                         <div
@@ -1063,6 +1081,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                               <button
                                 aria-label="Zoom in"
                                 class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                                title="Zoom in"
                                 type="button"
                               />
                             </li>
@@ -1073,6 +1092,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                                 aria-label="Zoom out"
                                 class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                                 disabled=""
+                                title="Zoom out"
                                 type="button"
                               />
                             </li>
@@ -1082,6 +1102,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                               <button
                                 aria-label="Close lightbox"
                                 class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                title="Close lightbox"
                                 type="button"
                               />
                             </li>
@@ -1105,6 +1126,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
             ariaHideApp={true}
             bodyOpenClassName="ReactModal__Body--open"
             closeTimeoutMS={0}
+            contentElement={[Function]}
             contentLabel="Lightbox"
             defaultStyles={
               Object {
@@ -1135,8 +1157,10 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
             isOpen={true}
             onAfterOpen={[Function]}
             onRequestClose={[Function]}
+            overlayElement={[Function]}
             parentSelector={[Function]}
             portalClassName="ReactModalPortal"
+            preventScroll={false}
             role="dialog"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
@@ -1163,7 +1187,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
             }
           >
             <div
-              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              className="ReactModal__Overlay"
               onClick={[Function]}
               onMouseDown={[Function]}
               style={
@@ -1180,7 +1204,8 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
             >
               <div
                 aria-label="Lightbox"
-                className="ReactModal__Content ReactModal__Content--after-open"
+                aria-modal={true}
+                className="ReactModal__Content"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
@@ -1431,6 +1456,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                     className="ril-prev-button ril__navButtons ril__navButtonPrev"
                     key="prev"
                     onClick={[Function]}
+                    title="Previous image"
                     type="button"
                   />
                   <button
@@ -1438,6 +1464,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                     className="ril-next-button ril__navButtons ril__navButtonNext"
                     key="next"
                     onClick={[Function]}
+                    title="Next image"
                     type="button"
                   />
                   <div
@@ -1466,6 +1493,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           disabled={false}
                           key="zoom-in"
                           onClick={[Function]}
+                          title="Zoom in"
                           type="button"
                         />
                       </li>
@@ -1477,6 +1505,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                           disabled={true}
                           key="zoom-out"
+                          title="Zoom out"
                           type="button"
                         />
                       </li>
@@ -1488,6 +1517,7 @@ exports[`Gallery correctly opens lightbox on click 1`] = `
                           className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
                           key="close"
                           onClick={[Function]}
+                          title="Close lightbox"
                           type="button"
                         />
                       </li>
@@ -1843,12 +1873,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -2012,11 +2043,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -2042,6 +2075,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           <button
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -2052,6 +2086,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -2061,6 +2096,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -2084,12 +2120,15 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
         ariaHideApp={true}
         bodyOpenClassName="ReactModal__Body--open"
         closeTimeoutMS={0}
+        contentElement={[Function]}
         contentLabel="Lightbox"
         isOpen={true}
         onAfterOpen={[Function]}
         onRequestClose={[Function]}
+        overlayElement={[Function]}
         parentSelector={[Function]}
         portalClassName="ReactModalPortal"
+        preventScroll={false}
         role="dialog"
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
@@ -2121,12 +2160,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -2290,11 +2330,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -2320,6 +2362,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           <button
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -2330,6 +2373,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -2339,6 +2383,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -2379,12 +2424,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                   class="ReactModalPortal"
                 >
                   <div
-                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    class="ReactModal__Overlay"
                     style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
                   >
                     <div
                       aria-label="Lightbox"
-                      class="ReactModal__Content ReactModal__Content--after-open"
+                      aria-modal="true"
+                      class="ReactModal__Content"
                       role="dialog"
                       style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                       tabindex="-1"
@@ -2548,11 +2594,13 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                         <button
                           aria-label="Previous image"
                           class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          title="Previous image"
                           type="button"
                         />
                         <button
                           aria-label="Next image"
                           class="ril-next-button ril__navButtons ril__navButtonNext"
+                          title="Next image"
                           type="button"
                         />
                         <div
@@ -2578,6 +2626,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                               <button
                                 aria-label="Zoom in"
                                 class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
+                                title="Zoom in"
                                 type="button"
                               />
                             </li>
@@ -2588,6 +2637,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                                 aria-label="Zoom out"
                                 class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                                 disabled=""
+                                title="Zoom out"
                                 type="button"
                               />
                             </li>
@@ -2597,6 +2647,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                               <button
                                 aria-label="Close lightbox"
                                 class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                title="Close lightbox"
                                 type="button"
                               />
                             </li>
@@ -2620,6 +2671,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
             ariaHideApp={true}
             bodyOpenClassName="ReactModal__Body--open"
             closeTimeoutMS={0}
+            contentElement={[Function]}
             contentLabel="Lightbox"
             defaultStyles={
               Object {
@@ -2650,8 +2702,10 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
             isOpen={true}
             onAfterOpen={[Function]}
             onRequestClose={[Function]}
+            overlayElement={[Function]}
             parentSelector={[Function]}
             portalClassName="ReactModalPortal"
+            preventScroll={false}
             role="dialog"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
@@ -2678,7 +2732,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
             }
           >
             <div
-              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              className="ReactModal__Overlay"
               onClick={[Function]}
               onMouseDown={[Function]}
               style={
@@ -2695,7 +2749,8 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
             >
               <div
                 aria-label="Lightbox"
-                className="ReactModal__Content ReactModal__Content--after-open"
+                aria-modal={true}
+                className="ReactModal__Content"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
@@ -2946,6 +3001,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                     className="ril-prev-button ril__navButtons ril__navButtonPrev"
                     key="prev"
                     onClick={[Function]}
+                    title="Previous image"
                     type="button"
                   />
                   <button
@@ -2953,6 +3009,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                     className="ril-next-button ril__navButtons ril__navButtonNext"
                     key="next"
                     onClick={[Function]}
+                    title="Next image"
                     type="button"
                   />
                   <div
@@ -2981,6 +3038,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           disabled={false}
                           key="zoom-in"
                           onClick={[Function]}
+                          title="Zoom in"
                           type="button"
                         />
                       </li>
@@ -2992,6 +3050,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                           disabled={true}
                           key="zoom-out"
+                          title="Zoom out"
                           type="button"
                         />
                       </li>
@@ -3003,6 +3062,7 @@ exports[`Gallery correctly opens lightbox on keypress 1`] = `
                           className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
                           key="close"
                           onClick={[Function]}
+                          title="Close lightbox"
                           type="button"
                         />
                       </li>
@@ -3409,12 +3469,13 @@ exports[`Lightbox closes correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -3578,11 +3639,13 @@ exports[`Lightbox closes correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -3609,6 +3672,7 @@ exports[`Lightbox closes correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -3619,6 +3683,7 @@ exports[`Lightbox closes correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -3628,6 +3693,7 @@ exports[`Lightbox closes correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -3651,12 +3717,15 @@ exports[`Lightbox closes correcly 1`] = `
         ariaHideApp={true}
         bodyOpenClassName="ReactModal__Body--open"
         closeTimeoutMS={0}
+        contentElement={[Function]}
         contentLabel="Lightbox"
         isOpen={true}
         onAfterOpen={[Function]}
         onRequestClose={[Function]}
+        overlayElement={[Function]}
         parentSelector={[Function]}
         portalClassName="ReactModalPortal"
+        preventScroll={false}
         role="dialog"
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
@@ -3688,12 +3757,13 @@ exports[`Lightbox closes correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -3857,11 +3927,13 @@ exports[`Lightbox closes correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -3888,6 +3960,7 @@ exports[`Lightbox closes correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -3898,6 +3971,7 @@ exports[`Lightbox closes correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -3907,6 +3981,7 @@ exports[`Lightbox closes correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -3947,12 +4022,13 @@ exports[`Lightbox closes correcly 1`] = `
                   class="ReactModalPortal"
                 >
                   <div
-                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    class="ReactModal__Overlay"
                     style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
                   >
                     <div
                       aria-label="Lightbox"
-                      class="ReactModal__Content ReactModal__Content--after-open"
+                      aria-modal="true"
+                      class="ReactModal__Content"
                       role="dialog"
                       style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                       tabindex="-1"
@@ -4116,11 +4192,13 @@ exports[`Lightbox closes correcly 1`] = `
                         <button
                           aria-label="Previous image"
                           class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          title="Previous image"
                           type="button"
                         />
                         <button
                           aria-label="Next image"
                           class="ril-next-button ril__navButtons ril__navButtonNext"
+                          title="Next image"
                           type="button"
                         />
                         <div
@@ -4147,6 +4225,7 @@ exports[`Lightbox closes correcly 1`] = `
                                 aria-label="Zoom in"
                                 class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                                 disabled=""
+                                title="Zoom in"
                                 type="button"
                               />
                             </li>
@@ -4157,6 +4236,7 @@ exports[`Lightbox closes correcly 1`] = `
                                 aria-label="Zoom out"
                                 class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                                 disabled=""
+                                title="Zoom out"
                                 type="button"
                               />
                             </li>
@@ -4166,6 +4246,7 @@ exports[`Lightbox closes correcly 1`] = `
                               <button
                                 aria-label="Close lightbox"
                                 class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                title="Close lightbox"
                                 type="button"
                               />
                             </li>
@@ -4189,6 +4270,7 @@ exports[`Lightbox closes correcly 1`] = `
             ariaHideApp={true}
             bodyOpenClassName="ReactModal__Body--open"
             closeTimeoutMS={0}
+            contentElement={[Function]}
             contentLabel="Lightbox"
             defaultStyles={
               Object {
@@ -4219,8 +4301,10 @@ exports[`Lightbox closes correcly 1`] = `
             isOpen={true}
             onAfterOpen={[Function]}
             onRequestClose={[Function]}
+            overlayElement={[Function]}
             parentSelector={[Function]}
             portalClassName="ReactModalPortal"
+            preventScroll={false}
             role="dialog"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
@@ -4247,7 +4331,7 @@ exports[`Lightbox closes correcly 1`] = `
             }
           >
             <div
-              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              className="ReactModal__Overlay"
               onClick={[Function]}
               onMouseDown={[Function]}
               style={
@@ -4264,7 +4348,8 @@ exports[`Lightbox closes correcly 1`] = `
             >
               <div
                 aria-label="Lightbox"
-                className="ReactModal__Content ReactModal__Content--after-open"
+                aria-modal={true}
+                className="ReactModal__Content"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
@@ -4517,12 +4602,14 @@ exports[`Lightbox closes correcly 1`] = `
                     aria-label="Previous image"
                     className="ril-prev-button ril__navButtons ril__navButtonPrev"
                     key="prev"
+                    title="Previous image"
                     type="button"
                   />
                   <button
                     aria-label="Next image"
                     className="ril-next-button ril__navButtons ril__navButtonNext"
                     key="next"
+                    title="Next image"
                     type="button"
                   />
                   <div
@@ -4550,6 +4637,7 @@ exports[`Lightbox closes correcly 1`] = `
                           className="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                           disabled={true}
                           key="zoom-in"
+                          title="Zoom in"
                           type="button"
                         />
                       </li>
@@ -4561,6 +4649,7 @@ exports[`Lightbox closes correcly 1`] = `
                           className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                           disabled={true}
                           key="zoom-out"
+                          title="Zoom out"
                           type="button"
                         />
                       </li>
@@ -4571,6 +4660,7 @@ exports[`Lightbox closes correcly 1`] = `
                           aria-label="Close lightbox"
                           className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
                           key="close"
+                          title="Close lightbox"
                           type="button"
                         />
                       </li>
@@ -4926,12 +5016,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -5095,11 +5186,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -5126,6 +5219,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -5136,6 +5230,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -5145,6 +5240,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -5168,12 +5264,15 @@ exports[`Lightbox moves to the next image correcly 1`] = `
         ariaHideApp={true}
         bodyOpenClassName="ReactModal__Body--open"
         closeTimeoutMS={0}
+        contentElement={[Function]}
         contentLabel="Lightbox"
         isOpen={true}
         onAfterOpen={[Function]}
         onRequestClose={[Function]}
+        overlayElement={[Function]}
         parentSelector={[Function]}
         portalClassName="ReactModalPortal"
+        preventScroll={false}
         role="dialog"
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
@@ -5205,12 +5304,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -5374,11 +5474,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -5405,6 +5507,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -5415,6 +5518,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -5424,6 +5528,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -5464,12 +5569,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                   class="ReactModalPortal"
                 >
                   <div
-                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    class="ReactModal__Overlay"
                     style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
                   >
                     <div
                       aria-label="Lightbox"
-                      class="ReactModal__Content ReactModal__Content--after-open"
+                      aria-modal="true"
+                      class="ReactModal__Content"
                       role="dialog"
                       style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                       tabindex="-1"
@@ -5633,11 +5739,13 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                         <button
                           aria-label="Previous image"
                           class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          title="Previous image"
                           type="button"
                         />
                         <button
                           aria-label="Next image"
                           class="ril-next-button ril__navButtons ril__navButtonNext"
+                          title="Next image"
                           type="button"
                         />
                         <div
@@ -5664,6 +5772,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                                 aria-label="Zoom in"
                                 class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                                 disabled=""
+                                title="Zoom in"
                                 type="button"
                               />
                             </li>
@@ -5674,6 +5783,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                                 aria-label="Zoom out"
                                 class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                                 disabled=""
+                                title="Zoom out"
                                 type="button"
                               />
                             </li>
@@ -5683,6 +5793,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                               <button
                                 aria-label="Close lightbox"
                                 class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                title="Close lightbox"
                                 type="button"
                               />
                             </li>
@@ -5706,6 +5817,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
             ariaHideApp={true}
             bodyOpenClassName="ReactModal__Body--open"
             closeTimeoutMS={0}
+            contentElement={[Function]}
             contentLabel="Lightbox"
             defaultStyles={
               Object {
@@ -5736,8 +5848,10 @@ exports[`Lightbox moves to the next image correcly 1`] = `
             isOpen={true}
             onAfterOpen={[Function]}
             onRequestClose={[Function]}
+            overlayElement={[Function]}
             parentSelector={[Function]}
             portalClassName="ReactModalPortal"
+            preventScroll={false}
             role="dialog"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
@@ -5764,7 +5878,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
             }
           >
             <div
-              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              className="ReactModal__Overlay"
               onClick={[Function]}
               onMouseDown={[Function]}
               style={
@@ -5781,7 +5895,8 @@ exports[`Lightbox moves to the next image correcly 1`] = `
             >
               <div
                 aria-label="Lightbox"
-                className="ReactModal__Content ReactModal__Content--after-open"
+                aria-modal={true}
+                className="ReactModal__Content"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
@@ -6034,12 +6149,14 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                     aria-label="Previous image"
                     className="ril-prev-button ril__navButtons ril__navButtonPrev"
                     key="prev"
+                    title="Previous image"
                     type="button"
                   />
                   <button
                     aria-label="Next image"
                     className="ril-next-button ril__navButtons ril__navButtonNext"
                     key="next"
+                    title="Next image"
                     type="button"
                   />
                   <div
@@ -6067,6 +6184,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           className="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                           disabled={true}
                           key="zoom-in"
+                          title="Zoom in"
                           type="button"
                         />
                       </li>
@@ -6078,6 +6196,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                           disabled={true}
                           key="zoom-out"
+                          title="Zoom out"
                           type="button"
                         />
                       </li>
@@ -6088,6 +6207,7 @@ exports[`Lightbox moves to the next image correcly 1`] = `
                           aria-label="Close lightbox"
                           className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
                           key="close"
+                          title="Close lightbox"
                           type="button"
                         />
                       </li>
@@ -6443,12 +6563,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -6612,11 +6733,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -6643,6 +6766,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -6653,6 +6777,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -6662,6 +6787,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -6685,12 +6811,15 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
         ariaHideApp={true}
         bodyOpenClassName="ReactModal__Body--open"
         closeTimeoutMS={0}
+        contentElement={[Function]}
         contentLabel="Lightbox"
         isOpen={true}
         onAfterOpen={[Function]}
         onRequestClose={[Function]}
+        overlayElement={[Function]}
         parentSelector={[Function]}
         portalClassName="ReactModalPortal"
+        preventScroll={false}
         role="dialog"
         shouldCloseOnEsc={true}
         shouldCloseOnOverlayClick={true}
@@ -6722,12 +6851,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
               class="ReactModalPortal"
             >
               <div
-                class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                class="ReactModal__Overlay"
                 style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
               >
                 <div
                   aria-label="Lightbox"
-                  class="ReactModal__Content ReactModal__Content--after-open"
+                  aria-modal="true"
+                  class="ReactModal__Content"
                   role="dialog"
                   style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                   tabindex="-1"
@@ -6891,11 +7021,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                     <button
                       aria-label="Previous image"
                       class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                      title="Previous image"
                       type="button"
                     />
                     <button
                       aria-label="Next image"
                       class="ril-next-button ril__navButtons ril__navButtonNext"
+                      title="Next image"
                       type="button"
                     />
                     <div
@@ -6922,6 +7054,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                             aria-label="Zoom in"
                             class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                             disabled=""
+                            title="Zoom in"
                             type="button"
                           />
                         </li>
@@ -6932,6 +7065,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                             aria-label="Zoom out"
                             class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                             disabled=""
+                            title="Zoom out"
                             type="button"
                           />
                         </li>
@@ -6941,6 +7075,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           <button
                             aria-label="Close lightbox"
                             class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                            title="Close lightbox"
                             type="button"
                           />
                         </li>
@@ -6981,12 +7116,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                   class="ReactModalPortal"
                 >
                   <div
-                    class="ReactModal__Overlay ReactModal__Overlay--after-open"
+                    class="ReactModal__Overlay"
                     style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: transparent; z-index: 1000;"
                   >
                     <div
                       aria-label="Lightbox"
-                      class="ReactModal__Content ReactModal__Content--after-open"
+                      aria-modal="true"
+                      class="ReactModal__Content"
                       role="dialog"
                       style="position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgb(255, 255, 255); overflow: hidden; border-radius: 0; outline: none; padding: 0px; background-color: transparent;"
                       tabindex="-1"
@@ -7150,11 +7286,13 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                         <button
                           aria-label="Previous image"
                           class="ril-prev-button ril__navButtons ril__navButtonPrev"
+                          title="Previous image"
                           type="button"
                         />
                         <button
                           aria-label="Next image"
                           class="ril-next-button ril__navButtons ril__navButtonNext"
+                          title="Next image"
                           type="button"
                         />
                         <div
@@ -7181,6 +7319,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                                 aria-label="Zoom in"
                                 class="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                                 disabled=""
+                                title="Zoom in"
                                 type="button"
                               />
                             </li>
@@ -7191,6 +7330,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                                 aria-label="Zoom out"
                                 class="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                                 disabled=""
+                                title="Zoom out"
                                 type="button"
                               />
                             </li>
@@ -7200,6 +7340,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                               <button
                                 aria-label="Close lightbox"
                                 class="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
+                                title="Close lightbox"
                                 type="button"
                               />
                             </li>
@@ -7223,6 +7364,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
             ariaHideApp={true}
             bodyOpenClassName="ReactModal__Body--open"
             closeTimeoutMS={0}
+            contentElement={[Function]}
             contentLabel="Lightbox"
             defaultStyles={
               Object {
@@ -7253,8 +7395,10 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
             isOpen={true}
             onAfterOpen={[Function]}
             onRequestClose={[Function]}
+            overlayElement={[Function]}
             parentSelector={[Function]}
             portalClassName="ReactModalPortal"
+            preventScroll={false}
             role="dialog"
             shouldCloseOnEsc={true}
             shouldCloseOnOverlayClick={true}
@@ -7281,7 +7425,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
             }
           >
             <div
-              className="ReactModal__Overlay ReactModal__Overlay--after-open"
+              className="ReactModal__Overlay"
               onClick={[Function]}
               onMouseDown={[Function]}
               style={
@@ -7298,7 +7442,8 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
             >
               <div
                 aria-label="Lightbox"
-                className="ReactModal__Content ReactModal__Content--after-open"
+                aria-modal={true}
+                className="ReactModal__Content"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onMouseDown={[Function]}
@@ -7551,12 +7696,14 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                     aria-label="Previous image"
                     className="ril-prev-button ril__navButtons ril__navButtonPrev"
                     key="prev"
+                    title="Previous image"
                     type="button"
                   />
                   <button
                     aria-label="Next image"
                     className="ril-next-button ril__navButtons ril__navButtonNext"
                     key="next"
+                    title="Next image"
                     type="button"
                   />
                   <div
@@ -7584,6 +7731,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           className="ril-zoom-in ril__toolbarItemChild ril__builtinButton ril__zoomInButton"
                           disabled={true}
                           key="zoom-in"
+                          title="Zoom in"
                           type="button"
                         />
                       </li>
@@ -7595,6 +7743,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           className="ril-zoom-out ril__toolbarItemChild ril__builtinButton ril__zoomOutButton ril__builtinButtonDisabled"
                           disabled={true}
                           key="zoom-out"
+                          title="Zoom out"
                           type="button"
                         />
                       </li>
@@ -7605,6 +7754,7 @@ exports[`Lightbox moves to the previous image correcly 1`] = `
                           aria-label="Close lightbox"
                           className="ril-close ril-toolbar__item__child ril__toolbarItemChild ril__builtinButton ril__closeButton"
                           key="close"
+                          title="Close lightbox"
                           type="button"
                         />
                       </li>
