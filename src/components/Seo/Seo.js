@@ -6,8 +6,8 @@ import { StaticQuery, graphql } from "gatsby"
 export const PureSeo = ({ description,image,data,keywords,pageTitle }) => {
   const info = data.kontentItemBasicInfo.elements;
   const homeTitle = info.name.value;
-  const favicon = info.favicon.value[0].url;
-  const ogImage = image ? image : favicon;
+  const logo = info.favicon.value[0].url;
+  const ogImage = image ? image : logo;
   const metaDescription = description ? description : info.short_description.value;
   const title = pageTitle ? pageTitle : homeTitle;
   return (
@@ -18,7 +18,7 @@ export const PureSeo = ({ description,image,data,keywords,pageTitle }) => {
       link={[
         {"rel": "icon", 
         "type": "image/png", 
-        "href": favicon
+        "href": logo
         }
       ]}
       meta={[

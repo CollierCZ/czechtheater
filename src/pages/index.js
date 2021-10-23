@@ -1,15 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Fact from "../components/Fact/Fact"
-import Layout from "../layout/layout"
-import ShowList from "../components/ShowList/ShowList"
-import Seo from "../components/Seo/Seo"
-import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons"
+import Fact from "../components/Fact/Fact";
+import Layout from "../layout/layout";
+import ShowList from "../components/ShowList/ShowList";
+import Seo from "../components/Seo/Seo";
+import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
-
-
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   const info = data.kontentItemBasicInfo.elements;
   return (
     <Layout>
@@ -17,13 +15,13 @@ const IndexPage = ({data}) => {
       <section className="about">
         <p dangerouslySetInnerHTML={{ __html: info.short_description.value }} />
       </section>
-      <section className ="future-shows">
+      <section className="future-shows">
         <h2>Future Shows</h2>
         <div className={"future showList"}>
-          <ShowList shows={data.futureShows.elements.shows} future="true"/>
+          <ShowList shows={data.futureShows.elements.shows} future="true" />
         </div>
       </section>
-      <section className="theaterFacts" >
+      <section className="theaterFacts">
         <h2>Czech Theater Fact</h2>
         <Fact facts={data.facts} />
       </section>
@@ -34,36 +32,40 @@ const IndexPage = ({data}) => {
         </div>
       </section>
       <section className="mission">
-      <h2>Our Mission</h2>
-        <div dangerouslySetInnerHTML={{ __html: info.about_us.value }} /> 
+        <h2>Our Mission</h2>
+        <div dangerouslySetInnerHTML={{ __html: info.about_us.value }} />
       </section>
       <section className="contact">
         <h2>Contact us</h2>
         <div dangerouslySetInnerHTML={{ __html: info.contact_info.value }} />
-        <SocialMediaIcons urls={info.social_media.value.split(",")} color="green" />
+        <SocialMediaIcons
+          urls={info.social_media.value.split(",")}
+          color="green"
+        />
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
-
+export default IndexPage;
 
 export const query = graphql`
   query indexQuery {
     kontentItemBasicInfo {
       ...BasicInfoFragment
     }
-    futureShows: kontentItemShowSection (system: {codename: {eq: "future_shows"}}) {
+    futureShows: kontentItemShowSection(
+      system: { codename: { eq: "future_shows" } }
+    ) {
       ...ShowListFragment
     }
-    pastShows: kontentItemShowSection (system: {codename: {eq: "past_shows"}}) {
+    pastShows: kontentItemShowSection(
+      system: { codename: { eq: "past_shows" } }
+    ) {
       ...ShowListFragment
-      
-  }
-  facts: allKontentItemTheaterFact {
-    edges {
-      node {
+    }
+    facts: allKontentItemTheaterFact {
+      nodes {
         system {
           codename
         }
@@ -73,8 +75,17 @@ export const query = graphql`
           }
           image {
             value {
-              fixed(width: 250, fit: "scale") {
-                ...KontentAssetFixed_withWebp
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 250
+                    height: 150
+                    placeholder: BLURRED
+                    transformOptions: { fit: CONTAIN }
+                    backgroundColor: "rgba(255,255,255,1)"
+                  )
+                }
               }
             }
           }
@@ -82,5 +93,4 @@ export const query = graphql`
       }
     }
   }
-}
-`
+`;
