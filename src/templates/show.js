@@ -20,7 +20,7 @@ const Show = ({ data }) => {
         keywords={[`czech`, `theater`, `show`]}
       />
       <h1>{show.name.value}</h1>
-      <GatsbyImage image={mainImage} alt={mainImage.description} />
+      <GatsbyImage image={mainImage} alt={mainImage.description || ""} />
       <div
         className="showDescription"
         dangerouslySetInnerHTML={{ __html: show.description.value }}
