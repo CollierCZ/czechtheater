@@ -4,13 +4,10 @@ exports[`Fact renders correctly with an image 1`] = `
 <div
   className="fact"
 >
-  <div
+  <RichTextElement
     className="factText"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div>Testing inner HTML</div>",
-      }
-    }
+    resolveLink={[Function]}
+    value="<div>Testing inner HTML</div>"
   />
   <V
     alt=""
@@ -54,13 +51,10 @@ exports[`Fact renders correctly without an image 1`] = `
 <div
   className="fact"
 >
-  <div
+  <RichTextElement
     className="factText"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div>Testing inner HTML</div>",
-      }
-    }
+    resolveLink={[Function]}
+    value="<div>Testing inner HTML</div>"
   />
 </div>
 `;

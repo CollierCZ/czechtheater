@@ -1,5 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import { RichTextElement } from "@kentico/gatsby-kontent-components";
 
 import Layout from "../layout/layout";
 import Gallery from "../components/Gallery/Gallery";
@@ -21,9 +22,15 @@ const Show = ({ data }) => {
       />
       <h1>{show.name.value}</h1>
       <GatsbyImage image={mainImage} alt={mainImage.description || ""} />
-      <div
+      <RichTextElement
         className="showDescription"
-        dangerouslySetInnerHTML={{ __html: show.description.value }}
+        value={show.description.value}
+        links={show.description.links}
+        resolveLink={(link, domNode) => {
+          return (
+            <Link to={`/${link.url_slug}`}>{domNode.children[0].data}</Link>
+          );
+        }}
       />
       {show.ticket_link.value ? (
         <h4 className="tickets">
@@ -45,6 +52,10 @@ export const query = graphql`
           value
         }
         description {
+          links {
+            url_slug
+            link_id
+          }
           value
         }
         main_image {

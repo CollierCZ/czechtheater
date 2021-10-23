@@ -71,6 +71,10 @@ export const query = graphql`
         }
         elements {
           description {
+            links {
+              url_slug
+              link_id
+            }
             value
           }
           image {
