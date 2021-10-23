@@ -2,37 +2,18 @@ import Gallery from "./Gallery";
 import { mount } from "enzyme";
 import React from "react";
 import { simpleShallowRender } from "../../utilities/testHelpers";
+import { sampleFixedGatsbyImageData } from "../../utilities/sampleTestData";
 
 const images = [
   {
     description: "The theater logo (image 1)",
-    fixed: {
-      width: 100,
-      height: 100,
-      src: `test_image_1.jpg`,
-      srcSet: `a_srcSet`,
-    },
-    fluid: {
-      aspectRatio: 1.5,
-      src: `test_image.jpg`,
-      srcSet: `some srcSet`,
-      sizes: `(max-width: 600px) 100vw, 600px`,
-    }
+    ...sampleFixedGatsbyImageData,
+    url: "https://link-to/first-image.png"
   },
   {
     description: "RUR banner (image 2)",
-    fixed: {
-      width: 100,
-      height: 100,
-      src: `test_image_2.jpg`,
-      srcSet: `a_second_srcSet`,
-    },
-    fluid: {
-      aspectRatio: 1.5,
-      src: `test_image_2.jpg`,
-      srcSet: `a_second_srcSet`,
-      sizes: `(max-width: 600px) 100vw, 600px`,
-    }
+    ...sampleFixedGatsbyImageData,
+    url: "https://link-to/second-image.png"
   },
 ]
 

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import Img from "gatsby-image";
+import { Link } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import "./Fact.css";
 
 class Fact extends Component {
@@ -7,18 +9,26 @@ class Fact extends Component {
     const { facts } = this.props;
 
     const currentFact =
-      facts.edges[Math.floor(Math.random() * facts.edges.length)];
+      facts.nodes[Math.floor(Math.random() * facts.nodes.length)];
+    const description = currentFact.elements.description;
     return (
       <div className="fact">
-        <div
+        <RichTextElement
           className="factText"
-          dangerouslySetInnerHTML={{
-            __html: currentFact.node.elements.description.value
+          value={description.value}
+          links={description.links}
+          resolveLink={(link, domNode) => {
+            return (
+              <Link to={`/${link.url_slug}`}>{domNode.children[0].data}</Link>
+            );
           }}
         />
-        {currentFact.node.elements.image.value[0] ? (
-          <Img
-            fixed={currentFact.node.elements.image.value[0].fixed}
+        {currentFact.elements.image.value[0] ? (
+          <GatsbyImage
+            image={
+              currentFact.elements.image.value[0].localFile.childImageSharp
+                .gatsbyImageData
+            }
             alt=""
             className="factImage"
           />

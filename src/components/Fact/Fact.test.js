@@ -1,23 +1,17 @@
 import Fact from "./Fact";
 import React from "react";
-import { sampleKenticoFixedData } from "../../utilities/sampleTestData";
+import { sampleConstrainedGatsbyImageData } from "../../utilities/sampleTestData";
 import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const factsWithImage = {
-  edges: [
+  nodes: [
     {
-      node: {
-        elements: {
-          description: {
-            value: "<div>Testing inner HTML</div>",
-          },
-          image: {
-            value: [
-              {
-                fixed: sampleKenticoFixedData,
-              },
-            ],
-          },
+      elements: {
+        description: {
+          value: "<div>Testing inner HTML</div>",
+        },
+        image: {
+          value: [sampleConstrainedGatsbyImageData],
         },
       },
     },
@@ -25,16 +19,14 @@ const factsWithImage = {
 };
 
 const factsNoImage = {
-  edges: [
+  nodes: [
     {
-      node: {
-        elements: {
-          description: {
-            value: "<div>Testing inner HTML</div>",
-          },
-          image: {
-            value: [],
-          },
+      elements: {
+        description: {
+          value: "<div>Testing inner HTML</div>",
+        },
+        image: {
+          value: [],
         },
       },
     },

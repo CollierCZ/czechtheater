@@ -6,12 +6,13 @@ import Header from "../components/Header/Header"
 import "./layout.css"
 
 export const PureLayout = ({ children,data }) => {
+  const favicon = data.kontentItemBasicInfo.elements.favicon.value[0]
   return (
     <>
       <Header 
         siteTitle={data.kontentItemBasicInfo.elements.name.value} 
-        logoUrl={data.kontentItemBasicInfo.elements.favicon.value[0].fixed.srcWebp} 
-        logoDescription={data.kontentItemBasicInfo.elements.favicon.value[0].description}        
+        image={favicon.localFile.childImageSharp.gatsbyImageData} 
+        logoDescription={favicon.description}        
       />
       <div
         style={{

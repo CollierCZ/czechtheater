@@ -3,7 +3,32 @@
 exports[`Layout loads correctly 1`] = `
 <Fragment>
   <Header
-    logoUrl="https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/4e43fc7c-ce8d-49fd-aba9-bdf908330220/logo.jpg?fm=webp&w=88&h=88"
+    image={
+      Object {
+        "height": 284,
+        "images": Object {
+          "fallback": Object {
+            "sizes": "284px",
+            "src": "/static/76e870b9a7408e63cec608575bad6cb8/46b1b/roadTrip.jpg",
+            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/46b1b/roadTrip.jpg 284w,
+/static/76e870b9a7408e63cec608575bad6cb8/dae5c/roadTrip.jpg 568w",
+          },
+          "sources": Array [
+            Object {
+              "sizes": "284px",
+              "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/5d551/roadTrip.webp 284w,
+/static/76e870b9a7408e63cec608575bad6cb8/47346/roadTrip.webp 568w",
+              "type": "image/webp",
+            },
+          ],
+        },
+        "layout": "fixed",
+        "placeholder": Object {
+          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAME/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAMB/9oADAMBAAIQAxAAAAGVITlXQwi0goMp/8QAGRABAAMBAQAAAAAAAAAAAAAAAQACAxET/9oACAEBAAEFAtbMdUs78tsukH0lseMrdIT/xAAXEQEBAQEAAAAAAAAAAAAAAAAAASEx/9oACAEDAQE/AWr1H//EABcRAAMBAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BMV//xAAeEAACAQQDAQAAAAAAAAAAAAAAARECEBKhIWFxgf/aAAgBAQAGPwLKpQJxwhyzHfZq30r8t//EABoQAAIDAQEAAAAAAAAAAAAAAAERACExQfD/2gAIAQEAAT8hIDvIfJogMwTAHa2ChpQzKqxCU5y5oXuwUi0YbF8qf//aAAwDAQACAAMAAAAQq+e//8QAGhEBAQACAwAAAAAAAAAAAAAAAQARITFBYf/aAAgBAwEBPxDAKd3klpcL/8QAGBEBAQADAAAAAAAAAAAAAAAAAAERMUH/2gAIAQIBAT8Q3Iyp1X//xAAdEAEBAAIDAQEBAAAAAAAAAAABEQAhMUFhcZHR/9oACAEBAAE/EOXAJBUV56bibYBhLI65ywIoSQIaxQmkdisOvnuICi6Wo6G+bx0TYMFT77gbqh2OdH8Yo/AdihjMbVH4Z//Z",
+        },
+        "width": 284,
+      }
+    }
     siteTitle="Czech Theater"
   />
   <div

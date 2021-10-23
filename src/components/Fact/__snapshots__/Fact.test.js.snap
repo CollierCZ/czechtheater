@@ -4,32 +4,45 @@ exports[`Fact renders correctly with an image 1`] = `
 <div
   className="fact"
 >
-  <div
+  <RichTextElement
     className="factText"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div>Testing inner HTML</div>",
-      }
-    }
+    resolveLink={[Function]}
+    value="<div>Testing inner HTML</div>"
   />
-  <Image
-    Tag="div"
+  <V
     alt=""
     className="factImage"
-    durationFadeIn={500}
-    fadeIn={true}
-    fixed={
+    image={
       Object {
-        "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABUAHgMBIgACEQEDEQH/xAAXAAADAQAAAAAAAAAAAAAAAAAAAwUG/8QAFwEAAwEAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAABmWMhtMWqXBsqomavhZErAj//xAAbEAADAAMBAQAAAAAAAAAAAAABAgMAERMSBP/aAAgBAQABBQKcl2YIwsoGcz1nfzk365ep9zTpRHGJZwDfWfM+7f/EABgRAQEBAQEAAAAAAAAAAAAAAAEAAhEh/9oACAEDAQE/AQNeWghZXl//xAAZEQADAQEBAAAAAAAAAAAAAAAAAQIRAxL/2gAIAQIBAT8Bqah6c/U4WkSkf//EACAQAAICAQMFAAAAAAAAAAAAAAABAhEhEiIxEzJBQlH/2gAIAQEABj8CVlnBKhty7aojKuWiXUbdMxL1K0pmMJeB7Ofo8VtP/8QAIRAAAgIBAwUBAAAAAAAAAAAAAREAIUExUWFxgZGhseH/2gAIAQEAAT8hs5jYeYuAggOWYPesPEYAyAsVtGDlkgc5hF0oWwFARDUBUCOIN1HeXVmAM/yRZPCGh6iFByZ/YdcbdOon/9oADAMBAAIAAwAAABBIxx7/xAAZEQEAAwEBAAAAAAAAAAAAAAABABFBMVH/2gAIAQMBAT8QKBXLj7Tpmz3Yxwtn/8QAGhEAAwEAAwAAAAAAAAAAAAAAAAEhETFBwf/aAAgBAgEBPxBUar0Shx98qmtQW15T/8QAHRABAQACAwEBAQAAAAAAAAAAAREAITFBUbFhcf/aAAgBAQABPxAasole/pesHKJAvIWo+4eWki8ReZjWhEFHr7noHhC/p1DNQBCABXc6PbjYTrMBYOdvB1gacli0TUIX+awMMtV5emD9Reg56YbjUbN7nrCAK8My/9k=",
-        "height": 175,
-        "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&w=250&h=175",
-        "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&w=250&h=175 1x, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&w=375&h=262 1.5x, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&w=436&h=305 2x",
-        "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&fm=webp&w=250&h=175 1x, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&fm=webp&w=375&h=262 1.5x, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&fm=webp&w=436&h=305 2x",
-        "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/25d8d230-6ef7-482a-a54e-1cae119c4a10/curtain.jpg?fit=scale&fm=webp&w=250&h=175",
+        "backgroundColor": "rgba(255,255,255,1)",
+        "height": 150,
+        "images": Object {
+          "fallback": Object {
+            "sizes": "(min-width: 250px) 250px, 100vw",
+            "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
+            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
+          },
+          "sources": Array [
+            Object {
+              "sizes": "(min-width: 250px) 250px, 100vw",
+              "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
+              "type": "image/webp",
+            },
+          ],
+        },
+        "layout": "constrained",
+        "placeholder": Object {
+          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
+        },
         "width": 250,
       }
     }
-    loading="lazy"
   />
 </div>
 `;
@@ -38,13 +51,10 @@ exports[`Fact renders correctly without an image 1`] = `
 <div
   className="fact"
 >
-  <div
+  <RichTextElement
     className="factText"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<div>Testing inner HTML</div>",
-      }
-    }
+    resolveLink={[Function]}
+    value="<div>Testing inner HTML</div>"
   />
 </div>
 `;

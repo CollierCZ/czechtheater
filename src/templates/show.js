@@ -1,15 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import { RichTextElement } from "@kentico/gatsby-kontent-components";
 
 import Layout from "../layout/layout";
 import Gallery from "../components/Gallery/Gallery";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import Seo from "../components/Seo/Seo";
 import "./show.css";
 
 const Show = ({ data }) => {
   const show = data.kontentItemShow.elements;
-  const mainImage = show.main_image.value[0].localFile.childImageSharp.fluid;
+  const mainImage =
+    show.main_image.value[0].localFile.childImageSharp.gatsbyImageData;
   return (
     <Layout>
       <Seo
@@ -19,17 +21,16 @@ const Show = ({ data }) => {
         keywords={[`czech`, `theater`, `show`]}
       />
       <h1>{show.name.value}</h1>
-      <Img
-        style={{
-          maxHeight: mainImage.presentationHeight,
-          maxWidth: mainImage.presentationWidth
-        }}
-        fluid={mainImage}
-        alt={mainImage.description}
-      />
-      <div
+      <GatsbyImage image={mainImage} alt={mainImage.description || ""} />
+      <RichTextElement
         className="showDescription"
-        dangerouslySetInnerHTML={{ __html: show.description.value }}
+        value={show.description.value}
+        links={show.description.links}
+        resolveLink={(link, domNode) => {
+          return (
+            <Link to={`/${link.url_slug}`}>{domNode.children[0].data}</Link>
+          );
+        }}
       />
       {show.ticket_link.value ? (
         <h4 className="tickets">
@@ -51,23 +52,24 @@ export const query = graphql`
           value
         }
         description {
+          links {
+            url_slug
+            link_id
+          }
           value
         }
         main_image {
           value {
             localFile {
               childImageSharp {
-                fluid(
-                  maxWidth: 800
-                  maxHeight: 668
-                  fit: CONTAIN
-                  srcSetBreakpoints: [500, 980, 1200]
-                  background: "rgba(255,255,255,1)"
-                ) {
-                  ...GatsbyImageSharpFluid_tracedSVG
-                  presentationHeight
-                  presentationWidth
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 600
+                  height: 501
+                  transformOptions: { fit: CONTAIN }
+                  backgroundColor: "rgba(255,255,255,1)"
+                  placeholder: BLURRED
+                )
               }
             }
             description
@@ -81,13 +83,19 @@ export const query = graphql`
         }
         gallery {
           value {
-            fixed {
-              src
-            }
-            fluid(maxHeight: 250, maxWidth: 250, fit: "crop") {
-              ...KontentAssetFluid_withWebp
+            localFile {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  width: 284
+                  placeholder: BLURRED
+                  height: 284
+                  transformOptions: { fit: COVER }
+                )
+              }
             }
             description
+            url
           }
         }
       }

@@ -1,12 +1,13 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 import "./Header.css";
 
-const Header = ({ siteTitle, logoUrl, logoDescription }) => (
+const Header = ({ image, logoDescription, siteTitle }) => (
   <header>
     <Link to="/">
-      <img src={logoUrl} alt={logoDescription ? logoDescription : ""} />
+      <GatsbyImage image={image} alt={logoDescription ? logoDescription : ""} />
       <div className="siteName">{siteTitle}</div>
     </Link>
   </header>

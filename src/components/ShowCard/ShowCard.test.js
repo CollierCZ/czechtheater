@@ -1,12 +1,12 @@
 import React from "react";
 import ShowCard from "./ShowCard";
-import { sampleKenticoFluidData } from "../../utilities/sampleTestData";
+import { sampleFixedGatsbyImageData } from "../../utilities/sampleTestData";
 import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const propsArray = {
   name: "Alquist's revenge",
   description: "All the acting",
-  imageSrc: sampleKenticoFluidData,
+  imageSrc: sampleFixedGatsbyImageData,
   imageDescription: "A cool image",
   slug: "alquists-revenge"
 };

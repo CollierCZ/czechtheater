@@ -6,13 +6,33 @@ exports[`ShowList loads correctly for future shows 1`] = `
   imageDescription="A cool image"
   imageSrc={
     Object {
-      "aspectRatio": 1,
-      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
-      "sizes": "(max-width: 353px) 100vw, 353px",
-      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
-      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
-      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
-      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+      "backgroundColor": "rgba(255,255,255,1)",
+      "height": 150,
+      "images": Object {
+        "fallback": Object {
+          "sizes": "(min-width: 250px) 250px, 100vw",
+          "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
+          "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
+        },
+        "sources": Array [
+          Object {
+            "sizes": "(min-width: 250px) 250px, 100vw",
+            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
+            "type": "image/webp",
+          },
+        ],
+      },
+      "layout": "constrained",
+      "placeholder": Object {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
+      },
+      "width": 250,
     }
   }
   key="Alquist's revenge"
@@ -29,13 +49,33 @@ exports[`ShowList loads correctly for past shows 1`] = `
   imageDescription="A cool image"
   imageSrc={
     Object {
-      "aspectRatio": 1,
-      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
-      "sizes": "(max-width: 353px) 100vw, 353px",
-      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
-      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
-      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
-      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+      "backgroundColor": "rgba(255,255,255,1)",
+      "height": 150,
+      "images": Object {
+        "fallback": Object {
+          "sizes": "(min-width: 250px) 250px, 100vw",
+          "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
+          "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
+        },
+        "sources": Array [
+          Object {
+            "sizes": "(min-width: 250px) 250px, 100vw",
+            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
+            "type": "image/webp",
+          },
+        ],
+      },
+      "layout": "constrained",
+      "placeholder": Object {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
+      },
+      "width": 250,
     }
   }
   key="Alquist's revenge"
@@ -52,13 +92,33 @@ exports[`ShowList loads correctly for past shows with no ticket link 1`] = `
   imageDescription="A cool image"
   imageSrc={
     Object {
-      "aspectRatio": 1,
-      "base64": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMABQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/bAEMBBQUFBQUFBQYGBQgIBwgICwoJCQoLEQwNDA0MERoQExAQExAaFxsWFRYbFykgHBwgKS8nJScvOTMzOUdER11dff/CABEIABAAHgMBIgACEQEDEQH/xAAYAAADAQEAAAAAAAAAAAAAAAACAwQBBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMAAf/aAAwDAQACEAMQAAAB4shYTGyZdn//xAAZEAADAQEBAAAAAAAAAAAAAAABAgMSABP/2gAIAQEAAQUCdZ0CyYt4U00CBOpUG1Czs1C2m7//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAEDAQE/AYyYf//EABYRAQEBAAAAAAAAAAAAAAAAAAEhAP/aAAgBAgEBPwEE1l3/xAAgEAABBAEEAwAAAAAAAAAAAAARAAECEiETIjFRQaHx/9oACAEBAAY/Ao6UcszHpAAcnwotVs8Oi02diN2FUWj0rXz6Rl8W6ZX/xAAcEAACAgMBAQAAAAAAAAAAAAABEQAhMVFxQYH/2gAIAQEAAT8hf2TBvS2/XDcTPJUDszMD5fs7CwGOwnWUvwXDPIpaajZMjVDiEvAFMz//2gAMAwEAAgADAAAAECA//8QAGhEBAQACAwAAAAAAAAAAAAAAAREAITFBYf/aAAgBAwEBPxBZLz2BMpu3m8//xAAZEQEBAAMBAAAAAAAAAAAAAAABEQAhQVH/2gAIAQIBAT8QpFpxWuI3Qe6z/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRQWFxkaGx/9oACAEBAAE/EAAitANA4kNe+Btqkico/WR3SZMcLQ7obkuSCLbMrc8j8xSXiiPanw8kxXOAutwRoh64B4oLAG4O+8cYaz4zP//Z",
-      "sizes": "(max-width: 353px) 100vw, 353px",
-      "src": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353",
-      "srcSet": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&w=705&h=705 706w",
-      "srcSetWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=88&h=88 88.25w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=177&h=177 176.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353 353w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=530&h=530 529.5w, https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=705&h=705 706w",
-      "srcWebp": "https://assets-us-01.kc-usercontent.com:443/fb599585-baec-0077-1624-981d3321fff0/dac0a3fd-0216-4fd9-ba04-05e561b0b0cc/RUR.jpg?fit=crop&fm=webp&w=353&h=353",
+      "backgroundColor": "rgba(255,255,255,1)",
+      "height": 150,
+      "images": Object {
+        "fallback": Object {
+          "sizes": "(min-width: 250px) 250px, 100vw",
+          "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
+          "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
+        },
+        "sources": Array [
+          Object {
+            "sizes": "(min-width: 250px) 250px, 100vw",
+            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
+/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
+/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
+/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
+            "type": "image/webp",
+          },
+        ],
+      },
+      "layout": "constrained",
+      "placeholder": Object {
+        "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
+      },
+      "width": 250,
     }
   }
   key="Alquist's revenge"
