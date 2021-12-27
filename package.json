@@ -41,7 +41,7 @@
     "enzyme-to-json": "^3.6.2",
     "jest": "^27.4.5",
     "jsdom": "^19.0.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.8.0"
   },
   "resolutions": {
     "@babel/helper-call-delegate": "^7.10.1",
