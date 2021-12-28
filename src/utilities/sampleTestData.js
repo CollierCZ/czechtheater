@@ -31,6 +31,18 @@ export const sampleConstrainedGatsbyImageData = {
   },
 };
 
+export const sampleTallImageData = {
+  height: 250,
+  width: 150,
+  url: "https://example.com/wide.png"
+};
+
+export const sampleWideImageData = {
+  height: 150,
+  width: 250,
+  url: "https://example.com/wide.png"
+};
+
 export const sampleFixedGatsbyImageData = {
   localFile: {
     childImageSharp: {

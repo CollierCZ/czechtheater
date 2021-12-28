@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Fact from "../components/Fact/Fact";
+import Facts from "../components/Fact/Facts";
 import Layout from "../layout/layout";
 import ShowList from "../components/ShowList/ShowList";
 import Seo from "../components/Seo/Seo";
@@ -9,6 +9,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
 const IndexPage = ({ data }) => {
   const info = data.kontentItemBasicInfo.elements;
+  const factNodes = data.facts.nodes;
   return (
     <Layout>
       <Seo />
@@ -23,7 +24,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="theaterFacts">
         <h2>Czech Theater Fact</h2>
-        <Fact facts={data.facts} />
+        <Facts facts={factNodes} />
       </section>
       <section className="past-shows">
         <h2>Past Shows</h2>
@@ -79,18 +80,9 @@ export const query = graphql`
           }
           image {
             value {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 250
-                    height: 150
-                    placeholder: BLURRED
-                    transformOptions: { fit: CONTAIN }
-                    backgroundColor: "rgba(255,255,255,1)"
-                  )
-                }
-              }
+              height
+              width
+              url
             }
           }
         }
