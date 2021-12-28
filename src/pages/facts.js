@@ -3,38 +3,17 @@ import { graphql } from "gatsby";
 
 import Fact from "../components/Fact/Fact";
 import Layout from "../layout/layout";
-import ShowList from "../components/ShowList/ShowList";
 import Seo from "../components/Seo/Seo";
 import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 
-const IndexPage = ({ data }) => {
+const FactListing = ({ data }) => {
   const info = data.kontentItemBasicInfo.elements;
-  const factNodes = data.facts.nodes;
+  const nodes = data.facts.nodes
   return (
     <Layout>
       <Seo />
-      <section className="about">
-        <p dangerouslySetInnerHTML={{ __html: info.short_description.value }} />
-      </section>
-      <section className="future-shows">
-        <h2>Future Shows</h2>
-        <div className={"future showList"}>
-          <ShowList shows={data.futureShows.elements.shows} future="true" />
-        </div>
-      </section>
       <section className="theaterFacts">
-        <h2>Czech Theater Fact</h2>
-        <Fact fact={factNodes[Math.floor(Math.random() * factNodes.length)]} />
-      </section>
-      <section className="past-shows">
-        <h2>Past Shows</h2>
-        <div className={"past showList"}>
-          <ShowList shows={data.pastShows.elements.shows} />
-        </div>
-      </section>
-      <section className="mission">
-        <h2>Our Mission</h2>
-        <div dangerouslySetInnerHTML={{ __html: info.about_us.value }} />
+        {nodes.map(fact => <div  key={fact.id} style={{ padding: "2rem 0" }}><Fact fact={fact} /></div>)}
       </section>
       <section className="contact">
         <h2>Contact us</h2>
@@ -48,28 +27,16 @@ const IndexPage = ({ data }) => {
   );
 };
 
-export default IndexPage;
+export default FactListing;
 
 export const query = graphql`
-  query indexQuery {
+  query factQuery {
     kontentItemBasicInfo {
       ...BasicInfoFragment
     }
-    futureShows: kontentItemShowSection(
-      system: { codename: { eq: "future_shows" } }
-    ) {
-      ...ShowListFragment
-    }
-    pastShows: kontentItemShowSection(
-      system: { codename: { eq: "past_shows" } }
-    ) {
-      ...ShowListFragment
-    }
     facts: allKontentItemTheaterFact {
       nodes {
-        system {
-          codename
-        }
+        id
         elements {
           description {
             links {
