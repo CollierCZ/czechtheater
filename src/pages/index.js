@@ -10,6 +10,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 const IndexPage = ({ data }) => {
   const info = data.kontentItemBasicInfo.elements;
   const factNodes = data.facts.nodes;
+  const factToUse = factNodes[Math.floor(Math.random() * factNodes.length)]
   return (
     <Layout>
       <Seo />
@@ -24,7 +25,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="theaterFacts">
         <h2>Czech Theater Fact</h2>
-        <Fact fact={factNodes[Math.floor(Math.random() * factNodes.length)]} />
+        <Fact fact={factToUse} />
       </section>
       <section className="past-shows">
         <h2>Past Shows</h2>

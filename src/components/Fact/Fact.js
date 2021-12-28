@@ -5,6 +5,7 @@ import { RichTextElement } from "@kentico/gatsby-kontent-components";
 import "./Fact.css";
 
 const Fact = ({ fact }) => {
+  console.log(fact)
   const description = fact.elements.description;
   return (
     <div className="fact">
