@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Fact from "../components/Fact/Fact";
+import Facts from "../components/Fact/Facts";
 import Layout from "../layout/layout";
 import ShowList from "../components/ShowList/ShowList";
 import Seo from "../components/Seo/Seo";
@@ -10,7 +10,6 @@ import SocialMediaIcons from "../components/SocialMediaIcons/SocialMediaIcons";
 const IndexPage = ({ data }) => {
   const info = data.kontentItemBasicInfo.elements;
   const factNodes = data.facts.nodes;
-  const factToUse = factNodes[Math.floor(Math.random() * factNodes.length)]
   return (
     <Layout>
       <Seo />
@@ -25,7 +24,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="theaterFacts">
         <h2>Czech Theater Fact</h2>
-        <Fact fact={factToUse} />
+        <Facts facts={factNodes} />
       </section>
       <section className="past-shows">
         <h2>Past Shows</h2>
