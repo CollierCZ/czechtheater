@@ -47,18 +47,9 @@ export const query = graphql`
           }
           image {
             value {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED
-                    width: 250
-                    height: 150
-                    placeholder: BLURRED
-                    transformOptions: { fit: CONTAIN }
-                    backgroundColor: "rgba(255,255,255,1)"
-                  )
-                }
-              }
+              height
+              width
+              url
             }
           }
         }

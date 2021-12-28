@@ -1,11 +1,31 @@
 import React from "react";
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
+import { ImageElement } from "@kentico/gatsby-kontent-components"
 import "./Fact.css";
 
+const FactImage = ({ image }) => {
+  if (image.width > image.height) {
+    return <ImageElement
+      image={image}
+      width={250}
+      alt=""
+      className="factImage"
+      layout={"constrained"}
+      backgroundColor={"rgba(255,255,255,1)"}
+    />
+  }
+  return <ImageElement
+    image={image}
+    height={150}
+    className="factImage"
+    layout={"constrained"}
+    backgroundColor={"rgba(255,255,255,1)"}
+  />
+
+}
+
 const Fact = ({ fact }) => {
-  console.log(fact)
   const description = fact.elements.description;
   return (
     <div className="fact">
@@ -20,13 +40,10 @@ const Fact = ({ fact }) => {
         }}
       />
       {fact.elements.image.value[0] ? (
-        <GatsbyImage
+        <FactImage
           image={
-            fact.elements.image.value[0].localFile.childImageSharp
-              .gatsbyImageData
+            fact.elements.image.value[0]
           }
-          alt=""
-          className="factImage"
         />
       ) : null}
     </div>
