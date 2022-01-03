@@ -7,8 +7,7 @@ const Facts = ({facts}) => {
 
   useEffect(() => {
     setRandomFact(facts[Math.floor(Math.random() * facts.length)])
-
-  })
+  },[facts])
 
   if (!randomFact) {
     return <div style={{height: "8rem"}} />
