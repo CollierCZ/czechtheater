@@ -1,13 +1,19 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageElement } from "@kentico/gatsby-kontent-components";
 import "./Header.css";
 
-const Header = ({ image, logoDescription, siteTitle }) => (
+const Header = ({ image, siteTitle }) => (
   <header>
     <Link to="/">
-      <GatsbyImage image={image} alt={logoDescription ? logoDescription : ""} />
+      <ImageElement
+        image={image}
+        alt={image.description || ""}
+        layout="fixed"
+        height={100}
+        width={100}
+      />
       <div className="siteName">{siteTitle}</div>
     </Link>
   </header>

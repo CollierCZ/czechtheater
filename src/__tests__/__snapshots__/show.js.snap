@@ -4,6 +4,7 @@ exports[`A show loads correctly with a gallery 1`] = `
 <Layout>
   <Seo
     description="<p>All the acting</p>"
+    image="https://example.com/wide.png"
     keywords={
       Array [
         "czech",
@@ -16,39 +17,18 @@ exports[`A show loads correctly with a gallery 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <V
-    alt=""
+  <Memo(ImageElement)
+    alt="A great image"
+    backgroundColor="rgba(255,255,255,1)"
+    height={501}
     image={
       Object {
-        "backgroundColor": "rgba(255,255,255,1)",
-        "height": 150,
-        "images": Object {
-          "fallback": Object {
-            "sizes": "(min-width: 250px) 250px, 100vw",
-            "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
-            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
-          },
-          "sources": Array [
-            Object {
-              "sizes": "(min-width: 250px) 250px, 100vw",
-              "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
-              "type": "image/webp",
-            },
-          ],
-        },
-        "layout": "constrained",
-        "placeholder": Object {
-          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
-        },
-        "width": 250,
+        "description": "A great image",
+        "url": "https://example.com/wide.png",
       }
     }
+    layout="constrained"
+    placeholder="blurred"
   />
   <RichTextElement
     className="showDescription"
@@ -68,41 +48,8 @@ exports[`A show loads correctly with a gallery 1`] = `
     images={
       Array [
         Object {
-          "description": "A cool image",
-          "localFile": Object {
-            "childImageSharp": Object {
-              "gatsbyImageData": Object {
-                "backgroundColor": "rgba(255,255,255,1)",
-                "height": 150,
-                "images": Object {
-                  "fallback": Object {
-                    "sizes": "(min-width: 250px) 250px, 100vw",
-                    "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
-                    "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
-                  },
-                  "sources": Array [
-                    Object {
-                      "sizes": "(min-width: 250px) 250px, 100vw",
-                      "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
-                      "type": "image/webp",
-                    },
-                  ],
-                },
-                "layout": "constrained",
-                "placeholder": Object {
-                  "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
-                },
-                "width": 250,
-              },
-            },
-          },
-          "url": "https://example.com",
+          "description": "A great image",
+          "url": "https://example.com/wide.png",
         },
       ]
     }
@@ -114,6 +61,7 @@ exports[`A show loads correctly with no gallery 1`] = `
 <Layout>
   <Seo
     description="<p>All the acting</p>"
+    image="https://example.com/wide.png"
     keywords={
       Array [
         "czech",
@@ -126,39 +74,18 @@ exports[`A show loads correctly with no gallery 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <V
-    alt=""
+  <Memo(ImageElement)
+    alt="A great image"
+    backgroundColor="rgba(255,255,255,1)"
+    height={501}
     image={
       Object {
-        "backgroundColor": "rgba(255,255,255,1)",
-        "height": 150,
-        "images": Object {
-          "fallback": Object {
-            "sizes": "(min-width: 250px) 250px, 100vw",
-            "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
-            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
-          },
-          "sources": Array [
-            Object {
-              "sizes": "(min-width: 250px) 250px, 100vw",
-              "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
-              "type": "image/webp",
-            },
-          ],
-        },
-        "layout": "constrained",
-        "placeholder": Object {
-          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
-        },
-        "width": 250,
+        "description": "A great image",
+        "url": "https://example.com/wide.png",
       }
     }
+    layout="constrained"
+    placeholder="blurred"
   />
   <RichTextElement
     className="showDescription"
@@ -181,6 +108,7 @@ exports[`A show loads correctly with no tickets 1`] = `
 <Layout>
   <Seo
     description="<p>All the acting</p>"
+    image="https://example.com/wide.png"
     keywords={
       Array [
         "czech",
@@ -193,39 +121,18 @@ exports[`A show loads correctly with no tickets 1`] = `
   <h1>
     Alquist's revenge
   </h1>
-  <V
-    alt=""
+  <Memo(ImageElement)
+    alt="A great image"
+    backgroundColor="rgba(255,255,255,1)"
+    height={501}
     image={
       Object {
-        "backgroundColor": "rgba(255,255,255,1)",
-        "height": 150,
-        "images": Object {
-          "fallback": Object {
-            "sizes": "(min-width: 250px) 250px, 100vw",
-            "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
-            "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
-          },
-          "sources": Array [
-            Object {
-              "sizes": "(min-width: 250px) 250px, 100vw",
-              "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
-              "type": "image/webp",
-            },
-          ],
-        },
-        "layout": "constrained",
-        "placeholder": Object {
-          "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
-        },
-        "width": 250,
+        "description": "A great image",
+        "url": "https://example.com/wide.png",
       }
     }
+    layout="constrained"
+    placeholder="blurred"
   />
   <RichTextElement
     className="showDescription"
@@ -236,41 +143,8 @@ exports[`A show loads correctly with no tickets 1`] = `
     images={
       Array [
         Object {
-          "description": "A cool image",
-          "localFile": Object {
-            "childImageSharp": Object {
-              "gatsbyImageData": Object {
-                "backgroundColor": "rgba(255,255,255,1)",
-                "height": 150,
-                "images": Object {
-                  "fallback": Object {
-                    "sizes": "(min-width: 250px) 250px, 100vw",
-                    "src": "/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg",
-                    "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/a72d7/roadTrip.jpg 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/ae327/roadTrip.jpg 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/1169f/roadTrip.jpg 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/69ffc/roadTrip.jpg 500w",
-                  },
-                  "sources": Array [
-                    Object {
-                      "sizes": "(min-width: 250px) 250px, 100vw",
-                      "srcSet": "/static/76e870b9a7408e63cec608575bad6cb8/acf2b/roadTrip.webp 63w,
-/static/76e870b9a7408e63cec608575bad6cb8/7f239/roadTrip.webp 125w,
-/static/76e870b9a7408e63cec608575bad6cb8/8d474/roadTrip.webp 250w,
-/static/76e870b9a7408e63cec608575bad6cb8/ba777/roadTrip.webp 500w",
-                      "type": "image/webp",
-                    },
-                  ],
-                },
-                "layout": "constrained",
-                "placeholder": Object {
-                  "fallback": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQCAwb/xAAVAQEBAAAAAAAAAAAAAAAAAAADAv/aAAwDAQACEAMQAAABmpekaaMCz//EAB0QAAICAQUAAAAAAAAAAAAAAAEEAgMRABIUITP/2gAIAQEAAQUCukeWLCNKndQz7ZxNXtf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAATH/2gAIAQMBAT8BmK//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPwGo/8QAHBAAAgICAwAAAAAAAAAAAAAAAAIBQSEiYYHw/9oACAEBAAY/AmWMcmtSLI/qOhT/xAAdEAEAAgICAwAAAAAAAAAAAAABABEhMUGxUWFx/9oACAEBAAE/IbQamRfEuLeH3FUu29/WNKnk6TIQNolLvPc//9oADAMBAAIAAwAAABDsP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQMBAT8QGC6b/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARMf/aAAgBAgEBPxBatwX/xAAcEAEBAAICAwAAAAAAAAAAAAABEQAhMYFhcdH/2gAIAQEAAT8QqSikBp0ffGQYqiQ46R7wWwlnLRY/oUn1g1gSNOIqYodW73z/2Q==",
-                },
-                "width": 250,
-              },
-            },
-          },
-          "url": "https://example.com",
+          "description": "A great image",
+          "url": "https://example.com/wide.png",
         },
       ]
     }

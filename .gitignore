@@ -9,3 +9,6 @@ yarn-error.log
 
 # Test coverage
 coverage
+
+# IDE files
+*.code-workspace

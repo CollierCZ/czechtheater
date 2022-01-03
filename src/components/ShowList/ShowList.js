@@ -8,10 +8,7 @@ class ShowList extends React.Component {
       let propsArray = {
         name: show.elements.name.value,
         description: show.elements.short_description.value,
-        imageSrc:
-          show.elements.main_image.value[0].localFile.childImageSharp
-            .gatsbyImageData,
-        imageDescription: show.elements.main_image.value[0].description,
+        showImage: show.elements.main_image.value[0],
         slug: show.elements.url.value,
       };
       future ? (propsArray.time = "future") : (propsArray.time = "past");

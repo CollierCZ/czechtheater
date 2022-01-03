@@ -11,8 +11,7 @@ export const PureLayout = ({ children,data }) => {
     <>
       <Header 
         siteTitle={data.kontentItemBasicInfo.elements.name.value} 
-        image={favicon.localFile.childImageSharp.gatsbyImageData} 
-        logoDescription={favicon.description}        
+        image={favicon}        
       />
       <div
         style={{

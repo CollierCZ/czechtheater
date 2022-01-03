@@ -20,12 +20,6 @@ module.exports = {
         icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `@rshackleton/gatsby-transformer-kontent-image`,
-      options: {
-        local: true,
-      },
-    },
     "gatsby-plugin-offline",
     "gatsby-plugin-image",
     `gatsby-transformer-sharp`,

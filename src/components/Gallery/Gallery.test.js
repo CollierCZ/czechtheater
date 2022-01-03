@@ -2,17 +2,14 @@ import Gallery from "./Gallery";
 import { mount } from "enzyme";
 import React from "react";
 import { simpleShallowRender } from "../../utilities/testHelpers";
-import { sampleFixedGatsbyImageData } from "../../utilities/sampleTestData";
 
 const images = [
   {
     description: "The theater logo (image 1)",
-    ...sampleFixedGatsbyImageData,
     url: "https://link-to/first-image.png"
   },
   {
     description: "RUR banner (image 2)",
-    ...sampleFixedGatsbyImageData,
     url: "https://link-to/second-image.png"
   },
 ]
