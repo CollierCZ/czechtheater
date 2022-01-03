@@ -1,12 +1,12 @@
 import React from "react";
 import ShowCard from "./ShowCard";
-import { sampleFixedGatsbyImageData } from "../../utilities/sampleTestData";
+import { sampleImage } from "../../utilities/sampleTestData";
 import { simpleShallowRender } from "../../utilities/testHelpers";
 
 const propsArray = {
   name: "Alquist's revenge",
   description: "All the acting",
-  imageSrc: sampleFixedGatsbyImageData,
+  showImage: sampleImage,
   imageDescription: "A cool image",
   slug: "alquists-revenge"
 };

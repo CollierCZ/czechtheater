@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageElement } from "@kentico/gatsby-kontent-components";
 import "./ShowCard.css";
 
 class ShowCard extends Component {
@@ -7,8 +7,7 @@ class ShowCard extends Component {
     const {
       name,
       description,
-      imageSrc,
-      imageDescription,
+      showImage,
       slug,
       time,
       ticketLink,
@@ -16,7 +15,7 @@ class ShowCard extends Component {
     return (
       <div className={time + " showCard"}>
         <div className="image">
-          <GatsbyImage image={imageSrc} alt={imageDescription} />
+          <ImageElement image={showImage} alt={showImage.description} layout="fixed" width={291} height={291} />
         </div>
         {ticketLink
           ? time === "future" && (

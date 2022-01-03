@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { RichTextElement } from "@kentico/gatsby-kontent-components";
-import { ImageElement } from "@kentico/gatsby-kontent-components"
+import { ImageElement } from "@kentico/gatsby-kontent-components";
 import "./Fact.css";
 
 const FactImage = ({ image }) => {

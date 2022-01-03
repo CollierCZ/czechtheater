@@ -11,6 +11,7 @@ exports[`Fact renders correctly with a tall image 1`] = `
         "image": Object {
           "value": Array [
             Object {
+              "description": "A great image",
               "height": 250,
               "url": "https://example.com/wide.png",
               "width": 150,
@@ -36,6 +37,7 @@ exports[`Fact renders correctly with a tall image 1`] = `
     <FactImage
       image={
         Object {
+          "description": "A great image",
           "height": 250,
           "url": "https://example.com/wide.png",
           "width": 150,
@@ -48,6 +50,7 @@ exports[`Fact renders correctly with a tall image 1`] = `
         height={150}
         image={
           Object {
+            "description": "A great image",
             "height": 250,
             "url": "https://example.com/wide.png",
             "width": 150,
@@ -56,7 +59,7 @@ exports[`Fact renders correctly with a tall image 1`] = `
         layout="constrained"
       >
         <V
-          alt=""
+          alt="A great image"
           className="factImage"
           image={
             Object {
@@ -164,7 +167,7 @@ https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)
                   />
                 </Placeholder>
                 <MainImage
-                  alt=""
+                  alt="A great image"
                   data-gatsby-image-ssr=""
                   data-main-image=""
                   fallback={
@@ -196,7 +199,7 @@ https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)
                   }
                 >
                   <Picture
-                    alt=""
+                    alt="A great image"
                     data-gatsby-image-ssr=""
                     data-main-image=""
                     fallback={
@@ -228,7 +231,7 @@ https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)
                     }
                   >
                     <O
-                      alt=""
+                      alt="A great image"
                       data-gatsby-image-ssr=""
                       data-main-image=""
                       innerRef={null}
@@ -256,7 +259,7 @@ https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)
                       }
                     >
                       <img
-                        alt=""
+                        alt="A great image"
                         data-gatsby-image-ssr=""
                         data-main-image=""
                         data-src="https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)&fit=crop"
@@ -286,7 +289,7 @@ https://example.com/wide.png?w=90&h=150&auto=format&bg=rgba(255%2C255%2C255%2C1)
                   </Picture>
                   <noscript>
                     <Picture
-                      alt=""
+                      alt="A great image"
                       data-gatsby-image-ssr=""
                       data-main-image=""
                       fallback={
@@ -350,6 +353,7 @@ exports[`Fact renders correctly with a wide image 1`] = `
         "image": Object {
           "value": Array [
             Object {
+              "description": "A great image",
               "height": 150,
               "url": "https://example.com/wide.png",
               "width": 250,
@@ -375,6 +379,7 @@ exports[`Fact renders correctly with a wide image 1`] = `
     <FactImage
       image={
         Object {
+          "description": "A great image",
           "height": 150,
           "url": "https://example.com/wide.png",
           "width": 250,
@@ -387,6 +392,7 @@ exports[`Fact renders correctly with a wide image 1`] = `
         className="factImage"
         image={
           Object {
+            "description": "A great image",
             "height": 150,
             "url": "https://example.com/wide.png",
             "width": 250,

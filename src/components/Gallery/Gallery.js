@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { ImageElement } from "@kentico/gatsby-kontent-components";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 import "./Gallery.css";
@@ -23,22 +23,10 @@ class Gallery extends Component {
     return (
       <div className={"gallery"}>
         {images.map((image, index) => {
-          if (image.localFile.childImageSharp) {
-            const imageFile = image.localFile.childImageSharp;
-            return (
-              <GalleryImage
-                key={index}
-                image={imageFile.gatsbyImageData}
-                index={index}
-                handler={this.handleClick}
-              />
-            );
-          }
           return (
             <GalleryImage
               key={image.url}
-              url={image.url}
-              alt={image.description}
+              image={image}
               index={index}
               handler={this.handleClick}
             />
@@ -70,7 +58,7 @@ class Gallery extends Component {
 
 class GalleryImage extends Component {
   render() {
-    const { alt, image, index, handler, url } = this.props;
+    const { image, index, handler, url } = this.props;
     return (
       <button
         className="image"
@@ -78,9 +66,16 @@ class GalleryImage extends Component {
         onKeyPress={() => handler(index)}
       >
         {url ? (
-          <img src={url} alt={alt} />
+          <img src={url} alt={image.description} />
         ) : (
-          <GatsbyImage image={image} alt={image.description || ""} />
+          <ImageElement
+            image={image}
+            alt={image.description || ""}
+            layout="fixed"
+            width={284}
+            placeholder="blurred"
+            height={284}
+          />
         )}
       </button>
     );

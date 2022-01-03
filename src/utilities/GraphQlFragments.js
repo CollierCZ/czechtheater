@@ -11,11 +11,7 @@ export const BasicInfoFragment = graphql`
       }
       favicon {
         value {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(layout: FIXED, width: 100, height: 100)
-            }
-          }
+          description
           url
         }
       }
@@ -41,18 +37,8 @@ export const ShowListFragment = graphql`
             elements {
               main_image {
                 value {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData(
-                        layout: FIXED
-                        width: 291
-                        placeholder: BLURRED
-                        height: 291
-                        transformOptions: { fit: COVER }
-                      )
-                    }
-                  }
                   description
+                  url
                 }
               }
               name {
