@@ -27,7 +27,7 @@ const Contest = ({ data }) => {
           <li>Prizes must be collected in person in the Brno center or at one of Czech Theater's performances in Prague. If a winner is unable to collect the prize or within a week of winning arrange a time and place for collection, they forfeit the prize back to Czech Theater.</li>
           <li>Czech Theater will collect only the personal data that participants provide to it for the purposes of participanting or arranging collection of a prize, such as the participant's name, email address, or phone number to arrange collection. None of this information will be stored beyond the purpose of providing prizes to contest winners. By submitting personal data to Czech Theater within the contest, you consent to your data being used for this purpose. Czech Theater will not use this information for any other puposes, including marketing, without further explicit consent by the participant.</li>
           <li>Czech Theater reserves the right to cancel or postpone the contest or change its rules at any time for any reason, including, but not limited to, because of the COVID-19 pandemic. Any changes to the rules will be announced on the Facebook page of Czech Theater and placed here.</li>
-          <li>By participanting in the contest, you agree to abid by these rules.</li>
+          <li>By participanting in the contest, you agree to abide by these rules.</li>
         </ol>
         <p>These rules were compiled in Brno on January 14, 2022.</p>
       </section>
