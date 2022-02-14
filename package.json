@@ -16,7 +16,7 @@
     "@babel/helper-call-delegate": "^7.12.13",
     "@babel/helper-function-name": "^7.16.7",
     "@kentico/gatsby-kontent-components": "^8.0.0-beta.2",
-    "@kentico/gatsby-source-kontent": "^8.0.0-beta.2",
+    "@kentico/gatsby-source-kontent": "^8.0.0",
     "@reach/dialog": "^0.16.0",
     "gatsby": "^4.5.5",
     "gatsby-plugin-image": "^2.6.0",
