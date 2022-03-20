@@ -21,7 +21,7 @@ class Gallery extends Component {
     const { images } = this.props;
     const { photoIndex, showLightbox } = this.state;
     return (
-      <div className={"gallery"}>
+      <div className={"gallery"} data-testid="gallery">
         {images.map((image, index) => {
           return (
             <GalleryImage

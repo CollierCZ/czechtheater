@@ -230,11 +230,6 @@
 
     }
 
-    .tickets {
-        margin-top:1em;
-        font-size: 1.35em;
-    }
-
     .showList .showCard > .tickets + a {
         height: 79%;
     }

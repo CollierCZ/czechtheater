@@ -1,10 +1,12 @@
-import { basicInfoQuery } from "../utilities/sampleTestData" 
-import { PureLayout as Layout } from "./layout";
+import Layout from "./layout";
 import React from "react";
-import { simpleShallowRender } from "../utilities/testHelpers";
+import { render, screen } from '@testing-library/react'
+import "@testing-library/jest-dom/extend-expect";
 
 describe("Layout", () => {
     it("loads correctly", () => {
-      simpleShallowRender(<Layout data={basicInfoQuery}><p>A test</p></Layout>)
+      const testText = "A test"
+      render(<Layout><h1>{testText}</h1></Layout>)
+      expect(screen.getByRole("heading")).toHaveTextContent(testText)
     })
 })

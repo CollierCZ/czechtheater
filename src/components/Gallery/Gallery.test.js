@@ -1,7 +1,7 @@
 import Gallery from "./Gallery";
-import { mount } from "enzyme";
 import React from "react";
-import { simpleShallowRender } from "../../utilities/testHelpers";
+import { fireEvent, render, screen } from '@testing-library/react'
+import "@testing-library/jest-dom/extend-expect";
 
 const images = [
   {
@@ -14,43 +14,40 @@ const images = [
   },
 ]
 
-const openLightbox = (nextClick,event) => {
-  const component = mount(<Gallery images={images} />)
-  const imageNodes = component.find('img')
-  const image = imageNodes.at(0)
-  if (event === 'keypress') {
-    image.simulate('keypress', {key: 'Enter'})
-  }
-  else {
-    image.simulate('click')
-  }
-  if (nextClick) {
-    component.find(nextClick).simulate('click')    
-  }
-  expect(component).toMatchSnapshot()
-  component.unmount()
+const openLightbox = () => {
+  render(<Gallery images={images} />)
+  fireEvent.click(screen.getByAltText(images[0].description))
 }
 
 describe("Gallery", () => {
   it("renders correctly ", () => {
-    simpleShallowRender(<Gallery images={images} />)
+    render(<Gallery images={images} />)
+    expect(screen.getByTestId("gallery")).toBeInTheDocument()
   })
   it("correctly opens lightbox on click", () => {
     openLightbox()
+    expect(document.querySelector(".ReactModalPortal")).toBeInTheDocument()
   })
   it("correctly opens lightbox on keypress", () => {
-    openLightbox(false,'keypress')
+    render(<Gallery images={images} />)
+    fireEvent.keyPress(screen.getByAltText(images[0].description), {key: "Enter", charCode: 13})
+    expect(document.querySelector(".ReactModalPortal")).toBeInTheDocument()
   })
 })
 
 describe("Lightbox", () => {
   it("moves to the next image correcly", () => {
-    openLightbox('.ril__navButtonNext')
+    openLightbox()
+    fireEvent.click(screen.getByTitle("Next image"))
+    fireEvent.load(screen.getByLabelText("Lightbox"))
   })
   it("moves to the previous image correcly", () => {
-    openLightbox('.ril__navButtonPrev')
+    openLightbox()
+    fireEvent.click(screen.getByTitle("Previous image"))
+    fireEvent.load(document.querySelector(".ril-image-current"))
   })
   it("closes correcly", () => {
-    openLightbox('.ril__closeButton')
+    openLightbox()
+    fireEvent.click(screen.getByTitle("Close lightbox"))
   })
 })
