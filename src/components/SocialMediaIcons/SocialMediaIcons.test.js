@@ -1,12 +1,16 @@
 import React from "react";
-import { simpleShallowRender } from "../../utilities/testHelpers";
 import SocialMediaIcons from "./SocialMediaIcons";
+import { render, screen } from '@testing-library/react'
+import "@testing-library/jest-dom/extend-expect";
 
 describe("SocialMediaIcons", () => {
   it("loads correctly with URL", () => {
-    simpleShallowRender(<SocialMediaIcons urls={["https://www.facebook.com/czechtheater/"]} />)
+    const mediaLink = "https://www.facebook.com/czechtheater/"
+    render(<SocialMediaIcons urls={[mediaLink]} />)
+    expect(screen.getByRole("link")).toHaveAttribute("href", mediaLink)
   })
-  it("loads correctly when empty", () => {
-    simpleShallowRender(<SocialMediaIcons />)
+  it("loads nothing when empty", () => {
+    render(<SocialMediaIcons />)
+    expect(screen.queryByRole("link")).not.toBeInTheDocument()
   })
 })

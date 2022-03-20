@@ -1,16 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../components/Header/Header"
 import "./layout.css"
 
-export const PureLayout = ({ children,data }) => {
-  const favicon = data.kontentItemBasicInfo.elements.favicon.value[0]
+const Layout = ({ children }) => {
+  const { kontentItemBasicInfo } = useStaticQuery(graphql`
+    query {
+      kontentItemBasicInfo {
+        ...BasicInfoFragment
+      }
+    }
+  `)
+
+  const favicon = kontentItemBasicInfo.elements.favicon.value[0]
   return (
     <>
       <Header 
-        siteTitle={data.kontentItemBasicInfo.elements.name.value} 
+        siteTitle={kontentItemBasicInfo.elements.name.value} 
         image={favicon}        
       />
       <div
@@ -29,28 +37,6 @@ export const PureLayout = ({ children,data }) => {
     </>
   )
 }
-
-PureLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-  data: PropTypes.object.isRequired,
-}
-
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        kontentItemBasicInfo {
-          ...BasicInfoFragment
-        }
-      }
-    `}
-    render={data => {
-      return (
-        <PureLayout children={children} data={data} />
-      )
-    }}
-  />
-)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

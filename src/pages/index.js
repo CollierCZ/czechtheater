@@ -18,9 +18,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="future-shows">
         <h2>Future Shows</h2>
-        <div className={"future showList"}>
-          <ShowList shows={data.futureShows.elements.shows} future="true" />
-        </div>
+        <ShowList shows={data.futureShows.elements.shows} future="true" />
       </section>
       <section className="theaterFacts">
         <h2>Czech Theater Fact</h2>
@@ -28,9 +26,7 @@ const IndexPage = ({ data }) => {
       </section>
       <section className="past-shows">
         <h2>Past Shows</h2>
-        <div className={"past showList"}>
-          <ShowList shows={data.pastShows.elements.shows} />
-        </div>
+        <ShowList shows={data.pastShows.elements.shows} />
       </section>
       <section className="mission">
         <h2>Our Mission</h2>

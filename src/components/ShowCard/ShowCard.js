@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ImageElement } from "@kentico/gatsby-kontent-components";
+import TicketLink from "../TicketLink/TicketLink";
 import "./ShowCard.css";
 
 class ShowCard extends Component {
@@ -13,17 +14,11 @@ class ShowCard extends Component {
       ticketLink,
     } = this.props;
     return (
-      <div className={time + " showCard"}>
+      <div className="showCard" data-testid="show-card">
         <div className="image">
           <ImageElement image={showImage} alt={showImage.description} layout="fixed" width={291} height={291} />
         </div>
-        {ticketLink
-          ? time === "future" && (
-              <h4 className="tickets">
-                <a href={ticketLink}>Tickets</a>
-              </h4>
-            )
-          : null}
+        {ticketLink ? time === "future" && <TicketLink link={ticketLink} /> : null}
         <a href={slug}>
           <h3>{name}</h3>
           <div

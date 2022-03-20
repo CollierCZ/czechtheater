@@ -11,6 +11,7 @@ const FactImage = ({ image }) => {
       width={250}
       alt=""
       className="factImage"
+      data-testid="fact-image"
       layout={"constrained"}
       backgroundColor={"rgba(255,255,255,1)"}
     />
@@ -18,7 +19,9 @@ const FactImage = ({ image }) => {
   return <ImageElement
     image={image}
     height={150}
+    alt=""
     className="factImage"
+    data-testid="fact-image"
     layout={"constrained"}
     backgroundColor={"rgba(255,255,255,1)"}
   />
@@ -28,7 +31,7 @@ const FactImage = ({ image }) => {
 const Fact = ({ fact }) => {
   const description = fact.elements.description;
   return (
-    <div className="fact">
+    <div className="fact" data-testid="fact">
       <RichTextElement
         className="factText"
         value={description.value}

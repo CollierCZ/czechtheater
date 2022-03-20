@@ -1,5 +1,6 @@
 const React = require("react")
 const gatsby = jest.requireActual("gatsby")
+import { basicInfoQuery } from "../src/utilities/sampleTestData"
 module.exports = {
   ...gatsby,
   graphql: jest.fn(),
@@ -21,6 +22,6 @@ module.exports = {
         href: to,
       })
   ),
-  StaticQuery: jest.fn(),
-  useStaticQuery: jest.fn(),
+  StaticQuery: jest.fn().mockImplementation(() => null),
+  useStaticQuery: jest.fn().mockImplementation(() => basicInfoQuery),
 }

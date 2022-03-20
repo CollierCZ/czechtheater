@@ -3,6 +3,10 @@ export const sampleImage = {
   url: "https://example.com/wide.png"
 };
 
+export const sampleImageNoDescription = {
+  url: "https://example.com/wide.png"
+};
+
 export const sampleTallImageData = {
   description: "A great image",
   height: 250,
@@ -59,16 +63,33 @@ sampleShowNoTicketLink.elements.ticket_link.value = "";
 let sampleShowForPageNoGallery = JSON.parse(JSON.stringify(sampleShowForPage));
 sampleShowForPageNoGallery.elements.gallery.value = [];
 
-let sampleShowForPageNoTicketLink = JSON.parse(
-  JSON.stringify(sampleShowForPage)
-);
+let sampleShowForPageNoTicketLink = JSON.parse(JSON.stringify(sampleShowForPage));
 sampleShowForPageNoTicketLink.elements.ticket_link.value = "";
+
+export const internalLinkText = "Cat on the Rails"
+const internalLinkValue = `<p>This is text with a link to the show <a data-item-id=\"7a4bc255\" href=\"\">${internalLinkText}</a>.</p>`
+const internalLinkLinks = [{
+  "codename": "cat_on_the_rails",
+  "link_id": "7a4bc255",
+  "type": "show",
+  "url_slug": "cat-on-the-rails"
+}]
+
+export const internalLinksObject = {
+  internalLinkLinks,
+  internalLinkValue
+}
+
+let sampleShowForPageWithInternalLink = JSON.parse(JSON.stringify(sampleShowForPage));
+sampleShowForPageWithInternalLink.elements.description.value = internalLinkValue
+sampleShowForPageWithInternalLink.elements.description.links = internalLinkLinks
 
 export {
   sampleShowForPage,
   sampleShowForPageNoGallery,
   sampleShowForPageNoTicketLink,
   sampleShowNoTicketLink,
+  sampleShowForPageWithInternalLink
 };
 
 export const basicInfoQuery = {

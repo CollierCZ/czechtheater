@@ -5,6 +5,7 @@ import { ImageElement, RichTextElement } from "@kentico/gatsby-kontent-component
 import Layout from "../layout/layout";
 import Gallery from "../components/Gallery/Gallery";
 import Seo from "../components/Seo/Seo";
+import TicketLink from "../components/TicketLink/TicketLink";
 import "./show.css";
 
 const Show = ({ data }) => {
@@ -33,17 +34,9 @@ const Show = ({ data }) => {
         className="showDescription"
         value={show.description.value}
         links={show.description.links}
-        resolveLink={(link, domNode) => {
-          return (
-            <Link to={`/${link.url_slug}`}>{domNode.children[0].data}</Link>
-          );
-        }}
+        resolveLink={(link, domNode) => <Link to={`/${link.url_slug}`}>{domNode.children[0].data}</Link>}
       />
-      {show.ticket_link.value ? (
-        <h4 className="tickets">
-          <a href={show.ticket_link.value}>Tickets</a>
-        </h4>
-      ) : null}
+      {show.ticket_link.value ? <TicketLink link={show.ticket_link.value} /> : null}
       {show.gallery.value[0] ? <Gallery images={show.gallery.value} /> : null}
     </Layout>
   );
