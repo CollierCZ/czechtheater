@@ -15,7 +15,7 @@
     "@kentico/gatsby-kontent-components": "^8.0.0",
     "@kentico/gatsby-source-kontent": "^8.0.0",
     "@reach/dialog": "^0.17.0",
-    "gatsby": "4.17.1",
+    "gatsby": "4.24.4",
     "gatsby-plugin-image": "2.17.0",
     "gatsby-plugin-manifest": "^4.17.0",
     "gatsby-plugin-offline": "^5.17.0",
