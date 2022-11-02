@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ImageElement } from "@kentico/gatsby-kontent-components";
+import { ImageElement } from "@kontent-ai/gatsby-components";
 import TicketLink from "../TicketLink/TicketLink";
 import "./ShowCard.css";
 

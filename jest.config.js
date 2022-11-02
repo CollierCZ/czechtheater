@@ -12,5 +12,5 @@ module.exports = {
   transform: {
     "^.+\\.(js|jsx)?$": `<rootDir>/jest-preprocess.js`,
   },
-  transformIgnorePatterns: [`node_modules/(?!(gatsby|gatsby-script)/)`]
+  transformIgnorePatterns: [`node_modules/(?!(gatsby|gatsby-script|yet-another-react-lightbox)/)`]
 }

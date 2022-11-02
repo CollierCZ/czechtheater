@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { ImageElement, RichTextElement } from "@kentico/gatsby-kontent-components";
+import { ImageElement, RichTextElement } from "@kontent-ai/gatsby-components";
 
 import Layout from "../layout/layout";
 import Gallery from "../components/Gallery/Gallery";
