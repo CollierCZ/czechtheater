@@ -2,7 +2,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `@kentico/gatsby-source-kontent`,
+      resolve: `@kontent-ai/gatsby-source`,
       options: {
         projectId: `fb599585-baec-0077-1624-981d3321fff0`,
         languageCodenames: [`en-US`],

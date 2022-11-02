@@ -1,59 +1,47 @@
-import React, { Component } from "react";
-import { ImageElement } from "@kentico/gatsby-kontent-components";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import React, { Component, useState } from "react";
+import { ImageElement } from "@kontent-ai/gatsby-components";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 import "./Gallery.css";
 
-class Gallery extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photoIndex: 0,
-      showLightbox: false,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick = (index) => {
-    this.setState({ showLightbox: true, photoIndex: index });
+const Gallery = ({images}) => {
+  const [ photoIndex, setPhotoIndex ] = useState(0)
+  const [ showLightbox, setShowLightbox ] = useState(false)
+
+  const handleClick = (index) => {
+    setPhotoIndex(index)
+    setShowLightbox(true)
   };
 
-  render() {
-    const { images } = this.props;
-    const { photoIndex, showLightbox } = this.state;
-    return (
-      <div className={"gallery"} data-testid="gallery">
-        {images.map((image, index) => {
-          return (
-            <GalleryImage
-              key={image.url}
-              image={image}
-              index={index}
-              handler={this.handleClick}
-            />
-          );
-        })}
-        {showLightbox && (
-          <Lightbox
-            mainSrc={images[photoIndex].url}
-            nextSrc={images[(photoIndex + 1) % images.length].url}
-            prevSrc={
-              images[(photoIndex + images.length - 1) % images.length].url
-            }
-            onCloseRequest={() => this.setState({ showLightbox: false })}
-            onMovePrevRequest={() =>
-              this.setState({
-                photoIndex: (photoIndex + images.length - 1) % images.length,
-              })
-            }
-            onMoveNextRequest={() =>
-              this.setState({ photoIndex: (photoIndex + 1) % images.length })
-            }
-            imageCaption={images[photoIndex].description}
+  const lightboxImages = images.map(image => ({
+    src: image.url,
+    description: image.description
+  }))
+  return (
+    <div className={"gallery"} data-testid="gallery">
+      {images.map((image, index) => {
+        return (
+          <GalleryImage
+            key={image.url}
+            image={image}
+            index={index}
+            handler={handleClick}
           />
-        )}
-      </div>
-    );
-  }
+        );
+      })}
+      {showLightbox && (
+        <Lightbox
+          open={showLightbox}
+          close={() => setShowLightbox(false)}
+          index={photoIndex}
+          slides={lightboxImages}
+          plugins={[Captions]}
+        />
+      )}
+    </div>
+  );
 }
 
 class GalleryImage extends Component {

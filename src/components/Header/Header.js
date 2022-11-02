@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-import { ImageElement } from "@kentico/gatsby-kontent-components";
+import { ImageElement } from "@kontent-ai/gatsby-components";
 import "./Header.css";
 
 const Header = ({ image, siteTitle }) => (
