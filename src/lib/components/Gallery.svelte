@@ -13,5 +13,10 @@
 </script>
 
 <div class="mt-6">
-	<ImageGallery items={galleryImages} lazyLoad={true} showFullscreenButton={false} showPlayButton={false} />
+	<ImageGallery
+		items={galleryImages}
+		lazyLoad={true}
+		showFullscreenButton={false}
+		showPlayButton={false}
+	/>
 </div>

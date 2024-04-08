@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { richTextResolver } from '$lib';
 	import Gallery from '$lib/components/Gallery.svelte';
+	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import TicketLink from '$lib/components/TicketLink.svelte';
 
@@ -29,7 +29,7 @@
 			alt={show.elements.main_image.value[0].description}
 		/>
 
-		{@html richTextResolver(show.elements.description)}
+		<RichText richTextElement={show.elements.description} />
 
 		{#if ticketLink}
 			<TicketLink link={ticketLink} />

@@ -21,7 +21,7 @@
 		"@kontent-ai/model-generator": "^6.5.1",
 		"@kontent-ai/rich-text-resolver": "^1.0.1",
 		"@mdi/js": "^7.4.47",
-		"@portabletext/to-html": "^2.0.12",
+		"@portabletext/svelte": "^2.1.10",
 		"@react2svelte/image-gallery": "^1.0.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.1",

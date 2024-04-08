@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { richTextResolver } from '$lib';
+	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 
 	import { onMount } from 'svelte';
@@ -32,7 +32,7 @@
 			/>
 		{/if}
 		<div class="col-span-2">
-			{@html richTextResolver(fact.elements.description)}
+			<RichText richTextElement={fact.elements.description} />
 		</div>
 	</div>
 {/if}
