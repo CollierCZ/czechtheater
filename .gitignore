@@ -6,9 +6,20 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+/build
+/.svelte-kit
 
 # Test coverage
 coverage
 
 # IDE files
 *.code-workspace
+
+# For environment variables in development
+.env
+.env.*
+!.env.example
+
+# Vite builds
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
