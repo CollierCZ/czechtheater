@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { richTextResolver } from '$lib';
+	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 
 	export let data: PageData;
@@ -16,4 +16,4 @@
 
 <Title>About Czech Theater</Title>
 
-{@html richTextResolver(data.aboutUsText)}
+<RichText richTextElement={data.aboutUsText} />

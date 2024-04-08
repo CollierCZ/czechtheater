@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { richTextResolver } from '$lib';
 
 	import Gallery from '$lib/components/Gallery.svelte';
+	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import TicketLink from '$lib/components/TicketLink.svelte';
 
@@ -34,7 +34,7 @@
 	Premiere: {new Date(showData.premiere.value || '').toDateString()}
 </p>
 
-{@html richTextResolver(showData.description)}
+<RichText richTextElement={showData.description} />
 
 {#if gallery.value.length > 0}
 	<Gallery images={gallery} />

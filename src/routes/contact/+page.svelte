@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { richTextResolver } from '$lib';
+	import RichText from '$lib/components/RichText.svelte';
 	import { mdiFacebook, mdiEmail, mdiInstagram } from '@mdi/js';
 
 	import Title from '$lib/components/Title.svelte';
@@ -36,4 +36,4 @@
 	{/each}
 </div>
 
-{@html richTextResolver(data.contactInfo)}
+<RichText richTextElement={data.contactInfo} />
