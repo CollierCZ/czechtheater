@@ -2,8 +2,7 @@
 	import {
 		PortableText,
 		type PortableTextComponents,
-		type PortableTextTypeComponentOptions,
-		type PortableTextMarkComponentOptions
+		type PortableTextTypeComponentOptions
 	} from '@portabletext/svelte';
 	import {
 		nodeParse,
@@ -11,9 +10,7 @@
 		resolveImage,
 		toHTMLImageDefault,
 		type PortableTextImage,
-		type PortableTextComponent,
-		type PortableTextExternalLink,
-		type PortableTextInternalLink
+		type PortableTextComponent
 	} from '@kontent-ai/rich-text-resolver';
 	import type { Elements } from '@kontent-ai/delivery-sdk';
 

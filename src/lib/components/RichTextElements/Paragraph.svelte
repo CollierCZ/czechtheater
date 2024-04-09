@@ -3,7 +3,7 @@
 
 	// Property custom marks receive from @portabletext/svelte when redered
 	export let portableText: MarkComponentProps;
-	const { value, indexInParent } = portableText;
+	const { indexInParent } = portableText;
 	const isFirst = indexInParent === 0;
 </script>
 

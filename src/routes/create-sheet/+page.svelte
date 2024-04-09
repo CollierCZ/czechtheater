@@ -6,7 +6,7 @@
 	let rows = $state(1);
 	let ticketCounts = $state({ 0: 1 });
 
-	const getRowNumber = (string) => string.split(/[a-zA-Z]*/)[1];
+	const getRowNumber = (string: string): string => string.split(/[a-zA-Z]*/)[1];
 
 	const handleSubmit = (event: { target: EventTarget & HTMLFormElement }) => {
 		const formData = new FormData(event.target);
@@ -45,7 +45,7 @@
 
 {#if !submitted}
 	<form on:submit|preventDefault={handleSubmit}>
-		{#each new Array(rows).keys() as row, rowIndex}
+		{#each new Array(rows).keys() as _row, rowIndex}
 			<div class="mb-4 flex flex-wrap gap-8">
 				<div class="flex flex-col">
 					<label class="text-xs" for={`email${rowIndex}`}>Email</label>
@@ -65,7 +65,7 @@
 						name={`ticketCount${rowIndex}`}
 						bind:value={ticketCounts[rowIndex]}
 					>
-						{#each numberArray as x, numIndex}
+						{#each numberArray as _x, numIndex}
 							<option value={numIndex + 1}>{numIndex + 1}</option>
 						{/each}
 					</select>

@@ -3,9 +3,11 @@
 	import type { LayoutData } from './$types';
 	import '../app.pcss';
 
-	export let data: LayoutData;
+	let { data }: LayoutData = $props();
 
-	$: currentSlug = $page.url.pathname;
+	// https://github.com/sveltejs/eslint-plugin-svelte/issues/652
+	// eslint-disable-next-line svelte/valid-compile
+	let currentSlug = $state($page.url.pathname);
 	const navItems = [
 		['/', 'Upcoming Shows'],
 		['/auditions', 'Auditions'],
