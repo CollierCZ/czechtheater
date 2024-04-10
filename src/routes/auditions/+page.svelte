@@ -28,8 +28,7 @@
 <RichText richTextElement={data.auditionsInfo.upcoming_auditions_description} />
 
 {#if auditionEventLink}
-	<LinkButton link={auditionEventLink}>
-		<SvgIcon path={mdiFacebook} alt="Facebook" />
+  <LinkButton {auditionEventLink} iconPath={mdiFacebook} iconAlt="Facebook">
 		Audition Event
 	</LinkButton>
 {/if}
