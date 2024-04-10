@@ -9,8 +9,7 @@
 		transformToPortableText,
 		resolveImage,
 		toHTMLImageDefault,
-		type PortableTextImage,
-		type PortableTextComponent
+		type PortableTextImage
 	} from '@kontent-ai/rich-text-resolver';
 	import type { Elements } from '@kontent-ai/delivery-sdk';
 
@@ -30,16 +29,6 @@
 			image: ({ value }: PortableTextTypeComponentOptions<PortableTextImage>) => {
 				// helper method for resolving images
 				return resolveImage(value, toHTMLImageDefault);
-			},
-			component: ({ value }: PortableTextTypeComponentOptions<PortableTextComponent>) => {
-				const linkedItem = linkedItems?.find(
-					(item) => item.system.codename === value.component._ref
-				);
-				switch (linkedItem?.system.type) {
-					default: {
-						return `Resolver for type ${linkedItem?.system.type} not implemented.`;
-					}
-				}
 			}
 		},
 		block: {

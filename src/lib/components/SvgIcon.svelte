@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let alt: string;
+	export let alt = "";
 	export let path: string;
 	const size = 24;
 </script>

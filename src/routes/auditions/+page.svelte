@@ -4,7 +4,6 @@
 	import { mdiFacebook } from '@mdi/js';
 
 	import RichText from '$lib/components/RichText.svelte';
-	import SvgIcon from '$lib/components/SvgIcon.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import LinkButton from '$lib/components/LinkButton.svelte';
 
@@ -28,5 +27,7 @@
 <RichText richTextElement={data.auditionsInfo.upcoming_auditions_description} />
 
 {#if auditionEventLink}
-	<LinkButton {auditionEventLink} iconPath={mdiFacebook} iconAlt="Facebook">Audition Event</LinkButton>
+	<LinkButton link={auditionEventLink} iconPath={mdiFacebook} iconAlt="Facebook"
+		>Audition Event</LinkButton
+	>
 {/if}

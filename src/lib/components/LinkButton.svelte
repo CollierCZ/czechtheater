@@ -20,7 +20,9 @@
 		class="hover:text-medium focus:text-medium inline-flex items-center gap-2 rounded-lg bg-blue-100 p-6 hover:bg-blue-200 focus:bg-blue-200"
 		href={link}
 	>
-		<SvgIcon path={iconPath} alt={iconAlt} />
-		{@render children()}
+		{#if iconPath}
+			<SvgIcon path={iconPath} alt={iconAlt} />
+		{/if}
+			{@render children()}
 	</a>
 </div>
