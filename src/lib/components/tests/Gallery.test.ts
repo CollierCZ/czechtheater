@@ -39,13 +39,14 @@ const testImages = {
 test('gallery exists with three images', () => {
 	render(Gallery, { images: testImages });
 
-	const image1 = screen.getByAltText('The first image');
-	const image2 = screen.getByAltText('The second image');
-	const image3 = screen.getByAltText('');
+	const images1 = screen.getAllByAltText('The first image');
+	const images2 = screen.getAllByAltText('The second image');
+	const images3 = screen.getAllByAltText('');
 
-	expect(image1).toBeInTheDocument();
-	expect(image2).toBeInTheDocument();
-	expect(image3).toBeInTheDocument();
+	// One for main image and one for thumbnail
+	expect(images1).toHaveLength(2);
+	expect(images2).toHaveLength(2);
+	expect(images3).toHaveLength(2);
 });
 
 // TODO: add tests for interacting with the gallery
