@@ -14,11 +14,11 @@ export const GET: RequestHandler = async () => {
 
 	const body = xmlify(allShows.data.items).trim();
 
-	return new Response(body, { headers: headers, status: 200});
+	return new Response(body, { headers: headers, status: 200 });
 };
 
 const baseUrl = 'https://czechtheater.cz';
-const pages = ['auditions', 'shows', 'fact', 'about', 'contact'];
+const pages = ['auditions', 'fact', 'about', 'contact'];
 
 const xmlify = (shows: Show[]) => `
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -34,6 +34,10 @@ const xmlify = (shows: Show[]) => `
     <loc>${baseUrl}</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>${baseUrl}/shows</loc>
+    <changefreq>monthly</changefreq>
+  </url>
   ${pages
 		.map(
 			(page) => `
@@ -44,12 +48,14 @@ const xmlify = (shows: Show[]) => `
     `
 		)
 		.join('')}
-  ${shows.filter(show => show.elements.url)
+  ${shows
+		.filter((show) => show.elements.url)
 		.map(
 			(show) => `
   <url>
     <loc>${baseUrl}/shows/${show.elements.url.value}</loc>
     <changefreq>monthly</changefreq>
+    <lastmod>${show.system.lastModified}</lastmod>
   </url>
     `
 		)

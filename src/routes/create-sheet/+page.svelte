@@ -43,10 +43,7 @@
 
 <svelte:head>
 	<title>Create File To Invite People</title>
-	<meta
-		name="robots"
-		content="noindex"
-	/>
+	<meta name="robots" content="noindex" />
 </svelte:head>
 
 <Title>Create File To Invite People</Title>
