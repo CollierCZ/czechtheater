@@ -2,11 +2,13 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { kontentConnector } from '$lib';
 import { type Show } from '../../kontent-types';
 
+export const prerender = true;
+
 export const GET: RequestHandler = async () => {
 	const allShows = await kontentConnector().items<Show>().toPromise();
 
 	const headers = {
-		'Cache-Control': `max-age=0, s-max-age=${3600}`,
+		'Cache-Control': `max-age=20160, s-maxage=20160`,
 		'Content-Type': 'application/xml'
 	};
 
