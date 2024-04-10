@@ -8,6 +8,7 @@
 		original: image.url,
 		thumbnail: `${image.url}?w=284&h=284&auto=format&fit=crop`,
 		originalAlt: image.description || '',
+		thumbnailAlt: image.description || '',
 		description: image.description || ''
 	}));
 </script>
