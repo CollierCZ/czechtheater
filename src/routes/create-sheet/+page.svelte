@@ -41,6 +41,11 @@
 		'hover:text-medium focus:text-medium inline-block inline-flex items-center gap-2 rounded-lg bg-blue-100 p-2 hover:bg-blue-200 focus:bg-blue-200';
 </script>
 
+<svelte:head>
+	<title>Create File To Invite People</title>
+	<meta name="robots" content="noindex" />
+</svelte:head>
+
 <Title>Create File To Invite People</Title>
 
 {#if !submitted}

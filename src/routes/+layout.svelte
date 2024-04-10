@@ -1,13 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import type { LayoutData } from './$types';
+	import type { Snippet } from 'svelte';
 	import '../app.pcss';
 
-	let { data }: LayoutData = $props();
+	let {
+		data,
+		children
+	}: {
+		data: LayoutData;
+		children: Snippet;
+	} = $props();
 
 	// https://github.com/sveltejs/eslint-plugin-svelte/issues/652
 	// eslint-disable-next-line svelte/valid-compile
-	let currentSlug = $state($page.url.pathname);
+	let currentSlug = $derived($page.url.pathname);
+
 	const navItems = [
 		['/', 'Upcoming Shows'],
 		['/auditions', 'Auditions'],
@@ -38,7 +46,7 @@
 <main
 	class="m-auto mb-6 min-h-[calc(100vh-300px)] max-w-prose px-4 text-lg sm:min-h-[calc(100vh-228px)] md:px-0 xl:text-2xl"
 >
-	<slot />
+	{@render children()}
 </main>
 
 <footer class="m-4 mb-2 text-center text-sm">

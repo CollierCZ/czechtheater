@@ -1,10 +1,17 @@
 <script lang="ts">
 	import type { MarkComponentProps } from '@portabletext/svelte';
+	import type { Snippet } from 'svelte';
 
 	// Property custom marks receive from @portabletext/svelte when redered
-	export let portableText: MarkComponentProps;
+	let {
+		children,
+		portableText
+	}: {
+		children: Snippet;
+		portableText: MarkComponentProps;
+	} = $props();
 
-	$: ({ value } = portableText);
+	const { value } = portableText;
 </script>
 
 <a
@@ -12,5 +19,5 @@
 	href={value.href!}
 	data-new-window={value['data-new-window']}
 >
-	<slot />
+	{@render children()}
 </a>

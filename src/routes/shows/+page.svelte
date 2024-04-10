@@ -15,7 +15,7 @@
 <Title>Past Shows</Title>
 
 {#each data.pastShows as show}
-	<div class="mb-12 gap-4 grid-cols-2 md:grid">
+	<div class="mb-12 grid-cols-2 gap-4 md:grid">
 		<a href={`/shows/${show.elements.url.value}`}>
 			<img
 				class="h-62 transition delay-150 ease-in-out hover:scale-105 focus:scale-105"
