@@ -1,13 +1,21 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import type { LayoutData } from './$types';
+	import type { Snippet } from 'svelte';
 	import '../app.pcss';
 
-	let { data, children }: LayoutData = $props();
+	let {
+		data,
+		children
+	}: {
+		data: LayoutData;
+		children: Snippet;
+	} = $props();
 
 	// https://github.com/sveltejs/eslint-plugin-svelte/issues/652
 	// eslint-disable-next-line svelte/valid-compile
-	let currentSlug = $state($page.url.pathname);
+	let currentSlug = $derived($page.url.pathname);
+
 	const navItems = [
 		['/', 'Upcoming Shows'],
 		['/auditions', 'Auditions'],

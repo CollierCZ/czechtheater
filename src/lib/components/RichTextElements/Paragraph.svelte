@@ -3,9 +3,12 @@
 	import type { Snippet } from 'svelte';
 
 	// Property custom marks receive from @portabletext/svelte when redered
-  let { children, portableText }: {
-		children: Snippet,
-		portableText: MarkComponentProps
+	let {
+		children,
+		portableText
+	}: {
+		children: Snippet;
+		portableText: MarkComponentProps;
 	} = $props();
 
 	const { indexInParent } = portableText;

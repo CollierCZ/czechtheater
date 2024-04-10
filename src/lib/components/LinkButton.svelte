@@ -1,13 +1,18 @@
 <script lang="ts">
 	import SvgIcon from '$lib/components/SvgIcon.svelte';
 	import type { Snippet } from 'svelte';
-	
-	let { link, iconAlt, iconPath, children }: {
-		link: string,
-		iconAlt?: string,
-		iconPath?: string,
-		children: Snippet 
-	} = $props()
+
+	let {
+		link,
+		iconAlt,
+		iconPath,
+		children
+	}: {
+		link: string;
+		iconAlt?: string;
+		iconPath?: string;
+		children: Snippet;
+	} = $props();
 </script>
 
 <div class="my-2">

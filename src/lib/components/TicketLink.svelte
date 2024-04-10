@@ -5,6 +5,4 @@
 	export let link: string;
 </script>
 
-<LinkButton {link} iconPath={mdiTicket} iconAlt="">
-	Tickets
-</LinkButton>
+<LinkButton {link} iconPath={mdiTicket} iconAlt="">Tickets</LinkButton>
