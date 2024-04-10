@@ -83,7 +83,7 @@
 	</form>
 	<button class={`mt-4 ${buttonStyles}`} on:click={addRow}>Add another person</button>
 {:else}
-	<p>
+	<p data-testid="submittedText">
 		You should be prompted to download the file. Then add it to the right event in <a
 			class="font-medium underline hover:no-underline focus:no-underline"
 			href="https://smsticket.cz/poradatel">Smsticket</a
