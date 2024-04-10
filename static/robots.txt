@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /create-sheet
+
+Sitemap: https://czechtheater.cz/sitemap.xml
