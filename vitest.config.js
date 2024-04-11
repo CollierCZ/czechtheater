@@ -17,6 +17,9 @@ export default defineConfig(({ mode }) => ({
 			deps: {
 				inline: ['clsx']
 			}
+		},
+		alias: {
+			'@testing-library/svelte': '@testing-library/svelte/svelte5'
 		}
 	}
 }));

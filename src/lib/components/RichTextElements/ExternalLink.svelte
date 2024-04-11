@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PortableTextExternalLink } from '@kontent-ai/rich-text-resolver';
 	import type { MarkComponentProps } from '@portabletext/svelte';
 	import type { Snippet } from 'svelte';
 
@@ -11,13 +12,13 @@
 		portableText: MarkComponentProps;
 	} = $props();
 
-	const { value } = portableText;
+	const linkData = portableText.value as PortableTextExternalLink;
 </script>
 
 <a
 	class="font-medium underline hover:no-underline focus:no-underline"
-	href={value.href!}
-	data-new-window={value['data-new-window']}
+	href={linkData.href!}
+	data-new-window={linkData['data-new-window']}
 >
 	{@render children()}
 </a>

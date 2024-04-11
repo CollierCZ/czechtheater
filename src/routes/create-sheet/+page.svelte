@@ -4,12 +4,14 @@
 
 	let submitted = $state(false);
 	let rows = $state(1);
-	let ticketCounts = $state({ 0: 1 });
+	let ticketCounts: { [row: string]: number } = $state({ 0: 1 });
 
 	const getRowNumber = (string: string): string => string.split(/[a-zA-Z]*/)[1];
 
-	const handleSubmit = (event: { target: EventTarget & HTMLFormElement }) => {
-		const formData = new FormData(event.target);
+	// @ts-expect-error: TODO: Fix the typing instead of ignoring
+	const handleSubmit = (event: { target }) => {
+		const currentTarget = event.target as EventTarget & HTMLFormElement;
+		const formData = new FormData(currentTarget);
 
 		const data = [];
 		let formIndex = 0;

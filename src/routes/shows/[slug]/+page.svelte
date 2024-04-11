@@ -5,6 +5,7 @@
 	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import TicketLink from '$lib/components/TicketLink.svelte';
+	import ImageConstrainedHeight from '$lib/components/ImageConstrainedHeight.svelte';
 
 	export let data: PageData;
 
@@ -20,11 +21,9 @@
 
 <Title>{showData.name.value}</Title>
 
-<img
-	class="mb-4 h-96"
-	src={`${showData.main_image.value[0].url}?h=450`}
-	alt={showData.main_image.value[0].description}
-/>
+<div class="mb-4">
+	<ImageConstrainedHeight image={showData.main_image.value[0]} height={450} priority={true} />
+</div>
 
 {#if ticketLink}
 	<TicketLink link={ticketLink} />
