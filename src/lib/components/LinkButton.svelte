@@ -23,6 +23,6 @@
 		{#if iconPath}
 			<SvgIcon path={iconPath} alt={iconAlt} />
 		{/if}
-			{@render children()}
+		{@render children()}
 	</a>
 </div>
