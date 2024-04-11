@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ILink } from '@kontent-ai/delivery-sdk';
-	import type { MarkComponentProps, PortableTextMarkDefinition } from '@portabletext/svelte';
+	import type { PortableTextInternalLink } from '@kontent-ai/rich-text-resolver';
+	import type { MarkComponentProps } from '@portabletext/svelte';
 	import type { Snippet } from 'svelte';
 
 	// Property custom marks receive from @portabletext/svelte when redered
@@ -18,13 +19,12 @@
 			context: { links }
 		}
 	}: {
-		value: PortableTextMarkDefinition;
+		value: PortableTextInternalLink;
 		global: {
 			context: { links: ILink[] };
 		};
 	} = portableText;
 
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 	const link = links.find((item) => item.linkId === value.reference._ref);
 </script>
 

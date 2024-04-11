@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PortableTextExternalLink } from '@kontent-ai/rich-text-resolver';
 	import type { MarkComponentProps } from '@portabletext/svelte';
 	import type { Snippet } from 'svelte';
 
@@ -11,7 +12,7 @@
 		portableText: MarkComponentProps;
 	} = $props();
 
-	const { value } = portableText;
+	const { value }: { value: PortableTextExternalLink } = portableText;
 </script>
 
 <a
