@@ -15,6 +15,9 @@ jobs:
         run: npm ci --legacy-peer-deps
       #- name: Test
       #  run: npm test
+      # Need a build to get types for linting
+      - name: Build
+        run: npm run build
       - name: Lint
         run: npm run lint
       #- name: Coverage
