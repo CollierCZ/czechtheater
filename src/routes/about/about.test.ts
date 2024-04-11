@@ -1,9 +1,8 @@
 import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
-import { ElementType } from '@kontent-ai/delivery-sdk';
-
 import AboutPage from './+page.svelte';
+import { basicRichTextValues, sharedLogo } from '$lib/Tests/sharedData';
 
 const aboutTextTest = 'We are so awesome!';
 
@@ -12,13 +11,10 @@ test('about page has the right header and text', () => {
 		data: {
 			aboutUsText: {
 				name: 'about_us',
-				type: ElementType.RichText,
 				value: `<p>${aboutTextTest}</p>`,
-				links: [],
-				images: [],
-				linkedItemCodenames: [],
-				linkedItems: []
-			}
+				...basicRichTextValues
+			},
+			logo: sharedLogo
 		}
 	});
 

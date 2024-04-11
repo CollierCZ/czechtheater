@@ -9,9 +9,12 @@
 	export let data: PageData;
 
 	const getIconAndAltText = (link: string): [string, string] => {
-		if (link.startsWith('https://www.facebook.com')) {
+		if (link.startsWith('https://www.facebook.com') || link.startsWith('https://facebook.com')) {
 			return [mdiFacebook, 'Facebook'];
-		} else if (link.startsWith('https://www.instagram.com')) {
+		} else if (
+			link.startsWith('https://www.instagram.com') ||
+			link.startsWith('https://instagram.com')
+		) {
 			return [mdiInstagram, 'Instagram'];
 		} else if (link.startsWith('mailto')) {
 			return [mdiEmail, 'Email'];

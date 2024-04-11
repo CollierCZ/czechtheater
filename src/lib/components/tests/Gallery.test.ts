@@ -3,14 +3,8 @@ import { expect, test } from 'vitest';
 
 import Gallery from '../Gallery.svelte';
 import type { ElementType } from '@kontent-ai/delivery-sdk';
+import { commonImageProperties } from '$lib/Tests/sharedData';
 
-const commonImageProperties = {
-	type: 'image/png',
-	width: 24,
-	height: 24,
-	size: 256,
-	renditions: null
-};
 const testImages = {
 	name: 'Gallery',
 	type: 'asset' as ElementType,
