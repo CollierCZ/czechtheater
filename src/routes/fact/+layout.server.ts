@@ -1,5 +1,5 @@
 import { kontentConnector } from '$lib';
-import type { LayoutLoad } from './$types';
+import type { LayoutServerLoad } from './$types';
 import { type TheaterFact } from '../../kontent-types';
 
 // Using this variable together with prerendering works as a cache
@@ -8,7 +8,7 @@ let cachedData: TheaterFact[] = [];
 
 export const prerender = true;
 
-export const load: LayoutLoad = async () => {
+export const load: LayoutServerLoad = async () => {
 	if (cachedData.length > 0) {
 		return { facts: cachedData };
 	}

@@ -12,13 +12,13 @@
 		portableText: MarkComponentProps;
 	} = $props();
 
-	const { value }: { value: PortableTextExternalLink } = portableText;
+	const linkData = portableText.value as PortableTextExternalLink;
 </script>
 
 <a
 	class="font-medium underline hover:no-underline focus:no-underline"
-	href={value.href!}
-	data-new-window={value['data-new-window']}
+	href={linkData.href!}
+	data-new-window={linkData['data-new-window']}
 >
 	{@render children()}
 </a>

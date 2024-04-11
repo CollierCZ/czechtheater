@@ -15,9 +15,9 @@ jobs:
         run: npm ci --legacy-peer-deps
       #- name: Test
       #  run: npm test
-      # Need a build to get types for linting
-      - name: Build
-        run: npm run build
+      # This step needs to go before linting to generate the types
+      - name: Check
+        run: PUBLIC_KONTENT_ENVIRONMENT_ID=test npm run check
       - name: Lint
         run: npm run lint
       #- name: Coverage

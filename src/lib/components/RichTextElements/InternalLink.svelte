@@ -13,17 +13,8 @@
 		portableText: MarkComponentProps;
 	} = $props();
 
-	const {
-		value,
-		global: {
-			context: { links }
-		}
-	}: {
-		value: PortableTextInternalLink;
-		global: {
-			context: { links: ILink[] };
-		};
-	} = portableText;
+	const value = portableText.value as PortableTextInternalLink;
+	const links = portableText.global.context.links as ILink[];
 
 	const link = links.find((item) => item.linkId === value.reference._ref);
 </script>

@@ -10,7 +10,7 @@
 		portableText: CustomBlockComponentProps;
 	} = $props();
 
-	const { value }: { value: PortableTextImage } = portableText;
+	const imageData = portableText.value as PortableTextImage;
 </script>
 
-<Image src={value.asset.url} alt={value.asset.alt} layout="fullWidth" />
+<Image src={imageData.asset.url} alt={imageData.asset.alt} layout="fullWidth" />
