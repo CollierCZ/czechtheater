@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: "./.github/shared/setup-node"
+      - uses: './.github/shared/setup-node'
       #- name: Test
       #  run: npm test
       #- name: Coverage

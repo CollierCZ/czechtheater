@@ -2,33 +2,28 @@ import { render, screen } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import Gallery from '../Gallery.svelte';
-import type { ElementType } from '@kontent-ai/delivery-sdk';
 import { commonImageProperties } from '$lib/Tests/sharedData';
 
-const testImages = {
-	name: 'Gallery',
-	type: 'asset' as ElementType,
-	value: [
-		{
-			url: 'https://example.org/image1.png',
-			description: 'The first image',
-			name: 'image1.png',
-			...commonImageProperties
-		},
-		{
-			url: 'https://example.org/image2.png',
-			description: 'The second image',
-			name: 'image2.png',
-			...commonImageProperties
-		},
-		{
-			url: 'https://example.org/image3.png',
-			description: '',
-			name: 'image3.png',
-			...commonImageProperties
-		}
-	]
-};
+const testImages = [
+	{
+		url: 'https://example.org/image1.png',
+		description: 'The first image',
+		name: 'image1.png',
+		...commonImageProperties
+	},
+	{
+		url: 'https://example.org/image2.png',
+		description: 'The second image',
+		name: 'image2.png',
+		...commonImageProperties
+	},
+	{
+		url: 'https://example.org/image3.png',
+		description: '',
+		name: 'image3.png',
+		...commonImageProperties
+	}
+];
 
 test('gallery exists with three images', () => {
 	render(Gallery, { images: testImages });

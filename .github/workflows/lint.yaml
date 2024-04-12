@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: "./.github/shared/setup-node"
+      - uses: './.github/shared/setup-node'
 
         # This step needs to go before linting to generate the types
         # Including the environment variable ensures the type is generated
