@@ -6,7 +6,6 @@
 	import SvgIcon from './SvgIcon.svelte';
 	import { mdiChevronLeft, mdiChevronRight, mdiCircle, mdiCircleOutline } from '@mdi/js';
 	import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
-	import type { Action } from '@sveltejs/kit';
 
 	let {
 		carouselItems
@@ -16,15 +15,18 @@
 
 	let currentSlideItem = $state(0);
 	let baseImageWidth = $state(826);
-	
+
 	let SlideDivHeight = $derived.by(() => {
-		const { height } = getHeightAndWidth({ image: carouselItems[currentSlideItem], width: baseImageWidth });
+		const { height } = getHeightAndWidth({
+			image: carouselItems[currentSlideItem],
+			width: baseImageWidth
+		});
 		return height || 500;
 	});
 
 	const setBaseImageWidth = (_node: HTMLDivElement, calculatedImageWidth: number) => {
 		baseImageWidth = calculatedImageWidth;
-	}
+	};
 
 	const switchToItem = (item: number) => {
 		currentSlideItem = item;
@@ -73,11 +75,7 @@
 					<div
 						class="my-auto min-w-[340px] max-w-[340px] sm:min-w-[480px] md:min-w-[608px] md:max-w-[calc(65ch-8rem)] xl:min-w-[826px] xl:max-w-[826px]"
 					>
-						<ImageConstrainedOneDimension
-							image={item}
-							width={826}
-							priority={itemIndex === 0}
-						/>
+						<ImageConstrainedOneDimension image={item} width={826} priority={itemIndex === 0} />
 					</div>
 				{/each}
 			</div>
