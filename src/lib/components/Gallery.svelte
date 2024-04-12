@@ -1,23 +1,10 @@
 <script lang="ts">
-	import type { Elements } from '@kontent-ai/delivery-sdk';
-	import ImageGallery from '@react2svelte/image-gallery';
+	import type { ElementModels } from '@kontent-ai/delivery-sdk';
+	import Carousel from './Carousel.svelte';
 
-	export let images: Elements.AssetsElement;
-
-	const galleryImages = images.value.map((image) => ({
-		original: image.url,
-		thumbnail: `${image.url}?w=284&h=284&auto=format&fit=crop`,
-		originalAlt: image.description || '',
-		thumbnailAlt: image.description || '',
-		description: image.description || ''
-	}));
+	export let images: ElementModels.AssetModel[];
 </script>
 
-<div class="mt-6">
-	<ImageGallery
-		items={galleryImages}
-		lazyLoad={true}
-		showFullscreenButton={false}
-		showPlayButton={false}
-	/>
-</div>
+<h2 class="mt-8 pb-4 text-2xl font-medium">A Look at the Show</h2>
+
+<Carousel carouselItems={images} />

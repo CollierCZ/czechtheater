@@ -19,10 +19,10 @@
 <Title>Upcoming Shows</Title>
 
 {#each data.futureShows as show}
-	{@const gallery = show.elements.gallery}
+	{@const gallery = show.elements.gallery.value}
 	{@const ticketLink = show.elements.ticket_link.value}
 	<div>
-		<h2 class="mb-4 font-medium">{show.elements.name.value}</h2>
+		<h2 class="mb-4 text-2xl font-medium">{show.elements.name.value}</h2>
 		<img
 			class="h-64 pb-2"
 			src={`${show.elements.main_image.value[0].url}?h=300`}
@@ -35,7 +35,7 @@
 			<TicketLink link={ticketLink} />
 		{/if}
 
-		{#if gallery.value.length > 0}
+		{#if gallery.length > 0}
 			<Gallery images={gallery} />
 		{/if}
 	</div>

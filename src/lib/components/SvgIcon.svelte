@@ -4,7 +4,7 @@
 	const size = 24;
 </script>
 
-<svg class="scale-150" width={size} height={size} viewBox="0 0 24 24">
+<svg class="scale-150" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
 	<title>{alt}</title>
 	<path d={path} />
 </svg>

@@ -3,7 +3,7 @@
 
 	import Title from '$lib/components/Title.svelte';
 	import { getDateFromDateString } from '$lib';
-	import ImageConstrainedHeight from '$lib/components/ImageConstrainedHeight.svelte';
+	import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
 
 	export let data: PageData;
 </script>
@@ -23,7 +23,7 @@
 			class="origin-left transition delay-150 ease-in-out hover:scale-105 focus:scale-105 motion-reduce:hover:transform-none md:origin-center"
 		>
 			<a href={`/shows/${showData.url.value}`}>
-				<ImageConstrainedHeight image={showMainImage} />
+				<ImageConstrainedOneDimension image={showMainImage} height={300} />
 			</a>
 		</div>
 		<div class="mt-2 md:mt-0">

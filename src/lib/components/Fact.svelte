@@ -1,7 +1,7 @@
 <script lang="ts">
 	import RichText from './RichText.svelte';
 	import type { TheaterFact } from '../../kontent-types';
-	import ImageConstrainedHeight from './ImageConstrainedHeight.svelte';
+	import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 
 	let {
 		fact
@@ -14,7 +14,7 @@
 
 <div class="mb-12 grid-cols-3 gap-4 md:grid">
 	{#if factImage}
-		<ImageConstrainedHeight image={factImage} />
+		<ImageConstrainedOneDimension image={factImage} height={300} />
 	{/if}
 	<div class="col-span-2 mt-4 md:mt-0">
 		<RichText richTextElement={fact.elements.description} />

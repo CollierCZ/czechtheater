@@ -5,12 +5,12 @@
 	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import TicketLink from '$lib/components/TicketLink.svelte';
-	import ImageConstrainedHeight from '$lib/components/ImageConstrainedHeight.svelte';
+	import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
 
 	export let data: PageData;
 
 	const showData = data.showData.elements;
-	const gallery = showData.gallery;
+	const gallery = showData.gallery.value;
 	const ticketLink = showData.ticket_link.value;
 </script>
 
@@ -22,7 +22,7 @@
 <Title>{showData.name.value}</Title>
 
 <div class="mb-4">
-	<ImageConstrainedHeight image={showData.main_image.value[0]} height={450} priority={true} />
+	<ImageConstrainedOneDimension image={showData.main_image.value[0]} height={450} priority={true} />
 </div>
 
 {#if ticketLink}
@@ -35,6 +35,6 @@
 
 <RichText richTextElement={showData.description} />
 
-{#if gallery.value.length > 0}
+{#if gallery.length > 0}
 	<Gallery images={gallery} />
 {/if}
