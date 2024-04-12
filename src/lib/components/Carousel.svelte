@@ -5,6 +5,8 @@
 	import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 	import SvgIcon from './SvgIcon.svelte';
 	import { mdiChevronLeft, mdiChevronRight, mdiCircle, mdiCircleOutline } from '@mdi/js';
+	import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
+	import type { Action } from '@sveltejs/kit';
 
 	let {
 		carouselItems
@@ -13,19 +15,30 @@
 	} = $props();
 
 	let currentSlideItem = $state(0);
+	let baseImageWidth = $state(826);
+	
+	let SlideDivHeight = $derived.by(() => {
+		const { height } = getHeightAndWidth({ image: carouselItems[currentSlideItem], width: baseImageWidth });
+		return height || 500;
+	});
+
+	const setBaseImageWidth = (_node: HTMLDivElement, calculatedImageWidth: number) => {
+		baseImageWidth = calculatedImageWidth;
+	}
+
+	const switchToItem = (item: number) => {
+		currentSlideItem = item;
+	};
 
 	const nextItem = () => {
-		currentSlideItem = (currentSlideItem + 1) % carouselItems.length;
+		switchToItem((currentSlideItem + 1) % carouselItems.length);
 	};
 	const prevItem = () => {
 		if (currentSlideItem != 0) {
-			currentSlideItem = (currentSlideItem - 1) % carouselItems.length;
+			switchToItem((currentSlideItem - 1) % carouselItems.length);
 		} else {
-			currentSlideItem = carouselItems.length - 1;
+			switchToItem(carouselItems.length - 1);
 		}
-	};
-	const switchToItem = (item: number) => {
-		currentSlideItem = item;
 	};
 
 	const navButtonClasses =
@@ -52,13 +65,19 @@
 			{@const offset = currentSlideItem * imageWidth}
 			<div
 				class="flex max-w-[338px] transition-transform duration-500 motion-reduce:transition-none sm:max-w-[480px] md:max-w-min"
-				style={`transform: translateX(-${offset}px) scaleX(1)`}
+				style:transform={`translateX(-${offset}px) scaleX(1)`}
+				use:setBaseImageWidth={imageWidth}
+				style:max-height={`${SlideDivHeight}px`}
 			>
 				{#each carouselItems as item, itemIndex}
 					<div
 						class="my-auto min-w-[340px] max-w-[340px] sm:min-w-[480px] md:min-w-[608px] md:max-w-[calc(65ch-8rem)] xl:min-w-[826px] xl:max-w-[826px]"
 					>
-						<ImageConstrainedOneDimension image={item} width={imageWidth} priority={itemIndex === 0} />
+						<ImageConstrainedOneDimension
+							image={item}
+							width={826}
+							priority={itemIndex === 0}
+						/>
 					</div>
 				{/each}
 			</div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
 	import type { ElementModels } from '@kontent-ai/delivery-sdk';
 	import { Image } from '@unpic/svelte';
 
@@ -19,18 +20,7 @@
 
 	let { image, height, width, priority }: ConstrainedHeight | ConstrainedWidth = $props();
 
-	const getHeightAndWidth = () => {
-		if (height) {
-			const width = (Number(image.width) / Number(image.height)) * height;
-			return { height, width };
-		} else if (width) {
-			const height = (Number(image.height) / Number(image.width)) * width;
-			return { height, width };
-		}
-		return {};
-	};
-
-	const { height: finalHeight = 0, width: finalWidth = 0 } = getHeightAndWidth();
+	const { height: finalHeight = 0, width: finalWidth = 0 } = getHeightAndWidth({ image, height, width});
 </script>
 
 <Image

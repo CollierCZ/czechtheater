@@ -5,8 +5,6 @@
 	export let images: ElementModels.AssetModel[];
 </script>
 
-<h2 class="pb-4 text-2xl font-medium">A Look at the Show</h2>
+<h2 class="mt-8 pb-4 text-2xl font-medium">A Look at the Show</h2>
 
-<div class="mt-6">
-	<Carousel carouselItems={images} />
-</div>
+<Carousel carouselItems={images} />
