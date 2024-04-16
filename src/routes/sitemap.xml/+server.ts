@@ -49,6 +49,7 @@ const xmlify = (shows: Show[]) => `
 		)
 		.join('')}
   ${shows
+		.filter((show) => show.system.codename !== 'unknown_show')
 		.filter((show) => show.elements.url)
 		.map(
 			(show) => `
