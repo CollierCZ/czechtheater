@@ -12,7 +12,7 @@
 	const factImage = fact.elements.image.value[0];
 </script>
 
-<div class="mb-12 grid-cols-3 gap-4 md:grid">
+<div class={`mb-12 grid-cols-3 gap-4 ${factImage ? 'md:grid' : ''}`}>
 	{#if factImage}
 		<ImageConstrainedOneDimension image={factImage} height={300} />
 	{/if}
