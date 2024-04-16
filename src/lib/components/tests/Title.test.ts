@@ -4,10 +4,10 @@ import { expect, test } from 'vitest';
 import TitleTest from './Title.test.svelte';
 
 test('title renders properly', () => {
-	render(TitleTest);
+  render(TitleTest);
 
-	const heading = screen.getByRole('heading');
-	const child = within(heading).getByTestId('child');
+  const heading = screen.getByRole('heading');
+  const child = within(heading).getByTestId('child');
 
-	expect(child).toBeInTheDocument();
+  expect(child).toBeInTheDocument();
 });

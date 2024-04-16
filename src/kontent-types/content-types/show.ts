@@ -6,65 +6,65 @@ import { type IContentItem, type Elements } from '@kontent-ai/delivery-sdk';
  * Codename: show
  */
 export type Show = IContentItem<{
-	/**
-	 * Description (rich_text)
-	 * Required: true
-	 * Codename: description
-	 */
-	description: Elements.RichTextElement;
+  /**
+   * Description (rich_text)
+   * Required: true
+   * Codename: description
+   */
+  description: Elements.RichTextElement;
 
-	/**
-	 * Gallery (asset)
-	 * Required: false
-	 * Codename: gallery
-	 *
-	 * Various images from the show displayed as a gallery
-	 */
-	gallery: Elements.AssetsElement;
+  /**
+   * Gallery (asset)
+   * Required: false
+   * Codename: gallery
+   *
+   * Various images from the show displayed as a gallery
+   */
+  gallery: Elements.AssetsElement;
 
-	/**
-	 * Main image (asset)
-	 * Required: true
-	 * Codename: main_image
-	 *
-	 * A single image to be used as a preview
-	 */
-	main_image: Elements.AssetsElement;
+  /**
+   * Main image (asset)
+   * Required: true
+   * Codename: main_image
+   *
+   * A single image to be used as a preview
+   */
+  main_image: Elements.AssetsElement;
 
-	/**
-	 * Name (text)
-	 * Required: true
-	 * Codename: name
-	 */
-	name: Elements.TextElement;
+  /**
+   * Name (text)
+   * Required: true
+   * Codename: name
+   */
+  name: Elements.TextElement;
 
-	/**
-	 * Premiere (date_time)
-	 * Required: false
-	 * Codename: premiere
-	 */
-	premiere: Elements.DateTimeElement;
+  /**
+   * Premiere (date_time)
+   * Required: false
+   * Codename: premiere
+   */
+  premiere: Elements.DateTimeElement;
 
-	/**
-	 * Short description (text)
-	 * Required: true
-	 * Codename: short_description
-	 */
-	short_description: Elements.TextElement;
+  /**
+   * Short description (text)
+   * Required: true
+   * Codename: short_description
+   */
+  short_description: Elements.TextElement;
 
-	/**
-	 * Ticket link (text)
-	 * Required: false
-	 * Codename: ticket_link
-	 *
-	 * The URL where tickets are sold
-	 */
-	ticket_link: Elements.TextElement;
+  /**
+   * Ticket link (text)
+   * Required: false
+   * Codename: ticket_link
+   *
+   * The URL where tickets are sold
+   */
+  ticket_link: Elements.TextElement;
 
-	/**
-	 * URL (url_slug)
-	 * Required: true
-	 * Codename: url
-	 */
-	url: Elements.UrlSlugElement;
+  /**
+   * URL (url_slug)
+   * Required: true
+   * Codename: url
+   */
+  url: Elements.UrlSlugElement;
 }>;

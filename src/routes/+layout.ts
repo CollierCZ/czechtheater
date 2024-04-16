@@ -5,13 +5,13 @@ import { type BasicInfo } from '../kontent-types';
 export const prerender = true;
 
 export const load: LayoutLoad = async () => {
-	const basicInfo = await kontentConnector()
-		.item<BasicInfo>('basic_info_about_czech_theater')
-		.toPromise();
+  const basicInfo = await kontentConnector()
+    .item<BasicInfo>('basic_info_about_czech_theater')
+    .toPromise();
 
-	const logo = basicInfo.data.item.elements.favicon.value[0];
+  const logo = basicInfo.data.item.elements.favicon.value[0];
 
-	return {
-		logo
-	};
+  return {
+    logo
+  };
 };

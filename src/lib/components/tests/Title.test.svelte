@@ -1,7 +1,7 @@
 <script>
-	import Title from '../Title.svelte';
+  import Title from '../Title.svelte';
 </script>
 
 <Title>
-	<span data-testid="child" />
+  <span data-testid="child" />
 </Title>
