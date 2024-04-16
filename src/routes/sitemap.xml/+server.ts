@@ -18,7 +18,9 @@ export const GET: RequestHandler = async () => {
 };
 
 const baseUrl = 'https://czechtheater.cz';
-const pages = ['auditions', 'fact', 'about', 'contact'];
+const pagesWithUpdates = ['shows', 'auditions', 'fact'];
+const pagesNotUpdated = ['about', 'contact'];
+const pages = pagesWithUpdates.concat(pagesNotUpdated);
 
 const xmlify = (shows: Show[]) => `
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -34,16 +36,12 @@ const xmlify = (shows: Show[]) => `
     <loc>${baseUrl}</loc>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>${baseUrl}/shows</loc>
-    <changefreq>monthly</changefreq>
-  </url>
   ${pages
 		.map(
 			(page) => `
   <url>
     <loc>${baseUrl}/${page}</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>${pagesWithUpdates.includes(page) ? 'monthly' : 'yearly'}</changefreq>
   </url>
     `
 		)
