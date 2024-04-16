@@ -4,6 +4,7 @@
 	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
 	import TicketLink from '$lib/components/TicketLink.svelte';
+	import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
 
 	export let data: PageData;
 </script>
@@ -23,17 +24,16 @@
 	{@const ticketLink = show.elements.ticket_link.value}
 	<div>
 		<h2 class="mb-4 text-2xl font-medium">{show.elements.name.value}</h2>
-		<img
-			class="h-64 pb-2"
-			src={`${show.elements.main_image.value[0].url}?h=300`}
-			alt={show.elements.main_image.value[0].description}
-		/>
-
-		<RichText richTextElement={show.elements.description} />
+		
+		<div class="mb-4">
+			<ImageConstrainedOneDimension image={show.elements.main_image.value[0]} height={300} priority={true} />
+		</div>
 
 		{#if ticketLink}
 			<TicketLink link={ticketLink} />
 		{/if}
+
+		<RichText richTextElement={show.elements.description} />
 
 		{#if gallery.length > 0}
 			<Gallery images={gallery} />
