@@ -4,14 +4,12 @@
 	import Gallery from '$lib/components/Gallery.svelte';
 	import RichText from '$lib/components/RichText.svelte';
 	import Title from '$lib/components/Title.svelte';
-	import TicketLink from '$lib/components/TicketLink.svelte';
 	import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
 
 	export let data: PageData;
 
 	const showData = data.showData.elements;
 	const gallery = showData.gallery.value;
-	const ticketLink = showData.ticket_link.value;
 </script>
 
 <svelte:head>
@@ -24,10 +22,6 @@
 <div class="mb-4">
 	<ImageConstrainedOneDimension image={showData.main_image.value[0]} height={450} priority={true} />
 </div>
-
-{#if ticketLink}
-	<TicketLink link={ticketLink} />
-{/if}
 
 <p class="mb-4">
 	Premiere: {new Date(showData.premiere.value || '').toDateString()}
