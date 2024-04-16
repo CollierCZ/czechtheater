@@ -1,24 +1,29 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { kontentConnector } from '$lib';
-import { type Show } from '../../kontent-types';
+import type { Show, ShowSection } from '../../kontent-types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-	const allShows = await kontentConnector().items<Show>().toPromise();
+  const pastShowsSection = await kontentConnector()
+    .item<ShowSection>('past_shows')
+    .toPromise();
+  const pastShows = pastShowsSection.data.item.elements.shows.linkedItems;
 
-	const headers = {
-		'Cache-Control': `max-age=20160, s-maxage=20160`,
-		'Content-Type': 'application/xml'
-	};
+  const headers = {
+    'Cache-Control': `max-age=20160, s-maxage=20160`,
+    'Content-Type': 'application/xml'
+  };
 
-	const body = xmlify(allShows.data.items).trim();
+  const body = xmlify(pastShows).trim();
 
-	return new Response(body, { headers: headers, status: 200 });
+  return new Response(body, { headers: headers, status: 200 });
 };
 
 const baseUrl = 'https://czechtheater.cz';
-const pages = ['auditions', 'fact', 'about', 'contact'];
+const pagesWithUpdates = ['shows', 'auditions', 'fact'];
+const pagesNotUpdated = ['about', 'contact'];
+const pages = pagesWithUpdates.concat(pagesNotUpdated);
 
 const xmlify = (shows: Show[]) => `
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -34,31 +39,28 @@ const xmlify = (shows: Show[]) => `
     <loc>${baseUrl}</loc>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>${baseUrl}/shows</loc>
-    <changefreq>monthly</changefreq>
-  </url>
   ${pages
-		.map(
-			(page) => `
+    .map(
+      (page) => `
   <url>
     <loc>${baseUrl}/${page}</loc>
-    <changefreq>yearly</changefreq>
+    <changefreq>${pagesWithUpdates.includes(page) ? 'monthly' : 'yearly'}</changefreq>
   </url>
     `
-		)
-		.join('')}
+    )
+    .join('')}
   ${shows
-		.filter((show) => show.elements.url)
-		.map(
-			(show) => `
+    .filter((show) => show.system.codename !== 'unknown_show')
+    .filter((show) => show.elements.url)
+    .map(
+      (show) => `
   <url>
     <loc>${baseUrl}/shows/${show.elements.url.value}</loc>
     <changefreq>monthly</changefreq>
     <lastmod>${show.system.lastModified}</lastmod>
   </url>
     `
-		)
-		.join('')}
+    )
+    .join('')}
 </urlset>
 `;

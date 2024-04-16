@@ -9,15 +9,15 @@ let cachedData: TheaterFact[] = [];
 export const prerender = true;
 
 export const load: LayoutServerLoad = async () => {
-	if (cachedData.length > 0) {
-		return { facts: cachedData };
-	}
+  if (cachedData.length > 0) {
+    return { facts: cachedData };
+  }
 
-	const factsResponse = await kontentConnector()
-		.items<TheaterFact>()
-		.type('theater_fact')
-		.toPromise();
+  const factsResponse = await kontentConnector()
+    .items<TheaterFact>()
+    .type('theater_fact')
+    .toPromise();
 
-	cachedData = factsResponse.data.items;
-	return { facts: cachedData };
+  cachedData = factsResponse.data.items;
+  return { facts: cachedData };
 };
