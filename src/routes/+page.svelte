@@ -23,10 +23,14 @@
 	{@const gallery = show.elements.gallery.value}
 	{@const ticketLink = show.elements.ticket_link.value}
 	<div>
-		<h2 class="mb-4 text-2xl font-medium">{show.elements.name.value}</h2>
-		
+		<h2 class="mb-4 text-3xl font-medium xl:text-4xl">{show.elements.name.value}</h2>
+
 		<div class="mb-4">
-			<ImageConstrainedOneDimension image={show.elements.main_image.value[0]} height={300} priority={true} />
+			<ImageConstrainedOneDimension
+				image={show.elements.main_image.value[0]}
+				height={300}
+				priority={true}
+			/>
 		</div>
 
 		{#if ticketLink}
@@ -36,7 +40,7 @@
 		<RichText richTextElement={show.elements.description} />
 
 		{#if gallery.length > 0}
-			<Gallery images={gallery} />
+			<Gallery images={gallery} headingLevel={3} />
 		{/if}
 	</div>
 {/each}
