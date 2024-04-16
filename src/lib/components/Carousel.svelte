@@ -4,8 +4,9 @@
 	import type { ElementModels } from '@kontent-ai/delivery-sdk';
 	import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 	import SvgIcon from './SvgIcon.svelte';
-	import { mdiChevronLeft, mdiChevronRight, mdiCircle, mdiCircleOutline } from '@mdi/js';
+	import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 	import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
+	import { Image } from '@unpic/svelte';
 
 	let {
 		carouselItems
@@ -86,12 +87,18 @@
 	</button>
 </div>
 
-<div class="mt-2 flex flex-wrap justify-center">
-	{#each carouselItems as _item, itemIndex}
-		<button class="px-1 pb-4 text-slate-500" on:click={() => switchToItem(itemIndex)}>
-			<SvgIcon
-				path={itemIndex === currentSlideItem ? mdiCircle : mdiCircleOutline}
+<div class="mt-2 overflow-x-scroll whitespace-nowrap">
+	{#each carouselItems as currentImage, itemIndex}
+		<button
+			class={`mx-1 box-content ${itemIndex === currentSlideItem ? 'border-4 border-slate-400' : ''}`}
+			on:click={() => switchToItem(itemIndex)}
+		>
+			<Image
+				src={currentImage.url}
 				alt={`Switch to picture ${itemIndex}`}
+				height={84}
+				width={84}
+				layout="fixed"
 			/>
 		</button>
 	{/each}
