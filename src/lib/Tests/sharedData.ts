@@ -1,4 +1,5 @@
 import { type ElementModels, ElementType } from '@kontent-ai/delivery-sdk';
+import type { Show } from '../../kontent-types';
 
 export const commonImageProperties = {
 	type: 'image/png',
@@ -27,7 +28,7 @@ export const commonSystemProperties = {
 	id: '12345',
 	name: 'test',
 	codename: 'test',
-	lastModified: new Date().toDateString(),
+	lastModified: new Date().toISOString(),
 	language: 'en-US',
 	collection: 'default',
 	sitemapLocations: [],
@@ -47,7 +48,7 @@ export const firstImageDescription = 'An image accompanying a fact';
 export const secondImageDescription = 'A second image accompanying a second fact';
 
 const sharedDescriptionProperties = {
-	name: 'about_us',
+	name: 'description',
 	...basicRichTextValues
 };
 
@@ -99,3 +100,63 @@ export const testFacts = [
 		}
 	}
 ];
+
+export const showDescriptionText = 'A brilliant show.';
+export const showImageText = 'A brilliant image';
+export const showName = 'Awesome Show';
+export const numberOfShowDescriptionParagraphs = 3;
+export const showData: Show = {
+	elements: {
+		description: {
+			value: `<p>${showDescriptionText}</p>`.repeat(numberOfShowDescriptionParagraphs),
+			...sharedDescriptionProperties
+		},
+		gallery: {
+			name: 'Gallery',
+			type: ElementType.Asset,
+			value: []
+		},
+		main_image: {
+			name: 'Main image',
+			type: ElementType.Asset,
+			value: [
+				{
+					url: 'https://example.org/image1.png',
+					description: showImageText,
+					name: 'image1.png',
+					...commonImageProperties
+				}
+			]
+		},
+		name: {
+			type: ElementType.Text,
+			name: 'Name',
+			value: showName
+		},
+		premiere: {
+			type: ElementType.DateTime,
+			value: new Date().toISOString(),
+			name: 'Premiere',
+			displayTimeZone: 'Europe/Prague'
+		},
+		short_description: {
+			name: 'Short description',
+			type: ElementType.Text,
+			value: showDescriptionText
+		},
+		ticket_link: {
+			type: ElementType.Text,
+			name: 'Ticket link',
+			value: ''
+		},
+		url: {
+			type: ElementType.UrlSlug,
+			name: 'URL',
+			value: 'slug'
+		}
+	},
+	system: {
+		type: 'show',
+		...commonSystemProperties
+	}
+};
