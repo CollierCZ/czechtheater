@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
 		setupFiles: ['./vitest-setup.js'],
 		coverage: {
 			include: ['src/**'],
-			exclude: ['src/kontent-types/**', '**/+page.ts']
+			exclude: ['src/kontent-types/**', '**/+page.ts', '**/+layout.server.ts']
 		},
 		server: {
 			deps: {
