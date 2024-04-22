@@ -27,7 +27,7 @@
     "@sveltejs/kit": "^2.5.6",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/svelte": "^4.2.2",
+    "@testing-library/svelte": "^5.0.1",
     "@types/eslint": "^8.56.9",
     "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
