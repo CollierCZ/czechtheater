@@ -8,8 +8,8 @@
 
   const getRowNumber = (string: string): string => string.split(/[a-zA-Z]*/)[1];
 
-  // @ts-expect-error: TODO: Fix the typing instead of ignoring
-  const handleSubmit = (event: { target }) => {
+  const handleSubmit = (event: Event) => {
+    event.preventDefault();
     const currentTarget = event.target as EventTarget & HTMLFormElement;
     const formData = new FormData(currentTarget);
 
@@ -51,7 +51,7 @@
 <Title>Create File To Invite People</Title>
 
 {#if !submitted}
-  <form on:submit|preventDefault={handleSubmit}>
+  <form onsubmit={handleSubmit}>
     {#each new Array(rows).keys() as _row, rowIndex}
       <div class="mb-4 flex flex-wrap gap-8">
         <div class="flex flex-col">
@@ -83,7 +83,7 @@
     {/each}
     <button class={buttonStyles} type="submit">Create sheet</button>
   </form>
-  <button class={`mt-4 ${buttonStyles}`} on:click={addRow}
+  <button class={`mt-4 ${buttonStyles}`} onclick={addRow}
     >Add another person</button
   >
 {:else}

@@ -52,7 +52,7 @@
 </script>
 
 <div class="relative flex">
-  <button on:click={prevItem} class={`${navButtonClasses} left-0`}>
+  <button onclick={prevItem} class={`${navButtonClasses} left-0`}>
     <SvgIcon path={mdiChevronLeft} alt="Previous image" />
   </button>
   <div class="mx-auto flex overflow-hidden">
@@ -89,7 +89,7 @@
       </div>
     </MediaQuery>
   </div>
-  <button on:click={nextItem} class={`${navButtonClasses} right-0`}>
+  <button onclick={nextItem} class={`${navButtonClasses} right-0`}>
     <SvgIcon path={mdiChevronRight} alt="Next image" />
   </button>
 </div>
@@ -98,7 +98,7 @@
   {#each carouselItems as currentImage, itemIndex}
     <button
       class={`mx-1 box-content ${itemIndex === currentSlideItem ? 'border-4 border-slate-400' : ''}`}
-      on:click={() => switchToItem(itemIndex)}
+      onclick={() => switchToItem(itemIndex)}
     >
       <Image
         src={currentImage.url}

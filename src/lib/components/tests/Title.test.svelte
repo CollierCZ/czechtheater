@@ -3,5 +3,5 @@
 </script>
 
 <Title>
-  <span data-testid="child" />
+  <span data-testid="child"></span>
 </Title>
