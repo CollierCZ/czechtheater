@@ -17,3 +17,5 @@ jobs:
       #    CC_TEST_REPORTER_ID: 12e45f7dc77e1f2aea24b7516aa3a069f14424da47e53403022698626881b0ab
       #  with:
       #    coverageCommand: npm run test:coverage
+      - name: Build
+        run: npm run build
