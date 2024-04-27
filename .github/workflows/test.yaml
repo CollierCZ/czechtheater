@@ -6,6 +6,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_KONTENT_ENVIRONMENT_ID: ${{ vars.PUBLIC_KONTENT_ENVIRONMENT_ID }}
     steps:
       - uses: actions/checkout@v4
       - uses: './.github/shared/setup-node'
