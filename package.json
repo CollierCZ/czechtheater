@@ -33,7 +33,7 @@
     "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.12.7",
-    "@unpic/svelte": "^0.0.51",
+    "@unpic/svelte": "^0.0.53",
     "@vitest/coverage-v8": "^1.5.2",
     "autoprefixer": "^10.4.16",
     "eslint": "^9.1.1",
