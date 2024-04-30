@@ -32,10 +32,9 @@ test('gallery exists with three images', () => {
 	const images2 = screen.getAllByAltText('The second image');
 	const images3 = screen.getAllByAltText('');
 
-	// One for main image and one for thumbnail
-	expect(images1).toHaveLength(2);
-	expect(images2).toHaveLength(2);
-	expect(images3).toHaveLength(2);
+	expect(images1).toHaveLength(1);
+	expect(images2).toHaveLength(1);
+	expect(images3).toHaveLength(1);
 });
 
 // TODO: add tests for interacting with the gallery
