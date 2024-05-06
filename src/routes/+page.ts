@@ -5,6 +5,7 @@ import { type ShowSection } from '../kontent-types';
 export const load: PageLoad = async () => {
   const futureShowsSection = await kontentConnector()
     .item<ShowSection>('future_shows')
+    .depthParameter(2)
     .toPromise();
 
   const futureShows = futureShowsSection.data.item.elements.shows.linkedItems;

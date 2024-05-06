@@ -6,6 +6,7 @@ export const load: PageLoad = async ({ params }) => {
   const showData = (
     await kontentConnector()
       .items<Show>()
+      .depthParameter(2)
       .type('show')
       .equalsFilter('elements.url', params.slug)
       .toPromise()

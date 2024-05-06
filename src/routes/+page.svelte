@@ -1,12 +1,14 @@
 <script lang="ts">
   import type { PageData } from './$types';
   import Gallery from '$lib/components/Gallery.svelte';
+  import GalleryWithCaptions from '$lib/components/GalleryWithCaptions.svelte';
   import RichText from '$lib/components/RichText.svelte';
   import Title from '$lib/components/Title.svelte';
   import TicketLink from '$lib/components/TicketLink.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
 
   export let data: PageData;
+  console.log(data.futureShows[0]);
 </script>
 
 <svelte:head>
@@ -21,6 +23,7 @@
 
 {#each data.futureShows as show}
   {@const gallery = show.elements.gallery.value}
+  {@const galleryWithCaptions = show.elements.gallery_with_captions}
   {@const ticketLink = show.elements.ticket_link.value}
   <div>
     <h2 class="mb-4 text-3xl font-medium xl:text-4xl">
@@ -41,7 +44,9 @@
 
     <RichText richTextElement={show.elements.description} />
 
-    {#if gallery.length > 0}
+    {#if galleryWithCaptions.value.length > 0}
+      <GalleryWithCaptions images={galleryWithCaptions} headingLevel={3} />
+    {:else if gallery.length > 0}
       <Gallery images={gallery} headingLevel={3} />
     {/if}
   </div>
