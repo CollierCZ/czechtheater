@@ -119,6 +119,15 @@ export const showData: Show = {
       type: ElementType.Asset,
       value: []
     },
+    gallery_with_captions: {
+      name: 'Gallery with captions',
+      type: ElementType.RichText,
+      linkedItems: [],
+      value: '',
+      images: [],
+      linkedItemCodenames: [],
+      links: []
+    },
     main_image: {
       name: 'Main image',
       type: ElementType.Asset,
