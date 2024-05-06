@@ -17,7 +17,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@kontent-ai/delivery-sdk": "^14.8.0",
+    "@kontent-ai/delivery-sdk": "^14.9.0",
     "@kontent-ai/model-generator": "^7.0.3",
     "@kontent-ai/rich-text-resolver": "^1.1.2",
     "@mdi/js": "^7.4.47",
