@@ -26,47 +26,32 @@
     xlarge: boolean;
   } = $props();
 
-  const getNumberOfCaptionRows = (
-    caption: string,
-    small: boolean,
-    medium: boolean,
-    xlarge: boolean
-  ): number => {
-    const divideAndRoundUp = (denominator: number) =>
-      Math.ceil(caption.length / denominator);
-    if (xlarge) {
-      return divideAndRoundUp(91);
-    } else if (medium) {
-      return divideAndRoundUp(80);
-    } else if (small) {
-      return divideAndRoundUp(57);
-    } else {
-      return divideAndRoundUp(40);
-    }
-  };
-  const getCaptionOffset = (
-    caption: string,
-    small: boolean,
-    medium: boolean,
-    xlarge: boolean
-  ): number => {
-    const numberOfCaptionRows = getNumberOfCaptionRows(
-      caption,
-      Boolean(small),
-      Boolean(medium),
-      Boolean(xlarge)
-    );
-    if (xlarge) {
-      return numberOfCaptionRows * 32;
-    }
-    return numberOfCaptionRows * 28;
-  };
-  const captionOffset = getCaptionOffset(
-    caption,
-    Boolean(small),
-    Boolean(medium),
-    Boolean(xlarge)
-  );
+  let captionOffset = $derived.by(() => {
+    const getNumberOfCaptionRows = (): number => {
+      const divideAndRoundUp = (denominator: number) =>
+        Math.ceil(caption.length / denominator);
+
+      if (xlarge) {
+        return divideAndRoundUp(80);
+      } else if (medium) {
+        return divideAndRoundUp(74);
+      } else if (small) {
+        return divideAndRoundUp(60);
+      } else {
+        return divideAndRoundUp(40);
+      }
+    };
+
+    const getCaptionOffset = (): number => {
+      const numberOfCaptionRows = getNumberOfCaptionRows();
+      if (xlarge) {
+        return numberOfCaptionRows * 32;
+      }
+      return numberOfCaptionRows * 28;
+    };
+
+    return getCaptionOffset();
+  });
 </script>
 
 <div

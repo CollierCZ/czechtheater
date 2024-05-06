@@ -85,9 +85,9 @@
             {@const caption = item.elements.caption.value}
             <CarouselImage
               isFirstImage={itemIndex === 0}
-              small
-              medium
-              xlarge
+              small={Boolean(small)}
+              medium={Boolean(medium)}
+              xlarge={Boolean(xlarge)}
               {imageNumber}
               {image}
               {hide}
