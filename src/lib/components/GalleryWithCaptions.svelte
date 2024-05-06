@@ -3,7 +3,7 @@
   import type { Elements } from '@kontent-ai/delivery-sdk';
   import type { ImageWithCaption } from '../../kontent-types';
 
-  export let images: Elements.LinkedItemsElement<ImageWithCaption>;
+  export let images: ImageWithCaption[];
   export let headingLevel = 2;
 </script>
 

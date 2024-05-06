@@ -7,19 +7,19 @@ import { type IContentItem, type Elements } from '@kontent-ai/delivery-sdk';
  * Codename: theater_fact
  */
 export type TheaterFact = IContentItem<{
-  /**
-   * Description (rich_text)
-   * Required: false
-   * Id: 56cf0d02-f9f3-4696-bddd-4549b9db7961
-   * Codename: description
-   */
-  description: Elements.RichTextElement;
+    /**
+     * Description (rich_text)
+     * Required: false
+     * Id: 56cf0d02-f9f3-4696-bddd-4549b9db7961
+     * Codename: description
+     */
+    description: Elements.RichTextElement;
 
-  /**
-   * Image (asset)
-   * Required: false
-   * Id: 63ee712a-1202-4446-9b1c-51dedab57161
-   * Codename: image
-   */
-  image: Elements.AssetsElement;
+    /**
+     * Image (asset)
+     * Required: false
+     * Id: 63ee712a-1202-4446-9b1c-51dedab57161
+     * Codename: image
+     */
+    image: Elements.AssetsElement;
 }>;

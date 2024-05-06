@@ -9,13 +9,13 @@ import { type Show } from './show';
  * Codename: show_section
  */
 export type ShowSection = IContentItem<{
-  /**
-   * Shows (modular_content)
-   * Required: true
-   * Id: 3f4b98ae-8b45-4f97-8bcb-195921fb2ec7
-   * Codename: shows
-   *
-   * What shows to include in this section
-   */
-  shows: Elements.LinkedItemsElement<Show>;
+    /**
+     * Shows (modular_content)
+     * Required: true
+     * Id: 3f4b98ae-8b45-4f97-8bcb-195921fb2ec7
+     * Codename: shows
+     *
+     * What shows to include in this section
+     */
+    shows: Elements.LinkedItemsElement<Show>;
 }>;

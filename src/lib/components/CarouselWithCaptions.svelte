@@ -12,7 +12,7 @@
   let {
     carouselItems
   }: {
-    carouselItems: Elements.LinkedItemsElement<ImageWithCaption>;
+    carouselItems: ImageWithCaption[];
   } = $props();
 
   let currentSlideItem = $state(0);
@@ -20,7 +20,7 @@
 
   let SlideDivHeight = $derived.by(() => {
     const currentImageWithCaption =
-      carouselItems.linkedItems[currentSlideItem].elements;
+      carouselItems[currentSlideItem].elements;
     const { height } = getHeightAndWidth({
       image: currentImageWithCaption.image.value[0],
       width: baseImageWidth
@@ -41,13 +41,13 @@
   };
 
   const nextItem = () => {
-    switchToItem((currentSlideItem + 1) % carouselItems.linkedItems.length);
+    switchToItem((currentSlideItem + 1) % carouselItems.length);
   };
   const prevItem = () => {
     if (currentSlideItem != 0) {
-      switchToItem((currentSlideItem - 1) % carouselItems.linkedItems.length);
+      switchToItem((currentSlideItem - 1) % carouselItems.length);
     } else {
-      switchToItem(carouselItems.linkedItems.length - 1);
+      switchToItem(carouselItems.length - 1);
     }
   };
 
@@ -117,7 +117,7 @@
           use:setBaseImageWidth={imageWidth}
           role="group"
         >
-          {#each carouselItems.linkedItems as item, itemIndex}
+          {#each carouselItems as item, itemIndex}
             {@const imageNumber = itemIndex + 1}
             {@const image = item.elements.image.value[0]}
             {@const hide = itemIndex === currentSlideItem ? false : true}
@@ -131,7 +131,7 @@
             <div
               class="my-auto min-w-[340px] max-w-[340px] sm:min-w-[480px] md:min-w-[608px] md:max-w-[calc(65ch-8rem)] xl:min-w-[826px] xl:max-w-[826px]"
               aria-hidden={hide}
-              aria-label={`Image ${imageNumber} of ${carouselItems.linkedItems.length}`}
+              aria-label={`Image ${imageNumber} of ${carouselItems.length}`}
               id={`carousel-image-${imageNumber}`}
               style:max-height={`${SlideDivHeight + (caption ? captionOffset : 0)}px`}
             >
@@ -156,7 +156,7 @@
   </div>
 
   <div class="mt-2 overflow-x-scroll whitespace-nowrap">
-    {#each carouselItems.linkedItems as item, itemIndex}
+    {#each carouselItems as item, itemIndex}
       {@const currentImage = item.elements.image.value[0]}
       {@const imageNumber = itemIndex + 1}
       <button
