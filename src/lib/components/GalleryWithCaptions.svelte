@@ -1,6 +1,5 @@
 <script lang="ts">
   import CarouselWithCaptions from './CarouselWithCaptions.svelte';
-  import type { Elements } from '@kontent-ai/delivery-sdk';
   import type { ImageWithCaption } from '../../kontent-types';
 
   export let images: ImageWithCaption[];

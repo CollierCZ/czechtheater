@@ -121,9 +121,12 @@ export const showData: Show = {
     },
     gallery_with_captions: {
       name: 'Gallery with captions',
-      type: ElementType.ModularContent,
+      type: ElementType.RichText,
       linkedItems: [],
-      value: []
+      value: '',
+      images: [],
+      linkedItemCodenames: [],
+      links: []
     },
     main_image: {
       name: 'Main image',

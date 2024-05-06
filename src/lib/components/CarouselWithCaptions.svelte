@@ -1,13 +1,12 @@
 <script lang="ts">
   import MediaQuery from 'svelte-media-queries';
 
-  import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
   import SvgIcon from './SvgIcon.svelte';
   import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
   import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
   import { Image } from '@unpic/svelte';
   import type { ImageWithCaption } from '../../kontent-types';
-  import type { Elements } from '@kontent-ai/delivery-sdk';
+  import CarouselImage from './CarouselImage.svelte';
 
   let {
     carouselItems
@@ -19,8 +18,7 @@
   let baseImageWidth = $state(826);
 
   let SlideDivHeight = $derived.by(() => {
-    const currentImageWithCaption =
-      carouselItems[currentSlideItem].elements;
+    const currentImageWithCaption = carouselItems[currentSlideItem].elements;
     const { height } = getHeightAndWidth({
       image: currentImageWithCaption.image.value[0],
       width: baseImageWidth
@@ -49,43 +47,6 @@
     } else {
       switchToItem(carouselItems.length - 1);
     }
-  };
-
-  const getNumberOfCaptionRows = (
-    caption: string,
-    small: boolean,
-    medium: boolean,
-    xlarge: boolean
-  ): number => {
-    const divideAndRoundUp = (denominator: number) =>
-      Math.ceil(caption.length / denominator);
-    if (xlarge) {
-      return divideAndRoundUp(91);
-    } else if (medium) {
-      return divideAndRoundUp(80);
-    } else if (small) {
-      return divideAndRoundUp(57);
-    } else {
-      return divideAndRoundUp(40);
-    }
-  };
-
-  const getCaptionOffset = (
-    caption: string,
-    small: boolean,
-    medium: boolean,
-    xlarge: boolean
-  ): number => {
-    const numberOfCaptionRows = getNumberOfCaptionRows(
-      caption,
-      Boolean(small),
-      Boolean(medium),
-      Boolean(xlarge)
-    );
-    if (xlarge) {
-      return numberOfCaptionRows * 32;
-    }
-    return numberOfCaptionRows * 28;
   };
 
   const navButtonClasses =
@@ -122,30 +83,18 @@
             {@const image = item.elements.image.value[0]}
             {@const hide = itemIndex === currentSlideItem ? false : true}
             {@const caption = item.elements.caption.value}
-            {@const captionOffset = getCaptionOffset(
-              caption,
-              Boolean(small),
-              Boolean(medium),
-              Boolean(xlarge)
-            )}
-            <div
-              class="my-auto min-w-[340px] max-w-[340px] sm:min-w-[480px] md:min-w-[608px] md:max-w-[calc(65ch-8rem)] xl:min-w-[826px] xl:max-w-[826px]"
-              aria-hidden={hide}
-              aria-label={`Image ${imageNumber} of ${carouselItems.length}`}
-              id={`carousel-image-${imageNumber}`}
-              style:max-height={`${SlideDivHeight + (caption ? captionOffset : 0)}px`}
-            >
-              <figure>
-                <ImageConstrainedOneDimension
-                  {image}
-                  width={826}
-                  priority={itemIndex === 0}
-                />
-                {#if caption}
-                  <figcaption>{caption}</figcaption>
-                {/if}
-              </figure>
-            </div>
+            <CarouselImage
+              isFirstImage={itemIndex === 0}
+              small
+              medium
+              xlarge
+              {imageNumber}
+              {image}
+              {hide}
+              {caption}
+              {SlideDivHeight}
+              totalImagesLength={carouselItems.length}
+            />
           {/each}
         </div>
       </MediaQuery>

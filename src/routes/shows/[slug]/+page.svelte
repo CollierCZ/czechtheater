@@ -6,13 +6,14 @@
   import RichText from '$lib/components/RichText.svelte';
   import Title from '$lib/components/Title.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
-    import type { ImageWithCaption } from '../../../kontent-types';
+  import type { ImageWithCaption } from '../../../kontent-types';
 
   export let data: PageData;
 
   const showData = data.showData.elements;
   const gallery = showData.gallery.value;
-  const galleryWithCaptions = showData.gallery_with_captions.linkedItems as ImageWithCaption[];
+  const galleryWithCaptions = showData.gallery_with_captions
+    .linkedItems as ImageWithCaption[];
 </script>
 
 <svelte:head>
