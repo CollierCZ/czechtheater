@@ -16,3 +16,17 @@ jobs:
         run: PUBLIC_KONTENT_ENVIRONMENT_ID=test npm run check
       - name: Lint
         run: npm run lint
+  
+  lint-prose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint with Vale
+        uses: errata-ai/vale-action@reviewdog
+        with:
+          fail_on_error: true
+          vale_flags: "--config=vale.ini"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
