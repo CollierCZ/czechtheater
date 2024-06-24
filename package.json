@@ -37,7 +37,7 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^9.5.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "^2.40.0",
+    "eslint-plugin-svelte": "^2.41.0",
     "globals": "^15.6.0",
     "jsdom": "^24.1.0",
     "postcss": "^8.4.32",
