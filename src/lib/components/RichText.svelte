@@ -13,6 +13,7 @@
   import InternalLink from './RichTextElements/InternalLink.svelte';
   import Paragraph from './RichTextElements/Paragraph.svelte';
   import RichTextImage from './RichTextElements/RichTextImage.svelte';
+  import Component from './RichTextElements/Component.svelte';
 
   export let richTextElement: Elements.RichTextElement;
 
@@ -22,7 +23,8 @@
 
   const portableTextComponents: PortableTextComponents = {
     types: {
-      image: RichTextImage
+      image: RichTextImage,
+      component: Component
     },
     block: {
       normal: Paragraph
