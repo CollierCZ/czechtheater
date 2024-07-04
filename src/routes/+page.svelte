@@ -23,7 +23,8 @@
 
 {#each data.futureShows as show}
   {@const gallery = show.elements.gallery.value}
-  {@const galleryWithCaptions = show.elements.gallery_with_captions.linkedItems as ImageWithCaption[]}
+  {@const galleryWithCaptions = show.elements.gallery_with_captions
+    .linkedItems as ImageWithCaption[]}
   {@const ticketLink = show.elements.ticket_link.value}
   <div>
     <h2 class="mb-4 text-3xl font-medium xl:text-4xl">

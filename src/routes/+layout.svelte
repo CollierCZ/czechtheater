@@ -12,8 +12,6 @@
     children: Snippet;
   } = $props();
 
-  // https://github.com/sveltejs/eslint-plugin-svelte/issues/652
-  // eslint-disable-next-line svelte/valid-compile
   let currentSlug = $derived($page.url.pathname);
 
   const navItems = [
