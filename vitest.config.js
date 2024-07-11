@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { svelteTesting } from '@testing-library/svelte/vite';
 
 export default defineConfig(({ mode }) => ({
-  plugins: [sveltekit()],
+  plugins: [sveltekit(), svelteTesting()],
   resolve: {
     conditions: mode === 'test' ? ['browser'] : []
   },
@@ -17,9 +18,6 @@ export default defineConfig(({ mode }) => ({
       deps: {
         inline: ['clsx']
       }
-    },
-    alias: {
-      '@testing-library/svelte': '@testing-library/svelte/svelte5'
     }
   }
 }));
