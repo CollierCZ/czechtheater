@@ -2,17 +2,14 @@
   import SvgIcon from '$lib/components/SvgIcon.svelte';
   import type { Snippet } from 'svelte';
 
-  let {
-    link,
-    iconAlt,
-    iconPath,
-    children
-  }: {
+  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
+  interface LinkProps {
     link: string;
     iconAlt?: string;
     iconPath?: string;
     children: Snippet;
-  } = $props();
+  }
+  let { link, iconAlt, iconPath, children } = $props() as LinkProps;
 </script>
 
 <div class="my-2">

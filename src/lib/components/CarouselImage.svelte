@@ -2,6 +2,19 @@
   import type { ElementModels } from '@kontent-ai/delivery-sdk';
   import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 
+  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
+  interface CarouselImageProps {
+    isFirstImage: boolean;
+    imageNumber: number;
+    image: ElementModels.AssetModel;
+    hide: boolean;
+    caption: string;
+    SlideDivHeight: number;
+    totalImagesLength: number;
+    small: boolean;
+    medium: boolean;
+    xlarge: boolean;
+  }
   let {
     isFirstImage,
     imageNumber,
@@ -13,18 +26,7 @@
     small,
     medium,
     xlarge
-  }: {
-    isFirstImage: boolean;
-    imageNumber: number;
-    image: ElementModels.AssetModel;
-    hide: boolean;
-    caption: string;
-    SlideDivHeight: number;
-    totalImagesLength: number;
-    small: boolean;
-    medium: boolean;
-    xlarge: boolean;
-  } = $props();
+  } = $props() as CarouselImageProps;
 
   let captionOffset = $derived.by(() => {
     const getNumberOfCaptionRows = (): number => {

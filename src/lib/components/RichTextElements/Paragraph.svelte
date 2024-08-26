@@ -2,14 +2,13 @@
   import type { MarkComponentProps } from '@portabletext/svelte';
   import type { Snippet } from 'svelte';
 
-  // Property custom marks receive from @portabletext/svelte when redered
-  let {
-    children,
-    portableText
-  }: {
+  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
+  interface ParagraphtProps {
     children: Snippet;
     portableText: MarkComponentProps;
-  } = $props();
+  }
+  // Property custom marks receive from @portabletext/svelte when redered
+  let { children, portableText } = $props() as ParagraphtProps;
 
   const { indexInParent } = portableText;
   const isFirst = indexInParent === 0;

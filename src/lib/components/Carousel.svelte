@@ -8,11 +8,11 @@
   import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
   import { Image } from '@unpic/svelte';
 
-  let {
-    carouselItems
-  }: {
+  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
+  interface CarouselProps {
     carouselItems: ElementModels.AssetModel[];
-  } = $props();
+  }
+  let { carouselItems } = $props() as CarouselProps;
 
   let currentSlideItem = $state(0);
   let baseImageWidth = $state(826);

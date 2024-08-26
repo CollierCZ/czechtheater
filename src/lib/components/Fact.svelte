@@ -3,11 +3,11 @@
   import type { TheaterFact } from '../../kontent-types';
   import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 
-  let {
-    fact
-  }: {
+  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
+  interface FactProps {
     fact: TheaterFact;
-  } = $props();
+  }
+  let { fact } = $props() as FactProps;
 
   const factImage = fact.elements.image.value[0];
 </script>
