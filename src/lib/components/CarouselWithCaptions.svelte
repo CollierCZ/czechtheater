@@ -8,11 +8,11 @@
   import type { ImageWithCaption } from '../../kontent-types';
   import CarouselImage from './CarouselImage.svelte';
 
-  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
-  interface CarouselWithCaptionstProps {
+  let {
+    carouselItems
+  }: {
     carouselItems: ImageWithCaption[];
-  }
-  let { carouselItems } = $props() as CarouselWithCaptionstProps;
+  } = $props();
 
   let currentSlideItem = $state(0);
   let baseImageWidth = $state(826);

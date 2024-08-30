@@ -4,12 +4,13 @@
   import type { Snippet } from 'svelte';
   import '../app.pcss';
 
-  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
-  interface LayoutProps {
+  let {
+    data,
+    children
+  }: {
     data: LayoutData;
     children: Snippet;
-  }
-  let { data, children } = $props() as LayoutProps;
+  } = $props();
 
   let currentSlug = $derived($page.url.pathname);
 

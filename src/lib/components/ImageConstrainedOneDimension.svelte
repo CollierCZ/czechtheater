@@ -18,10 +18,8 @@
     width: number;
   }
 
-  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
-  let { image, height, width, priority } = $props() as
-    | ConstrainedHeight
-    | ConstrainedWidth;
+  let { image, height, width, priority }: ConstrainedHeight | ConstrainedWidth =
+    $props();
 
   const { height: finalHeight = 0, width: finalWidth = 0 } = getHeightAndWidth({
     image,

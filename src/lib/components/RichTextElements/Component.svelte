@@ -3,18 +3,18 @@
   import { Image } from '@unpic/svelte';
   import type { FixedSizeImage } from '../../../kontent-types';
 
-  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
-  interface ComponentProps {
-    portableText: CustomBlockComponentProps;
-  }
   // Property custom marks receive from @portabletext/svelte when redered
-  let { portableText } = $props() as ComponentProps;
+  let {
+    portableText
+  }: {
+    portableText: CustomBlockComponentProps;
+  } = $props();
 
   const linkedItems = portableText.global.context
     .linkedItems as FixedSizeImage[];
 
   const linkedItem = linkedItems.find(
-    (item) => item.system.codename === portableText.value.component._ref // eslint-disable-line @typescript-eslint/no-unsafe-member-access
+    (item) => item.system.codename === portableText.value.component._ref
   );
   const componentType = linkedItem?.system.type;
 </script>

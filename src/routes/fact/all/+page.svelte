@@ -3,11 +3,11 @@
   import Title from '$lib/components/Title.svelte';
   import type { PageData } from './$types';
 
-  // Temporary fix for: https://github.com/sveltejs/eslint-plugin-svelte/issues/804
-  interface FactProps {
+  let {
+    data
+  }: {
     data: PageData;
-  }
-  let { data } = $props() as FactProps;
+  } = $props();
 
   const facts = data.facts;
 </script>
