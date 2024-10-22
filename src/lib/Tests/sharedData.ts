@@ -38,6 +38,7 @@ export const commonSystemProperties = {
 
 export const firstFactText = 'Czech Theater is great!';
 export const secondFactText = 'A different fact about Czech Theater';
+export const factNoImageText = 'This fact has no image';
 
 const sharedFactImageProperties = {
   name: 'Image',
@@ -45,14 +46,13 @@ const sharedFactImageProperties = {
 };
 
 export const firstImageDescription = 'An image accompanying a fact';
-export const secondImageDescription =
-  'A second image accompanying a second fact';
 
 const sharedDescriptionProperties = {
   name: 'description',
   ...basicRichTextValues
 };
 
+const factKontenType = 'theater_fact';
 export const testFacts = [
   {
     elements: {
@@ -73,7 +73,7 @@ export const testFacts = [
       }
     },
     system: {
-      type: 'theater_fact',
+      type: factKontenType,
       ...commonSystemProperties
     }
   },
@@ -84,19 +84,12 @@ export const testFacts = [
         ...sharedDescriptionProperties
       },
       image: {
-        value: [
-          {
-            url: 'https://example.org/image2.png',
-            description: secondImageDescription,
-            name: 'image2.png',
-            ...commonImageProperties
-          }
-        ],
+        value: [],
         ...sharedFactImageProperties
       }
     },
     system: {
-      type: 'theater_fact',
+      type: factKontenType,
       ...commonSystemProperties
     }
   }

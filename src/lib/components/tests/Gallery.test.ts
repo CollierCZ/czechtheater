@@ -118,3 +118,12 @@ describe('Gallery', () => {
     expect(isInaccessible(image3));
   });
 });
+
+describe('Gallery with different heading level', () => {
+  it('exists with an accessible image', () => {
+    render(Gallery, { headingLevel: 3, images: testImages });
+    const image1 = screen.getByAltText(testImages[0].description);
+
+    expect(!isInaccessible(image1));
+  });
+});

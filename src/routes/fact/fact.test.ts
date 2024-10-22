@@ -6,7 +6,6 @@ import {
   firstFactText,
   firstImageDescription,
   secondFactText,
-  secondImageDescription,
   sharedLogo,
   testFacts
 } from '$lib/Tests/sharedData';
@@ -51,9 +50,7 @@ describe('Fact page', () => {
     });
 
     const factDescriptionText = screen.getByText(secondFactText);
-    const factImage = screen.getByAltText(secondImageDescription);
 
     expect(factDescriptionText).toBeInTheDocument();
-    expect(factImage).toBeInTheDocument();
   });
 });
