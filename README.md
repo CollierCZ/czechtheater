@@ -60,3 +60,17 @@ Then run this command:
 ```bash
 npx kontent-generate --exportRoles=false --exportWebhooks=false --outputDir=./src/kontent-types --environmentId=<ENVIRONMENT_ID> --apiKey=<API_KEY>
 ```
+
+## Preview draft content
+
+You can run the site locally with draft content to preview how it looks.
+Only run it locally unless you don't worry about draft content becoming public.
+
+To do so, follow these steps:
+
+1. Create a Kontent Delivery API key with content preview permissions.
+2. Save the API key and preview as true in your `.env` file:
+   ```ini
+   PUBLIC_KONTENT_PREVIEW_API_KEY=abc123
+   PUBLIC_KONTENT_PREVIEW=true
+   ```
