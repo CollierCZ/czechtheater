@@ -7,7 +7,7 @@
   import TicketLink from '$lib/components/TicketLink.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../kontent-types';
-    import { getMonthFromDateString } from '$lib';
+  import { getMonthFromDateString } from '$lib';
 
   export let data: PageData;
 </script>
@@ -45,7 +45,9 @@
         <TicketLink link={ticketLink} />
       {/if}
 
-      <p class="mb-4">Coming: {getMonthFromDateString(show.elements.premiere.value)}</p>
+      <p class="mb-4">
+        Coming: {getMonthFromDateString(show.elements.premiere.value)}
+      </p>
 
       <RichText richTextElement={show.elements.description} />
 

@@ -1,5 +1,9 @@
 import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
-import { PUBLIC_KONTENT_ENVIRONMENT_ID, PUBLIC_KONTENT_PREVIEW_API_KEY, PUBLIC_KONTENT_PREVIEW } from '$env/static/public';
+import {
+  PUBLIC_KONTENT_ENVIRONMENT_ID,
+  PUBLIC_KONTENT_PREVIEW_API_KEY,
+  PUBLIC_KONTENT_PREVIEW
+} from '$env/static/public';
 
 export const kontentConnector = () => {
   if (!PUBLIC_KONTENT_ENVIRONMENT_ID) {
@@ -20,7 +24,6 @@ export const kontentConnector = () => {
         usePreviewMode: true
       }
     });
-
   }
   return createDeliveryClient({
     environmentId: PUBLIC_KONTENT_ENVIRONMENT_ID
