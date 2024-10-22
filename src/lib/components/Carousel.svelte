@@ -53,9 +53,11 @@
 
 <section aria-label="gallery-carousel">
   <div class="relative flex">
-    <button onclick={prevItem} class={`${navButtonClasses} left-0`}>
-      <SvgIcon path={mdiChevronLeft} alt="Previous image" />
-    </button>
+    {#if carouselItems.length > 1}
+      <button onclick={prevItem} class={`${navButtonClasses} left-0`}>
+        <SvgIcon path={mdiChevronLeft} alt="Previous image" />
+      </button>
+    {/if}
     <div class="mx-auto flex overflow-hidden">
       <MediaQuery
         query={[
@@ -96,28 +98,32 @@
         </div>
       </MediaQuery>
     </div>
-    <button onclick={nextItem} class={`${navButtonClasses} right-0`}>
-      <SvgIcon path={mdiChevronRight} alt="Next image" />
-    </button>
+    {#if carouselItems.length > 1}
+      <button onclick={nextItem} class={`${navButtonClasses} right-0`}>
+        <SvgIcon path={mdiChevronRight} alt="Next image" />
+      </button>
+    {/if}
   </div>
 
-  <div class="mt-2 overflow-x-scroll whitespace-nowrap">
-    {#each carouselItems as currentImage, itemIndex}
-      {@const imageNumber = itemIndex + 1}
-      <button
-        class={`mx-1 box-content ${itemIndex === currentSlideItem ? 'border-4 border-slate-400' : ''}`}
-        onclick={() => switchToItem(itemIndex)}
-        aria-current={itemIndex === currentSlideItem ? 'true' : 'false'}
-        aria-controls={`carousel-image-${imageNumber}`}
-      >
-        <Image
-          src={currentImage.url}
-          alt={`Switch to image ${itemIndex}`}
-          height={84}
-          width={84}
-          layout="fixed"
-        />
-      </button>
-    {/each}
-  </div>
+  {#if carouselItems.length > 1}
+    <div class="mt-2 overflow-x-scroll whitespace-nowrap">
+      {#each carouselItems as currentImage, itemIndex}
+        {@const imageNumber = itemIndex + 1}
+        <button
+          class={`mx-1 box-content ${itemIndex === currentSlideItem ? 'border-4 border-slate-400' : ''}`}
+          onclick={() => switchToItem(itemIndex)}
+          aria-current={itemIndex === currentSlideItem ? 'true' : 'false'}
+          aria-controls={`carousel-image-${imageNumber}`}
+        >
+          <Image
+            src={currentImage.url}
+            alt={`Switch to image ${itemIndex}`}
+            height={84}
+            width={84}
+            layout="fixed"
+          />
+        </button>
+      {/each}
+    </div>
+  {/if}
 </section>
