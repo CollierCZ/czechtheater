@@ -7,6 +7,7 @@
   import Title from '$lib/components/Title.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../../../kontent-types';
+    import TicketLink from '$lib/components/TicketLink.svelte';
 
   export let data: PageData;
 
@@ -14,6 +15,7 @@
   const gallery = showData.gallery.value;
   const galleryWithCaptions = showData.gallery_with_captions
     .linkedItems as ImageWithCaption[];
+  const ticketLink = showData.ticket_link.value
 </script>
 
 <svelte:head>
@@ -34,6 +36,10 @@
 <p class="mb-4">
   Premiere: {new Date(showData.premiere.value || '').toDateString()}
 </p>
+
+{#if ticketLink && new Date(showData.premiere.value || '') >= new Date(Date.now() - 12096e5)}
+  <TicketLink link={ticketLink} />
+{/if}
 
 <RichText richTextElement={showData.description} />
 
