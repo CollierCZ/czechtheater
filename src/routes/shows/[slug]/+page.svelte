@@ -21,6 +21,12 @@
 <svelte:head>
   <title>{showData.name.value} | Czech Theater</title>
   <meta name="description" content={showData.short_description.value} />
+  <meta property="og:title" content={showData.name.value} />
+  <meta name="og:site_name" content="Czech Theater" />
+  <meta property="og:type" content="article" />
+  <meta name="og:description" content={showData.short_description.value} />
+  <meta property="og:url" content={`https://czechtheater.cz/shows/${showData.url.value}`} />
+  <meta property="og:image" content={showData.main_image.value[0].url} />
 </svelte:head>
 
 <Title>{showData.name.value}</Title>
