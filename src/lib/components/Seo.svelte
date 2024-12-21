@@ -73,7 +73,9 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content={fullUrl} />
   <meta property="og:type" content={'website'} />
-  <meta property="og:title" content={title || "Czech Theater"} />
+  <meta property="og:title" content={title || 'Czech Theater'} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={imageUrl} />
+  {#if imageUrl}
+    <meta property="og:image" content={imageUrl} />
+  {/if}
 </svelte:head>

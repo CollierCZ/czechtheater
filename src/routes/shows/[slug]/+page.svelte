@@ -8,7 +8,7 @@
   import Title from '$lib/components/Title.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../../../kontent-types';
-    import TicketLink from '$lib/components/TicketLink.svelte';
+  import TicketLink from '$lib/components/TicketLink.svelte';
 
   export let data: PageData;
 
@@ -16,11 +16,11 @@
   const gallery = showData.gallery.value;
   const galleryWithCaptions = showData.gallery_with_captions
     .linkedItems as ImageWithCaption[];
-  const ticketLink = showData.ticket_link.value
-  const premiereDate = new Date(showData.premiere.value || '').toDateString()
+  const ticketLink = showData.ticket_link.value;
+  const premiereDate = new Date(showData.premiere.value || '').toDateString();
 </script>
 
-<Seo 
+<Seo
   description={showData.short_description.value}
   imageUrl={showData.main_image.value[0].url}
   isShow={true}

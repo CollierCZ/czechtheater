@@ -8,17 +8,15 @@
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../kontent-types';
   import { getMonthFromDateString } from '$lib';
+  import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 </script>
 
-<svelte:head>
-  <title>Czech Theater</title>
-  <meta
-    name="description"
-    content="A multicultural amateur community theater in Brno presenting Czech plays in English."
-  />
-</svelte:head>
+<Seo
+  description="A multicultural amateur community theater in Brno presenting Czech plays in English."
+  slug={`/`}
+/>
 
 <Title>Upcoming Shows</Title>
 
