@@ -14,10 +14,7 @@
 
 <svelte:head>
   <title>Czech Theater Facts</title>
-  <meta
-    name="description"
-    content="A list of facts about theater in the Czech Republic."
-  />
+  <meta name="robots" content="noindex" />
 </svelte:head>
 
 <Title>All Czech Theater Facts</Title>

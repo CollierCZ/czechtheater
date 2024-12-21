@@ -6,6 +6,7 @@
   import RichText from '$lib/components/RichText.svelte';
   import Title from '$lib/components/Title.svelte';
   import LinkButton from '$lib/components/LinkButton.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 
@@ -13,13 +14,11 @@
   const auditionEventLink = data.auditionsInfo.link_to_audition_event.value;
 </script>
 
-<svelte:head>
-  <title>Audition for Czech Theater</title>
-  <meta
-    name="description"
-    content="How to audition for a role in a Czech Theater production."
-  />
-</svelte:head>
+<Seo
+  description="How to audition for a role in a Czech Theater production."
+  slug={`/audition`}
+  title="Audition"
+/>
 
 <Title>Auditions</Title>
 

@@ -4,17 +4,16 @@
   import Title from '$lib/components/Title.svelte';
   import { getDateFromDateString } from '$lib';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 </script>
 
-<svelte:head>
-  <title>Past Shows by Czech Theater</title>
-  <meta
-    name="description"
-    content="A list of all of the shows that Czech Theater has put on."
-  />
-</svelte:head>
+<Seo
+  description="A list of all of the shows that Czech Theater has put on."
+  slug={`/shows`}
+  title="Past Shows"
+/>
 
 <Title>Past Shows</Title>
 

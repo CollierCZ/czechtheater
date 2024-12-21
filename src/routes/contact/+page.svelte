@@ -5,6 +5,7 @@
 
   import Title from '$lib/components/Title.svelte';
   import SvgIcon from '$lib/components/SvgIcon.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 
@@ -26,10 +27,11 @@
   };
 </script>
 
-<svelte:head>
-  <title>Contact Czech Theater</title>
-  <meta name="description" content="How to get in touch with Czech Theater." />
-</svelte:head>
+<Seo
+  description="How to get in touch with Czech Theater."
+  slug={`/contact`}
+  title="Contact"
+/>
 
 <Title>Contact Information</Title>
 

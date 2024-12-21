@@ -5,6 +5,7 @@
   import { onMount } from 'svelte';
   import type { TheaterFact } from '../../kontent-types';
   import Fact from '$lib/components/Fact.svelte';
+  import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 
@@ -15,13 +16,11 @@
   });
 </script>
 
-<svelte:head>
-  <title>Czech Theater Fact</title>
-  <meta
-    name="description"
-    content="A fact about theater in the Czech Republic."
-  />
-</svelte:head>
+<Seo
+  description="A fact about theater in the Czech Republic."
+  slug={`/fact`}
+  title="Czech Theater Fact"
+/>
 
 <Title>Czech Theater Fact</Title>
 
