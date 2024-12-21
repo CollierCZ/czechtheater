@@ -4,6 +4,7 @@
   import Gallery from '$lib/components/Gallery.svelte';
   import GalleryWithCaptions from '$lib/components/GalleryWithCaptions.svelte';
   import RichText from '$lib/components/RichText.svelte';
+  import Seo from '$lib/components/Seo.svelte';
   import Title from '$lib/components/Title.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../../../kontent-types';
@@ -16,18 +17,17 @@
   const galleryWithCaptions = showData.gallery_with_captions
     .linkedItems as ImageWithCaption[];
   const ticketLink = showData.ticket_link.value
+  const premiereDate = new Date(showData.premiere.value || '').toDateString()
 </script>
 
-<svelte:head>
-  <title>{showData.name.value} | Czech Theater</title>
-  <meta name="description" content={showData.short_description.value} />
-  <meta property="og:title" content={showData.name.value} />
-  <meta name="og:site_name" content="Czech Theater" />
-  <meta property="og:type" content="article" />
-  <meta name="og:description" content={showData.short_description.value} />
-  <meta property="og:url" content={`https://czechtheater.cz/shows/${showData.url.value}`} />
-  <meta property="og:image" content={showData.main_image.value[0].url} />
-</svelte:head>
+<Seo 
+  description={showData.short_description.value}
+  imageUrl={showData.main_image.value[0].url}
+  isShow={true}
+  slug={`/shows/${showData.url.value}`}
+  startDate={premiereDate}
+  title={showData.name.value}
+/>
 
 <Title>{showData.name.value}</Title>
 
@@ -40,7 +40,7 @@
 </div>
 
 <p class="mb-4">
-  Premiere: {new Date(showData.premiere.value || '').toDateString()}
+  Premiere: {premiereDate}
 </p>
 
 {#if ticketLink && new Date(showData.premiere.value || '') >= new Date(Date.now() - 12096e5)}
