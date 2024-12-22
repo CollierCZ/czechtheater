@@ -1,16 +1,17 @@
-import { kontentConnector, sortShows } from '$lib';
+import { kontentConnector } from '$lib';
 import type { PageLoad } from './$types';
-import { type ShowSection } from '../../kontent-types';
+import { type PastShows } from '../../kontent-types';
 
 export const load: PageLoad = async () => {
   const pastShowsSection = await kontentConnector()
-    .item<ShowSection>('past_shows')
+    .item<PastShows>('past_shows')
+    .depthParameter(2)
     .toPromise();
 
-  const pastShows =
-    pastShowsSection.data.item.elements.shows.linkedItems.sort(sortShows);
+  const pastSeasons =
+    pastShowsSection.data.item.elements.seasons.linkedItems;
 
   return {
-    pastShows
+    pastSeasons
   };
 };
