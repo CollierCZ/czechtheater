@@ -10,6 +10,7 @@
   import type { ImageWithCaption } from '../../../kontent-types';
   import TicketLink from '$lib/components/TicketLink.svelte';
     import PerformanceLink from '$lib/components/PerformanceLink.svelte';
+    import { getDateFromDateString } from '$lib';
 
   export let data: PageData;
 
@@ -18,7 +19,7 @@
   const galleryWithCaptions = showData.gallery_with_captions
     .linkedItems as ImageWithCaption[];
   const ticketLink = showData.ticket_link.value;
-  const premiereDate = new Date(showData.premiere.value || '').toDateString();
+  const premiereDate = getDateFromDateString(showData.premiere.value );
   const fullPerformanceLink = showData.full_performance_link.value;
 </script>
 
