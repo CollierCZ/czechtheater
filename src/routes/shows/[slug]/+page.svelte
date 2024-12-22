@@ -9,6 +9,8 @@
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import type { ImageWithCaption } from '../../../kontent-types';
   import TicketLink from '$lib/components/TicketLink.svelte';
+  import PerformanceLink from '$lib/components/PerformanceLink.svelte';
+  import { getDateFromDateString, isShowInFuture } from '$lib';
 
   export let data: PageData;
 
@@ -17,7 +19,8 @@
   const galleryWithCaptions = showData.gallery_with_captions
     .linkedItems as ImageWithCaption[];
   const ticketLink = showData.ticket_link.value;
-  const premiereDate = new Date(showData.premiere.value || '').toDateString();
+  const premiereDate = getDateFromDateString(showData.premiere.value);
+  const fullPerformanceLink = showData.full_performance_link.value;
 </script>
 
 <Seo
@@ -43,8 +46,12 @@
   Premiere: {premiereDate}
 </p>
 
-{#if ticketLink && new Date(showData.premiere.value || '') >= new Date(Date.now() - 12096e5)}
+{#if ticketLink && isShowInFuture(premiereDate)}
   <TicketLink link={ticketLink} />
+{/if}
+
+{#if fullPerformanceLink}
+  <PerformanceLink link={fullPerformanceLink} />
 {/if}
 
 <RichText richTextElement={showData.description} />

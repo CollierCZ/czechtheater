@@ -10,7 +10,6 @@
 
   /* Structured data for SEO */
   const czechTheaterObject = {
-    '@type': 'PerformingGroup',
     name: 'Czech Theater',
     email: 'czechtheater@gmail.com',
     foundingDate: '2018-06-18',
@@ -20,13 +19,23 @@
     url: 'https://czechtheater.cz'
   };
 
+  const czechTheaterPerformingGroup = {
+    '@type': 'PerformingGroup',
+    ...czechTheaterObject
+  };
+
+  const czechTheaterOrganization = {
+    '@type': 'Organization',
+    ...czechTheaterObject
+  };
+
   let getJsonLd = () => {
     if (isShow) {
       return {
         '@context': 'http://schema.org',
-        '@type': 'Event',
+        '@type': 'TheaterEvent',
         about: description,
-        actor: czechTheaterObject,
+        actor: czechTheaterPerformingGroup,
         description,
         doorTime: '19:00',
         image: imageUrl,
@@ -38,10 +47,14 @@
     }
     return {
       '@context': 'http://schema.org',
-      '@type': 'WebSite',
+      '@type': 'WebPage',
       about: description,
-      author: czechTheaterObject,
-      copyrightHolder: czechTheaterObject,
+      author: czechTheaterOrganization,
+      copyrightHolder: czechTheaterOrganization,
+      mainContentOfPage: {
+        '@type': 'WebPageElement',
+        cssSelector: 'main'
+      },
       name: title,
       url: fullUrl
     };

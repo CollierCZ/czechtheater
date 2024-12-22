@@ -1,14 +1,19 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { kontentConnector } from '$lib';
-import type { Show, ShowSection } from '../../kontent-types';
+import type { Show, PastShows } from '../../kontent-types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-  const pastShowsSection = await kontentConnector()
-    .item<ShowSection>('past_shows')
+  const pastShowsItem = await kontentConnector()
+    .item<PastShows>('past_shows')
+    .depthParameter(2)
     .toPromise();
-  const pastShows = pastShowsSection.data.item.elements.shows.linkedItems;
+  const pastShowSeasons = pastShowsItem.data.item.elements.seasons.linkedItems;
+
+  const pastShows = pastShowSeasons.reduce((pastShowsAcc, season): Show[] =>{
+    return [...pastShowsAcc, ...season.elements.shows.linkedItems]
+  },[] as Show[])
 
   const headers = {
     'Cache-Control': `max-age=20160, s-maxage=20160`,
