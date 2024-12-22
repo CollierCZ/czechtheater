@@ -3,13 +3,13 @@ import { describe, expect, it } from 'vitest';
 
 import PastShowsPage from './+page.svelte';
 import {
+  seasonData,
   sharedLogo,
   showData,
   showDescriptionText,
   showImageText,
   showName
 } from '$lib/Tests/sharedData';
-import { sortShows } from '$lib';
 
 const secondShow = structuredClone(showData);
 const secondShowName = 'A Second Show';
@@ -20,7 +20,7 @@ describe('Show listing page', () => {
   it('should include the title, description, and image', () => {
     render(PastShowsPage, {
       data: {
-        pastShows: [showData],
+        pastSeasons: [seasonData],
         logo: sharedLogo
       }
     });
@@ -32,18 +32,5 @@ describe('Show listing page', () => {
     expect(showDescription).toBeInTheDocument();
     expect(showImage).toBeInTheDocument();
     expect(showTitle).toBeInTheDocument();
-  });
-
-  it('should sort with older shows first', () => {
-    render(PastShowsPage, {
-      data: {
-        pastShows: [showData, secondShow].sort(sortShows),
-        logo: sharedLogo
-      }
-    });
-
-    const showTitles = screen.getAllByRole('heading');
-
-    expect(showTitles[1].textContent).toEqual(secondShowName);
   });
 });

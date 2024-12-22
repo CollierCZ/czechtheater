@@ -1,5 +1,5 @@
 import { type ElementModels, ElementType } from '@kontent-ai/delivery-sdk';
-import type { Show } from '../../kontent-types';
+import type { Season, Show } from '../../kontent-types';
 
 export const commonImageProperties = {
   type: 'image/png',
@@ -121,6 +121,11 @@ export const showData: Show = {
       linkedItemCodenames: [],
       links: []
     },
+    full_performance_link: {
+      type: ElementType.Text,
+      name: 'Full performance link',
+      value: ''
+    },
     main_image: {
       name: 'Main image',
       type: ElementType.Asset,
@@ -140,7 +145,7 @@ export const showData: Show = {
     },
     premiere: {
       type: ElementType.DateTime,
-      value: new Date().toISOString(),
+      value: '2020-05-17',
       name: 'Premiere',
       displayTimeZone: 'Europe/Prague'
     },
@@ -162,6 +167,38 @@ export const showData: Show = {
   },
   system: {
     type: 'show',
-    ...commonSystemProperties
+    ...commonSystemProperties,
+    codename: 'example_show'
+  }
+};
+
+export const seasonData: Season = {
+  elements: {
+    season_start_year: {
+      name: 'Season start year',
+      value: 2020,
+      type: ElementType.Number
+    },
+    season_end_year: {
+      name: 'Season end year',
+      value: 2021,
+      type: ElementType.Number
+    },
+    season_name: {
+      type: ElementType.Text,
+      name: 'Season name',
+      value: 'The Lost Year'
+    },
+    shows: {
+      type: ElementType.ModularContent,
+      name: 'Shows',
+      value: ['example_show'],
+      linkedItems: [showData]
+    }
+  },
+  system: {
+    type: 'season',
+    ...commonSystemProperties,
+    codename: 'example_season'
   }
 };
