@@ -13,6 +13,9 @@ jobs:
         # This step needs to go before linting to generate the types
         # Including the environment variable ensures the type is generated
       - name: Check
-        run: PUBLIC_KONTENT_ENVIRONMENT_ID=test npm run check
+        run: >
+          PUBLIC_KONTENT_PREVIEW=""
+          PUBLIC_KONTENT_PREVIEW_API_KEY=abc
+          PUBLIC_KONTENT_ENVIRONMENT_ID=test npm run check
       - name: Lint
         run: npm run lint
