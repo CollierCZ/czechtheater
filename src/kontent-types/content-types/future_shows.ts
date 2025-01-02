@@ -9,11 +9,11 @@ import { type Show } from './show.js';
  * Codename: future_shows
  */
 export type FutureShows = IContentItem<{
-    /**
-     * Shows (modular_content)
-     * Required: true
-     * Id: b66bf432-77bc-499b-a215-5bb54a6427a4
-     * Codename: shows
-     */
-    shows: Elements.LinkedItemsElement<Show>;
+  /**
+   * Shows (modular_content)
+   * Required: true
+   * Id: b66bf432-77bc-499b-a215-5bb54a6427a4
+   * Codename: shows
+   */
+  shows: Elements.LinkedItemsElement<Show>;
 }>;

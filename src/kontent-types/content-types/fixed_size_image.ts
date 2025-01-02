@@ -7,27 +7,27 @@ import { type IContentItem, type Elements } from '@kontent-ai/delivery-sdk';
  * Codename: fixed_size_image
  */
 export type FixedSizeImage = IContentItem<{
-    /**
-     * Height (number)
-     * Required: true
-     * Id: afe713f9-7237-499b-b2a8-cb8dc3e1f6af
-     * Codename: height
-     */
-    height: Elements.NumberElement;
+  /**
+   * Height (number)
+   * Required: true
+   * Id: afe713f9-7237-499b-b2a8-cb8dc3e1f6af
+   * Codename: height
+   */
+  height: Elements.NumberElement;
 
-    /**
-     * Image (asset)
-     * Required: true
-     * Id: 6ed6fb3e-f7f8-4511-94e0-e3659fcc3c23
-     * Codename: image
-     */
-    image: Elements.AssetsElement;
+  /**
+   * Image (asset)
+   * Required: true
+   * Id: 6ed6fb3e-f7f8-4511-94e0-e3659fcc3c23
+   * Codename: image
+   */
+  image: Elements.AssetsElement;
 
-    /**
-     * Width (number)
-     * Required: true
-     * Id: 518e08ce-a0b0-4b5e-8801-a2b155c28fa4
-     * Codename: width
-     */
-    width: Elements.NumberElement;
+  /**
+   * Width (number)
+   * Required: true
+   * Id: 518e08ce-a0b0-4b5e-8801-a2b155c28fa4
+   * Codename: width
+   */
+  width: Elements.NumberElement;
 }>;
