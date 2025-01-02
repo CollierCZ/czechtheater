@@ -9,11 +9,11 @@ import { type Season } from './season.js';
  * Codename: past_shows
  */
 export type PastShows = IContentItem<{
-    /**
-     * Seasons (modular_content)
-     * Required: true
-     * Id: ceff5def-6232-4020-ba62-d27e76cb8fbb
-     * Codename: seasons
-     */
-    seasons: Elements.LinkedItemsElement<Season>;
+  /**
+   * Seasons (modular_content)
+   * Required: true
+   * Id: ceff5def-6232-4020-ba62-d27e76cb8fbb
+   * Codename: seasons
+   */
+  seasons: Elements.LinkedItemsElement<Season>;
 }>;

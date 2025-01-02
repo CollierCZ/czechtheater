@@ -7,93 +7,93 @@ import { type IContentItem, type Elements } from '@kontent-ai/delivery-sdk';
  * Codename: show
  */
 export type Show = IContentItem<{
-    /**
-     * Description (rich_text)
-     * Required: true
-     * Id: 9e6ba8a8-a878-4c56-a7e7-5dcf055de610
-     * Codename: description
-     */
-    description: Elements.RichTextElement;
+  /**
+   * Description (rich_text)
+   * Required: true
+   * Id: 9e6ba8a8-a878-4c56-a7e7-5dcf055de610
+   * Codename: description
+   */
+  description: Elements.RichTextElement;
 
-    /**
-     * Full performance link (text)
-     * Required: false
-     * Id: 541da3ef-4032-430b-a839-c8a3eda6d4a9
-     * Codename: full_performance_link
-     *
-     * A link to the full performance of the show
-     */
-    full_performance_link: Elements.TextElement;
+  /**
+   * Full performance link (text)
+   * Required: false
+   * Id: 541da3ef-4032-430b-a839-c8a3eda6d4a9
+   * Codename: full_performance_link
+   *
+   * A link to the full performance of the show
+   */
+  full_performance_link: Elements.TextElement;
 
-    /**
-     * Gallery (asset)
-     * Required: false
-     * Id: 6f0583db-9d1f-4caa-af8a-e36c0ee505c1
-     * Codename: gallery
-     *
-     * Various images from the show displayed as a gallery
-     */
-    gallery: Elements.AssetsElement;
+  /**
+   * Gallery (asset)
+   * Required: false
+   * Id: 6f0583db-9d1f-4caa-af8a-e36c0ee505c1
+   * Codename: gallery
+   *
+   * Various images from the show displayed as a gallery
+   */
+  gallery: Elements.AssetsElement;
 
-    /**
-     * Gallery with captions (rich_text)
-     * Required: false
-     * Id: 92fe8244-d346-4411-820c-f5f86e4ac666
-     * Codename: gallery_with_captions
-     *
-     * Include images with a caption to be displayed in a scrolling gallery
-     */
-    gallery_with_captions: Elements.RichTextElement;
+  /**
+   * Gallery with captions (rich_text)
+   * Required: false
+   * Id: 92fe8244-d346-4411-820c-f5f86e4ac666
+   * Codename: gallery_with_captions
+   *
+   * Include images with a caption to be displayed in a scrolling gallery
+   */
+  gallery_with_captions: Elements.RichTextElement;
 
-    /**
-     * Main image (asset)
-     * Required: true
-     * Id: 3ee38568-bde5-428d-9702-bf646c7d7547
-     * Codename: main_image
-     *
-     * A single image to be used as a preview
-     */
-    main_image: Elements.AssetsElement;
+  /**
+   * Main image (asset)
+   * Required: true
+   * Id: 3ee38568-bde5-428d-9702-bf646c7d7547
+   * Codename: main_image
+   *
+   * A single image to be used as a preview
+   */
+  main_image: Elements.AssetsElement;
 
-    /**
-     * Name (text)
-     * Required: true
-     * Id: 62be8611-be31-4983-a51b-d99cbde75972
-     * Codename: name
-     */
-    name: Elements.TextElement;
+  /**
+   * Name (text)
+   * Required: true
+   * Id: 62be8611-be31-4983-a51b-d99cbde75972
+   * Codename: name
+   */
+  name: Elements.TextElement;
 
-    /**
-     * Premiere (date_time)
-     * Required: false
-     * Id: 9e1ed95e-3b15-43b9-845a-fc8d02adc4b8
-     * Codename: premiere
-     */
-    premiere: Elements.DateTimeElement;
+  /**
+   * Premiere (date_time)
+   * Required: false
+   * Id: 9e1ed95e-3b15-43b9-845a-fc8d02adc4b8
+   * Codename: premiere
+   */
+  premiere: Elements.DateTimeElement;
 
-    /**
-     * Short description (text)
-     * Required: true
-     * Id: 0c2ac722-9302-4d59-8977-a00414844843
-     * Codename: short_description
-     */
-    short_description: Elements.TextElement;
+  /**
+   * Short description (text)
+   * Required: true
+   * Id: 0c2ac722-9302-4d59-8977-a00414844843
+   * Codename: short_description
+   */
+  short_description: Elements.TextElement;
 
-    /**
-     * Ticket link (text)
-     * Required: false
-     * Id: 7a35d9c3-a52e-435b-ab65-95e453e2f8ff
-     * Codename: ticket_link
-     *
-     * The URL where tickets are sold
-     */
-    ticket_link: Elements.TextElement;
+  /**
+   * Ticket link (text)
+   * Required: false
+   * Id: 7a35d9c3-a52e-435b-ab65-95e453e2f8ff
+   * Codename: ticket_link
+   *
+   * The URL where tickets are sold
+   */
+  ticket_link: Elements.TextElement;
 
-    /**
-     * URL (url_slug)
-     * Required: true
-     * Id: ff17c8ed-31d6-48e3-beac-fa0ab3045fe7
-     * Codename: url
-     */
-    url: Elements.UrlSlugElement;
+  /**
+   * URL (url_slug)
+   * Required: true
+   * Id: ff17c8ed-31d6-48e3-beac-fa0ab3045fe7
+   * Codename: url
+   */
+  url: Elements.UrlSlugElement;
 }>;

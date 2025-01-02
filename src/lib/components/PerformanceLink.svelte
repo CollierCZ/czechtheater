@@ -5,4 +5,6 @@
   export let link: string;
 </script>
 
-<LinkButton {link} iconPath={mdiTheater} iconAlt="">See the full performance</LinkButton>
+<LinkButton {link} iconPath={mdiTheater} iconAlt="">
+  See the full performance
+</LinkButton>

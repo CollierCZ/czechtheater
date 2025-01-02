@@ -17,5 +17,5 @@ export const sortShows = (showA: Show, showB: Show): number =>
   Date.parse(showA.elements.premiere.value || '') -
   Date.parse(showB.elements.premiere.value || '');
 
-export const isShowInFuture = (showPremiere: string): boolean => 
-  new Date(showPremiere) >= new Date(Date.now() - 12096e5)
+export const isShowInFuture = (showPremiere: string): boolean =>
+  new Date(showPremiere) >= new Date(Date.now() - 12096e5);

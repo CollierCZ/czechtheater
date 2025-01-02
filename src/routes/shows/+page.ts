@@ -8,8 +8,7 @@ export const load: PageLoad = async () => {
     .depthParameter(2)
     .toPromise();
 
-  const pastSeasons =
-    pastShowsSection.data.item.elements.seasons.linkedItems;
+  const pastSeasons = pastShowsSection.data.item.elements.seasons.linkedItems;
 
   return {
     pastSeasons

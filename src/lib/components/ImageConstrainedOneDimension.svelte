@@ -1,10 +1,51 @@
 <script lang="ts">
   import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
-  import type { ElementModels } from '@kontent-ai/delivery-sdk';
   import { Image } from '@unpic/svelte';
 
+  interface Rendition {
+    rendition_id: string;
+    preset_id: string;
+    width: number;
+    height: number;
+    query: string;
+    url: string;
+  }
+
+  interface AssetModel {
+    /**
+     * Name of the asset
+     */
+    name: string;
+    /**
+     * Type of the asset
+     */
+    type: string;
+    /**
+     * Size of the asset
+     */
+    size: number;
+    /**
+     * Description of the asset
+     */
+    description: string | null;
+    /**
+     * Url of the asset
+     */
+    url: string;
+    /**
+     * Width in pixels for image assets
+     */
+    width: number | null;
+    /**
+     * Height in pixels for image assets
+     */
+    height: number | null;
+
+    renditions: { [renditionPresetCodename: string]: Rendition } | null;
+  }
+
   interface BasicProps {
-    image: ElementModels.AssetModel;
+    image: AssetModel;
     priority?: boolean;
   }
 
