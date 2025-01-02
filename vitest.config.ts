@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitest/config';
+import type { ViteUserConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
 
 export default defineConfig(({ mode }) => ({
-  plugins: [sveltekit(), svelteTesting()],
+  plugins: [sveltekit(), svelteTesting()] as ViteUserConfig['plugins'],
   resolve: {
     conditions: mode === 'test' ? ['browser'] : []
   },

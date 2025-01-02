@@ -2,6 +2,7 @@
   import type { CustomBlockComponentProps } from '@portabletext/svelte';
   import { Image } from '@unpic/svelte';
   import type { FixedSizeImage } from '../../../kontent-types';
+  import type { Reference } from '@kontent-ai/rich-text-resolver';
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
@@ -13,9 +14,10 @@
   const linkedItems = portableText.global.context
     .linkedItems as FixedSizeImage[];
 
-  const linkedItem = linkedItems.find(
-    (item) => item.system.codename === portableText.value.component._ref
-  );
+  const linkedItem = linkedItems.find((item) => {
+    const comp = portableText.value.component as Reference;
+    return item.system.codename === comp._ref;
+  });
   const componentType = linkedItem?.system.type;
 </script>
 

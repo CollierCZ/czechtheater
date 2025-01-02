@@ -22,7 +22,7 @@
     "svelte.config.js",
     "tailwind.config.cjs",
     "vitest-setup.js",
-    "vitest.config.js",
+    "vitest.config.ts",
     ".svelte-kit/ambient.d.ts", // Here and below from .svelte-kit/tsconfig.json
     ".svelte-kit/non-ambient.d.ts",
     ".svelte-kit//types/**/$types.d.ts",
