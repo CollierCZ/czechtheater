@@ -1,5 +1,6 @@
 export * from './auditions.js';
 export * from './basic_info.js';
+export * from './call_to_action_button.js';
 export * from './fixed_size_image.js';
 export * from './future_shows.js';
 export * from './image_with_caption.js';
