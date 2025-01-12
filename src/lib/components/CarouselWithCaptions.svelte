@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MediaQuery from 'svelte-media-queries';
+  import { MediaQuery } from 'svelte/reactivity';
 
   import SvgIcon from './SvgIcon.svelte';
   import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
@@ -51,6 +51,15 @@
 
   const navButtonClasses =
     'flex min-w-16 py-8 sm:py-0 items-center justify-center absolute opacity-60 bg-white z-10 sm:relative top-[calc(50%-44px)] hover:bg-slate-200 focus:bg-slate-200';
+
+  // Set media queries to get sizes for images
+  const xlarge = new MediaQuery('(min-width: 1280px)');
+  const medium = new MediaQuery('(min-width: 768px) and (max-width: 1280px)');
+  const small = new MediaQuery('(min-width: 640px) and (max-width: 768px)');
+  const imageWidth = $derived(
+    xlarge.current ? 826 : medium.current ? 608 : small.current ? 480 : 340
+  );
+  const offset = $derived(currentSlideItem * imageWidth);
 </script>
 
 <section aria-label="gallery-carousel">
@@ -61,45 +70,31 @@
       </button>
     {/if}
     <div class="mx-auto flex overflow-hidden">
-      <MediaQuery
-        query={[
-          '(max-width: 640px',
-          '(min-width: 640px) and (max-width: 768px)',
-          '(min-width: 768px) and (max-width: 1280px)',
-          '(min-width: 1280px)'
-        ]}
-        let:matches
+      <div
+        class="flex max-w-[338px] transition-transform duration-500 motion-reduce:transition-none sm:max-w-[480px] md:max-w-min"
+        style:transform={`translateX(-${offset}px) scaleX(1)`}
+        use:setBaseImageWidth={imageWidth}
+        role="group"
       >
-        <!-- eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -->
-        {@const [_base, small, medium, xlarge] = matches}
-        {@const imageWidth = xlarge ? 826 : medium ? 608 : small ? 480 : 340}
-        {@const offset = currentSlideItem * imageWidth}
-        <div
-          class="flex max-w-[338px] transition-transform duration-500 motion-reduce:transition-none sm:max-w-[480px] md:max-w-min"
-          style:transform={`translateX(-${offset}px) scaleX(1)`}
-          use:setBaseImageWidth={imageWidth}
-          role="group"
-        >
-          {#each carouselItems as item, itemIndex}
-            {@const imageNumber = itemIndex + 1}
-            {@const image = item.elements.image.value[0]}
-            {@const hide = itemIndex === currentSlideItem ? false : true}
-            {@const caption = item.elements.caption.value}
-            <CarouselImage
-              isFirstImage={itemIndex === 0}
-              small={Boolean(small)}
-              medium={Boolean(medium)}
-              xlarge={Boolean(xlarge)}
-              {imageNumber}
-              {image}
-              {hide}
-              {caption}
-              {SlideDivHeight}
-              totalImagesLength={carouselItems.length}
-            />
-          {/each}
-        </div>
-      </MediaQuery>
+        {#each carouselItems as item, itemIndex}
+          {@const imageNumber = itemIndex + 1}
+          {@const image = item.elements.image.value[0]}
+          {@const hide = itemIndex === currentSlideItem ? false : true}
+          {@const caption = item.elements.caption.value}
+          <CarouselImage
+            isFirstImage={itemIndex === 0}
+            small={Boolean(small)}
+            medium={Boolean(medium)}
+            xlarge={Boolean(xlarge)}
+            {imageNumber}
+            {image}
+            {hide}
+            {caption}
+            {SlideDivHeight}
+            totalImagesLength={carouselItems.length}
+          />
+        {/each}
+      </div>
     </div>
     {#if carouselItems.length > 1}
       <button onclick={nextItem} class={`${navButtonClasses} right-0`}>
