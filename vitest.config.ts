@@ -18,7 +18,8 @@ export default defineConfig(({ mode }) => ({
         '**/+page.ts',
         '**/+layout.server.ts',
         '**/*.d.ts'
-      ]
+      ],
+      reporter: ['lcovonly', 'text']
     },
     server: {
       deps: {
