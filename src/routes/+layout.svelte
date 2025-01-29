@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import type { LayoutData } from './$types';
   import type { Snippet } from 'svelte';
-  import '../app.pcss';
+  import '../app.css';
 
   let {
     data,

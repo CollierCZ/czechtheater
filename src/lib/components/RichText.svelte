@@ -3,10 +3,7 @@
     PortableText,
     type PortableTextComponents
   } from '@portabletext/svelte';
-  import {
-    nodeParse,
-    transformToPortableText
-  } from '@kontent-ai/rich-text-resolver';
+  import { transformToPortableText } from '@kontent-ai/rich-text-resolver';
   import type { Elements } from '@kontent-ai/delivery-sdk';
 
   import ExternalLink from './RichTextElements/ExternalLink.svelte';
@@ -18,19 +15,18 @@
   export let richTextElement: Elements.RichTextElement;
 
   let { links, linkedItems, value: richText } = richTextElement;
-  const parsedTree = nodeParse(richText);
-  const portableText = transformToPortableText(parsedTree);
+  const portableText = transformToPortableText(richText);
 
   const portableTextComponents: PortableTextComponents = {
     types: {
       image: RichTextImage,
-      component: Component
+      componentOrItem: Component
     },
     block: {
       normal: Paragraph
     },
     marks: {
-      internalLink: InternalLink,
+      contentItemLink: InternalLink,
       link: ExternalLink
     }
   };

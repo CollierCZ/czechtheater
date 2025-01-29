@@ -55,7 +55,7 @@
 </script>
 
 <div
-  class="my-auto min-w-[340px] max-w-[340px] sm:min-w-[480px] md:min-w-[608px] md:max-w-[calc(65ch-8rem)] xl:min-w-[826px] xl:max-w-[826px]"
+  class="my-auto max-w-[340px] min-w-[340px] sm:min-w-[480px] md:max-w-[calc(65ch-8rem)] md:min-w-[608px] xl:max-w-[826px] xl:min-w-[826px]"
   aria-hidden={hide}
   aria-label={`Image ${imageNumber} of ${totalImagesLength}`}
   id={`carousel-image-${imageNumber}`}
