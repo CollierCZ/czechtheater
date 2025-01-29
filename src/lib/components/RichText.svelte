@@ -3,9 +3,7 @@
     PortableText,
     type PortableTextComponents
   } from '@portabletext/svelte';
-  import {
-    transformToPortableText
-  } from '@kontent-ai/rich-text-resolver';
+  import { transformToPortableText } from '@kontent-ai/rich-text-resolver';
   import type { Elements } from '@kontent-ai/delivery-sdk';
 
   import ExternalLink from './RichTextElements/ExternalLink.svelte';
