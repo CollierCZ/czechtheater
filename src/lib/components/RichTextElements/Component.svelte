@@ -20,7 +20,7 @@
     | CallToActionButton[];
 
   const linkedItem = linkedItems.find((item) => {
-    const comp = portableText.value.component as Reference;
+    const comp = portableText.value.componentOrItem as Reference;
     return item.system.codename === comp._ref;
   });
   const componentType = linkedItem?.system.type;

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ILink } from '@kontent-ai/delivery-sdk';
-  import type { PortableTextInternalLink } from '@kontent-ai/rich-text-resolver';
+  import type { PortableTextItemLink } from '@kontent-ai/rich-text-resolver';
   import type { MarkComponentProps } from '@portabletext/svelte';
   import type { Snippet } from 'svelte';
 
@@ -13,10 +13,10 @@
     portableText: MarkComponentProps;
   } = $props();
 
-  const value = portableText.value as PortableTextInternalLink;
+  const value = portableText.value as PortableTextItemLink;
   const links = portableText.global.context.links as ILink[];
 
-  const link = links.find((item) => item.linkId === value.reference._ref);
+  const link = links.find((item) => item.linkId === value.contentItemLink._ref);
 </script>
 
 <a
