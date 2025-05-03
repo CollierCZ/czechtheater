@@ -18,7 +18,7 @@
 
 <Seo
   description="A fact about theater in the Czech Republic."
-  slug={`/fact`}
+  slug="/fact"
   title="Czech Theater Fact"
 />
 

@@ -11,19 +11,19 @@
 
 <Seo
   description="A list of all of the shows that Czech Theater has put on."
-  slug={`/shows`}
+  slug="/shows"
   title="Past Shows"
 />
 
 <Title>Past Shows</Title>
 
-{#each data.pastSeasons as season}
+{#each data.pastSeasons as season (season.system.codename)}
   {@const seasonData = season.elements}
   <h2 class="mb-4 text-center text-3xl font-medium xl:text-4xl">
     {seasonData.season_start_year.value}–{seasonData.season_end_year.value} Season:
     {seasonData.season_name.value}
   </h2>
-  {#each seasonData.shows.linkedItems as show}
+  {#each seasonData.shows.linkedItems as show (show.system.codename)}
     {@const showData = show.elements}
     {@const showPremier = showData.premiere.value}
     {#if !isShowInFuture(showPremier || '')}

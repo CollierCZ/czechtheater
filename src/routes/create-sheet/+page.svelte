@@ -52,7 +52,7 @@
 
 {#if !submitted}
   <form onsubmit={handleSubmit}>
-    {#each new Array(rows).keys() as _row, rowIndex}
+    {#each new Array(rows).keys() as _row, rowIndex (rowIndex)}
       <div class="mb-4 flex flex-wrap gap-8">
         <div class="flex flex-col">
           <label class="text-xs" for={`email${rowIndex}`}>Email</label>
@@ -74,7 +74,7 @@
             name={`ticketCount${rowIndex}`}
             bind:value={ticketCounts[rowIndex]}
           >
-            {#each numberArray as _x, numIndex}
+            {#each numberArray as _x, numIndex (numIndex)}
               <option value={numIndex + 1}>{numIndex + 1}</option>
             {/each}
           </select>

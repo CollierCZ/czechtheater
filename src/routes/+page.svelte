@@ -15,13 +15,13 @@
 
 <Seo
   description="A multicultural amateur community theater in Brno presenting Czech plays in English."
-  slug={`/`}
+  slug="/"
 />
 
 <Title>Upcoming Shows</Title>
 
 <div class="flex flex-col space-y-12">
-  {#each data.futureShows as show}
+  {#each data.futureShows as show (show.system.codename)}
     {@const gallery = show.elements.gallery.value}
     {@const galleryWithCaptions = show.elements.gallery_with_captions
       .linkedItems as ImageWithCaption[]}

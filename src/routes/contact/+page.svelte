@@ -29,14 +29,14 @@
 
 <Seo
   description="How to get in touch with Czech Theater."
-  slug={`/contact`}
+  slug="/contact"
   title="Contact"
 />
 
 <Title>Contact Information</Title>
 
 <div class="mb-6 flex gap-6">
-  {#each data.socialMedia as socialMediaLink}
+  {#each data.socialMedia as socialMediaLink (socialMediaLink)}
     {@const [icon, alt] = getIconAndAltText(socialMediaLink)}
     {#if icon}
       <a href={socialMediaLink}><SvgIcon path={icon} {alt} /></a>

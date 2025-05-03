@@ -85,7 +85,7 @@
   <meta name="og:site_name" content="Czech Theater" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content={fullUrl} />
-  <meta property="og:type" content={'website'} />
+  <meta property="og:type" content="website" />
   <meta property="og:title" content={title || 'Czech Theater'} />
   <meta property="og:description" content={description} />
   {#if imageUrl}
