@@ -40,10 +40,7 @@ export const firstFactText = 'Czech Theater is great!';
 export const secondFactText = 'A different fact about Czech Theater';
 export const factNoImageText = 'This fact has no image';
 
-const sharedFactImageProperties = {
-  name: 'Image',
-  type: ElementType.Asset
-};
+const sharedFactImageProperties = { name: 'Image', type: ElementType.Asset };
 
 export const firstImageDescription = 'An image accompanying a fact';
 
@@ -75,7 +72,7 @@ export const testFacts = [
     system: {
       type: factKontenType,
       ...commonSystemProperties,
-      codename: "test-fact-1"
+      codename: 'test-fact-1'
     }
   },
   {
@@ -84,15 +81,12 @@ export const testFacts = [
         value: `<p>${secondFactText}</p>`,
         ...sharedDescriptionProperties
       },
-      image: {
-        value: [],
-        ...sharedFactImageProperties
-      }
+      image: { value: [], ...sharedFactImageProperties }
     },
     system: {
       type: factKontenType,
       ...commonSystemProperties,
-      codename: "test-fact-2"
+      codename: 'test-fact-2'
     }
   }
 ];
@@ -109,11 +103,7 @@ export const showData: Show = {
       ),
       ...sharedDescriptionProperties
     },
-    gallery: {
-      name: 'Gallery',
-      type: ElementType.Asset,
-      value: []
-    },
+    gallery: { name: 'Gallery', type: ElementType.Asset, value: [] },
     gallery_with_captions: {
       name: 'Gallery with captions',
       type: ElementType.RichText,
@@ -140,11 +130,7 @@ export const showData: Show = {
         }
       ]
     },
-    name: {
-      type: ElementType.Text,
-      name: 'Name',
-      value: showName
-    },
+    name: { type: ElementType.Text, name: 'Name', value: showName },
     premiere: {
       type: ElementType.DateTime,
       value: '2020-05-17',
@@ -156,22 +142,10 @@ export const showData: Show = {
       type: ElementType.Text,
       value: showDescriptionText
     },
-    ticket_link: {
-      type: ElementType.Text,
-      name: 'Ticket link',
-      value: ''
-    },
-    url: {
-      type: ElementType.UrlSlug,
-      name: 'URL',
-      value: 'slug'
-    }
+    ticket_link: { type: ElementType.Text, name: 'Ticket link', value: '' },
+    url: { type: ElementType.UrlSlug, name: 'URL', value: 'slug' }
   },
-  system: {
-    type: 'show',
-    ...commonSystemProperties,
-    codename: 'example_show'
-  }
+  system: { type: 'show', ...commonSystemProperties, codename: 'example_show' }
 };
 
 export const seasonData: Season = {
