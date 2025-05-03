@@ -74,7 +74,8 @@ export const testFacts = [
     },
     system: {
       type: factKontenType,
-      ...commonSystemProperties
+      ...commonSystemProperties,
+      codename: "test-fact-1"
     }
   },
   {
@@ -90,7 +91,8 @@ export const testFacts = [
     },
     system: {
       type: factKontenType,
-      ...commonSystemProperties
+      ...commonSystemProperties,
+      codename: "test-fact-2"
     }
   }
 ];
