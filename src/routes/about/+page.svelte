@@ -9,7 +9,7 @@
 
 <Seo
   description="A multicultural amateur community theater in Brno presenting Czech plays in English."
-  slug={`/about`}
+  slug="/about"
   title="About"
 />
 

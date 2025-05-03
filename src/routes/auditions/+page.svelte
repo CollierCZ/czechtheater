@@ -16,7 +16,7 @@
 
 <Seo
   description="How to audition for a role in a Czech Theater production."
-  slug={`/audition`}
+  slug="/audition"
   title="Audition"
 />
 

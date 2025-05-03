@@ -76,7 +76,7 @@
         style:max-height={`${SlideDivHeight}px`}
         role="group"
       >
-        {#each carouselItems as item, itemIndex}
+        {#each carouselItems as item, itemIndex (item.name)}
           {@const imageNumber = itemIndex + 1}
           {@const hide = itemIndex === currentSlideItem ? false : true}
           <div
@@ -103,7 +103,7 @@
 
   {#if carouselItems.length > 1}
     <div class="mt-2 overflow-x-scroll whitespace-nowrap">
-      {#each carouselItems as currentImage, itemIndex}
+      {#each carouselItems as currentImage, itemIndex (currentImage.name)}
         {@const imageNumber = itemIndex + 1}
         <button
           class={`mx-1 box-content ${itemIndex === currentSlideItem ? 'border-4 border-slate-400' : ''}`}

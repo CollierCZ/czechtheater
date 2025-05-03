@@ -32,7 +32,7 @@
 </header>
 
 <nov class="mb-6 flex flex-wrap justify-center gap-2 px-2 xl:text-xl">
-  {#each navItems as navItem}
+  {#each navItems as navItem (navItem[0])}
     <a
       href={navItem[0]}
       class="focus:bg-slate-10 hover:bg-slate-10 rounded-lg p-2 font-medium underline-offset-8 hover:bg-slate-100 focus:bg-slate-100"

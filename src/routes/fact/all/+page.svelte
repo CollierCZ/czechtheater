@@ -19,6 +19,6 @@
 
 <Title>All Czech Theater Facts</Title>
 
-{#each facts as fact}
+{#each facts as fact (fact.system.codename)}
   <Fact {fact} />
 {/each}
