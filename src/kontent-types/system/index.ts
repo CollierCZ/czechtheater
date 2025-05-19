@@ -13,5 +13,5 @@
 * -------------------------------------------------------------------------------
 **/
 
-export * from './content-types/index.js';
-export * from './system/index.js';
+export * from './core.type.js';
+export * from './delivery.codenames.js';
