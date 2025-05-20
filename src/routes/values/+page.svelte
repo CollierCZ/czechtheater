@@ -43,18 +43,18 @@
   </Modal>
 </div>
 
-<div class="my-4 flex justify-center gap-24 md:my-0 md:gap-32">
-  <div class="hidden md:block">
+<div class="my-4 flex justify-center gap-24 sm:my-0 sm:gap-32">
+  <div class="hidden sm:block">
     <SvgIcon path={mdiArrowBottomLeft} />
   </div>
   <SvgIcon path={mdiArrowDown} />
-  <div class="hidden md:block">
+  <div class="hidden sm:block">
     <SvgIcon path={mdiArrowBottomRight} />
   </div>
 </div>
 
 <div
-  class="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-12"
+  class="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-12"
 >
   {#each data.values.linkedItems as value, index (value.system.codename)}
     {@const valueIcon = value.elements.icon.value}

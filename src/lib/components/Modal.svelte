@@ -24,12 +24,17 @@
   onclick={(e) => {
     if (e.target === dialog) dialog.close();
   }}
-  class="m-auto max-w-64 shadow-2xl md:max-w-120"
+  class="m-auto max-w-64 rounded-lg shadow-2xl md:max-w-120"
 >
   <div class="grid p-8">
-    <button class="place-self-end" onclick={() => dialog?.close()}
-      ><SvgIcon alt="Close" path={mdiClose} /></button
+    <button
+      class="place-self-end p-2 hover:bg-gray-200 focus:bg-gray-200"
+      onclick={() => dialog?.close()}
     >
-    {@render children?.()}
+      <SvgIcon alt="Close" path={mdiClose} />
+    </button>
+    <div>
+      {@render children?.()}
+    </div>
   </div>
 </dialog>
