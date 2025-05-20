@@ -17,7 +17,7 @@
   } = $props();
 </script>
 
-<div class={`my-2 ${big ? "text-4xl" : ""}`}>
+<div class={`my-2 ${big ? 'text-4xl' : ''}`}>
   <button
     class="hover:text-medium focus:text-medium inline-flex items-center gap-2 rounded-lg bg-blue-100 p-6 hover:bg-blue-200 focus:bg-blue-200"
     onclick={action}
