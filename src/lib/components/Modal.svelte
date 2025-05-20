@@ -24,7 +24,7 @@
   onclick={(e) => {
     if (e.target === dialog) dialog.close();
   }}
-  class="max-w-64 place-self-center md:max-w-120"
+  class="max-w-64 md:max-w-120 m-auto shadow-2xl"
 >
   <div class="grid p-8">
     <button class="place-self-end" onclick={() => dialog?.close()}
