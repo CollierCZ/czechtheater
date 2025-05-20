@@ -1,5 +1,5 @@
 import { type ElementModels, ElementType } from '@kontent-ai/delivery-sdk';
-import type { Season, Show } from '../../kontent-types';
+import type { Season, Show, Value } from '../../kontent-types';
 
 export const commonImageProperties = {
   type: 'image/png',
@@ -31,10 +31,9 @@ export const commonSystemProperties = {
   lastModified: new Date().toISOString(),
   language: 'en-US',
   collection: 'default',
-  sitemapLocations: [],
   workflowStep: 'published',
   workflow: 'default'
-};
+} as const;
 
 export const firstFactText = 'Czech Theater is great!';
 export const secondFactText = 'A different fact about Czech Theater';
@@ -49,7 +48,7 @@ const sharedDescriptionProperties = {
   ...basicRichTextValues
 };
 
-const factKontenType = 'theater_fact';
+const factKontentType = 'theater_fact' as const;
 export const testFacts = [
   {
     elements: {
@@ -70,8 +69,9 @@ export const testFacts = [
       }
     },
     system: {
-      type: factKontenType,
+      type: factKontentType,
       ...commonSystemProperties,
+      sitemapLocations: [],
       codename: 'test-fact-1'
     }
   },
@@ -84,8 +84,9 @@ export const testFacts = [
       image: { value: [], ...sharedFactImageProperties }
     },
     system: {
-      type: factKontenType,
+      type: factKontentType,
       ...commonSystemProperties,
+      sitemapLocations: [],
       codename: 'test-fact-2'
     }
   }
@@ -106,12 +107,8 @@ export const showData: Show = {
     gallery: { name: 'Gallery', type: ElementType.Asset, value: [] },
     gallery_with_captions: {
       name: 'Gallery with captions',
-      type: ElementType.RichText,
-      linkedItems: [],
       value: '',
-      images: [],
-      linkedItemCodenames: [],
-      links: []
+      ...basicRichTextValues
     },
     full_performance_link: {
       type: ElementType.Text,
@@ -145,7 +142,12 @@ export const showData: Show = {
     ticket_link: { type: ElementType.Text, name: 'Ticket link', value: '' },
     url: { type: ElementType.UrlSlug, name: 'URL', value: 'slug' }
   },
-  system: { type: 'show', ...commonSystemProperties, codename: 'example_show' }
+  system: {
+    type: 'show',
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'example_show'
+  }
 };
 
 export const seasonData: Season = {
@@ -175,6 +177,33 @@ export const seasonData: Season = {
   system: {
     type: 'season',
     ...commonSystemProperties,
+    sitemapLocations: [],
     codename: 'example_season'
+  }
+};
+
+export const valueData: Value = {
+  elements: {
+    name: {
+      type: ElementType.Text,
+      name: 'value',
+      value: 'Community'
+    },
+    description: {
+      value: 'We build communities',
+      name: 'description',
+      ...basicRichTextValues
+    },
+    icon: {
+      type: ElementType.Text,
+      name: 'icon',
+      value: ''
+    }
+  },
+  system: {
+    type: 'value',
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'example_svalue'
   }
 };
