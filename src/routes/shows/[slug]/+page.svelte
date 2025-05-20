@@ -7,7 +7,6 @@
   import Seo from '$lib/components/Seo.svelte';
   import Title from '$lib/components/Title.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
-  import type { ImageWithCaption } from '../../../kontent-types';
   import TicketLink from '$lib/components/TicketLink.svelte';
   import PerformanceLink from '$lib/components/PerformanceLink.svelte';
   import { getDateFromDateString, isShowInFuture } from '$lib';
@@ -16,8 +15,7 @@
 
   const showData = data.showData.elements;
   const gallery = showData.gallery.value;
-  const galleryWithCaptions = showData.gallery_with_captions
-    .linkedItems as ImageWithCaption[];
+  const galleryWithCaptions = showData.gallery_with_captions.linkedItems;
   const ticketLink = showData.ticket_link.value;
   const premiereDate = getDateFromDateString(showData.premiere.value);
   const fullPerformanceLink = showData.full_performance_link.value;

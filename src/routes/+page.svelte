@@ -6,7 +6,6 @@
   import Title from '$lib/components/Title.svelte';
   import TicketLink from '$lib/components/TicketLink.svelte';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
-  import type { ImageWithCaption } from '../kontent-types';
   import { getMonthFromDateString } from '$lib';
   import Seo from '$lib/components/Seo.svelte';
 
@@ -23,8 +22,8 @@
 <div class="flex flex-col space-y-12">
   {#each data.futureShows as show (show.system.codename)}
     {@const gallery = show.elements.gallery.value}
-    {@const galleryWithCaptions = show.elements.gallery_with_captions
-      .linkedItems as ImageWithCaption[]}
+    {@const galleryWithCaptions =
+      show.elements.gallery_with_captions.linkedItems}
     {@const ticketLink = show.elements.ticket_link.value}
     <div>
       <h2 class="mb-4 text-3xl font-medium xl:text-4xl">

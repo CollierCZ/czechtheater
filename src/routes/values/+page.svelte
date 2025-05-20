@@ -2,7 +2,6 @@
   import type { PageData } from './$types';
   import Title from '$lib/components/Title.svelte';
   import Seo from '$lib/components/Seo.svelte';
-  import LinkButton from '$lib/components/LinkButton.svelte';
 
   import {
     mdiArrowBottomLeft,
@@ -51,7 +50,7 @@
 </div>
 
 <div class="flex justify-center gap-4 md:gap-12">
-  {#each data.values.linkedItems as value, index}
+  {#each data.values.linkedItems as value, index (value.system.codename)}
     {@const valueIcon = value.elements.icon.value}
     {#if index !== 0}
       <ActionButton
