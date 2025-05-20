@@ -31,10 +31,9 @@ export const commonSystemProperties = {
   lastModified: new Date().toISOString(),
   language: 'en-US',
   collection: 'default',
-  sitemapLocations: [],
   workflowStep: 'published',
   workflow: 'default'
-};
+} as const;
 
 export const firstFactText = 'Czech Theater is great!';
 export const secondFactText = 'A different fact about Czech Theater';
@@ -49,7 +48,7 @@ const sharedDescriptionProperties = {
   ...basicRichTextValues
 };
 
-const factKontenType = 'theater_fact';
+const factKontentType = 'theater_fact' as const;
 export const testFacts = [
   {
     elements: {
@@ -70,8 +69,9 @@ export const testFacts = [
       }
     },
     system: {
-      type: factKontenType,
+      type: factKontentType,
       ...commonSystemProperties,
+      sitemapLocations: [],
       codename: 'test-fact-1'
     }
   },
@@ -84,8 +84,9 @@ export const testFacts = [
       image: { value: [], ...sharedFactImageProperties }
     },
     system: {
-      type: factKontenType,
+      type: factKontentType,
       ...commonSystemProperties,
+      sitemapLocations: [],
       codename: 'test-fact-2'
     }
   }
@@ -145,7 +146,12 @@ export const showData: Show = {
     ticket_link: { type: ElementType.Text, name: 'Ticket link', value: '' },
     url: { type: ElementType.UrlSlug, name: 'URL', value: 'slug' }
   },
-  system: { type: 'show', ...commonSystemProperties, codename: 'example_show' }
+  system: {
+    type: 'show',
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'example_show'
+  }
 };
 
 export const seasonData: Season = {
@@ -175,6 +181,7 @@ export const seasonData: Season = {
   system: {
     type: 'season',
     ...commonSystemProperties,
+    sitemapLocations: [],
     codename: 'example_season'
   }
 };
