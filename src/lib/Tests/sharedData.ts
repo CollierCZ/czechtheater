@@ -1,5 +1,5 @@
 import { type ElementModels, ElementType } from '@kontent-ai/delivery-sdk';
-import type { Season, Show } from '../../kontent-types';
+import type { Season, Show, Value } from '../../kontent-types';
 
 export const commonImageProperties = {
   type: 'image/png',
@@ -107,12 +107,8 @@ export const showData: Show = {
     gallery: { name: 'Gallery', type: ElementType.Asset, value: [] },
     gallery_with_captions: {
       name: 'Gallery with captions',
-      type: ElementType.RichText,
-      linkedItems: [],
       value: '',
-      images: [],
-      linkedItemCodenames: [],
-      links: []
+      ...basicRichTextValues
     },
     full_performance_link: {
       type: ElementType.Text,
@@ -183,5 +179,31 @@ export const seasonData: Season = {
     ...commonSystemProperties,
     sitemapLocations: [],
     codename: 'example_season'
+  }
+};
+
+export const valueData: Value = {
+  elements: {
+    name: {
+      type: ElementType.Text,
+      name: 'value',
+      value: 'Community'
+    },
+    description: {
+      value: 'We build communities',
+      name: 'description',
+      ...basicRichTextValues
+    },
+    icon: {
+      type: ElementType.Text,
+      name: 'icon',
+      value: ''
+    }
+  },
+  system: {
+    type: 'value',
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'example_svalue'
   }
 };
