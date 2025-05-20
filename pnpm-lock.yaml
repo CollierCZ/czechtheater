@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.27.0
+        version: 9.27.0
       '@kontent-ai/delivery-sdk':
         specifier: ^16.2.0
         version: 16.2.0
@@ -89,6 +92,9 @@ importers:
       svelte-check:
         specifier: ^4.1.7
         version: 4.2.1(picomatch@4.0.2)(svelte@5.30.2)(typescript@5.8.3)
+      svelte-eslint-parser:
+        specifier: ^1.2.0
+        version: 1.2.0(svelte@5.30.2)
       tailwindcss:
         specifier: ^4.1.5
         version: 4.1.7
