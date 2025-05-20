@@ -28,24 +28,23 @@
     {@const showPremier = showData.premiere.value}
     {#if !isShowInFuture(showPremier || '')}
       {@const showMainImage = showData.main_image.value[0]}
-      <div class="mb-12 grid-cols-2 gap-4 md:grid">
+      <a href={`/shows/${showData.url.value}`}>
         <div
-          class="origin-left transition delay-150 ease-in-out hover:scale-105 focus:scale-105 motion-reduce:hover:transform-none md:origin-center"
+          class="mr-8 mb-12 origin-left grid-cols-2 gap-4 transition delay-150 ease-in-out hover:scale-107 focus:scale-107 motion-reduce:hover:transform-none md:mr-0 md:grid md:origin-center"
         >
-          <a href={`/shows/${showData.url.value}`}>
-            <ImageConstrainedOneDimension image={showMainImage} height={300} />
-          </a>
+          <ImageConstrainedOneDimension image={showMainImage} height={300} />
+
+          <div class="mt-2 md:mt-0">
+            <h3
+              class="mb-4 font-medium underline hover:no-underline focus:no-underline"
+            >
+              {showData.name.value}
+            </h3>
+            <p class="mb-4">{showData.short_description.value}</p>
+            <p>Premiere: {getDateFromDateString(showPremier)}</p>
+          </div>
         </div>
-        <div class="mt-2 md:mt-0">
-          <a
-            class="underline hover:no-underline focus:no-underline"
-            href={`/shows/${showData.url.value}`}
-            ><h3 class="mb-4 font-medium">{showData.name.value}</h3></a
-          >
-          <p class="mb-4">{showData.short_description.value}</p>
-          <p>Premiere: {getDateFromDateString(showPremier)}</p>
-        </div>
-      </div>
+      </a>
     {/if}
   {/each}
 {/each}
