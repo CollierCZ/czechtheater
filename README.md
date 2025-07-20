@@ -58,7 +58,7 @@ You need a [Management API key](https://kontent.ai/learn/docs/apis/openapi/manag
 Then run this command:
 
 ```bash
-npx @kontent-ai/model-generator delivery-sdk --exportRoles=false --exportWebhooks=false --outputDir=./src/kontent-types --environmentId=<ENVIRONMENT_ID> --managementApiKey=<API_KEY>
+npx @kontent-ai/model-generator delivery-sdk --outputDir=./src/kontent-types --environmentId=<ENVIRONMENT_ID> --managementApiKey=<API_KEY>
 ```
 
 ## Preview draft content

@@ -3,13 +3,13 @@
   import Title from '$lib/components/Title.svelte';
 
   import { onMount } from 'svelte';
-  import type { TheaterFact } from '../../kontent-types';
+  import type { TheaterFactType } from '../../kontent-types';
   import Fact from '$lib/components/Fact.svelte';
   import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
 
-  let fact: TheaterFact;
+  let fact: TheaterFactType;
 
   onMount(() => {
     fact = data.facts[Math.floor(Math.random() * data.facts.length)];

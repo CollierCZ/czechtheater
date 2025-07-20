@@ -2,8 +2,8 @@
   import type { CustomBlockComponentProps } from '@portabletext/svelte';
   import { Image } from '@unpic/svelte';
   import type {
-    CallToActionButton,
-    FixedSizeImage
+    CallToActionButtonType,
+    FixedSizeImageType
   } from '../../../kontent-types';
   import type { Reference } from '@kontent-ai/rich-text-resolver';
   import LinkButton from '../LinkButton.svelte';
@@ -16,8 +16,8 @@
   } = $props();
 
   const linkedItems = portableText.global.context.linkedItems as
-    | FixedSizeImage[]
-    | CallToActionButton[];
+    | FixedSizeImageType[]
+    | CallToActionButtonType[];
 
   const linkedItem = linkedItems.find((item) => {
     const comp = portableText.value.componentOrItem as Reference;

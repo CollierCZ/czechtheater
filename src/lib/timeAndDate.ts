@@ -1,4 +1,4 @@
-import type { Show } from '../kontent-types';
+import type { ShowType } from '../kontent-types';
 
 /**
  * Turn a timestamp into a long-form date (like 17 May 1982).
@@ -21,7 +21,7 @@ export const getMonthFromDateString = (dateString: string | null) =>
     year: 'numeric'
   });
 
-export const sortShows = (showA: Show, showB: Show): number =>
+export const sortShows = (showA: ShowType, showB: ShowType): number =>
   Date.parse(showA.elements.premiere.value || '') -
   Date.parse(showB.elements.premiere.value || '');
 

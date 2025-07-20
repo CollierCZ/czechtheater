@@ -1,10 +1,10 @@
 import { kontentConnector } from '$lib';
 import type { PageLoad } from './$types';
-import { type FutureShows } from '../kontent-types';
+import { type FutureShowsType } from '../kontent-types';
 
 export const load: PageLoad = async () => {
   const futureShowsSection = await kontentConnector()
-    .item<FutureShows>('future_shows')
+    .item<FutureShowsType>('future_shows')
     .depthParameter(2)
     .toPromise();
 
