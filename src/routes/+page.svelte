@@ -22,19 +22,18 @@
 
 <div class="flex flex-col space-y-12">
   {#each data.futureShows as show (show.system.codename)}
-    {@const gallery = show.elements.gallery.value}
-    {@const galleryWithCaptions =
-      show.elements.gallery_with_captions.linkedItems}
-    {@const ticketLink = show.elements.ticket_link.value}
-    {@const trailer = show.elements.trailer.value}
+    {@const showData = show.elements}
+    {@const gallery = showData.gallery.value}
+    {@const galleryWithCaptions = showData.gallery_with_captions.linkedItems}
+    {@const ticketLink = showData.ticket_link.value}
     <div>
       <Heading level={2}>
-        {show.elements.name.value}
+        {showData.name.value}
       </Heading>
 
       <div class="mb-4">
         <ImageConstrainedOneDimension
-          image={show.elements.main_image.value[0]}
+          image={showData.main_image.value[0]}
           height={300}
           priority={true}
         />
@@ -44,16 +43,16 @@
         <TicketLink link={ticketLink} />
       {/if}
 
-      {#if trailer.length > 0}
+      {#if showData.trailer.linkedItems.length > 0}
         <Heading level={3}>Trailer</Heading>
-        <RichText richTextElement={show.elements.trailer} />
+        <RichText richTextElement={showData.trailer} />
       {/if}
 
       <p class="my-4">
-        Coming: {getMonthFromDateString(show.elements.premiere.value)}
+        Coming: {getMonthFromDateString(showData.premiere.value)}
       </p>
 
-      <RichText richTextElement={show.elements.description} />
+      <RichText richTextElement={showData.description} />
 
       {#if galleryWithCaptions.length > 0}
         <GalleryWithCaptions images={galleryWithCaptions} headingLevel={3} />
