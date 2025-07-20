@@ -8,6 +8,7 @@
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
   import { getMonthFromDateString } from '$lib';
   import Seo from '$lib/components/Seo.svelte';
+  import Heading from '$lib/components/Heading.svelte';
 
   export let data: PageData;
 </script>
@@ -25,10 +26,11 @@
     {@const galleryWithCaptions =
       show.elements.gallery_with_captions.linkedItems}
     {@const ticketLink = show.elements.ticket_link.value}
+    {@const trailer = show.elements.trailer.value}
     <div>
-      <h2 class="mb-4 text-3xl font-medium xl:text-4xl">
+      <Heading level={2}>
         {show.elements.name.value}
-      </h2>
+      </Heading>
 
       <div class="mb-4">
         <ImageConstrainedOneDimension
@@ -42,7 +44,12 @@
         <TicketLink link={ticketLink} />
       {/if}
 
-      <p class="mb-4">
+      {#if trailer.length > 0}
+        <Heading level={3}>Trailer</Heading>
+        <RichText richTextElement={show.elements.trailer} />
+      {/if}
+
+      <p class="my-4">
         Coming: {getMonthFromDateString(show.elements.premiere.value)}
       </p>
 
