@@ -8,8 +8,10 @@ export const load: PageLoad = async () => {
     .toPromise();
 
   const aboutUsText = basicInfo.data.item.elements.about_us;
+  const values = basicInfo.data.item.elements.values;
 
   return {
-    aboutUsText
+    aboutUsText,
+    values
   };
 };
