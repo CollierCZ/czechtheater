@@ -1,12 +1,12 @@
 <script lang="ts">
   import RichText from './RichText.svelte';
-  import type { TheaterFact } from '../../kontent-types';
+  import type { TheaterFactType } from '../../kontent-types';
   import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
 
   let {
     fact
   }: {
-    fact: TheaterFact;
+    fact: TheaterFactType;
   } = $props();
 
   const factImage = fact.elements.image.value[0];

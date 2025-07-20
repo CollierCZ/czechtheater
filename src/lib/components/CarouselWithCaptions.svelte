@@ -5,13 +5,13 @@
   import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
   import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
   import { Image } from '@unpic/svelte';
-  import type { ImageWithCaption } from '../../kontent-types';
+  import type { ImageWithCaptionType } from '../../kontent-types';
   import CarouselImage from './CarouselImage.svelte';
 
   let {
     carouselItems
   }: {
-    carouselItems: ImageWithCaption[];
+    carouselItems: ImageWithCaptionType[];
   } = $props();
 
   let currentSlideItem = $state(0);

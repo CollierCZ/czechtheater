@@ -4,7 +4,7 @@ import { type TheaterFactType } from '../../kontent-types';
 
 // Using this variable together with prerendering works as a cache
 // So API should only be called once for all children
-let cachedData: TheaterFact[] = [];
+let cachedData: TheaterFactType[] = [];
 
 export const prerender = true;
 
