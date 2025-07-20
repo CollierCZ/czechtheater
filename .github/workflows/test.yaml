@@ -16,11 +16,9 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Test
-        run: pnpm test
+        run: pnpm test:coverage
       - name: Coverage
-        uses: paambaati/codeclimate-action@v9.0.0
-        env:
-          CC_TEST_REPORTER_ID: 12e45f7dc77e1f2aea24b7516aa3a069f14424da47e53403022698626881b0ab
+        uses: qltysh/qlty-action/coverage@v1
         with:
-          coverageCommand: pnpm test:coverage
-          coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
+          token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+          files: ${{github.workspace}}/coverage/lcov.info
