@@ -2,11 +2,13 @@
   import type { CustomBlockComponentProps } from '@portabletext/svelte';
   import { Image } from '@unpic/svelte';
   import type {
-    CallToActionButton,
-    FixedSizeImage
+    CallToActionButtonType,
+    FixedSizeImageType,
+    TrailerType
   } from '../../../kontent-types';
   import type { Reference } from '@kontent-ai/rich-text-resolver';
   import LinkButton from '../LinkButton.svelte';
+  import Trailer from './Trailer.svelte';
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
@@ -16,8 +18,9 @@
   } = $props();
 
   const linkedItems = portableText.global.context.linkedItems as
-    | FixedSizeImage[]
-    | CallToActionButton[];
+    | FixedSizeImageType[]
+    | CallToActionButtonType[]
+    | TrailerType[];
 
   const linkedItem = linkedItems.find((item) => {
     const comp = portableText.value.componentOrItem as Reference;
@@ -44,4 +47,11 @@
       {buttonData.button_text.value}
     </LinkButton>
   {/if}
+{:else if componentType === 'trailer' && linkedItem}
+  {@const trailerItem = linkedItem as TrailerType}
+  {@const trailerData = trailerItem.elements}
+  <Trailer
+    video={trailerData.trailer_video}
+    link={trailerData.link_to_video_hosted_elsewhere.value}
+  />
 {/if}

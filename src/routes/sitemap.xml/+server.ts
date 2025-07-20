@@ -1,19 +1,22 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { kontentConnector } from '$lib';
-import type { Show, PastShows } from '../../kontent-types';
+import type { ShowType, PastShowsType } from '../../kontent-types';
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
   const pastShowsItem = await kontentConnector()
-    .item<PastShows>('past_shows')
+    .item<PastShowsType>('past_shows')
     .depthParameter(2)
     .toPromise();
   const pastShowSeasons = pastShowsItem.data.item.elements.seasons.linkedItems;
 
-  const pastShows = pastShowSeasons.reduce((pastShowsAcc, season): Show[] => {
-    return [...pastShowsAcc, ...season.elements.shows.linkedItems];
-  }, [] as Show[]);
+  const pastShows = pastShowSeasons.reduce(
+    (pastShowsAcc, season): ShowType[] => {
+      return [...pastShowsAcc, ...season.elements.shows.linkedItems];
+    },
+    [] as ShowType[]
+  );
 
   const headers = {
     'Cache-Control': `max-age=20160, s-maxage=20160`,
@@ -30,7 +33,7 @@ const pagesWithUpdates = ['shows', 'auditions', 'fact'];
 const pagesNotUpdated = ['about', 'contact'];
 const pages = pagesWithUpdates.concat(pagesNotUpdated);
 
-const xmlify = (shows: Show[]) => `
+const xmlify = (shows: ShowType[]) => `
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"

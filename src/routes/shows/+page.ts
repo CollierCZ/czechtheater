@@ -1,10 +1,10 @@
 import { kontentConnector } from '$lib';
 import type { PageLoad } from './$types';
-import { type PastShows } from '../../kontent-types';
+import { type PastShowsType } from '../../kontent-types';
 
 export const load: PageLoad = async () => {
   const pastShowsSection = await kontentConnector()
-    .item<PastShows>('past_shows')
+    .item<PastShowsType>('past_shows')
     .depthParameter(2)
     .toPromise();
 

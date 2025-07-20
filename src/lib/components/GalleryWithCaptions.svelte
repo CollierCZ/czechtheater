@@ -1,8 +1,8 @@
 <script lang="ts">
   import CarouselWithCaptions from './CarouselWithCaptions.svelte';
-  import type { ImageWithCaption } from '../../kontent-types';
+  import type { ImageWithCaptionType } from '../../kontent-types';
 
-  export let images: ImageWithCaption[];
+  export let images: ImageWithCaptionType[];
   export let headingLevel = 2;
 </script>
 

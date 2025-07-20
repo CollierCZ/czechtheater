@@ -44,18 +44,19 @@ export default [
   },
   {
     ignores: [
+      '!.env.example',
       '.DS_Store',
-      'node_modules',
-      'public',
+      '.env.*',
+      '.env',
       '.svelte-kit',
       'coverage',
-      '.env',
-      '.env.*',
-      '!.env.example',
-      'pnpm-lock.yaml',
+      'node_modules',
       'package-lock.json',
-      'yarn.lock',
-      'static/sw.js'
+      'pnpm-lock.yaml',
+      'public',
+      'src/kontent-types',
+      'static/sw.js',
+      'yarn.lock'
     ]
   },
   {

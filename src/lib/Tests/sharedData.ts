@@ -1,5 +1,5 @@
 import { type ElementModels, ElementType } from '@kontent-ai/delivery-sdk';
-import type { Season, Show, Value } from '../../kontent-types';
+import type { SeasonType, ShowType, ValueType } from '../../kontent-types';
 
 export const commonImageProperties = {
   type: 'image/png',
@@ -96,7 +96,7 @@ export const showDescriptionText = 'A brilliant show.';
 export const showImageText = 'A brilliant image';
 export const showName = 'Awesome Show';
 export const numberOfShowDescriptionParagraphs = 3;
-export const showData: Show = {
+export const showData: ShowType = {
   elements: {
     description: {
       value: `<p>${showDescriptionText}</p>`.repeat(
@@ -140,6 +140,7 @@ export const showData: Show = {
       value: showDescriptionText
     },
     ticket_link: { type: ElementType.Text, name: 'Ticket link', value: '' },
+    trailer: { name: 'Trailer', value: '', ...basicRichTextValues },
     url: { type: ElementType.UrlSlug, name: 'URL', value: 'slug' }
   },
   system: {
@@ -150,7 +151,7 @@ export const showData: Show = {
   }
 };
 
-export const seasonData: Season = {
+export const seasonData: SeasonType = {
   elements: {
     season_start_year: {
       name: 'Season start year',
@@ -182,7 +183,7 @@ export const seasonData: Season = {
   }
 };
 
-export const valueData: Value = {
+export const valueData: ValueType = {
   elements: {
     name: {
       type: ElementType.Text,
