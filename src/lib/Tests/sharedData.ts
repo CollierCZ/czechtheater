@@ -140,7 +140,7 @@ export const showData: ShowType = {
       value: showDescriptionText
     },
     ticket_link: { type: ElementType.Text, name: 'Ticket link', value: '' },
-    trailer: { name: 'Trailer', value: "", ...basicRichTextValues },
+    trailer: { name: 'Trailer', value: '', ...basicRichTextValues },
     url: { type: ElementType.UrlSlug, name: 'URL', value: 'slug' }
   },
   system: {

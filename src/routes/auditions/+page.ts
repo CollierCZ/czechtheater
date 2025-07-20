@@ -4,7 +4,9 @@ import { type AuditionsType } from '../../kontent-types';
 
 export const load: PageLoad = async () => {
   const auditionsInfo = (
-    await kontentConnector().item<AuditionsType>('upcoming_auditions').toPromise()
+    await kontentConnector()
+      .item<AuditionsType>('upcoming_auditions')
+      .toPromise()
   ).data.item.elements;
 
   return {

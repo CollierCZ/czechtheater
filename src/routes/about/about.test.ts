@@ -2,7 +2,11 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import AboutPage from './+page.svelte';
-import { basicRichTextValues, sharedLogo, valueData } from '$lib/Tests/sharedData';
+import {
+  basicRichTextValues,
+  sharedLogo,
+  valueData
+} from '$lib/Tests/sharedData';
 
 const aboutTextTest = 'We are so awesome!';
 
@@ -24,10 +28,10 @@ test('about page has the right headers and text', () => {
     }
   });
 
-  const title = screen.getByRole('heading', {level: 1});
+  const title = screen.getByRole('heading', { level: 1 });
   const firstHeading = within(title).getByText('About Czech Theater');
 
-  const heading = screen.getByRole('heading', {level: 2});
+  const heading = screen.getByRole('heading', { level: 2 });
   const valuesHeading = within(heading).getByText('Our Values');
 
   const aboutText = screen.getByText(aboutTextTest);

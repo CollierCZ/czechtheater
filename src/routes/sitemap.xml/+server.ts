@@ -11,9 +11,12 @@ export const GET: RequestHandler = async () => {
     .toPromise();
   const pastShowSeasons = pastShowsItem.data.item.elements.seasons.linkedItems;
 
-  const pastShows = pastShowSeasons.reduce((pastShowsAcc, season): ShowType[] => {
-    return [...pastShowsAcc, ...season.elements.shows.linkedItems];
-  }, [] as ShowType[]);
+  const pastShows = pastShowSeasons.reduce(
+    (pastShowsAcc, season): ShowType[] => {
+      return [...pastShowsAcc, ...season.elements.shows.linkedItems];
+    },
+    [] as ShowType[]
+  );
 
   const headers = {
     'Cache-Control': `max-age=20160, s-maxage=20160`,
