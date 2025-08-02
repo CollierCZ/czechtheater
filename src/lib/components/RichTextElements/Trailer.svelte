@@ -16,7 +16,11 @@
 {#if video}
   <video controls>
     {#if videoSmall}
-      <source src={videoSmall.value[0].url} type={videoSmall.value[0].type} media="(max-width: 768px" />
+      <source
+        src={videoSmall.value[0].url}
+        type={videoSmall.value[0].type}
+        media="(max-width: 768px"
+      />
     {/if}
     <source src={video.value[0].url} type={video.value[0].type} />
     <track kind="captions" />
