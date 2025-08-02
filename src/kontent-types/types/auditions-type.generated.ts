@@ -19,6 +19,7 @@ import type { CollectionCodenames } from '../system/collections.generated.js';
 import type { CoreType } from '../system/types.generated.js';
 import type { FixedSizeImageType } from '../types/fixed-size-image-type.generated.js';
 import type { LanguageCodenames } from '../system/languages.generated.js';
+import type { TrailerType } from '../types/trailer-type.generated.js';
 import type { WorkflowCodenames, WorkflowStepCodenames } from '../system/workflows.generated.js';
            
             /*
@@ -48,9 +49,9 @@ export type AuditionsType = IContentItem<
 * Id: f6ecb711-72b0-4881-9845-7a17c6f9633a
 * Type: rich_text
 * Required: true
-* Allowed content types: fixed_size_image
+* Allowed content types: fixed_size_image, trailer
     */
-                readonly upcoming_auditions_description: Elements.RichTextElement<FixedSizeImageType>;
+                readonly upcoming_auditions_description: Elements.RichTextElement<FixedSizeImageType | TrailerType>;
 
 /*
     * Audition date

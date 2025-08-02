@@ -2,12 +2,22 @@
   import type { Elements } from '@kontent-ai/delivery-sdk';
   import LinkButton from '../LinkButton.svelte';
 
-  let { link, video }: { link: string; video: Elements.AssetsElement } =
-    $props();
+  let {
+    link,
+    video,
+    videoSmall
+  }: {
+    link: string;
+    video: Elements.AssetsElement;
+    videoSmall: Elements.AssetsElement;
+  } = $props();
 </script>
 
 {#if video}
   <video controls>
+    {#if videoSmall}
+      <source src={videoSmall.value[0].url} type={videoSmall.value[0].type} media="(max-width: 768px" />
+    {/if}
     <source src={video.value[0].url} type={video.value[0].type} />
     <track kind="captions" />
     Download the <a href={video.value[0].url}>trailer</a>.

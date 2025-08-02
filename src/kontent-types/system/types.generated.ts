@@ -22,14 +22,14 @@ import type { PastShowsType } from '../types/past-shows-type.generated.js';
 import type { AuditionsType } from '../types/auditions-type.generated.js';
 import type { TheaterFactType } from '../types/theater-fact-type.generated.js';
 import type { CallToActionButtonType } from '../types/call-to-action-button-type.generated.js';
-import type { TrailerType } from '../types/trailer-type.generated.js';
 import type { ShowType } from '../types/show-type.generated.js';
+import type { TrailerType } from '../types/trailer-type.generated.js';
 import type { ImageWithCaptionType } from '../types/image-with-caption-type.generated.js';
 
             /*
 * Array of all type codenames
 */
-            export const typeCodenames = ['future_shows', 'season', 'value', 'fixed_size_image', 'basic_info', 'past_shows', 'auditions', 'theater_fact', 'call_to_action_button', 'trailer', 'show', 'image_with_caption'] as const;;
+            export const typeCodenames = ['future_shows', 'season', 'value', 'fixed_size_image', 'basic_info', 'past_shows', 'auditions', 'theater_fact', 'call_to_action_button', 'show', 'trailer', 'image_with_caption'] as const;;
            
             /*
 * Type representing all type codenames
@@ -46,7 +46,7 @@ import type { ImageWithCaptionType } from '../types/image-with-caption-type.gene
 					 /*
 * Core content type with narrowed types. Use this instead of'IContentItem' for increased type safety.
 */
-					 export type CoreType = FutureShowsType | SeasonType | ValueType | FixedSizeImageType | BasicInfoType | PastShowsType | AuditionsType | TheaterFactType | CallToActionButtonType | TrailerType | ShowType | ImageWithCaptionType
+					 export type CoreType = FutureShowsType | SeasonType | ValueType | FixedSizeImageType | BasicInfoType | PastShowsType | AuditionsType | TheaterFactType | CallToActionButtonType | ShowType | TrailerType | ImageWithCaptionType
 
 					/*
 * Type mapping for codename & type. Can be used for type safe access to type based on the codename of type.
@@ -61,8 +61,8 @@ readonly past_shows: PastShowsType,
 readonly auditions: AuditionsType,
 readonly theater_fact: TheaterFactType,
 readonly call_to_action_button: CallToActionButtonType,
-readonly trailer: TrailerType,
 readonly show: ShowType,
+readonly trailer: TrailerType,
 readonly image_with_caption: ImageWithCaptionType,
 };
 
