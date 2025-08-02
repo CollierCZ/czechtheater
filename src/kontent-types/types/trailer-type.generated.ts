@@ -51,6 +51,16 @@ export type TrailerType = IContentItem<
                 readonly trailer_video: Elements.AssetsElement;
 
 /*
+    * Trailer video small
+    *
+    * Codename: trailer_video_small
+* Id: 637d6e4a-189f-4ed9-9e89-e6281046f3c0
+* Type: asset
+* Required: false
+    */
+                readonly trailer_video_small: Elements.AssetsElement;
+
+/*
     * Link to video hosted elsewhere
     *
     * Codename: link_to_video_hosted_elsewhere
@@ -65,7 +75,7 @@ TrailerTypeCodename, LanguageCodenames, CollectionCodenames, WorkflowCodenames, 
 /*
 * Type representing all available element codenames for Trailer
 */
-export type TrailerTypeElementCodenames = 'trailer_video' | 'link_to_video_hosted_elsewhere';;
+export type TrailerTypeElementCodenames = 'trailer_video' | 'trailer_video_small' | 'link_to_video_hosted_elsewhere';;
 
 /*
     * Type guard for Trailer

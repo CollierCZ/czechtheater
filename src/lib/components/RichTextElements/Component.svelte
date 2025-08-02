@@ -52,6 +52,7 @@
   {@const trailerData = trailerItem.elements}
   <Trailer
     video={trailerData.trailer_video}
+    videoSmall={trailerData.trailer_video_small}
     link={trailerData.link_to_video_hosted_elsewhere.value}
   />
 {/if}

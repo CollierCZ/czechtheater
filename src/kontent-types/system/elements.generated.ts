@@ -17,7 +17,7 @@
             /*
 * Array of all element codenames
 */
-            export const elementCodenames = ['shows', 'season_start_year', 'season_end_year', 'season_name', 'name', 'icon', 'description', 'height', 'width', 'image', 'short_description', 'about_us', 'contact_info', 'social_media', 'logo', 'favicon', 'keywords', 'values', 'seasons', 'upcoming_auditions_description', 'audition_date', 'link_to_audition_event', 'button_text', 'url', 'trailer_video', 'link_to_video_hosted_elsewhere', 'main_image', 'trailer', 'premiere', 'ticket_link', 'full_performance_link', 'gallery', 'gallery_with_captions', 'caption'] as const;;
+            export const elementCodenames = ['shows', 'season_start_year', 'season_end_year', 'season_name', 'name', 'icon', 'description', 'height', 'width', 'image', 'short_description', 'about_us', 'contact_info', 'social_media', 'logo', 'favicon', 'keywords', 'values', 'seasons', 'upcoming_auditions_description', 'audition_date', 'link_to_audition_event', 'button_text', 'url', 'main_image', 'trailer', 'premiere', 'ticket_link', 'full_performance_link', 'gallery', 'gallery_with_captions', 'trailer_video', 'trailer_video_small', 'link_to_video_hosted_elsewhere', 'caption'] as const;;
            
             /*
 * Type representing all element codenames
