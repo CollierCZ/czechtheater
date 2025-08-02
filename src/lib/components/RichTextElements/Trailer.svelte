@@ -10,7 +10,7 @@
   <video controls>
     <source src={video.value[0].url} type={video.value[0].type} />
     <track kind="captions" />
-    Download the <a href={link}>trailer</a>.
+    Download the <a href={video.value[0].url}>trailer</a>.
   </video>
 {:else}
   <LinkButton {link}>Watch the trailer</LinkButton>
