@@ -9,7 +9,7 @@ jobs:
     env:
       PUBLIC_KONTENT_ENVIRONMENT_ID: ${{ vars.PUBLIC_KONTENT_ENVIRONMENT_ID }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: './.github/shared/setup-node'
       - name: Fix export
         run: jq '.exports.".".default = "./dist/index.js"' ./node_modules/@portabletext/svelte/package.json > test.json && mv test.json ./node_modules/@portabletext/svelte/package.json
