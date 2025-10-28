@@ -23,7 +23,7 @@
     ['/newsletter', 'Newsletter'],
     ['/about', 'About'],
     ['/contact', 'Contact']
-  ];
+  ] as const;
 </script>
 
 <header
