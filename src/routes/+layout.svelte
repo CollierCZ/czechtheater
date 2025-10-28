@@ -19,6 +19,7 @@
     ['/auditions', 'Auditions'],
     ['/shows', 'Past Shows'],
     ['/fact', 'Fact'],
+    ['/newsletter', 'Newsletter'],
     ['/about', 'About'],
     ['/contact', 'Contact']
   ];

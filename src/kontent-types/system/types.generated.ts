@@ -13,23 +13,23 @@
  */
 
 
-            import type { FutureShowsType } from '../types/future-shows-type.generated.js';
-import type { SeasonType } from '../types/season-type.generated.js';
-import type { ValueType } from '../types/value-type.generated.js';
-import type { FixedSizeImageType } from '../types/fixed-size-image-type.generated.js';
-import type { BasicInfoType } from '../types/basic-info-type.generated.js';
-import type { PastShowsType } from '../types/past-shows-type.generated.js';
-import type { AuditionsType } from '../types/auditions-type.generated.js';
-import type { TheaterFactType } from '../types/theater-fact-type.generated.js';
-import type { CallToActionButtonType } from '../types/call-to-action-button-type.generated.js';
-import type { ShowType } from '../types/show-type.generated.js';
-import type { TrailerType } from '../types/trailer-type.generated.js';
+            import type { AuditionsType } from '../types/auditions-type.generated.js';
 import type { ImageWithCaptionType } from '../types/image-with-caption-type.generated.js';
+import type { FixedSizeImageType } from '../types/fixed-size-image-type.generated.js';
+import type { SeasonType } from '../types/season-type.generated.js';
+import type { PastShowsType } from '../types/past-shows-type.generated.js';
+import type { FutureShowsType } from '../types/future-shows-type.generated.js';
+import type { CallToActionButtonType } from '../types/call-to-action-button-type.generated.js';
+import type { ValueType } from '../types/value-type.generated.js';
+import type { TrailerType } from '../types/trailer-type.generated.js';
+import type { TheaterFactType } from '../types/theater-fact-type.generated.js';
+import type { BasicInfoType } from '../types/basic-info-type.generated.js';
+import type { ShowType } from '../types/show-type.generated.js';
 
             /*
 * Array of all type codenames
 */
-            export const typeCodenames = ['future_shows', 'season', 'value', 'fixed_size_image', 'basic_info', 'past_shows', 'auditions', 'theater_fact', 'call_to_action_button', 'show', 'trailer', 'image_with_caption'] as const;;
+            export const typeCodenames = ['auditions', 'image_with_caption', 'fixed_size_image', 'season', 'past_shows', 'future_shows', 'call_to_action_button', 'value', 'trailer', 'theater_fact', 'basic_info', 'show'] as const;;
            
             /*
 * Type representing all type codenames
@@ -46,24 +46,24 @@ import type { ImageWithCaptionType } from '../types/image-with-caption-type.gene
 					 /*
 * Core content type with narrowed types. Use this instead of'IContentItem' for increased type safety.
 */
-					 export type CoreType = FutureShowsType | SeasonType | ValueType | FixedSizeImageType | BasicInfoType | PastShowsType | AuditionsType | TheaterFactType | CallToActionButtonType | ShowType | TrailerType | ImageWithCaptionType
+					 export type CoreType = AuditionsType | ImageWithCaptionType | FixedSizeImageType | SeasonType | PastShowsType | FutureShowsType | CallToActionButtonType | ValueType | TrailerType | TheaterFactType | BasicInfoType | ShowType
 
 					/*
 * Type mapping for codename & type. Can be used for type safe access to type based on the codename of type.
 */
 					export type CodenameTypeMapping = {
-	readonly future_shows: FutureShowsType,
-readonly season: SeasonType,
-readonly value: ValueType,
-readonly fixed_size_image: FixedSizeImageType,
-readonly basic_info: BasicInfoType,
-readonly past_shows: PastShowsType,
-readonly auditions: AuditionsType,
-readonly theater_fact: TheaterFactType,
-readonly call_to_action_button: CallToActionButtonType,
-readonly show: ShowType,
-readonly trailer: TrailerType,
+	readonly auditions: AuditionsType,
 readonly image_with_caption: ImageWithCaptionType,
+readonly fixed_size_image: FixedSizeImageType,
+readonly season: SeasonType,
+readonly past_shows: PastShowsType,
+readonly future_shows: FutureShowsType,
+readonly call_to_action_button: CallToActionButtonType,
+readonly value: ValueType,
+readonly trailer: TrailerType,
+readonly theater_fact: TheaterFactType,
+readonly basic_info: BasicInfoType,
+readonly show: ShowType,
 };
 
 					/*
