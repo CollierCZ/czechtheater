@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import { resolve } from '$app/paths';
   import RichText from '$lib/components/RichText.svelte';
   import { mdiFacebook, mdiEmail, mdiInstagram } from '@mdi/js';
 
@@ -40,7 +39,8 @@
   {#each data.socialMedia as socialMediaLink (socialMediaLink)}
     {@const [icon, alt] = getIconAndAltText(socialMediaLink)}
     {#if icon}
-      <a href={resolve(socialMediaLink)}><SvgIcon path={icon} {alt} /></a>
+      <!-- eslint-disable-next-line svelte/no-navigation-without-resolve Definitely external links (from Kontent.ai) -->
+      <a href={socialMediaLink}><SvgIcon path={icon} {alt} /></a>
     {/if}
   {/each}
 </div>
