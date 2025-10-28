@@ -4,6 +4,7 @@
   import Title from '$lib/components/Title.svelte';
   import { getDateFromDateString, isShowInFuture } from '$lib';
   import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
+  import { resolve } from '$app/paths';
   import Seo from '$lib/components/Seo.svelte';
 
   export let data: PageData;
@@ -28,7 +29,7 @@
     {@const showPremier = showData.premiere.value}
     {#if !isShowInFuture(showPremier || '')}
       {@const showMainImage = showData.main_image.value[0]}
-      <a href={`/shows/${showData.url.value}`}>
+      <a href={resolve(`/shows/${showData.url.value}`)}>
         <div
           class="mr-8 mb-12 origin-left grid-cols-2 gap-4 transition delay-150 ease-in-out hover:scale-107 focus:scale-107 motion-reduce:hover:transform-none md:mr-0 md:grid md:origin-center"
         >

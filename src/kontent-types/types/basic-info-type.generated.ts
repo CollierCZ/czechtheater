@@ -132,13 +132,23 @@ export type BasicInfoType = IContentItem<
 * Required: true
 * Allowed content types: value
     */
-                readonly values: Elements.RichTextElement<ValueType>;}, 
+                readonly values: Elements.RichTextElement<ValueType>;
+
+/*
+    * Newsletter Sign Up Text
+    *
+    * Codename: newsletter_sign_up_text
+* Id: 35a59d12-a0db-483f-8886-e8286d95738f
+* Type: rich_text
+* Required: true
+    */
+                readonly newsletter_sign_up_text: Elements.RichTextElement<CoreType>;}, 
 BasicInfoTypeCodename, LanguageCodenames, CollectionCodenames, WorkflowCodenames, WorkflowStepCodenames>
 
 /*
 * Type representing all available element codenames for Basic info
 */
-export type BasicInfoTypeElementCodenames = 'name' | 'short_description' | 'about_us' | 'contact_info' | 'social_media' | 'logo' | 'favicon' | 'keywords' | 'values';;
+export type BasicInfoTypeElementCodenames = 'name' | 'short_description' | 'about_us' | 'contact_info' | 'social_media' | 'logo' | 'favicon' | 'keywords' | 'values' | 'newsletter_sign_up_text';;
 
 /*
     * Type guard for Basic info
