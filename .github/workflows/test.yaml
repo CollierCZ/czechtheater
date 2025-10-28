@@ -9,7 +9,7 @@ jobs:
     env:
       PUBLIC_KONTENT_ENVIRONMENT_ID: ${{ vars.PUBLIC_KONTENT_ENVIRONMENT_ID }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: './.github/shared/setup-node'
       - name: Fix export
         run: jq '.exports.".".default = "./dist/index.js"' ./node_modules/@portabletext/svelte/package.json > test.json && mv test.json ./node_modules/@portabletext/svelte/package.json
@@ -18,7 +18,7 @@ jobs:
       - name: Test
         run: pnpm test:coverage
       - name: Coverage
-        uses: qltysh/qlty-action/coverage@v1
+        uses: qltysh/qlty-action/coverage@v2
         with:
           token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
           files: ${{github.workspace}}/coverage/lcov.info
