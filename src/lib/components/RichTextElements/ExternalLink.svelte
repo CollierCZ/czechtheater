@@ -15,6 +15,7 @@
   const linkData = portableText.value as PortableTextExternalLink;
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve Likely an external link -->
 <a
   class="font-medium underline hover:no-underline focus:no-underline"
   href={linkData.href!}
