@@ -25,9 +25,10 @@
     : `/${link?.urlSlug}`;
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve It's a variable so it's hard-->
 <a
   class="font-medium underline hover:no-underline focus:no-underline"
-  href={resolve(slug)}
+  href={slug}
 >
   {@render children()}
 </a>
