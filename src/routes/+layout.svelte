@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import type { LayoutData } from './$types';
+  import { resolve } from '$app/paths';
   import type { Snippet } from 'svelte';
   import '../app.css';
 
@@ -19,9 +20,10 @@
     ['/auditions', 'Auditions'],
     ['/shows', 'Past Shows'],
     ['/fact', 'Fact'],
+    ['/newsletter', 'Newsletter'],
     ['/about', 'About'],
     ['/contact', 'Contact']
-  ];
+  ] as const;
 </script>
 
 <header
@@ -34,7 +36,7 @@
 <nov class="mb-6 flex flex-wrap justify-center gap-2 px-2 xl:text-xl">
   {#each navItems as navItem (navItem[0])}
     <a
-      href={navItem[0]}
+      href={resolve(navItem[0])}
       class="focus:bg-slate-10 hover:bg-slate-10 rounded-lg p-2 font-medium underline-offset-8 hover:bg-slate-100 focus:bg-slate-100"
       class:underline={navItem[0] === '/'
         ? currentSlug === navItem[0]

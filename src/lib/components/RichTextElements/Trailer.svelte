@@ -13,6 +13,7 @@
   } = $props();
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve Definitely external links (from Kontent.ai) -->
 {#if video}
   <video controls>
     {#if videoSmall}

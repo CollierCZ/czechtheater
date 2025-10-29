@@ -39,6 +39,7 @@
   {#each data.socialMedia as socialMediaLink (socialMediaLink)}
     {@const [icon, alt] = getIconAndAltText(socialMediaLink)}
     {#if icon}
+      <!-- eslint-disable-next-line svelte/no-navigation-without-resolve Definitely external links (from Kontent.ai) -->
       <a href={socialMediaLink}><SvgIcon path={icon} {alt} /></a>
     {/if}
   {/each}
