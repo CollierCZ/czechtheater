@@ -12,6 +12,7 @@
   import RichTextHeading from "./RichTextElements/RichTextHeading.svelte"
   import RichTextImage from './RichTextElements/RichTextImage.svelte';
   import Component from './RichTextElements/Component.svelte';
+    import UnorderedListWrapper from './RichTextElements/UnorderedListWrapper.svelte';
 
   export let richTextElement: Elements.RichTextElement;
 
@@ -29,6 +30,9 @@
       h3: RichTextHeading,
       h4: RichTextHeading,
       normal: Paragraph
+    },
+    list: {
+      bullet: UnorderedListWrapper
     },
     marks: {
       contentItemLink: InternalLink,
