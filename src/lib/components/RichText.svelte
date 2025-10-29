@@ -9,6 +9,7 @@
   import ExternalLink from './RichTextElements/ExternalLink.svelte';
   import InternalLink from './RichTextElements/InternalLink.svelte';
   import Paragraph from './RichTextElements/Paragraph.svelte';
+  import RichTextHeading from "./RichTextElements/RichTextHeading.svelte"
   import RichTextImage from './RichTextElements/RichTextImage.svelte';
   import Component from './RichTextElements/Component.svelte';
 
@@ -16,6 +17,7 @@
 
   let { links, linkedItems, value: richText } = richTextElement;
   const portableText = transformToPortableText(richText);
+  console.log(portableText)
 
   const portableTextComponents: PortableTextComponents = {
     types: {
@@ -23,6 +25,9 @@
       componentOrItem: Component
     },
     block: {
+      h2: RichTextHeading,
+      h3: RichTextHeading,
+      h4: RichTextHeading,
       normal: Paragraph
     },
     marks: {
