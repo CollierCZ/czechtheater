@@ -9,10 +9,10 @@
   import ExternalLink from './RichTextElements/ExternalLink.svelte';
   import InternalLink from './RichTextElements/InternalLink.svelte';
   import Paragraph from './RichTextElements/Paragraph.svelte';
-  import RichTextHeading from "./RichTextElements/RichTextHeading.svelte"
+  import RichTextHeading from './RichTextElements/RichTextHeading.svelte';
   import RichTextImage from './RichTextElements/RichTextImage.svelte';
   import Component from './RichTextElements/Component.svelte';
-    import UnorderedListWrapper from './RichTextElements/UnorderedListWrapper.svelte';
+  import UnorderedListWrapper from './RichTextElements/UnorderedListWrapper.svelte';
 
   export let richTextElement: Elements.RichTextElement;
 

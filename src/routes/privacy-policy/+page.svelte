@@ -7,13 +7,13 @@
 
   let { data }: { data: PageData } = $props();
 
-  const title = data.title
+  const title = data.title;
 </script>
 
 <Seo
   description="Czech Theater's Privacy Policy: See what information we collect and how we protect it."
   slug={`/${data.slug}`}
-  title={title}
+  {title}
 />
 
 <Title>{title}</Title>

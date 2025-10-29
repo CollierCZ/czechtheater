@@ -7,8 +7,7 @@ export const load: PageLoad = async () => {
     .item<StaticContentType>('newsletter_sign_up_text')
     .toPromise();
 
-  const newsletterSignUpText =
-    basicInfo.data.item.elements.content;
+  const newsletterSignUpText = basicInfo.data.item.elements.content;
 
   return {
     newsletterSignUpText
