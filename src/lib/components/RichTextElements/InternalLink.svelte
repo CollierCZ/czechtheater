@@ -19,7 +19,7 @@
   const links = portableText.global.context.links as ILink[];
 
   const link = links.find((item) => item.linkId === value.contentItemLink._ref);
-  
+
   const slug = isShowTypeCodename(link?.type)
     ? `/shows/${link?.urlSlug}`
     : `/${link?.urlSlug}`;
@@ -27,7 +27,7 @@
 
 <a
   class="font-medium underline hover:no-underline focus:no-underline"
-  href={resolve(slug)}
+  href={slug}
 >
   {@render children()}
 </a>
