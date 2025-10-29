@@ -18,7 +18,6 @@
 
   let { links, linkedItems, value: richText } = richTextElement;
   const portableText = transformToPortableText(richText);
-  console.log(portableText)
 
   const portableTextComponents: PortableTextComponents = {
     types: {

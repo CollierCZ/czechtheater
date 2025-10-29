@@ -4,18 +4,12 @@
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
-    children,
-    portableText
+    children
   }: {
     children: Snippet;
-    portableText: ListComponentProps;
   } = $props();
-
-  console.log(portableText)
 </script>
 
-<ul
-  class="list-disc ml-4"
->
+<ul class="ml-4 list-disc">
   {@render children()}
 </ul>
