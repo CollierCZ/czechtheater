@@ -52,10 +52,22 @@
 </main>
 
 <footer class="m-4 mb-2 text-center text-sm">
-  Content © 2018–{new Date().getFullYear()} Czech Theater, z.s. IČO: 07245904. Website
-  code available on
-  <a
-    class="underline hover:no-underline focus:no-underline"
-    href="https://github.com/CollierCZ/czechtheater">GitHub</a
-  >.
+  <span>
+    Content © 2018–{new Date().getFullYear()} Czech Theater, z.s. IČO: 07245904.
+  </span>
+  <span>
+    Website code available on
+    <a
+      class="underline hover:no-underline focus:no-underline"
+      href="https://github.com/CollierCZ/czechtheater">GitHub</a
+    >.
+  </span>
+  <span>
+    <a
+      class="font-medium underline hover:no-underline focus:no-underline"
+      href={resolve(`/privacy-policy`)}
+    >
+      Privacy Policy
+    </a>
+  </span>
 </footer>
