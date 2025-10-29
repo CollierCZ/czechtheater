@@ -2,7 +2,6 @@
   import type { ILink } from '@kontent-ai/delivery-sdk';
   import type { PortableTextItemLink } from '@kontent-ai/rich-text-resolver';
   import type { MarkComponentProps } from '@portabletext/svelte';
-  import { resolve } from '$app/paths';
   import type { Snippet } from 'svelte';
   import { isShowTypeCodename } from '../../../kontent-types';
 
