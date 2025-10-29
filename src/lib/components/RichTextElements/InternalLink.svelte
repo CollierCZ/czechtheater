@@ -4,7 +4,7 @@
   import type { MarkComponentProps } from '@portabletext/svelte';
   import { resolve } from '$app/paths';
   import type { Snippet } from 'svelte';
-  import { isShowType, isShowTypeCodename } from '../../../kontent-types';
+  import { isShowTypeCodename } from '../../../kontent-types';
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
@@ -27,7 +27,7 @@
 
 <a
   class="font-medium underline hover:no-underline focus:no-underline"
-  href={slug}
+  href={resolve(slug)}
 >
   {@render children()}
 </a>

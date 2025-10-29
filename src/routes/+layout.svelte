@@ -4,7 +4,6 @@
   import { resolve } from '$app/paths';
   import type { Snippet } from 'svelte';
   import '../app.css';
-  import InternalLink from '$lib/components/RichTextElements/InternalLink.svelte';
 
   let {
     data,

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { ListComponentProps } from '@portabletext/svelte';
   import type { Snippet } from 'svelte';
 
   // Property custom marks receive from @portabletext/svelte when redered
