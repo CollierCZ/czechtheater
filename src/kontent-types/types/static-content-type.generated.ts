@@ -44,6 +44,27 @@ import type { WorkflowCodenames, WorkflowStepCodenames } from '../system/workflo
 export type StaticContentType = IContentItem<
 {
 /*
+    * Title
+    *
+    * Codename: title
+* Id: 9a6670c6-24ad-470b-b6d6-d0503f945428
+* Type: text
+* Required: true
+    */
+                readonly title: Elements.TextElement;
+
+/*
+    * URL slug
+    *
+    * Codename: url_slug
+* Id: c8e58bf9-1c4f-46c7-9946-e413bbb78b11
+* Type: url_slug
+* Required: true
+* Guidelines: Where on the website the content will appear
+    */
+                readonly url_slug: Elements.UrlSlugElement;
+
+/*
     * Content
     *
     * Codename: content
@@ -58,7 +79,7 @@ StaticContentTypeCodename, LanguageCodenames, CollectionCodenames, WorkflowCoden
 /*
 * Type representing all available element codenames for Static content
 */
-export type StaticContentTypeElementCodenames = 'content';;
+export type StaticContentTypeElementCodenames = 'title' | 'url_slug' | 'content';;
 
 /*
     * Type guard for Static content
