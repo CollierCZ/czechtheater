@@ -16,6 +16,7 @@
 </script>
 
 <div class="my-2">
+  <!-- eslint-disable svelte/no-navigation-without-resolve Likely an external link -->
   <a
     class="hover:text-medium focus:text-medium inline-flex items-center gap-2 rounded-lg bg-blue-100 p-6 hover:bg-blue-200 focus:bg-blue-200"
     href={link}
