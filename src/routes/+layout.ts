@@ -9,7 +9,7 @@ export const load: LayoutLoad = async () => {
     .item<BasicInfoType>('basic_info_about_czech_theater')
     .toPromise();
 
-  const logo = basicInfo.data.item.elements.favicon.value[0];
+  const logo = basicInfo.data.item.elements.logo.value[0];
 
   return {
     logo
