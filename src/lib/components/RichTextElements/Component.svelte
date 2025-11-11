@@ -2,6 +2,7 @@
   import type { CustomBlockComponentProps } from '@portabletext/svelte';
   import { Image } from '@unpic/svelte';
   import type {
+    _2ColumnLayoutType,
     CallToActionButtonType,
     FixedSizeImageType,
     TrailerType
@@ -9,6 +10,7 @@
   import type { Reference } from '@kontent-ai/rich-text-resolver';
   import LinkButton from '../LinkButton.svelte';
   import Trailer from './Trailer.svelte';
+    import Columns from './Columns.svelte';
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
@@ -18,6 +20,7 @@
   } = $props();
 
   const linkedItems = portableText.global.context.linkedItems as
+    | _2ColumnLayoutType[]
     | FixedSizeImageType[]
     | CallToActionButtonType[]
     | TrailerType[];
@@ -54,5 +57,12 @@
     video={trailerData.trailer_video}
     videoSmall={trailerData.trailer_video_small}
     link={trailerData.link_to_video_hosted_elsewhere.value}
+  />
+{:else if componentType === 'n2_column_layout' && linkedItem}
+  {@const layoutItem = linkedItem as _2ColumnLayoutType}
+  {@const layoutData = layoutItem.elements}
+  <Columns
+    left={layoutData.left_side}
+    right={layoutData.right_side}
   />
 {/if}
