@@ -15,6 +15,7 @@
 
             import type { TypeCodenames } from '../system/types.generated.js';
 import type { Elements, IContentItem } from '@kontent-ai/delivery-sdk';
+import type { _2ColumnLayoutType } from '../types/2-column-layout-type.generated.js';
 import type { CallToActionButtonType } from '../types/call-to-action-button-type.generated.js';
 import type { CollectionCodenames } from '../system/collections.generated.js';
 import type { CoreType } from '../system/types.generated.js';
@@ -74,9 +75,9 @@ export type NewsletterType = IContentItem<
 * Id: 9175bb7a-2c2c-412e-840e-85b121063b74
 * Type: rich_text
 * Required: true
-* Allowed content types: image_with_caption, fixed_size_image, call_to_action_button, trailer
+* Allowed content types: image_with_caption, fixed_size_image, call_to_action_button, trailer, n2_column_layout
     */
-                readonly introduction: Elements.RichTextElement<ImageWithCaptionType | FixedSizeImageType | CallToActionButtonType | TrailerType>;
+                readonly introduction: Elements.RichTextElement<ImageWithCaptionType | FixedSizeImageType | CallToActionButtonType | TrailerType | _2ColumnLayoutType>;
 
 /*
     * Upcoming shows
@@ -85,9 +86,9 @@ export type NewsletterType = IContentItem<
 * Id: 46ed914d-21f1-400b-88fe-8e82ecdd0274
 * Type: rich_text
 * Required: true
-* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption, trailer
+* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption, trailer, n2_column_layout
     */
-                readonly upcoming_shows: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType | TrailerType>;
+                readonly upcoming_shows: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType | TrailerType | _2ColumnLayoutType>;
 
 /*
     * Notes from production
@@ -96,9 +97,9 @@ export type NewsletterType = IContentItem<
 * Id: 60a72c7d-7dd1-4ba9-b9f3-d1959bfd85cc
 * Type: rich_text
 * Required: true
-* Allowed content types: fixed_size_image, call_to_action_button, image_with_caption, trailer
+* Allowed content types: fixed_size_image, call_to_action_button, image_with_caption, trailer, n2_column_layout
     */
-                readonly notes_from_production: Elements.RichTextElement<FixedSizeImageType | CallToActionButtonType | ImageWithCaptionType | TrailerType>;
+                readonly notes_from_production: Elements.RichTextElement<FixedSizeImageType | CallToActionButtonType | ImageWithCaptionType | TrailerType | _2ColumnLayoutType>;
 
 /*
     * Intermission
@@ -118,9 +119,9 @@ export type NewsletterType = IContentItem<
 * Id: c45120f9-f85f-4af6-bd8c-14e15eae17f2
 * Type: rich_text
 * Required: true
-* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption
+* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption, n2_column_layout
     */
-                readonly interview: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType>;
+                readonly interview: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType | _2ColumnLayoutType>;
 
 /*
     * Past play
@@ -129,9 +130,9 @@ export type NewsletterType = IContentItem<
 * Id: 1848a3f7-daa8-424d-91d4-2cb70c376877
 * Type: rich_text
 * Required: true
-* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption
+* Allowed content types: call_to_action_button, fixed_size_image, image_with_caption, n2_column_layout
     */
-                readonly past_play: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType>;}, 
+                readonly past_play: Elements.RichTextElement<CallToActionButtonType | FixedSizeImageType | ImageWithCaptionType | _2ColumnLayoutType>;}, 
 NewsletterTypeCodename, LanguageCodenames, CollectionCodenames, WorkflowCodenames, WorkflowStepCodenames>
 
 /*
