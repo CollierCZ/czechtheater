@@ -46,15 +46,26 @@ import type { WorkflowCodenames, WorkflowStepCodenames } from '../system/workflo
 export type NewsletterType = IContentItem<
 {
 /*
-    * Publish date
+    * Month and Year
     *
-    * Codename: publish_date
-* Id: 74962e3f-a451-4501-b4b0-449ccbdce758
-* Type: date_time
+    * Codename: month_and_year
+* Id: d28af8e7-c279-47d8-91ad-468e454dcd41
+* Type: text
 * Required: true
-* Guidelines: Month and year are important
+* Guidelines: Write it as in this example: "November 2025"
     */
-                readonly publish_date: Elements.DateTimeElement;
+                readonly month_and_year: Elements.TextElement;
+
+/*
+    * Slug
+    *
+    * Codename: slug
+* Id: 85b9e515-4189-46b9-9af9-96b02ca54d99
+* Type: url_slug
+* Required: true
+* Guidelines: Write as month-year, as in this example: "november-2025"
+    */
+                readonly slug: Elements.UrlSlugElement;
 
 /*
     * Introduction
@@ -126,7 +137,7 @@ NewsletterTypeCodename, LanguageCodenames, CollectionCodenames, WorkflowCodename
 /*
 * Type representing all available element codenames for Newsletter
 */
-export type NewsletterTypeElementCodenames = 'publish_date' | 'introduction' | 'upcoming_shows' | 'notes_from_production' | 'intermission' | 'interview' | 'past_play';;
+export type NewsletterTypeElementCodenames = 'month_and_year' | 'slug' | 'introduction' | 'upcoming_shows' | 'notes_from_production' | 'intermission' | 'interview' | 'past_play';;
 
 /*
     * Type guard for Newsletter
