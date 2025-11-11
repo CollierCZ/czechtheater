@@ -22,11 +22,10 @@
 <Heading level={2}>See past editions</Heading>
 
 {#each data.newsletterEditions as edition}
-  {@const publishDate = new Date(
-    edition.elements.publish_date.value
-  ).toLocaleString('default', { month: 'long', year: 'numeric' })}
+  {@const slug = edition.elements.slug.value}
+  {@const title = edition.elements.month_and_year.value}
 
   <p class="font-medium underline hover:no-underline focus:no-underline">
-    <a href={publishDate.toLowerCase().replace(' ', '-')}>{publishDate}</a>
+    <a href={`/newsletter/${slug}`}>{title}</a>
   </p>
 {/each}
