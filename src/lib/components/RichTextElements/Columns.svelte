@@ -11,7 +11,7 @@
   } = $props();
 </script>
 
-<div class={'grid-cols-2 gap-16 sm:grid'}>
+<div class="grid-cols-2 gap-16 sm:grid">
   <div>
     <RichText richTextElement={left} />
   </div>
