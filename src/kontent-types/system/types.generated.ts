@@ -23,6 +23,8 @@ import type { CallToActionButtonType } from '../types/call-to-action-button-type
 import type { ValueType } from '../types/value-type.generated.js';
 import type { TrailerType } from '../types/trailer-type.generated.js';
 import type { StaticContentType } from '../types/static-content-type.generated.js';
+import type { NewsletterType } from '../types/newsletter-type.generated.js';
+import type { _2ColumnLayoutType } from '../types/2-column-layout-type.generated.js';
 import type { TheaterFactType } from '../types/theater-fact-type.generated.js';
 import type { BasicInfoType } from '../types/basic-info-type.generated.js';
 import type { ShowType } from '../types/show-type.generated.js';
@@ -30,7 +32,7 @@ import type { ShowType } from '../types/show-type.generated.js';
             /*
 * Array of all type codenames
 */
-            export const typeCodenames = ['auditions', 'image_with_caption', 'fixed_size_image', 'season', 'past_shows', 'future_shows', 'call_to_action_button', 'value', 'trailer', 'static_content', 'theater_fact', 'basic_info', 'show'] as const;;
+            export const typeCodenames = ['auditions', 'image_with_caption', 'fixed_size_image', 'season', 'past_shows', 'future_shows', 'call_to_action_button', 'value', 'trailer', 'static_content', 'newsletter', 'n2_column_layout', 'theater_fact', 'basic_info', 'show'] as const;;
            
             /*
 * Type representing all type codenames
@@ -47,7 +49,7 @@ import type { ShowType } from '../types/show-type.generated.js';
 					 /*
 * Core content type with narrowed types. Use this instead of'IContentItem' for increased type safety.
 */
-					 export type CoreType = AuditionsType | ImageWithCaptionType | FixedSizeImageType | SeasonType | PastShowsType | FutureShowsType | CallToActionButtonType | ValueType | TrailerType | StaticContentType | TheaterFactType | BasicInfoType | ShowType
+					 export type CoreType = AuditionsType | ImageWithCaptionType | FixedSizeImageType | SeasonType | PastShowsType | FutureShowsType | CallToActionButtonType | ValueType | TrailerType | StaticContentType | NewsletterType | _2ColumnLayoutType | TheaterFactType | BasicInfoType | ShowType
 
 					/*
 * Type mapping for codename & type. Can be used for type safe access to type based on the codename of type.
@@ -63,6 +65,8 @@ readonly call_to_action_button: CallToActionButtonType,
 readonly value: ValueType,
 readonly trailer: TrailerType,
 readonly static_content: StaticContentType,
+readonly newsletter: NewsletterType,
+readonly n2_column_layout: _2ColumnLayoutType,
 readonly theater_fact: TheaterFactType,
 readonly basic_info: BasicInfoType,
 readonly show: ShowType,

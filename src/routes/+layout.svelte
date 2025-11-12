@@ -29,7 +29,11 @@
 <header
   class="flex items-center justify-center gap-2 pb-3 text-4xl font-black xl:text-6xl"
 >
-  <img class="inline size-24" src={`${data.logo.url}?w=180&h=180`} alt="" />
+  <img
+    class="inline size-24"
+    src={`${data.logo.url}?w=180&h=180&fm=webp`}
+    alt=""
+  />
   <p>Czech Theater</p>
 </header>
 

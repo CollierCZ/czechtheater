@@ -17,7 +17,7 @@
             /*
 * Array of all element codenames
 */
-            export const elementCodenames = ['upcoming_auditions_description', 'audition_date', 'link_to_audition_event', 'image', 'caption', 'height', 'width', 'season_start_year', 'season_end_year', 'season_name', 'shows', 'seasons', 'button_text', 'url', 'name', 'icon', 'description', 'trailer_video', 'trailer_video_small', 'link_to_video_hosted_elsewhere', 'title', 'url_slug', 'content', 'short_description', 'about_us', 'contact_info', 'social_media', 'logo', 'favicon', 'keywords', 'values', 'main_image', 'trailer', 'premiere', 'ticket_link', 'full_performance_link', 'gallery', 'gallery_with_captions'] as const;;
+            export const elementCodenames = ['upcoming_auditions_description', 'audition_date', 'link_to_audition_event', 'image', 'caption', 'height', 'width', 'season_start_year', 'season_end_year', 'season_name', 'shows', 'seasons', 'button_text', 'url', 'name', 'icon', 'description', 'trailer_video', 'trailer_video_small', 'link_to_video_hosted_elsewhere', 'title', 'url_slug', 'content', 'month_and_year', 'slug', 'introduction', 'upcoming_shows', 'notes_from_production', 'intermission', 'interview', 'past_play', 'left_side', 'right_side', 'short_description', 'about_us', 'contact_info', 'social_media', 'logo', 'favicon', 'keywords', 'values', 'main_image', 'trailer', 'premiere', 'ticket_link', 'full_performance_link', 'gallery', 'gallery_with_captions'] as const;;
            
             /*
 * Type representing all element codenames

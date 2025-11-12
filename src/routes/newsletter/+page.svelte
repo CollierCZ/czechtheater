@@ -1,7 +1,9 @@
 <script lang="ts">
+  import Heading from '$lib/components/Heading.svelte';
   import RichText from '$lib/components/RichText.svelte';
   import Seo from '$lib/components/Seo.svelte';
   import Title from '$lib/components/Title.svelte';
+  import { resolve } from '$app/paths';
 
   import type { PageData } from './$types';
 
@@ -17,3 +19,14 @@
 <Title>Behind the Curtain</Title>
 
 <RichText richTextElement={data.newsletterSignUpText} />
+
+<Heading level={2}>See past editions</Heading>
+
+{#each data.newsletterEditions as edition (edition.elements.slug.value)}
+  {@const slug = edition.elements.slug.value}
+  {@const title = edition.elements.month_and_year.value}
+
+  <p class="font-medium underline hover:no-underline focus:no-underline">
+    <a href={resolve(`/newsletter/${slug}`)}>{title}</a>
+  </p>
+{/each}

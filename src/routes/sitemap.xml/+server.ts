@@ -1,6 +1,10 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { kontentConnector } from '$lib';
-import type { ShowType, PastShowsType } from '../../kontent-types';
+import type {
+  ShowType,
+  PastShowsType,
+  NewsletterType
+} from '../../kontent-types';
 
 export const prerender = true;
 
@@ -18,22 +22,31 @@ export const GET: RequestHandler = async () => {
     [] as ShowType[]
   );
 
+  const newsletterEditions = (
+    await kontentConnector()
+      .items<NewsletterType>()
+      .type('newsletter')
+      .orderByDescending('elements.publish_date')
+      .toPromise()
+  ).data.items;
+
   const headers = {
     'Cache-Control': `max-age=20160, s-maxage=20160`,
     'Content-Type': 'application/xml'
   };
 
-  const body = xmlify(pastShows).trim();
+  const body = xmlify(pastShows, newsletterEditions).trim();
+  console.log(body);
 
   return new Response(body, { headers: headers, status: 200 });
 };
 
 const baseUrl = 'https://czechtheater.cz';
-const pagesWithUpdates = ['shows', 'auditions', 'fact'];
+const pagesWithUpdates = ['shows', 'auditions', 'fact', 'newsletter'];
 const pagesNotUpdated = ['about', 'contact'];
 const pages = pagesWithUpdates.concat(pagesNotUpdated);
 
-const xmlify = (shows: ShowType[]) => `
+const xmlify = (shows: ShowType[], newsletterEditions: NewsletterType[]) => `
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -66,6 +79,17 @@ const xmlify = (shows: ShowType[]) => `
     <loc>${baseUrl}/shows/${show.elements.url.value}</loc>
     <changefreq>monthly</changefreq>
     <lastmod>${show.system.lastModified}</lastmod>
+  </url>
+    `
+    )
+    .join('')}
+  ${newsletterEditions
+    .map(
+      (newsletterEdition) => `
+  <url>
+    <loc>${baseUrl}/newsletter/${newsletterEdition.elements.slug.value}</loc>
+    <changefreq>yearly</changefreq>
+    <lastmod>${newsletterEdition.system.lastModified}</lastmod>
   </url>
     `
     )
