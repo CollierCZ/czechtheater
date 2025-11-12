@@ -25,22 +25,22 @@
 
 <RichText richTextElement={newsletterEditionData.introduction} />
 
-<Heading level={2}>The Show Must Go On</Heading>
+<Heading level={2} centered>The Show Must Go On</Heading>
 
 <RichText richTextElement={newsletterEditionData.upcoming_shows} />
 
-<Heading level={2}>Waiting in the Wings</Heading>
+<Heading level={2} centered>Waiting in the Wings</Heading>
 
 <RichText richTextElement={newsletterEditionData.notes_from_production} />
 
-<Heading level={2}>Intermission</Heading>
+<Heading level={2} centered>Intermission</Heading>
 
 <Fact fact={newsletterEditionData.intermission.linkedItems[0]} />
 
-<Heading level={2}>In the Spotlight</Heading>
+<Heading level={2} centered>In the Spotlight</Heading>
 
 <RichText richTextElement={newsletterEditionData.interview} />
 
-<Heading level={2}>A Tough Act to Follow</Heading>
+<Heading level={2} centered>A Tough Act to Follow</Heading>
 
 <RichText richTextElement={newsletterEditionData.past_play} />
