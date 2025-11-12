@@ -2,11 +2,15 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import NewsletterPage from './+page.svelte';
-import { basicRichTextValues, sharedLogo } from '$lib/Tests/sharedData';
+import {
+  basicRichTextValues,
+  newsletterEditionData,
+  sharedLogo
+} from '$lib/Tests/sharedData';
 
 const newsletterSignUpTextTest = 'Sign up for the newsletter';
 
-test('about page has the right headers and text', () => {
+test('newsletter page has the right headers and text', () => {
   render(NewsletterPage, {
     data: {
       newsletterSignUpText: {
@@ -14,7 +18,8 @@ test('about page has the right headers and text', () => {
         value: `<p>${newsletterSignUpTextTest}</p>`,
         ...basicRichTextValues
       },
-      logo: sharedLogo
+      logo: sharedLogo,
+      newsletterEditions: [newsletterEditionData]
     }
   });
 

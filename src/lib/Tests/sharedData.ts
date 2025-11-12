@@ -49,32 +49,35 @@ const sharedDescriptionProperties = {
 };
 
 const factKontentType = 'theater_fact' as const;
-export const testFacts = [
-  {
-    elements: {
-      description: {
-        value: `<p>${firstFactText}</p>`,
-        ...sharedDescriptionProperties
-      },
-      image: {
-        value: [
-          {
-            url: 'https://example.org/image1.png',
-            description: firstImageDescription,
-            name: 'image1.png',
-            ...commonImageProperties
-          }
-        ],
-        ...sharedFactImageProperties
-      }
+
+const firstTestFact = {
+  elements: {
+    description: {
+      value: `<p>${firstFactText}</p>`,
+      ...sharedDescriptionProperties
     },
-    system: {
-      type: factKontentType,
-      ...commonSystemProperties,
-      sitemapLocations: [],
-      codename: 'test-fact-1'
+    image: {
+      value: [
+        {
+          url: 'https://example.org/image1.png',
+          description: firstImageDescription,
+          name: 'image1.png',
+          ...commonImageProperties
+        }
+      ],
+      ...sharedFactImageProperties
     }
   },
+  system: {
+    type: factKontentType,
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'test-fact-1'
+  }
+};
+
+export const testFacts = [
+  firstTestFact,
   {
     elements: {
       description: {
@@ -206,5 +209,59 @@ export const valueData: ValueType = {
     ...commonSystemProperties,
     sitemapLocations: [],
     codename: 'example_svalue'
+  }
+};
+
+const newsletterKontentType = 'newsletter' as const;
+
+export const newsletterEditionData = {
+  elements: {
+    month_and_year: {
+      type: ElementType.Text,
+      name: 'value',
+      value: 'May 1982'
+    },
+    slug: {
+      type: ElementType.Text,
+      name: 'value',
+      value: 'may-1982'
+    },
+    introduction: {
+      name: 'introduction',
+      value: 'Read me!',
+      ...basicRichTextValues
+    },
+    upcoming_shows: {
+      name: 'upcoming_shows',
+      value: 'So much to see',
+      ...basicRichTextValues
+    },
+    notes_from_production: {
+      name: 'notes_from_production',
+      value: 'Working hard',
+      ...basicRichTextValues
+    },
+    intermission: {
+      type: ElementType.ModularContent,
+      name: 'intermission',
+      value: ['test-fact-1'],
+      linkedItems: [firstTestFact]
+    },
+    interview: {
+      name: 'interview',
+      value: 'I like Czech Theater',
+      ...basicRichTextValues
+    },
+    past_play: {
+      name: 'past_play',
+      value: 'We did great',
+      ...basicRichTextValues
+    }
+  },
+  system: {
+    type: newsletterKontentType,
+    ...commonSystemProperties,
+    sitemapLocations: [],
+    codename: 'test-newsletter'
   }
 };

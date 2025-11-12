@@ -20,6 +20,8 @@ export const load: PageLoad = async () => {
 
   const newsletterEditions = newsletters.data.items;
 
+  console.log(newsletterEditions[0].elements)
+
   return {
     newsletterEditions,
     newsletterSignUpText
