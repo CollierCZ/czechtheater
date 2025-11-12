@@ -10,7 +10,7 @@
   import type { Reference } from '@kontent-ai/rich-text-resolver';
   import LinkButton from '../LinkButton.svelte';
   import Trailer from './Trailer.svelte';
-    import Columns from './Columns.svelte';
+  import Columns from './Columns.svelte';
 
   // Property custom marks receive from @portabletext/svelte when redered
   let {
@@ -61,8 +61,5 @@
 {:else if componentType === 'n2_column_layout' && linkedItem}
   {@const layoutItem = linkedItem as _2ColumnLayoutType}
   {@const layoutData = layoutItem.elements}
-  <Columns
-    left={layoutData.left_side}
-    right={layoutData.right_side}
-  />
+  <Columns left={layoutData.left_side} right={layoutData.right_side} />
 {/if}

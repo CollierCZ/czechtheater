@@ -2,9 +2,9 @@
   import type { PageData } from './$types';
   import Seo from '$lib/components/Seo.svelte';
   import Title from '$lib/components/Title.svelte';
-    import Heading from '$lib/components/Heading.svelte';
-    import RichText from '$lib/components/RichText.svelte';
-    import Fact from '$lib/components/Fact.svelte';
+  import Heading from '$lib/components/Heading.svelte';
+  import RichText from '$lib/components/RichText.svelte';
+  import Fact from '$lib/components/Fact.svelte';
 
   export let data: PageData;
 
