@@ -36,7 +36,6 @@ export const GET: RequestHandler = async () => {
   };
 
   const body = xmlify(pastShows, newsletterEditions).trim();
-  console.log(body);
 
   return new Response(body, { headers: headers, status: 200 });
 };
