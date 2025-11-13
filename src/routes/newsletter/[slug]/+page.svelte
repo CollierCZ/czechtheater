@@ -5,6 +5,7 @@
   import Heading from '$lib/components/Heading.svelte';
   import RichText from '$lib/components/RichText.svelte';
   import Fact from '$lib/components/Fact.svelte';
+  import LinkButton from '$lib/components/LinkButton.svelte';
 
   export let data: PageData;
 
@@ -22,6 +23,12 @@
 />
 
 <Title>Behind the Curtain {publishDate}</Title>
+
+<div class="mt-4 mb-12">
+  <LinkButton link="http://eepurl.com/jqtBo2">
+    Subscribe to Behind the Curtain
+  </LinkButton>
+</div>
 
 <RichText richTextElement={newsletterEditionData.introduction} />
 
