@@ -37,7 +37,7 @@
   <p>Czech Theater</p>
 </header>
 
-<nov class="mb-6 flex flex-wrap justify-center gap-2 px-2 xl:text-xl">
+<nav class="mb-6 flex flex-wrap justify-center gap-2 px-2 xl:text-xl">
   {#each navItems as navItem (navItem[0])}
     <a
       href={resolve(navItem[0])}
@@ -47,7 +47,7 @@
         : currentSlug.startsWith(navItem[0])}>{navItem[1]}</a
     >
   {/each}
-</nov>
+</nav>
 
 <main
   class="m-auto mb-6 min-h-[calc(100vh-300px)] max-w-prose px-4 text-lg sm:min-h-[calc(100vh-228px)] md:px-0 xl:text-2xl"
