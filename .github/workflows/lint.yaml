@@ -16,6 +16,6 @@ jobs:
         run: >
           PUBLIC_KONTENT_PREVIEW=""
           PUBLIC_KONTENT_PREVIEW_API_KEY=abc
-          PUBLIC_KONTENT_ENVIRONMENT_ID=test npm run check
+          PUBLIC_KONTENT_ENVIRONMENT_ID=test pnpm check
       - name: Lint
         run: pnpm lint

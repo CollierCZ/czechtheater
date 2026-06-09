@@ -9,7 +9,7 @@
     fact: TheaterFactType;
   } = $props();
 
-  const factImage = fact.elements.image.value[0];
+  const factImage = $derived(fact.elements.image.value[0]);
 </script>
 
 <div class={`mb-12 grid-cols-3 gap-4 ${factImage ? 'md:grid' : ''}`}>

@@ -9,7 +9,7 @@
     data: PageData;
   } = $props();
 
-  const facts = data.facts;
+  const facts = $derived(data.facts);
 </script>
 
 <svelte:head>

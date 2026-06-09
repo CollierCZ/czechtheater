@@ -62,11 +62,13 @@
   let { image, height, width, priority }: ConstrainedHeight | ConstrainedWidth =
     $props();
 
-  const { height: finalHeight = 0, width: finalWidth = 0 } = getHeightAndWidth({
-    image,
-    height,
-    width
-  });
+  const { height: finalHeight = 0, width: finalWidth = 0 } = $derived.by(() =>
+    getHeightAndWidth({
+      image,
+      height,
+      width
+    })
+  );
 </script>
 
 <Image
