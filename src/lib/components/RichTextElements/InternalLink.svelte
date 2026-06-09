@@ -14,14 +14,18 @@
     portableText: MarkComponentProps;
   } = $props();
 
-  const value = portableText.value as PortableTextItemLink;
-  const links = portableText.global.context.links as ILink[];
+  const value = $derived(portableText.value) as PortableTextItemLink;
+  const links = $derived(portableText.global.context.links) as ILink[];
 
-  const link = links.find((item) => item.linkId === value.contentItemLink._ref);
+  const link = $derived(
+    links.find((item) => item.linkId === value.contentItemLink._ref)
+  );
 
-  const slug = isShowTypeCodename(link?.type)
-    ? `/shows/${link?.urlSlug}`
-    : `/${link?.urlSlug}`;
+  const slug = $derived.by(() =>
+    isShowTypeCodename(link?.type)
+      ? `/shows/${link?.urlSlug}`
+      : `/${link?.urlSlug}`
+  );
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve It's a variable so it's hard-->

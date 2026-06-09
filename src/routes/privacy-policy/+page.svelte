@@ -7,7 +7,7 @@
 
   let { data }: { data: PageData } = $props();
 
-  const title = data.title;
+  const title = $derived(data.title);
 </script>
 
 <Seo

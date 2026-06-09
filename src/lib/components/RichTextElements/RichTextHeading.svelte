@@ -12,9 +12,11 @@
     portableText: BlockComponentProps;
   } = $props();
 
-  const style = portableText.value.style;
+  const style = $derived(portableText.value.style);
 
-  const level = !style ? 2 : (parseInt(style?.replace(/^h/, '')) as 2 | 3 | 4);
+  const level = $derived.by(() =>
+    !style ? 2 : (parseInt(style?.replace(/^h/, '')) as 2 | 3 | 4)
+  );
 </script>
 
 <Heading {level}>

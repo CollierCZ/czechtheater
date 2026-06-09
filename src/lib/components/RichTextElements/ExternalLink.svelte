@@ -12,7 +12,7 @@
     portableText: MarkComponentProps;
   } = $props();
 
-  const linkData = portableText.value as PortableTextExternalLink;
+  const linkData = $derived(portableText.value) as PortableTextExternalLink;
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve Likely an external link -->

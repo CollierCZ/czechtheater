@@ -19,17 +19,19 @@
     portableText: CustomBlockComponentProps;
   } = $props();
 
-  const linkedItems = portableText.global.context.linkedItems as
+  const linkedItems = $derived(portableText.global.context.linkedItems) as
     | _2ColumnLayoutType[]
     | FixedSizeImageType[]
     | CallToActionButtonType[]
     | TrailerType[];
 
-  const linkedItem = linkedItems.find((item) => {
-    const comp = portableText.value.componentOrItem as Reference;
-    return item.system.codename === comp._ref;
-  });
-  const componentType = linkedItem?.system.type;
+  const linkedItem = $derived.by(() =>
+    linkedItems.find((item) => {
+      const comp = portableText.value.componentOrItem as Reference;
+      return item.system.codename === comp._ref;
+    })
+  );
+  const componentType = $derived(linkedItem?.system.type);
 </script>
 
 {#if componentType === 'fixed_size_image' && linkedItem}

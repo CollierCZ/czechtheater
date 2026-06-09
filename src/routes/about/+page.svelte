@@ -21,7 +21,7 @@
 
   let showModal = $state(0);
 
-  const firstValue = data.values.linkedItems[0];
+  const firstValue = $derived(data.values.linkedItems[0]);
 </script>
 
 <Seo

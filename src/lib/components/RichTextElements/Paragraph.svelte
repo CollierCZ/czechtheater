@@ -11,8 +11,8 @@
     portableText: MarkComponentProps;
   } = $props();
 
-  const { indexInParent } = portableText;
-  const isFirst = indexInParent === 0;
+  const { indexInParent } = $derived(portableText);
+  const isFirst = $derived.by(() => indexInParent === 0);
 </script>
 
 {#if isFirst}
