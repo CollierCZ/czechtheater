@@ -33,7 +33,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/eslint": "^9.6.1",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
     "@unpic/svelte": "^1.0.1",
     "@vitest/coverage-v8": "^4.1.9",
     "eslint": "^10.5.0",
