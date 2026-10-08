@@ -11,12 +11,12 @@ export const variables = defineEnvVars({
     description: 'Whether to fetch draft content',
     public: true,
     static: true,
-    schema: ((value: string | undefined) => value)
+    schema: (value: string | undefined) => value
   },
   PUBLIC_KONTENT_PREVIEW_API_KEY: {
     description: 'The key to fetch draft content',
     public: true,
     static: true,
-    schema: ((value: string | undefined) => value)
+    schema: (value: string | undefined) => value
   }
 });
