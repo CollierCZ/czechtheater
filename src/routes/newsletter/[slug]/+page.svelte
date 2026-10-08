@@ -36,9 +36,11 @@
 
 <RichText richTextElement={newsletterEditionData.upcoming_shows} />
 
-<Heading level={2} centered>Waiting in the Wings</Heading>
+{#if newsletterEditionData.notes_from_production}
+  <Heading level={2} centered>Waiting in the Wings</Heading>
 
-<RichText richTextElement={newsletterEditionData.notes_from_production} />
+  <RichText richTextElement={newsletterEditionData.notes_from_production} />
+{/if}
 
 <Heading level={2} centered>Intermission</Heading>
 
