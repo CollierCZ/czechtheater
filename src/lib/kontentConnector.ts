@@ -1,5 +1,9 @@
 import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
-import {PUBLIC_KONTENT_ENVIRONMENT_ID, PUBLIC_KONTENT_PREVIEW, PUBLIC_KONTENT_PREVIEW_API_KEY} from '$app/env/public';
+import {
+  PUBLIC_KONTENT_ENVIRONMENT_ID,
+  PUBLIC_KONTENT_PREVIEW,
+  PUBLIC_KONTENT_PREVIEW_API_KEY
+} from '$app/env/public';
 
 export const kontentConnector = () => {
   if (!PUBLIC_KONTENT_ENVIRONMENT_ID) {
