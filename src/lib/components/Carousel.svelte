@@ -5,7 +5,7 @@
   import ImageConstrainedOneDimension from './ImageConstrainedOneDimension.svelte';
   import SvgIcon from './SvgIcon.svelte';
   import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
-  import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
+  import { getHeightAndWidth } from '#lib/calculateHeightWidthConstraints.js';
   import { Image } from '@unpic/svelte';
 
   let {

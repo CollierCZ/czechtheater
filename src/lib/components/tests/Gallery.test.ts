@@ -3,7 +3,7 @@ import userEvent, { type UserEvent } from '@testing-library/user-event';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import Gallery from '../Gallery.svelte';
-import { commonImageProperties } from '$lib/Tests/sharedData';
+import { commonImageProperties } from '#lib/Tests/sharedData.js';
 
 const testImages = [
   {

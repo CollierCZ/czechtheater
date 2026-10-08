@@ -1,4 +1,4 @@
-import { kontentConnector } from '$lib';
+import { kontentConnector } from '#lib';
 import type { LayoutLoad } from './$types';
 import { type BasicInfoType } from '../kontent-types';
 

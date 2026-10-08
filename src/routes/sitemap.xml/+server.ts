@@ -1,5 +1,5 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import { kontentConnector } from '$lib';
+import { kontentConnector } from '#lib';
 import type {
   ShowType,
   PastShowsType,

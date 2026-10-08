@@ -1,4 +1,4 @@
-import { kontentConnector } from '$lib';
+import { kontentConnector } from '#lib';
 import type { PageLoad } from './$types';
 import { type NewsletterType } from '../../../kontent-types';
 

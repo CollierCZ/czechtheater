@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import AboutPage from './+page.svelte';
-import { basicRichTextValues, sharedLogo } from '$lib/Tests/sharedData';
+import { basicRichTextValues, sharedLogo } from '#lib/Tests/sharedData.js';
 
 const contactTextTest = 'Reach us at our office.';
 const contactTextObject = {

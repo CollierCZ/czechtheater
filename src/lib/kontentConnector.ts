@@ -1,5 +1,5 @@
 import { createDeliveryClient } from '@kontent-ai/delivery-sdk';
-import * as publicEnv from '$env/static/public';
+import * as publicEnv from '$app/env/public';
 
 export const kontentConnector = () => {
   if (!publicEnv.PUBLIC_KONTENT_ENVIRONMENT_ID) {

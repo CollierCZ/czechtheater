@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SvgIcon from '$lib/components/SvgIcon.svelte';
+  import SvgIcon from '#lib/components/SvgIcon.svelte';
   import type { Snippet } from 'svelte';
 
   let {

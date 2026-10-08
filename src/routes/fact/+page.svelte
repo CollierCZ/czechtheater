@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import Title from '$lib/components/Title.svelte';
+  import Title from '#lib/components/Title.svelte';
 
   import { onMount } from 'svelte';
   import type { TheaterFactType } from '../../kontent-types';
-  import Fact from '$lib/components/Fact.svelte';
-  import Seo from '$lib/components/Seo.svelte';
+  import Fact from '#lib/components/Fact.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 
   export let data: PageData;
 

@@ -4,6 +4,20 @@ import { describe, expect, it, vi } from 'vitest';
 import CreateSheetPage from './+page.svelte';
 import type { XLSX$Utils, WorkBook } from 'xlsx';
 
+interface ImportedXlsx {
+  utils: XLSX$Utils;
+}
+
+vi.mock('xlsx', async (importOriginal) => {
+  const actualXlsx: ImportedXlsx = await importOriginal();
+  return {
+    utils: actualXlsx.utils,
+    writeFile: vi
+      .fn()
+      .mockImplementation((_workbook: WorkBook, _fileName: string) => {})
+  };
+});
+
 const emailText = 'Email';
 const ticketText = 'Number of Tickets';
 const createSheetText = 'Create sheet';
@@ -44,20 +58,6 @@ describe('Create Sheet page', () => {
 
   it('should change after submission', async () => {
     render(CreateSheetPage);
-
-    interface ImportedXlsx {
-      utils: XLSX$Utils;
-    }
-
-    vi.mock('xlsx', async (importOriginal) => {
-      const actualXlsx: ImportedXlsx = await importOriginal();
-      return {
-        utils: actualXlsx.utils,
-        writeFile: vi
-          .fn()
-          .mockImplementation((_workbook: WorkBook, _fileName: string) => {})
-      };
-    });
 
     const createSheetButton = screen.getByText(createSheetText);
     await fireEvent.click(createSheetButton);

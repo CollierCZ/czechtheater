@@ -8,7 +8,7 @@ import {
   secondFactText,
   sharedLogo,
   testFacts
-} from '$lib/Tests/sharedData';
+} from '#lib/Tests/sharedData.js';
 
 describe('Fact page', () => {
   afterEach(() => {

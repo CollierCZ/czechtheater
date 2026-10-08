@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getHeightAndWidth } from '$lib/calculateHeightWidthConstraints';
+  import { getHeightAndWidth } from '#lib/calculateHeightWidthConstraints.js';
   import { Image } from '@unpic/svelte';
 
   interface Rendition {

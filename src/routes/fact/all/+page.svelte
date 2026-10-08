@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Fact from '$lib/components/Fact.svelte';
-  import Title from '$lib/components/Title.svelte';
+  import Fact from '#lib/components/Fact.svelte';
+  import Title from '#lib/components/Title.svelte';
   import type { PageData } from './$types';
 
   let {

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Heading from '$lib/components/Heading.svelte';
-  import RichText from '$lib/components/RichText.svelte';
-  import Seo from '$lib/components/Seo.svelte';
-  import Title from '$lib/components/Title.svelte';
+  import Heading from '#lib/components/Heading.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Seo from '#lib/components/Seo.svelte';
+  import Title from '#lib/components/Title.svelte';
   import { resolve } from '$app/paths';
 
   import type { PageData } from './$types';

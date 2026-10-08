@@ -1,5 +1,5 @@
 <script lang="ts">
-  import RichText from '$lib/components/RichText.svelte';
+  import RichText from '#lib/components/RichText.svelte';
   import type { Elements } from '@kontent-ai/delivery-sdk';
 
   let {

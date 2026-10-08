@@ -1,14 +1,14 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import Gallery from '$lib/components/Gallery.svelte';
-  import GalleryWithCaptions from '$lib/components/GalleryWithCaptions.svelte';
-  import RichText from '$lib/components/RichText.svelte';
-  import Title from '$lib/components/Title.svelte';
-  import TicketLink from '$lib/components/TicketLink.svelte';
-  import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
-  import { getMonthFromDateString } from '$lib';
-  import Seo from '$lib/components/Seo.svelte';
-  import Heading from '$lib/components/Heading.svelte';
+  import Gallery from '#lib/components/Gallery.svelte';
+  import GalleryWithCaptions from '#lib/components/GalleryWithCaptions.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Title from '#lib/components/Title.svelte';
+  import TicketLink from '#lib/components/TicketLink.svelte';
+  import ImageConstrainedOneDimension from '#lib/components/ImageConstrainedOneDimension.svelte';
+  import { getMonthFromDateString } from '#lib';
+  import Seo from '#lib/components/Seo.svelte';
+  import Heading from '#lib/components/Heading.svelte';
 
   export let data: PageData;
 </script>

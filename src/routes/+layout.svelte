@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import type { LayoutData } from './$types';
   import { resolve } from '$app/paths';
   import type { Snippet } from 'svelte';
@@ -13,7 +13,7 @@
     children: Snippet;
   } = $props();
 
-  let currentSlug = $derived($page.url.pathname);
+  let currentSlug = $derived(page.url.pathname);
 
   const navItems = [
     ['/', 'Upcoming Shows'],

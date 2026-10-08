@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  import Title from '$lib/components/Title.svelte';
-  import { getDateFromDateString, isShowInFuture } from '$lib';
-  import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
+  import Title from '#lib/components/Title.svelte';
+  import { getDateFromDateString, isShowInFuture } from '#lib';
+  import ImageConstrainedOneDimension from '#lib/components/ImageConstrainedOneDimension.svelte';
   import { resolve } from '$app/paths';
-  import Seo from '$lib/components/Seo.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 
   export let data: PageData;
 </script>
