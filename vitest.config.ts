@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
       ],
       reporter: ['lcovonly', 'text']
     },
+    pool: 'vmThreads',
     server: {
       deps: {
         inline: ['clsx']

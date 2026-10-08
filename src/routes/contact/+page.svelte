@@ -1,11 +1,11 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import RichText from '$lib/components/RichText.svelte';
+  import RichText from '#lib/components/RichText.svelte';
   import { mdiFacebook, mdiEmail, mdiInstagram } from '@mdi/js';
 
-  import Title from '$lib/components/Title.svelte';
-  import SvgIcon from '$lib/components/SvgIcon.svelte';
-  import Seo from '$lib/components/Seo.svelte';
+  import Title from '#lib/components/Title.svelte';
+  import SvgIcon from '#lib/components/SvgIcon.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 
   export let data: PageData;
 

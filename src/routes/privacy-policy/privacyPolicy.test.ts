@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import NewsletterPage from './+page.svelte';
-import { basicRichTextValues, sharedLogo } from '$lib/Tests/sharedData';
+import { basicRichTextValues, sharedLogo } from '#lib/Tests/sharedData.js';
 
 const privacyPolicyTextTest = 'Be private. Do good.';
 const titleTest = 'Privacy Policy';

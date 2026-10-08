@@ -9,7 +9,7 @@ import {
   showDescriptionText,
   showImageText,
   showName
-} from '$lib/Tests/sharedData';
+} from '#lib/Tests/sharedData.js';
 
 describe('Show listing page', () => {
   it('should include the title, description, and image', () => {

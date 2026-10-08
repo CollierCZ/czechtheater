@@ -1,4 +1,4 @@
-import { kontentConnector } from '$lib';
+import { kontentConnector } from '#lib';
 import type { LayoutServerLoad } from './$types';
 import { type TheaterFactType } from '../../kontent-types';
 

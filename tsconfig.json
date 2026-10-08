@@ -1,5 +1,5 @@
 {
-  "extends": "./.svelte-kit/tsconfig.json",
+  "extends": "$app/tsconfig",
   "compilerOptions": {
     "allowJs": true,
     "checkJs": true,
@@ -9,11 +9,10 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "types": ["@testing-library/jest-dom"], // To recognize methods like toBeInTheDocument()
+    "types": ["$app/types", "@testing-library/jest-dom"], // To recognize methods like toBeInTheDocument()
     "moduleResolution": "bundler"
   },
   // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
-  // except $lib which is handled by https://kit.svelte.dev/docs/configuration#files
   //
   // If you want to overwrite includes/excludes, make sure to copy over the relevant includes/excludes
   // from the referenced tsconfig.json - TypeScript does not merge them in
@@ -28,9 +27,7 @@
     ".svelte-kit//types/**/$types.d.ts",
     "vite.config.js",
     "vite.config.ts",
-    "src/**/*.js",
-    "src/**/*.ts",
-    "src/**/*.svelte",
+    "src",
     "test**/*.ts",
     "tests/**/*.js",
     "tests/**/*.ts",

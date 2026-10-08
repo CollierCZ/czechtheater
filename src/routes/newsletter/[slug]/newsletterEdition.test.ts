@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import NewsletterPage from './+page.svelte';
-import { newsletterEditionData, sharedLogo } from '$lib/Tests/sharedData';
+import { newsletterEditionData, sharedLogo } from '#lib/Tests/sharedData.js';
 
 test('newsletter page has the right headers and text', () => {
   render(NewsletterPage, {

@@ -1,15 +1,15 @@
 <script lang="ts">
   import type { PageData } from './$types';
 
-  import Gallery from '$lib/components/Gallery.svelte';
-  import GalleryWithCaptions from '$lib/components/GalleryWithCaptions.svelte';
-  import RichText from '$lib/components/RichText.svelte';
-  import Seo from '$lib/components/Seo.svelte';
-  import Title from '$lib/components/Title.svelte';
-  import ImageConstrainedOneDimension from '$lib/components/ImageConstrainedOneDimension.svelte';
-  import TicketLink from '$lib/components/TicketLink.svelte';
-  import PerformanceLink from '$lib/components/PerformanceLink.svelte';
-  import { getDateFromDateString, isShowInFuture } from '$lib';
+  import Gallery from '#lib/components/Gallery.svelte';
+  import GalleryWithCaptions from '#lib/components/GalleryWithCaptions.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Seo from '#lib/components/Seo.svelte';
+  import Title from '#lib/components/Title.svelte';
+  import ImageConstrainedOneDimension from '#lib/components/ImageConstrainedOneDimension.svelte';
+  import TicketLink from '#lib/components/TicketLink.svelte';
+  import PerformanceLink from '#lib/components/PerformanceLink.svelte';
+  import { getDateFromDateString, isShowInFuture } from '#lib';
 
   export let data: PageData;
 

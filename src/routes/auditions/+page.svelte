@@ -1,12 +1,12 @@
 <script lang="ts">
   import type { PageData } from './$types';
-  import { getDateFromDateString } from '$lib';
+  import { getDateFromDateString } from '#lib';
   import { mdiFacebook } from '@mdi/js';
 
-  import RichText from '$lib/components/RichText.svelte';
-  import Title from '$lib/components/Title.svelte';
-  import LinkButton from '$lib/components/LinkButton.svelte';
-  import Seo from '$lib/components/Seo.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Title from '#lib/components/Title.svelte';
+  import LinkButton from '#lib/components/LinkButton.svelte';
+  import Seo from '#lib/components/Seo.svelte';
 
   export let data: PageData;
 

@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 
 import AuditionsPage from './+page.svelte';
-import { basicRichTextValues, sharedLogo } from '$lib/Tests/sharedData';
+import { basicRichTextValues, sharedLogo } from '#lib/Tests/sharedData.js';
 import { ElementType } from '@kontent-ai/delivery-sdk';
 
 const auditionDescriptionText = 'Auditions coming soon!';

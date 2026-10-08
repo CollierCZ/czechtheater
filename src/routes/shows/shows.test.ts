@@ -9,7 +9,7 @@ import {
   showDescriptionText,
   showImageText,
   showName
-} from '$lib/Tests/sharedData';
+} from '#lib/Tests/sharedData.js';
 
 const secondShow = structuredClone(showData);
 const secondShowName = 'A Second Show';

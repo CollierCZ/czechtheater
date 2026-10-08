@@ -7,13 +7,13 @@
     mdiHandshake,
     mdiPalette
   } from '@mdi/js';
-  import ActionButton from '$lib/components/ActionButton.svelte';
-  import Heading from '$lib/components/Heading.svelte';
-  import Modal from '$lib/components/Modal.svelte';
-  import RichText from '$lib/components/RichText.svelte';
-  import Seo from '$lib/components/Seo.svelte';
-  import SvgIcon from '$lib/components/SvgIcon.svelte';
-  import Title from '$lib/components/Title.svelte';
+  import ActionButton from '#lib/components/ActionButton.svelte';
+  import Heading from '#lib/components/Heading.svelte';
+  import Modal from '#lib/components/Modal.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Seo from '#lib/components/Seo.svelte';
+  import SvgIcon from '#lib/components/SvgIcon.svelte';
+  import Title from '#lib/components/Title.svelte';
 
   import type { PageData } from './$types';
 

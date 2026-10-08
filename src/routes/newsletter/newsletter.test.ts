@@ -6,7 +6,7 @@ import {
   basicRichTextValues,
   newsletterEditionData,
   sharedLogo
-} from '$lib/Tests/sharedData';
+} from '#lib/Tests/sharedData.js';
 
 const newsletterSignUpTextTest = 'Sign up for the newsletter';
 

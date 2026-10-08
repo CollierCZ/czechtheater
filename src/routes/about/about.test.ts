@@ -6,7 +6,7 @@ import {
   basicRichTextValues,
   sharedLogo,
   valueData
-} from '$lib/Tests/sharedData';
+} from '#lib/Tests/sharedData.js';
 
 const aboutTextTest = 'We are so awesome!';
 

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Heading from '$lib/components/Heading.svelte';
-  import RichText from '$lib/components/RichText.svelte';
-  import Seo from '$lib/components/Seo.svelte';
-  import Title from '$lib/components/Title.svelte';
+  import Heading from '#lib/components/Heading.svelte';
+  import RichText from '#lib/components/RichText.svelte';
+  import Seo from '#lib/components/Seo.svelte';
+  import Title from '#lib/components/Title.svelte';
   import { resolve } from '$app/paths';
 
   import type { PageData } from './$types';
@@ -27,6 +27,6 @@
   {@const title = edition.elements.month_and_year.value}
 
   <p class="font-medium underline hover:no-underline focus:no-underline">
-    <a href={resolve(`/newsletter/${slug}`)}>{title}</a>
+    <a href={resolve('/newsletter/[slug]', { slug })}>{title}</a>
   </p>
 {/each}
